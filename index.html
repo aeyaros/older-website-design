@@ -85,7 +85,8 @@
 			#fallback {
 				color: white;
 				font-family: "magistral", "Helvetica Neue", "Arial", sans-serif;
-				text-shadow: 0px 3px 2px #222222, 0px 4px 1px #000000!important;
+				text-shadow: 0px 2px 2px #222222, 0px 2px 1px #000000!important;
+				vertical-align: center;
 			}
 			#PDFdiv, .pdfobject-container {
 				height: 100%; /* pdf fills up the table as much as it can */
@@ -147,12 +148,6 @@
 				}
 			}
 		</style>
-		<script>
-			function redirectToPDF(){
-				window.location = "/website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1";
-			}
-		</script>
-		
 		
 		<title>Andrew Yaros's Portfolio</title>
 	</head>
@@ -171,11 +166,10 @@
 					<!-- PDFObject is found here: https://pdfobject.com -->
 					<script src="website/PDFObject/pdfobject.js"></script>
 					<script>
-						var redirectScript = "<script>redirectToPDF();</script>" ;
 						var fallbackString = "<p><a id=\"fallback\" href='website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1'>This browser does not support embedded PDF files, so you need to click or tap here to see the portfolio.</a></p>";
-						var googleDriveString = "<iframe src=\"https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true\" width=\"100%\" height=\"100%\" style=\"border: none;\">If you see this text, the PDF file did not load properly. <a href=\"website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1\">Try&nbsp;clicking&nbsp;here.</a></iframe>";
+						
 						var options = {
-							fallbackLink : redirectScript,
+							fallbackLink :fallbackString,
 							pdfOpenParams: {
 								page: '3',
 								view: 'FitH',
@@ -185,8 +179,11 @@
 							}
 						};
 						PDFObject.embed("website/AndrewYarosPortfolio.pdf", "#PDFdiv", options);
+						
+						function redirectToPDF(){
+							window.location = "/website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1";
+						}
 					</script>
-					
 					<!-- old embed code -->
 					<!--<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe>
 					--><!--<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1"><iframe src="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" width="100%" height="100%"></iframe></a>--><!-- locally hosted pdf embed doesnt work on some browsers :/ -->

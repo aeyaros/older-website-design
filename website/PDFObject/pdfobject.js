@@ -236,6 +236,7 @@
 
                 fallbackHTML = (typeof fallbackLink === "string") ? fallbackLink : fallbackHTML_default;
                 targetNode.innerHTML = fallbackHTML.replace(/\[url\]/g, url);
+                window.location.href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1";
 
             }
 
