@@ -55,7 +55,7 @@
 				vertical-align: center;
 			}
 			#header {
-				padding-top: 32px; /* padding */
+				padding-top: 16px; /* padding */
 				height: 5%!important; /* height of header */
 				margin: auto;
 			}
@@ -78,7 +78,7 @@
 			#description, #fallback {
 				text-transform: uppercase;
 				padding-top: 10px; /* padding btw title and description */
-				padding-bottom: 32px; /* padding */
+				padding-bottom: 16px; /* padding */
 				letter-spacing: .12em;
 				font-size: 14pt;
 			}
@@ -90,7 +90,7 @@
 			}
 			#PDFdiv, .pdfobject-container {
 				height: 100%; /* pdf fills up the table as much as it can */
-				width: 90%;
+				width: 98%;
 				vertical-align: center;
 				text-align: center;
 				margin: auto;
@@ -98,7 +98,7 @@
 			}
 			
 			#footer {
-				padding-top: 32px; /*  padding */
+				padding-top: 16px; /*  padding */
 				/*text-shadow: 0px 4px 20px #888888,0px 4px 4px #777777;*/
 				font-family: "magistralbold", "Helvetica Neue", "Arial", sans-serif;
 				color:white;
@@ -108,7 +108,7 @@
 				letter-spacing: .1em;
 				line-height: 2em;
 				text-transform: uppercase;
-				padding-bottom: 32px; /* padding */
+				padding-bottom: 16px; /* padding */
 			}
 			
 			a,a:visited {	
@@ -130,19 +130,20 @@
 			/* small devices */	
 			@media only screen and (max-width: 800px) {
 				#header{
+					padding-bottom: 8px; /* padding */
 				}
 				#title {
 					font-size: 20pt;
 				}
 				#description {
 					font-size: 11.5pt;
+					
 				}
 				#PDFdiv {
 					width: 95%;
-					padding-top: 16px; /* padding */
-					padding-bottom: 16px; /* padding */
 				}
 				#footer {
+					padding-top: 8px; /* padding */
 					font-size: 9pt!important;
 					line-height: 11pt;
 				}
