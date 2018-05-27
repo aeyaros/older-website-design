@@ -1,111 +1,135 @@
 <!DOCTYPE html>
 <html>
+	<!--~~~~~~~~~~~
+	Hello world! :)
+	~~~~~~~~~~~~~~~
+	Website created
+	by Andrew Yaros
+	~~~~~~~~~~~~-->
 	<head
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="apple-mobile-web-app-title" content="A.Y. Portfolio">
 		
 		<link rel="shortcut icon" href="favicon.png">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,400i,700&amp;subset=latin-ext" rel="stylesheet">
-		<style>		
+		<!--<link href="https://fonts.googleapis.com/css?family=Exo+2:300,300i,400,400i,700&amp;subset=latin-ext" rel="stylesheet">-->
+		<style type="text/css" media="screen">	
+			@font-face {
+				font-family: "Tachyon";
+				src: url("tachyon_thin.otf");
+			}
+			@font-face {
+				font-family: "exo2light";
+				src: url("exo2_light.ttf");
+			}
 			html, body {
-				height: 96%;
+				height: 99%;
+			}
+			html{
 			}
 			body 
 			{
-				font-family: 'Exo 2', "Arial", sans-serif;
+				font-family: 'exo2light', "Arial", sans-serif;
 				font-size: 10pt;
-				background-image: url("website/triangleGridinvert.png")!important;
-				background-color:#000000!important;
+				background-image: url("website/triangleGrid.png");
+				background-image: url("website/triangleGrid.png"), linear-gradient(to bottom, #f0f0f0, white);
 				background-repeat:repeat-x;
 				background-size:auto;
-				color: #eeeeee!important;
+				color: #000000!important;
 			}
 			#bodyTable {
 				height: 100%;
 				width: 100%;
 			}
 			
-			#header, #footer {
-				padding: 15px;
+			#header, #footer, #PDFdiv {
+				text-align: center;
+				vertical-align: center;
+				padding-top: .5em; /* padding */
+				padding-bottom: .5em; /* padding */
+
 			}
-			
 			#header{
 				height: 15%!important; /* height of header */
-				vertical-align: center;
 				margin: auto;
 			}
 			#title {
-				width: 50%;
-				min-width: 300px;
+				background-position: center;
+				font-family: 'Tachyon', 'Helvetica Neue', "Arial", sans-serif;
+				text-transform: uppercase;
+				letter-spacing: .3em;
+				font-size: 28pt;
+				/*width: 50%;
+				min-width: 300px;*/
 			}
 			#description {
-				font-family: 'Exo 2', 'Helvetica Neue', "Arial", sans-serif;
+				font-family: 'exo2light', 'Helvetica Neue', "Arial", sans-serif;
 				text-transform: uppercase;
-				text-align: center;
 				padding: 10px;
-				letter-spacing: 2px;
+				letter-spacing: .2em;
 				font-weight: 300;
 				font-size: 12pt;
 			}			
 			#PDFdiv {
 				height: 100%; /* pdf fills up the table as much as it can */
-				width: 98%;
+				width: 100%;
 				vertical-align: center;
 				margin: auto;
 			}
 			#footer{
-				vertical-align: center;
-				height: 2.5%; /* height of footer */
-				text-align: center;
-				letter-spacing: 0px;
+				height: 1%; /* height of footer */
+				padding-top: .25em; /* padding */
+				letter-spacing: .1em;
 			}
-			#footerlink{
-				color: #eeeeee!important;
+			.footersection {
+				width: 50%;
 			}
-			/*@media screen (max-width: 512px) {
-				#description {
-					font-size: 10pt;
+			#footerleft {
+				text-align: right;
+			}
+			#footerright {
+				text-align: left;
+			}
+			.footerlink{
+				color: #000000!important;
+			}
+			@media only screen and (max-width: 800px) {
+				#title {
+					font-size: 18pt;
 				}
-			}*/
+				#description {
+					font-size: 9pt;
+				}
+				#footer {
+					font-size: 9pt;
+				}
+			}
 		</style>
 		<title>Andrew Yaros's Portfolio</title>
 	</head>
 	
 	<body ondragstart="return false" onselectstart="return false">
 		<table id="bodyTable">
-			<tr>
-				<td id="header">
-					<!-- Title image -->
-					<center>
-					<img id="title" src="website/websiteTitleinvert.png" alt="title" width="100%" height="100%">
-					</center>
-					
+			<tr><td id="header">
+					<!-- Title -->
+					<div id="title">Andrew&nbsp;Yaros</div><br/>
 					<!-- Description -->
-					<div id="description">
-						Computer&nbsp;Science&nbsp;Major &amp;&nbsp;Architecture&nbsp;Minor
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<!-- Architecture portfolio pdf embedded -->
-					<div id="PDFdiv">
-						<iframe src="https://docs.google.com/viewer?url=website/AndrewYarosPortfolio.pdf#embedded=true&page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" width="100%" height="100%"></iframe>
-						<!--<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="website/AndrewYarosPortfolio.pdf">Try&nbsp;clicking&nbsp;here.</a></iframe>--><!-- google drive hosted option -->
+					<div id="description">Computer&nbsp;Science&nbsp;Major &amp;&nbsp;Architecture&nbsp;Minor</div>
+			</td></tr>
+			<tr><td>
+				<!-- Architecture portfolio pdf embedded -->
+				<div id="PDFdiv">
+					<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe><!-- google drive hosted option -->
 						<!--<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1"><iframe src="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" width="100%" height="100%"></iframe></a>--><!-- locally hosted option -->
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td id="footer">
-					<!-- Footer -->
-					<p><a href="mailto:ay@drexel.edu" id="footerlink">&copy;&nbsp;2011&mdash;<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros: ALL&nbsp;RIGHTS&nbsp;RESERVED</a></p>
-				</td>
-			</tr>
+				</div>
+			</td></tr>
+			<tr><td id="footer">
+				<!-- Footer -->
+				&copy;&nbsp;2011&mdash;<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED<br/>
+				<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF</a> <a href="mailto:ay@drexel.edu" class="footerlink">Contact&nbsp;me</a>
+			</td></tr>
 		</table>
-		
-
 	</body>
 </html>
