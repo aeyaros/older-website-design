@@ -18,7 +18,15 @@
 		<style type="text/css" media="screen">	
 			@font-face {
 				font-family: "Tachyon";
+				src: url("tachyon.otf");
+			}
+			@font-face {
+				font-family: "TachyonThin";
 				src: url("tachyon_thin.otf");
+			}
+			@font-face {
+				font-family: "exo2semi";
+				src: url("exo2_semi.ttf");
 			}
 			@font-face {
 				font-family: "exo2light";
@@ -37,7 +45,7 @@
 				background-image: url("website/triangleGrid.png"), linear-gradient(to bottom, #f2f2f2, white);
 				background-repeat:repeat-x;
 				background-size:auto;
-				color: #000000!important;
+				color: black;
 			}
 			#bodyTable {
 				height: 100%;
@@ -54,25 +62,27 @@
 			#header{
 				height: 15%!important; /* height of header */
 				margin: auto;
-				text-shadow: 0px 5px 7px #888888;
 			}
+			
 			#title {
+				text-shadow: 0px 7px 15px #000000,0px 9px 15px #000000!important;
+				color: #f2f2f2;
 				background-position: center;
 				font-family: 'Tachyon', 'Helvetica Neue', "Arial", sans-serif;
 				text-transform: uppercase;
 				letter-spacing: .3em;
 				font-size: 32pt;
-				/*width: 50%;
-				min-width: 300px;*/
 			}
 			#description {
-				font-family: 'exo2light', 'Helvetica Neue', "Arial", sans-serif;
+				text-shadow: 0px 4px 10px #000000,0px 5px 10px #000000!important;
+				color: #f2f2f2;
+				font-family: 'exo2semi', 'Helvetica Neue', "Arial", sans-serif;
 				text-transform: uppercase;
 				padding: 10px;
 				letter-spacing: .2em;
 				font-weight: 300;
 				font-size: 16pt;
-			}			
+			}
 			#PDFdiv {
 				height: 100%; /* pdf fills up the table as much as it can */
 				width: 90%;
@@ -80,11 +90,12 @@
 				margin: auto;
 			}
 			#footer{
+				text-shadow: 0px 2px 5px #000000,0px 4px 4px #000000;
+				color: white;
 				height: 1%; /* height of footer */
 				padding-top: .25em; /* padding */
 				letter-spacing: .1em;
 				line-height: 2em;
-				text-shadow: 0px 2px 4px #aaaaaa;
 			}
 			.footersection {
 				width: 50%;
@@ -96,7 +107,7 @@
 				text-align: left;
 			}
 			.footerlink{
-				color: #000000!important;
+				color: white;
 			}
 			
 			@media only screen and (max-width: 800px) {
@@ -136,7 +147,7 @@
 			<tr><td id="footer">
 				<!-- Footer -->
 				&copy;&nbsp;2011&mdash;<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED<br/>
-				<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF</a> <a href="mailto:ay@drexel.edu" class="footerlink">Contact&nbsp;me</a>
+				<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF</a>&nbsp;&nbsp;&nbsp;<a href="mailto:ay@drexel.edu" class="footerlink">Contact&nbsp;me</a>
 			</td></tr>
 		</table>
 	</body>
