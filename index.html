@@ -38,6 +38,7 @@
 			
 			#header{
 				height: 15%!important; /* height of header */
+				vertical-align: top;
 				margin: auto;
 			}
 			#title {
@@ -56,13 +57,18 @@
 			#PDFdiv {
 				height: 100%; /* pdf fills up the table as much as it can */
 				width: 98%;
+				vertical-align: center;
 				margin: auto;
 			}
 			#footer{
-				height: 4%!important; /* height of footer */
+				vertical-align: bottom;
+				height: 2.5%; /* height of footer */
 				text-align: center;
-				font-size: 9pt;
-
+				font-size: 10pt;
+				letter-spacing: 0px;
+			}
+			#footerlink{
+				color: #eeeeee!important;
 			}
 			/*@media screen (max-width: 512px) {
 				#description {
@@ -101,12 +107,7 @@
 			<tr>
 				<td id="footer">
 					<!-- Footer -->
-					<p>©&nbsp;2011&nbsp;-&nbsp;
-					<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;by&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED. <a href="mailto:ay@drexel.edu">
-					</p>
-					
-					<p>Contact&nbsp;me</a>
-					</p>
+					<a href="mailto:ay@drexel.edu" id="footerlink">&copy;&nbsp;2011&mdash;<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros: ALL&nbsp;RIGHTS&nbsp;RESERVED</a>
 				</td>
 			</tr>
 		</table>
