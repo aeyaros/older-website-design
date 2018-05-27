@@ -56,6 +56,7 @@
 			}
 			#header {
 				padding-top: 16px; /* padding */
+				padding-bottom: 16px; /* padding */
 				height: 5%!important; /* height of header */
 				margin: auto;
 			}
@@ -78,7 +79,6 @@
 			#description, #fallback {
 				text-transform: uppercase;
 				padding-top: 10px; /* padding btw title and description */
-				padding-bottom: 16px; /* padding */
 				letter-spacing: .12em;
 				font-size: 14pt;
 			}
@@ -130,23 +130,33 @@
 			/* small devices */	
 			@media only screen and (max-width: 800px) {
 				#header{
-					padding-bottom: 0px; /* padding */
+					padding-top: 2px; /* padding */
+					padding-bottom: 2px; /* padding */
 				}
 				#title {
 					font-size: 20pt;
 				}
 				#description {
-					font-size: 11.5pt;
+					font-size: 10pt;
 					
 				}
 				#PDFdiv {
 					width: 99%;
 				}
 				#footer {
-					padding-top: 0px; /* padding */
-					font-size: 9pt!important;
+					padding-top: 6px; /* padding */
+					font-size: 9pt;
 					line-height: 11pt;
+					padding-bottom: 2px; /* padding */
+
 				}
+			}
+			@media only screen and (max-width: 512px) {
+				#footer {
+					font-size: 7pt;
+					line-height: 9pt;
+				}
+
 			}
 		</style>
 		
