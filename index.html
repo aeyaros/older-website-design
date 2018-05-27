@@ -32,9 +32,9 @@
 			body 
 			{
 				font-family: 'exo2light', "Arial", sans-serif;
-				font-size: 10pt;
+				font-size: 14pt;
 				background-image: url("website/triangleGrid.png");
-				background-image: url("website/triangleGrid.png"), linear-gradient(to bottom, #eeeeee, white);
+				background-image: url("website/triangleGrid.png"), linear-gradient(to bottom, #f2f2f2, white);
 				background-repeat:repeat-x;
 				background-size:auto;
 				color: #000000!important;
@@ -54,13 +54,14 @@
 			#header{
 				height: 15%!important; /* height of header */
 				margin: auto;
+				text-shadow: 0px 7px 10px #777777;
 			}
 			#title {
 				background-position: center;
 				font-family: 'Tachyon', 'Helvetica Neue', "Arial", sans-serif;
 				text-transform: uppercase;
 				letter-spacing: .3em;
-				font-size: 28pt;
+				font-size: 32pt;
 				/*width: 50%;
 				min-width: 300px;*/
 			}
@@ -70,11 +71,11 @@
 				padding: 10px;
 				letter-spacing: .2em;
 				font-weight: 300;
-				font-size: 12pt;
+				font-size: 16pt;
 			}			
 			#PDFdiv {
 				height: 100%; /* pdf fills up the table as much as it can */
-				width: 100%;
+				width: 90%;
 				vertical-align: center;
 				margin: auto;
 			}
@@ -82,6 +83,8 @@
 				height: 1%; /* height of footer */
 				padding-top: .25em; /* padding */
 				letter-spacing: .1em;
+				line-height: 2em;
+				text-shadow: 0px 3px 6px #777777;
 			}
 			.footersection {
 				width: 50%;
@@ -97,13 +100,17 @@
 			}
 			@media only screen and (max-width: 800px) {
 				#title {
-					font-size: 18pt;
+					font-size: 20pt;
 				}
 				#description {
-					font-size: 9pt;
+					font-size: 10pt;
+				}
+				#PDFdiv {
+					width: 100%;
 				}
 				#footer {
-					font-size: 9pt;
+					font-size: 10pt;
+					line-height: 1.5em;
 				}
 			}
 		</style>
