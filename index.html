@@ -31,15 +31,16 @@
 				font-family: "magistral";
 				src: url("website/magistral.otf");
 			}
-			html, body { height: 99%; }
+			html, body { height: 98%; }
 			body 
 			{
 				font-family: "magistral","Helvetica", "Arial", sans-serif;
 				font-size: 12pt;
-				background-image: linear-gradient(to bottom, #f2f2f2, white);
-				background-repeat:repeat-x;
-				background-size:auto;
 				color: black;
+				background-color: red;
+				background-image: linear-gradient(to bottom, #f2f2f2, white);
+				/*background-repeat:repeat-x;
+				background-size:auto;*/
 			}
 			#bodyTable {
 				height: 100%;
@@ -49,11 +50,9 @@
 			#header, #footer {
 				text-align: center;
 				vertical-align: center;
-				padding-top: 1%; /* padding */
-				padding-bottom: 1%; /* padding */
-
 			}
 			#header{
+				padding-top: 1%; /* padding */
 				height: 5%!important; /* height of header */
 				margin: auto;
 			}
@@ -73,15 +72,15 @@
 				color: #f2f2f2;
 				font-family: "magistralbold", "Helvetica Neue", "Arial", sans-serif;
 				text-transform: uppercase;
-				padding: 10px;
+				padding-top: 10px; /* padding btw title and description */
 				letter-spacing: .12em;
 				font-size: 14pt;
 			}
 			#PDFdiv {
 				height: 100%; /* pdf fills up the table as much as it can */
 				width: 90%;
-				padding-top: .25%; /* padding */
-				padding-bottom: .25%; /* padding */
+				padding-top: 1%; /* padding */
+				padding-bottom: 1%; /* padding */
 				vertical-align: center;
 				text-align: center;
 				margin: auto;
@@ -91,6 +90,7 @@
 				height: 1%; /* height of footer */
 				letter-spacing: .1em;
 				line-height: 2em;
+				padding-bottom: 1%; /* padding */
 			}
 			.footersection { width: 50%; }
 			#footerleft { text-align: right; }
@@ -98,8 +98,6 @@
 			/* small landscape devices */	
 			@media only screen and (max-width: 1024px) and (orientation: landscape) {
 				#header{
-					padding-top: 16px; /* padding */
-					padding-bottom: 16px; /* padding */
 				}
 				#title {
 					font-size: 20pt;
@@ -109,9 +107,9 @@
 				}
 				#PDFdiv {
 					width: 100%;
+					padding: 0px; /* padding */
 				}
 				#footer {
-					padding-top: 16px; /* padding */
 					font-size: 9pt;
 					line-height: 11pt;
 				}
@@ -119,8 +117,6 @@
 			/* small portrait devices */	
 			@media only screen and (max-width: 800px) {
 				#header{
-					padding-top: 16px; /* padding */
-					padding-bottom: 16px; /* padding */
 				}
 				#title {
 					font-size: 20pt;
@@ -130,9 +126,10 @@
 				}
 				#PDFdiv {
 					width: 100%;
+					padding-top: 16px; /* padding */
+					padding-bottom: 16px; /* padding */
 				}
 				#footer {
-					padding-top: 16px; /* padding */
 					font-size: 9pt;
 					line-height: 11pt;
 				}
