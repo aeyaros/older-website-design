@@ -6,7 +6,7 @@
 	Website created
 	by Andrew Yaros
 	~~~~~~~~~~~~-->
-	<head
+	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="white">
@@ -55,7 +55,7 @@
 				vertical-align: center;
 			}
 			#header {
-				padding-top: 1.25%; /* padding */
+				padding-top: 3%; /* padding */
 				height: 5%!important; /* height of header */
 				margin: auto;
 			}
@@ -76,25 +76,24 @@
 				font-family: "magistralbold", "Helvetica Neue", "Arial", sans-serif;
 				text-transform: uppercase;
 				padding-top: 10px; /* padding btw title and description */
+				padding-bottom: 2%; /* padding */
 				letter-spacing: .12em;
 				font-size: 14pt;
 			}
-			#PDFdiv {
+			#PDFdiv, .pdfobject-container {
 				height: 100%; /* pdf fills up the table as much as it can */
 				width: 90%;
-				padding-top: 1.125%; /* padding */
-				padding-bottom: 1%; /* padding */
 				vertical-align: center;
 				text-align: center;
 				margin: auto;
 			}
 			#footer {
+				padding-top: 2%; /* padding */
 				/*text-shadow: 0px 4px 20px #888888,0px 4px 4px #777777;*/
 				font-family: "magistralbold", "Helvetica Neue", "Arial", sans-serif;
 				color:white;
 				text-shadow: 0px 5px 4px #222222, 0px 5px 8px #000000;
 				/*text-shadow: 0px 2.5px 4px #000000, 0px 2.5px 1.5px #111111;*/
-				
 				height: 2%; /* height of footer */
 				letter-spacing: .1em;
 				line-height: 2em;
@@ -112,31 +111,13 @@
 				text-shadow: 0px 5px 4px white, 0px 5px 8px gray;
 
 			 }
-			
-			.footersection { width: 50%; }
+			.footerlink {
+				letter-spacing: .2em;
+			}
 			#footerleft { text-align: right; }
 			#footerright { text-align: left; }
 			
-			/* small landscape devices */	
-			@media only screen and (max-width: 1024px) and (orientation: landscape) {
-				#header{
-				}
-				#title {
-					font-size: 20pt;
-				}
-				/*#description {
-					font-size: 11.5pt;
-				}*/
-				#PDFdiv {
-					width: 100%;
-					padding: 0px; /* padding */
-				}
-				#footer {
-					font-size: 9pt!important;
-					line-height: 11pt;
-				}
-			}
-			/* small portrait devices */	
+			/* small devices */	
 			@media only screen and (max-width: 800px) {
 				#header{
 				}
@@ -147,7 +128,7 @@
 					font-size: 11.5pt;
 				}
 				#PDFdiv {
-					width: 100%;
+					width: 95%;
 					padding-top: 16px; /* padding */
 					padding-bottom: 16px; /* padding */
 				}
@@ -157,6 +138,9 @@
 				}
 			}
 		</style>
+		
+		
+		
 		<title>Andrew Yaros's Portfolio</title>
 	</head>
 	
@@ -171,13 +155,24 @@
 			<tr><td>
 				<!-- Architecture portfolio pdf embedded -->
 				<div id="PDFdiv">
-				<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe>
-				<!--<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1"><iframe src="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" width="100%" height="100%"></iframe></a>--><!-- locally hosted pdf embed doesnt work on some browsers :/ -->
-				</div>
+					<!-- PDFObject is found here: https://pdfobject.com -->
+					<script src="website/PDFObject/pdfobject.js"></script>
+					<script>
+						var options = {
+							page: '3',
+							fallbackLink : "<iframe src=\"https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true\" width=\"100%\" height=\"100%\" style=\"border: none;\">If you see this text, the PDF file did not load properly. <a href=\"website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1\">Try&nbsp;clicking&nbsp;here.</a></iframe>"
+						};
+						PDFObject.embed("website/AndrewYarosPortfolio.pdf#page=3", "#PDFdiv", options);
+					</script>
+					<!-- old embed code -->
+					<!--<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe>
+					--><!--<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1"><iframe src="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" width="100%" height="100%"></iframe></a>--><!-- locally hosted pdf embed doesnt work on some browsers :/ -->
+					</div>
 			</td></tr>
 			<tr><td id="footer">
 				<!-- Footer -->
-				&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros&nbsp;&nbsp; ALL&nbsp;RIGHTS&nbsp;RESERVED <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF&nbsp;file</a>&nbsp;&nbsp;&nbsp;<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a>
+				<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a><br/> 
+				&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros&nbsp;&nbsp; ALL&nbsp;RIGHTS&nbsp;RESERVED
 			</td></tr>
 		</table>
 	</body>
