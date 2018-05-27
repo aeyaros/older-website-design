@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
+		<style>		
+			html, body {
+				height: 98%;
+			}
+			body 
+			{
+				font-family: 'Helvetica Neue', "Arial", sans-serif;
+				font-size: 10pt;
+				background-image: url("./website/triangleGrid.png")!important;
+				background-color:#ffffff!important;
+				background-repeat:repeat-x;
+				background-size:auto;
+			}
+			#bodyTable {
+				height: 100%;
+				width: 100%;
+			}
+			
+			#header, #footer {
+				padding: 15px;
+			}
+			
+			#header{
+				height: 15%!important; /* height of header */
+				margin: auto;
+			}
+			#title {
+				width: 50%;
+				min-width: 300px;
+			}
+			#description {
+				font-family: 'Exo 2', 'Helvetica Neue', "Arial", sans-serif;
+				text-transform: uppercase;
+				text-align: center;
+				padding: 10px;
+				letter-spacing: 2px;
+				font-weight: 200;
+				font-size: 12pt;
+			}			
+			#PDFdiv {
+				height: 100%; /* pdf fills up the table as much as it can */
+				width: 90%;
+				margin: auto;
+
+
+			}
+			#footer{
+				height: 5%!important; /* height of footer */
+				text-align: center;
+				font-size: 9pt;
+
+			}		
+			@media screen (max-width: 512px) {
+				#description {
+					font-size: 10pt;
+				}
+			}
+		</style>
+		<title>Andrew Yaros's Portfolio</title>
+		<link href="https://fonts.googleapis.com/css?family=Exo+2:200,200i,400,400i,700&amp;subset=latin-ext" rel="stylesheet">
+	</head>
+	
+	<body ondragstart="return false" onselectstart="return false">
+		<table id="bodyTable">
+			<tr>
+				<td id="header">
+					<!-- Title image -->
+					<center>
+					<img id="title" src="./website/websiteTitle.png" alt="title" width="100%" height="100%">
+					</center>
+					
+					<!-- Description -->
+					<div id="description">
+						Computer&nbsp;Science&nbsp;Major &amp;&nbsp;Architecture&nbsp;Minor
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<!-- Architecture portfolio pdf embedded -->
+					<div id="PDFdiv">
+						<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="https://drive.google.com/file/d/0B_8Jo0VBj38mMGx3bndPT3NDNGM/view">Try&nbsp;clicking&nbsp;here.</a></iframe>
+						<!--<iframe src="./website/AndrewYarosPortfolio.pdf#view=fit" width="100%" height="100%"></iframe> -->
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td id="footer">
+					<!-- Footer -->
+					<p>©&nbsp;2011&nbsp;-&nbsp;
+					<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;by&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED. <a href="mailto:ay@drexel.edu">
+					</p>
+					
+					<p>Contact&nbsp;me</a>
+					</p>
+				</td>
+			</tr>
+		</table>
+		
+
+	</body>
+</html>
