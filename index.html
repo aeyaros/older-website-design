@@ -99,7 +99,24 @@
 			}
 			.footersection { width: 50%; }
 			#footerleft { text-align: right; }
-			#footerright { text-align: left; }			
+			#footerright { text-align: left; }
+			/* small landscape devices */	
+			@media only screen and (max-width: 1024px) and (orientation: landscape) {
+				#title {
+					font-size: 20pt;
+				}
+				#description {
+					font-size: 10pt;
+				}
+				#PDFdiv {
+					width: 100%;
+				}
+				#footer {
+					font-size: 9pt;
+					line-height: 11pt;
+				}
+			}
+			/* small portrait devices */	
 			@media only screen and (max-width: 800px) {
 				#title {
 					font-size: 20pt;
