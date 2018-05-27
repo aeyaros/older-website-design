@@ -16,11 +16,11 @@
 		<link rel="apple-touch-icon" href="apple-touch-icon.png?ver=1.1">
 		<style type="text/css" media="screen">	
 			@font-face {
-				font-family: "Tachyon";
+				font-family: "tachyon";
 				src: url("website/tachyon.otf");
 			}
 			@font-face {
-				font-family: "TachyonThin";
+				font-family: "tachyonthin";
 				src: url("website/tachyon_thin.otf");
 			}
 			@font-face {
@@ -61,7 +61,7 @@
 				text-shadow: 0px 10px 15px #222222, 0px 11px 9px #000000!important;
 				color: #f2f2f2;
 				background-position: center;
-				font-family: "Tachyon", "Helvetica Neue", "Arial", sans-serif;
+				font-family: "tachyon", "Helvetica Neue", "Arial", sans-serif;
 				text-transform: uppercase;
 				letter-spacing: .32em;
 				font-size: 33pt;
@@ -85,16 +85,35 @@
 				text-align: center;
 				margin: auto;
 			}
-			#footer{
-				text-shadow: 0px 4px 20px #888888,0px 4px 4px #777777;
+			#footer {
+				/*text-shadow: 0px 4px 20px #888888,0px 4px 4px #777777;*/
+				font-family: "magistralbold", "Helvetica Neue", "Arial", sans-serif;
+				color:white;
+				text-shadow: 0px 5px 4px #222222, 0px 5px 8px #000000;
+				/*text-shadow: 0px 2.5px 4px #000000, 0px 2.5px 1.5px #111111;*/
+				
 				height: 1%; /* height of footer */
 				letter-spacing: .1em;
 				line-height: 2em;
+				text-transform: uppercase;
 				padding-bottom: 1%; /* padding */
 			}
+			
+			a,a:visited {	
+				color: white;
+				text-decoration: none;
+			}
+			a:hover { 
+				color: rgba(100,100,100,1);
+				text-decoration: underline;
+				text-shadow: 0px 5px 4px white, 0px 5px 8px gray;
+
+			 }
+			
 			.footersection { width: 50%; }
 			#footerleft { text-align: right; }
 			#footerright { text-align: left; }
+			
 			/* small landscape devices */	
 			@media only screen and (max-width: 1024px) and (orientation: landscape) {
 				#header{
@@ -155,8 +174,8 @@
 			</td></tr>
 			<tr><td id="footer">
 				<!-- Footer -->
-				&copy;&nbsp;2013&mdash;<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED<br/>
-				<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF</a>&nbsp;&nbsp;&nbsp;<a href="mailto:ay@drexel.edu" class="footerlink">Contact&nbsp;me</a>
+				&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros&nbsp;&nbsp; ALL&nbsp;RIGHTS&nbsp;RESERVED<br/>
+				<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF&nbsp;file</a>&nbsp;&nbsp;&nbsp;<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a>
 			</td></tr>
 		</table>
 	</body>
