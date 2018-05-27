@@ -166,10 +166,10 @@
 					<!-- PDFObject is found here: https://pdfobject.com -->
 					<script src="website/PDFObject/pdfobject.js"></script>
 					<script>
-						var fallbackString = "<p><a id=\"fallback\" href='website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1'>This browser does not support embedded PDF files, so you need to click or tap here to see the portfolio.</a></p>";
-						
+						//var fallbackString = "<p><a id=\"fallback\" href='website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1'>This browser does not support embedded PDF files, so you need to click or tap here to see the portfolio.</a></p>";
+						var googleDriveString = "<iframe src=\"https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true\" width=\"100%\" height=\"100%\" style=\"border: none;\">If you see this text, the PDF file did not load properly. <a href=\"website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1\">Try&nbsp;clicking&nbsp;here.</a></iframe>";
 						var options = {
-							fallbackLink :fallbackString,
+							fallbackLink: googleDriveString,
 							pdfOpenParams: {
 								page: '3',
 								view: 'FitH',
@@ -185,7 +185,7 @@
 						}
 					</script>
 					<!-- old embed code -->
-					<!--<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe>
+					<!--
 					--><!--<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1"><iframe src="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" width="100%" height="100%"></iframe></a>--><!-- locally hosted pdf embed doesnt work on some browsers :/ -->
 					</div>
 			</td></tr>
