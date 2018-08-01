@@ -41,15 +41,15 @@
 				height: 100%;
 				width: 100%;
 			}
-			
 			.header, #footer {
 				/*text-align: center;*/
 				vertical-align: center;
 			}
 			.header {
-				padding: 20px; /* padding */
+				padding: 16px; /* padding */
 				min-height: 30px;
-				height: 5%!important; /* height of header */
+				max-height: 40px;
+				height: 5%; /* height of header */
 				/* margin: auto;*/
 			}
 			#headerR {
@@ -57,7 +57,7 @@
 				width: 100%;
 			}
 			#headerL {
-				width: 120px;
+				max-width: 240px;
 				text-align: left;
 			}
 			
@@ -140,8 +140,8 @@
 			/* small devices */	
 			@media only screen and (max-width: 512px) {
 				.header{
-					padding-top: 2px; /* padding */
-					padding-bottom: 2px; /* padding */
+					padding-top: 10px; /* padding */
+					padding-bottom: 10px; /* padding */
 				}
 				#headerR {
 				}
@@ -192,7 +192,7 @@
 				</td>
 				<td class="header" id="headerR">
 					<!-- Description -->
-					<span id="description">Drexel&nbsp;Computer Science&nbsp;Major&nbsp;&amp; <br/>Architecture&nbsp;Minor</span>				
+					<span id="description">Drexel Computer Science &amp; Architecture</span>				
 				</td>
 			</tr>
 			<tr>
