@@ -7,7 +7,7 @@
 	by Andrew Yaros
 	~~~~~~~~~~~~-->
 	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, minimum-scale=.75">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="white">
 		<meta name="apple-mobile-web-app-title" content="A.Y. Portfolio">
@@ -50,16 +50,24 @@
 				width: 100%;
 			}
 			
-			#header, #footer {
-				text-align: center;
+			.header, #footer {
+				/*text-align: center;*/
 				vertical-align: center;
 			}
-			#header {
-				padding-top: 16px; /* padding */
-				padding-bottom: 16px; /* padding */
+			.header {
+				padding: 20px; /* padding */
 				height: 5%!important; /* height of header */
-				margin: auto;
+				/* margin: auto;*/
 			}
+			#headerR {
+				text-align: right;
+				width: 100%;
+			}
+			#headerL {
+				width: 120px;
+				text-align: left;
+			}
+			
 			
 			#title {
 				text-shadow: 0px 10px 15px #333333, 0px 11px 9px #252525!important;
@@ -68,8 +76,8 @@
 				font-family: "tachyon", "Helvetica Neue", "Arial", sans-serif;
 				text-transform: uppercase;
 				letter-spacing: .32em;
-				font-size: 33pt;
-				display: block;
+				font-size: 20pt;
+				/*display: block;*/
 			}
 			#description {
 				font-family: "magistralbold", "Helvetica Neue", "Arial", sans-serif;
@@ -80,7 +88,7 @@
 				text-transform: uppercase;
 				padding-top: 10px; /* padding btw title and description */
 				letter-spacing: .12em;
-				font-size: 14pt;
+				font-size: 12pt;
 			}
 			#fallback {
 				color: white;
@@ -88,16 +96,17 @@
 				text-shadow: 0px 2px 2px #222222, 0px 2px 1px #000000!important;
 				vertical-align: center;
 			}
-			#PDFdiv, .pdfobject-container {
+			#gDriveDiv {
 				height: 100%; /* pdf fills up the table as much as it can */
-				width: 98%;
+				width: 100%;
 				vertical-align: center;
-				text-align: center;
+				/*text-align: center;*/
 				margin: auto;
 				background-color: transparent;
 			}
 			
 			#footer {
+				text-align: center;
 				padding-top: 16px; /*  padding */
 				/*text-shadow: 0px 4px 20px #888888,0px 4px 4px #777777;*/
 				font-family: "magistralbold", "Helvetica Neue", "Arial", sans-serif;
@@ -139,44 +148,46 @@
 			#footerright { text-align: left; }
 			
 			/* small devices */	
-			@media only screen and (max-width: 800px) {
-				#header{
+			@media only screen and (max-width: 512px) {
+				.header{
 					padding-top: 2px; /* padding */
 					padding-bottom: 2px; /* padding */
 				}
+				#headerR {
+				}
+				#headerL {
+				}
+				
 				#title {
-					font-size: 20pt;
+					font-size: 15pt;
 				}
 				#description {
 					font-size: 10pt;
 					
 				}
-				#PDFdiv {
+				#gDriveDiv, #PDFdiv {
 					width: 99%;
+					max-width: 500px;
 				}
 				#footer {
 					padding-top: 2px; /* padding */
 					font-size: 9pt;
 					line-height: 11pt;
 					padding-bottom: 2px; /* padding */
-
 				}
 			}
-			@media only screen and (max-width: 800px) and (orientation:landscape) {
+			@media only screen and (max-width: 600px) and (orientation:landscape) {
 				#footer {
 					font-size: 7pt;
 					line-height: 9pt;
 				}
-
 			}
-
 			@media only screen and (max-width: 512px) {
 				#footer {
 					font-size: 7pt;
 					line-height: 9pt;
 				}
-
-			}
+			}*/
 		</style>
 		
 		<title>Andrew Yaros's Portfolio</title>
@@ -184,45 +195,32 @@
 	
 	<body><!-- ondragstart="return false" onselectstart="return false"> -->
 		<table id="bodyTable">
-			<tr><td id="header">
+			<tr>
+				<td class="header" id="headerL">
 					<!-- Title -->
-					<div id="title" align="center">Andrew Yaros</div>
+					<span id="title">Andrew<br/>Yaros</span>		
+				</td>
+				<td class="header" id="headerR">
 					<!-- Description -->
-					<div id="description" align="center">Drexel&nbsp;Computer Science&nbsp;Major&nbsp;&amp; Architecture&nbsp;Minor&nbsp;&nbsp;</div>
-			</td></tr>
-			<tr><td>
-				<!-- Architecture portfolio pdf embedded -->
-				<div id="PDFdiv">
-					<!-- PDFObject is found here: https://pdfobject.com -->
-					<script src="website/PDFObject/pdfobject.js"></script>
-					<script>
-						//var fallbackString = "<p><a id=\"fallback\" href='website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1'>This browser does not support embedded PDF files, so you need to click or tap here to see the portfolio.</a></p>";
-						var googleDriveString = "<iframe src=\"https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;a=v&amp;chrome=false&amp;embedded=true\" width=\"100%\" height=\"100%\" style=\"border: none;\">If you see this text, the PDF file did not load properly. <a href=\"website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1\">Try&nbsp;clicking&nbsp;here.</a></iframe>";
-						var options = {
-							fallbackLink: googleDriveString,
-							pdfOpenParams: {
-								page: '3',
-								view: 'FitH',
-								toolbar: '0',
-								navpanes: '0',
-								scrollbar: '1'
-							}
-						};
-						PDFObject.embed("website/AndrewYarosPortfolio.pdf", "#PDFdiv", options);
-						
-						function redirectToPDF(){
-							window.location = "/website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1";
-						}
-					</script>
-					</div>
-			</td></tr>
-			<tr><td id="footer">
-				<!-- Footer -->
-				<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a><br/>
-				<div id="copyright">&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</div>
+					<span id="description">Drexel&nbsp;Computer Science&nbsp;Major&nbsp;&amp; <br/>Architecture&nbsp;Minor&nbsp;&nbsp;</span>				
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div id="gDriveDiv">
+						<!-- Architecture portfolio pdf embedded -->
+						<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe>
+						</div>
+					</td>
+				</tr>
+			<tr>
+				<td id="footer" colspan="2">
+					<!-- Footer -->
+					<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a><br/>
+					<div id="copyright">&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</div>
 
-			</td></tr>
+				</td>
+			</tr>
 		</table>
-		
 	</body>
 </html>
