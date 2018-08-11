@@ -146,7 +146,7 @@
 			@media only screen and (max-width: 512px) {
 				.header{
 					padding-top: 10px; /* padding */
-					padding-bottom: 10px; /* padding */
+					/*padding-bottom: 10px; /* padding */
 				}
 				#title {
 					font-size: 15pt;
@@ -155,24 +155,14 @@
 					font-size: 10pt;
 					
 				}
-				/*#gDriveDiv, #PDFdiv {
-					width: 99%;
-					max-width: 500px;
-				}*/
 				#footer {
-					padding-top: 2px; /* padding */
+					/*padding-top: 2px; /* padding */
 					font-size: 9pt;
 					line-height: 11pt;
 					padding-bottom: 2px; /* padding */
 				}
 			}
-			@media only screen and (max-width: 600px) and (orientation:landscape) {
-				#footer {
-					font-size: 7pt;
-					line-height: 9pt;
-				}
-			}
-			@media only screen and (max-width: 512px) {
+			@media only screen and (((max-width: 600px) and (orientation:landscape)) or (max-width: 512px)){
 				#footer {
 					font-size: 7pt;
 					line-height: 9pt;
@@ -199,7 +189,7 @@
 				<td colspan="2">
 					<div id="gDriveDiv">
 						<!-- Architecture portfolio pdf embedded -->
-						<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the PDF file did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe>
+						<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the Google Drive embed did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe>
 						</div>
 					</td>
 				</tr>
