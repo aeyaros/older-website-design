@@ -47,14 +47,10 @@
 			}
 			.header {
 				padding: 16px; /* padding */
-				/*height: 5%; /* height of header */
 				margin: auto;
-				min-height: 30px!important;
+				height: 5%;
 				max-height: 40px!important;
 
-			}
-			#headerR, #headerL {
-				padding: 16px!important;
 			}
 			#headerR {
 				text-align: right;
@@ -173,12 +169,12 @@
 	<body><!-- ondragstart="return false" onselectstart="return false"> -->
 		<table id="bodyTable">
 			<tr>
-				<td>
+				<td class="header">
 					<!-- Yes, I'm doing a table inside a table. So sue me. :P -->
-					<table width="100%" height="100%"><tr width="100%" height="100%">
-					<td class="header" id="headerL"> <!-- Title -->
+					<table width="100%" height="100%"><tr>
+					<td id="headerL"> <!-- Title -->
 					<span id="title">Andrew<br/><span id="lastname">Yaros</span></span></td>
-					<td class="header" id="headerR"> <!-- Description -->
+					<td id="headerR"> <!-- Description -->
 					<span id="description">Drexel Computer Science &amp; Architecture</span>
 					</td></tr></table>
 				</td>
