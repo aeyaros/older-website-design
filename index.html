@@ -11,7 +11,6 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="white">
 		<meta name="apple-mobile-web-app-title" content="A.Y. Portfolio">
-		
 		<link rel="shortcut icon" href="favicon.png?ver=1.1">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png?ver=1.1">
 		<style type="text/css" media="screen">	
@@ -31,7 +30,7 @@
 			body {
 				height: 99%;
 				background-image: linear-gradient(to bottom, #f2f2f2, white);
-				font-family: "magistral","Helvetica", "Arial", sans-serif;
+				font-family: "721","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 				font-size: 12pt;
 				color: black;
 				/*background-repeat:repeat-x;
@@ -41,16 +40,12 @@
 				height: 100%;
 				width: 100%;
 			}
-			.header, #footer {
-				/*text-align: center;*/
-				vertical-align: center;
-			}
+			.header, #footer { vertical-align: center; }
 			.header {
 				padding: 16px; /* padding */
 				margin: auto;
 				height: 5%;
 				max-height: 40px!important;
-
 			}
 			#headerR {
 				text-align: right;
@@ -60,8 +55,6 @@
 				max-width: 280px;
 				text-align: left;
 			}
-			
-			
 			#title, #description, #footer {
 				text-shadow: 0px 10px 10px #333333, 0px 5px 8px #252525!important;
 
@@ -74,9 +67,7 @@
 				letter-spacing: .325em;
 				font-size: 20pt;
 			}
-			#lastname {
-				letter-spacing: .8em!important;
-			}
+			#lastname { letter-spacing: .8em!important; }
 			#description {
 				font-family: "721", "Helvetica Neue", "Arial", sans-serif;
 				color: #f2f2f2;
@@ -85,16 +76,14 @@
 				letter-spacing: .12em;
 				font-size: 14pt;
 			}
-			
 			#gDriveDiv {
 				vertical-align: center;
 				margin: none;
 			}
-			
 			#footer {
 				text-align: center;
 				padding-top: 16px; /*  padding */
-				font-family: "721", "Helvetica Neue", "Arial", sans-serif;
+				font-family: "721", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 				color:white;
 				height: 2%; /* height of footer */
 				max-height: 80px!important;
@@ -104,7 +93,7 @@
 				padding-bottom: 5px; /* padding */
 			}
 			#copyright {
-				font-family: "721", "Arial Condensed", sans-serif!important;
+				font-family: "721", "Helvetica Neue", "Helvetica", "Arial Condensed", sans-serif!important;
 				font-weight: 200!important;
 				letter-spacing: 0em!important;
 				font-size: 4pt!important;
@@ -114,7 +103,6 @@
 				text-align: center!important;
 				padding-top: 6px!important;
 			}
-			
 			a,a:visited {	
 				color: white;
 				text-decoration: none;
@@ -123,44 +111,34 @@
 				color: rgba(100,100,100,1);
 				text-decoration: underline;
 				text-shadow: 0px 0px 10px white, 0px 0px 12px gray;
-
-			 }
+			}
 			.footerlink {
 				letter-spacing: .2em;
 			}
 			#footerleft { text-align: right; }
 			#footerright { text-align: left; }
-			
 			/* small devices */	
 			@media only screen and (max-width: 512px) {
 				.header{
 					padding-top: 10px; /* padding */
-					/*padding-bottom: 10px; /* padding */
+					padding-bottom: 10px; /* padding */
 				}
-				#title {
-					font-size: 15pt;
-				}
-				#description {
-					font-size: 10pt;
-					
-				}
+				#title { font-size: 15pt; }
+				#description { font-size: 10pt; }
 				#footer {
-					/*padding-top: 2px; /* padding */
+					padding-top: 2px; /* padding */
 					font-size: 9pt;
 					line-height: 11pt;
 					padding-bottom: 2px; /* padding */
 				}
 			}
 		</style>
-		
 		<title>Andrew Yaros's Portfolio</title>
 	</head>
-	
 	<body><!-- ondragstart="return false" onselectstart="return false"> -->
 		<table id="bodyTable">
 			<tr>
-				<td class="header">
-					<!-- Yes, I'm doing a table inside a table. So sue me. :P -->
+				<td class="header"> <!-- Yes, I'm doing a table inside a table. So sue me. :P -->
 					<table width="100%" height="100%"><tr>
 					<td id="headerL"> <!-- Title -->
 					<span id="title">Andrew<br/><span id="lastname">Yaros</span></span></td>
@@ -168,19 +146,14 @@
 					<span id="description">Drexel Computer Science &amp; Architecture</span>
 					</td></tr></table>
 				</td>
-			</tr>
-			<tr >
-				<td id="gDriveDiv" height="100%">
-					<!-- Architecture portfolio pdf embedded -->
+			</tr><tr >
+				<td id="gDriveDiv" height="100%"> <!-- Architecture portfolio pdf embedded -->
 					<iframe src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;chrome=false&amp;embedded=true" width="100%" height="100%" style="border: none;">If you see this text, the Google Drive embed did not load properly. <a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a></iframe>
-					</td>
-				</tr>
-			<tr>
-				<td id="footer">
-					<!-- Footer -->
+				</td>
+			</tr><tr>
+				<td id="footer"> <!-- Footer -->
 					<a href="website/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Download&nbsp;PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a><br/>
 					<div id="copyright">&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</div>
-
 				</td>
 			</tr>
 		</table>
