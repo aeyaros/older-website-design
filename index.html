@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
+    
 	<!--~~~~~~~~~~~
 	Hello world! :)
 	~~~~~~~~~~~~~~~
 	Website created
 	by Andrew Yaros
 	~~~~~~~~~~~~-->
+    
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -19,9 +21,13 @@
 				src: url("website/Tachyon_Light.otf")
 			}
 			@font-face {
+				font-family: "Bodoni";
+				src: url("website/Bodoni 72 OS.ttc");
+			}
+			@font-face {
 				font-family: "721";
 				src: url("website/Swiss721BT-Roman.otf");
-			}			
+			}
 			html { height: 100%; }
 			html, body {
 				margin: 0;
@@ -56,7 +62,7 @@
 				text-align: left;
 			}
 			#title, #description, #footer {
-				text-shadow: 0px 10px 10px #333333, 0px 5px 8px #252525!important;
+				text-shadow: 0px 3px 20px #000000, 0px 5px 6px #252525!important;
 
 			}
 			#title {
@@ -69,7 +75,8 @@
 			}
 			#lastname { letter-spacing: .8em!important; }
 			#description {
-				font-family: "721", "Helvetica Neue", "Arial", sans-serif;
+				font-family: "Bodoni", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+				font-weight: 400;
 				color: #f2f2f2;
 				text-transform: uppercase;
 				padding-top: 10px; /* padding btw title and description */
@@ -83,7 +90,7 @@
 			#footer {
 				text-align: center;
 				padding-top: 16px; /*  padding */
-				font-family: "721", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+				font-family: "Bodoni", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 				color:white;
 				height: 2%; /* height of footer */
 				max-height: 80px!important;
@@ -108,8 +115,8 @@
 				text-decoration: none;
 			}
 			a:hover { 
-				color: rgba(100,100,100,1);
-				text-decoration: underline;
+				color: rgba(100,100,100,.7);
+				text-decoration: overline;
 				text-shadow: 0px 0px 10px white, 0px 0px 12px gray;
 			}
 			.footerlink {
