@@ -63,7 +63,6 @@
 			}
 			#title, #description, #footer {
 				text-shadow: 0px 3px 20px #333333, 0px 3px 6px #252525!important;
-
 			}
 			#title {
 				color: #f2f2f2;
@@ -91,6 +90,7 @@
 				text-align: center;
 				padding-top: 16px; /*  padding */
 				font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+				font-size: 12pt;
 				color:white;
 				height: 2%; /* height of footer */
 				max-height: 80px!important;
@@ -123,8 +123,9 @@
 				letter-spacing: .2em;
 			}
 			#footerleft { text-align: right; }
+			#footercenter {text-align: center; }
 			#footerright { text-align: left; }
-			/* small devices */	
+			/* for small devices */	
 			@media only screen and (max-width: 512px) {
 				.header{
 					padding-top: 10px; /* padding */
@@ -134,10 +135,25 @@
 				#description { font-size: 10pt; }
 				#footer {
 					padding-top: 2px; /* padding */
-					font-size: 9pt;
+					font-weight: bold;
+					font-size: 10pt;
 					line-height: 11pt;
 					padding-bottom: 2px; /* padding */
 				}
+			}
+			/* for really small devices */
+			@media only screen and (max-width: 320px) {
+				#title { font-size: 12pt; }
+				#description { 
+					font-size: 8pt;
+					letter-spacing: .02em;
+				}
+				#description { font-size: 10pt; }
+				#footer { font-size: 7pt; }
+				#title, #description, #footer {
+					text-shadow: 0px 2px 5px #333333, 0px 2px 4px #252525!important;
+				}
+				#headerL { max-width: 140px; }
 			}
 		</style>
 		<title>Andrew Yaros's Portfolio</title>
@@ -159,10 +175,16 @@
 				</td>
 			</tr><tr>
 				<td id="footer"> <!-- Footer -->
-					<a href="media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">R&eacute;sum&eacute;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Portfolio&nbsp;PDF</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a><br/>
-					<div id="copyright">&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</div>
+					<table width="100%" height="100%"><tr width="100%">
+						<td id="footerleft" width="33%">
+						<a href="media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">R&eacute;sum&eacute;</a>
+						</td><td id="footercenter" width="33%">
+						<a href="media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Portfolio&nbsp;PDF</a>
+						</td><td id="footerright" width="33%">
+						<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a><br/>
+						</td></tr></table>
+				
+					<span id="copyright">&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</span>
 				</td>
 			</tr>
 		</table>
