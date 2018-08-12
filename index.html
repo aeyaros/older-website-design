@@ -141,20 +141,22 @@
 				#footerleft { text-align: right; }
 				#footercenter {text-align: center; }
 				#footerright { text-align: left; }
+				#title, #description, #footer, .footerlink, #footerleft, #footercenter, #footerright, body {
+					text-shadow: none!important;
+					color: #444444!important;
+					text-shadow: 0px 3px 5px #aaaaaa!important;
+				}
 			}
 			/* for really small devices */
 			@media only screen and (max-width: 320px) {
-				#title { font-size: 12pt; }
+				#title { font-size: 12pt!important; }
 				#description { 
-					font-size: 8pt;
-					letter-spacing: .02em;
+					font-size: 8pt!important;
+					letter-spacing: .02em!important;
 				}
-				#description { font-size: 10pt; }
-				#footer { font-size: 7pt; }
-				#title, #description, #footer {
-					text-shadow: 0px 2px 5px #333333, 0px 2px 4px #252525!important;
-				}
-				#headerL { max-width: 140px; }
+				#description { font-size: 10pt!important; }
+				#footer { font-size: 7pt!important; }
+				#headerL { max-width: 140px!important; }
 			}
 		</style>
 		<title>Andrew Yaros's Portfolio</title>
@@ -178,11 +180,11 @@
 				<td id="footer"> <!-- Footer -->
 					<table width="100%"><tr width="100%">
 						<td id="footerleft" width="33%">
-						<a href="media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">R&eacute;sum&eacute;</a>
+						<a class="footerlink" href="media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1" >R&eacute;sum&eacute;</a>
 						</td><td id="footercenter" width="33%">
-						<a href="media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" class="footerlink">Portfolio&nbsp;PDF</a>
+						<a class="footerlink" href="media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Portfolio&nbsp;PDF</a>
 						</td><td id="footerright" width="33%">
-						<a href="mailto:ay@drexel.edu" class="footerlink">Contact</a><br/>
+						<a class="footerlink" href="mailto:ay@drexel.edu">Contact</a>
 						</td></tr>
 					</table>
 					<span id="copyright">&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</span>
