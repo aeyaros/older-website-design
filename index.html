@@ -7,161 +7,21 @@
 	by Andrew Yaros
 	~~~~~~~~~~~~-->
 	<head>
+		<title>Andrew Yaros's Portfolio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="white">
 		<meta name="apple-mobile-web-app-title" content="A.Y. Portfolio">
 		<link rel="shortcut icon" href="favicon.png?ver=1.1">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png?ver=1.1">
-		<style type="text/css" media="screen">	
-			@font-face{
-				font-family: "tachyonlite";
-				src: url("media/Tachyon_Light.otf")
-			}
-			@font-face {
-				font-family: "cmu";
-				src: url("media/cmunrm.otf");
-			}
-			@font-face {
-				font-family: "721";
-				src: url("media/Swiss721BT-Roman.otf");
-			}
-			html { height: 100%; }
-			html, body {
-				margin: 0;
-				overflow: auto;
-			}
-			body {
-				height: 99%;
-				background-image: linear-gradient(to bottom, #f2f2f2, white);
-				font-family: "721","Helvetica Neue", "Helvetica", "Arial", sans-serif;
-				font-size: 12pt;
-				color: black;
-				/*background-repeat:repeat-x;
-				background-size:auto;*/
-			}
-			#bodyTable {
-				height: 100%;
-				width: 100%;
-			}
-			.header, #footer { vertical-align: center; }
-			.header {
-				padding: 16px; /* padding */
-				margin: auto;
-				height: 5%;
-				max-height: 40px!important;
-			}
-			#headerR {
-				text-align: right;
-				width: 100%;
-			}
-			#headerL {
-				max-width: 280px;
-				text-align: left;
-			}
-			#title, #description, #footer {
-				text-shadow: 0px 3px 20px #333333, 0px 3px 6px #252525!important;
-			}
-			#title {
-				color: #f2f2f2!important;
-				background-position: center!important;
-				font-family: "tachyonlite", "Helvetica Neue", "Arial", sans-serif!important;
-				text-transform: uppercase!important;
-				letter-spacing: .325em!important;
-				font-size: 20pt;
-			}
-			#lastname { letter-spacing: .8em!important; }
-			#description {
-				font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-				font-weight: bold;
-				color: #f2f2f2;
-				text-transform: uppercase;
-				padding-top: 10px; /* padding btw title and description */
-				letter-spacing: .12em;
-				font-size: 14pt;
-			}
-			#gDriveDiv {
-				vertical-align: center;
-				margin: none;
-			}
-			#footer {
-				text-align: center;
-				padding-top: 16px; /*  padding */
-				font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-				font-weight: bold;
-				font-size: 12pt;
-				color:white;
-				height: 2%; /* height of footer */
-				max-height: 80px!important;
-				letter-spacing: .1em;
-				line-height: 2em;
-				text-transform: uppercase;
-				padding-bottom: 5px; /* padding */
-			}
-			#copyright {
-				font-family: "721", "Helvetica Neue", "Helvetica", "Arial Condensed", sans-serif!important;
-				font-weight: 200!important;
-				letter-spacing: .06em!important;
-				font-size: 5pt!important;
-				color:rgba(0,0,0,.45) !important;
-				text-shadow: none!important;
-				text-transform: none!important;
-				text-align: center!important;
-				padding-top: 6px!important;
-			}
-			a,a:visited {	
-				color: white;
-				text-decoration: none;
-			}
-			a:hover { 
-				color: rgba(100,100,100,.7);
-				text-decoration: overline;
-				text-shadow: 0px 0px 10px white, 0px 0px 12px gray;
-			}
-			.footerlink {
-				letter-spacing: .2em;
-			}
-			
-			/* for small devices */	
-			@media only screen and (max-width: 512px) {
-				.header{
-					padding-top: 10px; /* padding */
-					padding-bottom: 10px; /* padding */
-				}
-				#title { font-size: 15pt; }
-				#description { font-size: 10pt; }
-				#footer {
-					padding-top: 2px; /* padding */
-					font-weight: bold;
-					font-size: 10pt;
-					line-height: 11pt;
-					padding-bottom: 2px; /* padding */
-				}
-				#title, #description, #footer, .footerlink, #footerleft, #footercenter, #footerright, body {
-					text-shadow: none!important;
-					color: #000000!important;
-					text-shadow: 0px 3px 5px #888888!important;
-				}
-			}
-			/* for really small devices */
-			@media only screen and (max-width: 320px) {
-				#title { font-size: 12pt!important; }
-				#description { 
-					font-size: 8pt!important;
-					letter-spacing: .02em!important;
-				}
-				#description { font-size: 10pt!important; }
-				#footer { font-size: 7pt!important; }
-				#headerL { max-width: 140px!important; }
-				/*
-				#footerleft { text-align: right; }
-				#footercenter {text-align: center; }
-				#footerright { text-align: left; }
-				*/
-			}
-		</style>
-		<title>Andrew Yaros's Portfolio</title>
+		<!-- CSS CODE; this is important... -->
+		<link type="text/css" rel="stylesheet" href="index.css" media="all">
 	</head>
+	<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	This website is JavaScript-free
+	aside from a tiny script at the
+	bottom, for the copyright date.
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 	<body>
 		<table id="bodyTable">
 			<tr>
@@ -188,6 +48,7 @@
 						<a target="_blank" class="footerlink" href="mailto:ay@drexel.edu">Contact</a>
 						</td></tr>
 					</table>
+					<!-- Keep copyright date up to date -->
 					<span id="copyright">&copy;&nbsp;2013-<script>var today = new Date(); var year = today.getFullYear(); document.write(year);</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</span>
 				</td>
 			</tr>
