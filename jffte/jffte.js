@@ -1,5 +1,4 @@
-/* 
-========================================
+/* ======================================
 Team 94 CI 103 Spring 2018 Final Project
 ========================================
 Andrew Yaros
@@ -9,9 +8,7 @@ Riley Faulkner
 ========================================
 John Fry's Food Truck Extravaganza!
 Javascript code file
-========================================
-*/
-
+======================================*/
 
 		//==============================
 		// aey - Initialize Firebase
@@ -27,15 +24,9 @@ Javascript code file
 		
 		var fireBaseJSON = firebase.database().ref().child("JSONarray");
 		//==============================
-		
-
-		//==============================
 		//aey - javascript object trucks
 		//aey - DO NOT DELETE THIS
 		var localTruckArray = [];
-		//==============================
-		
-		
 		//===============================
 		//aey - load trucks from firebase
 		//===============================
@@ -61,22 +52,12 @@ Javascript code file
 							"time": {
 								"open": {"hour": fieldData.time.open.hour, "minute": fieldData.time.open.minute },
 								"closed": {"hour": fieldData.time.closed.hour, "minute": fieldData.time.closed.minute }
-							},
-							"menu": fieldData.menu /*  aey - contains menu items */
-						};
-						
-						//aey - push the new truck to the local array
+							}, "menu": fieldData.menu /*  aey - contains menu items */
+						}; //aey - push the new truck to the local array
 						localTruckArray.push(newTruckObject);
 				});
-			});
-			//aey - after the trucks are loaded, the main menu should be printed!
-			
-			
-			
+			}); //aey - after the trucks are loaded, the main menu should be printed!
 		}
-		
-		
-		
 		//===========================================================
 		//aey - THIS IS HOW TRUCKS AND MENU ITEMS SHOULD BE FORMATTED 
 		//aey - these are the formats for the JSON strings for the database
@@ -109,17 +90,8 @@ Javascript code file
 		};
 		
 		//===========================================================
-		//===========================================================
-		//===========================================================
-		//===========================================================
-		//===========================================================
-		//===========================================================
 
 		//aey - creating temporary test objects!!!!!
-		
-			
-				
-		
 		
 		/* aey - example objects from the example info from the maps demo*/
 		/*
@@ -243,7 +215,6 @@ Javascript code file
 */
 //////////////////////////////////////////////////////////////
 		
-		
 		//aey - given an ID, get the truck for that ID
 		//aey - else, return -1 if not found
 		function getTruckWithID(givenID) {
@@ -251,8 +222,7 @@ Javascript code file
 				if(localTruckArray[i].id == givenID) {
 					return localTruckArray[i];
 				}
-			}
-			return -1; //aey - truck wasnt found
+			} return -1; //aey - truck wasnt found
 		}
 				
 		
@@ -301,7 +271,6 @@ Javascript code file
 			if(hr != NaN && min != NaN) { //if hr and min are both numbers
 				//aey - put leading 0 onto minute
 				if(min < 10) min = "0" + min;
-				
 				if(hr == 12) return "12:" + min + "PM";  //for 12 PM
 				else if(hr > 11) { //then PM: 12 - 23 = 1PM - 11PM
 					return hr-12 + ":" + min + "PM";
@@ -324,7 +293,6 @@ Javascript code file
 		function timeToANumber(hr, min) {
 			theHr = parseInt(hr);
 			theMin = parseInt(min);
-			
 			if(theHr != NaN && theMin != NaN) {
 				return theHr + (theMin/60)
 			} else if(theHr == NaN) return "...Error: hour is NAN";
@@ -337,13 +305,11 @@ Javascript code file
 			var curDate = new Date();
 			var curHr = curDate.getHours();
 			var curMin = curDate.getMinutes();
-			
 			var curTime = timeToANumber(curHr, curMin);
 			if(curTime != NaN) { //aey - if current time is a number
 				//aey - get opening and closing times for the truck as numbers
 				var truckOpening = timeToANumber(getHourOpen(truckID), getMinuteOpen(truckID)); 
 				var truckClosing = timeToANumber(getHourClosed(truckID), getMinuteClosed(truckID));
-				
 				if(truckOpening == NaN || truckClosing == NaN) { //aey - if either of those times is NaN
 					if(truckOpening == NaN) return truckOpening; //aey - return error message that timeToAnumber gave
 					else return truckClosing; //aey - return error message that timeToAnumber gave
@@ -369,7 +335,6 @@ Javascript code file
 		//aey - return "open" or "closed" if its open or closed
 		function getOpenClosed(truckID) {
 			var tempStatus = isOpen(truckID);
-			
 			if(tempStatus == true) return "open";
 			else if(tempStatus == false) return "closed";
 			else return tempStatus; //aey - return error isOpen gave
@@ -382,7 +347,6 @@ Javascript code file
 			var buttonString = "<button class=\"button1\" id=\"backButton\" " +
 							   "onclick=\"pickAMenu('" + menuType + "','" + 
 								truckID + "')\" >" + buttonText + "</button>";
-			
 			return buttonString;
 		}
 		
@@ -390,13 +354,10 @@ Javascript code file
 		//aey - color changes either red or green
 		function isOpenTextPanel(truckID) {
 			var htmlString = "<div ";
-			
 			//aey - add the status; change the class for the status text
 			if(isOpen(truckID) == true) htmlString += "id=\"mainMenuTruckOpen\">"; //aey - truck is open, green
 			else htmlString += "id=\"mainMenuTruckClosed\">"; //aey - truck is closed, or error, red
-			
 			htmlString += "Currently " + getOpenClosed(truckID) + ".</div>";
-			
 			return htmlString;
 		}
 		
@@ -404,19 +365,14 @@ Javascript code file
 		//aey - color changes either red or green
 		function isOpenTextPanel2(truckID) {
 			var htmlString = "<div ";
-			
 			//aey - add the status; change the class for the status text
 			if(isOpen(truckID) == true) htmlString += "id=\"mainMenuTruckOpen2\">"; //aey - truck is open, green
 			else htmlString += "id=\"mainMenuTruckClosed2\">"; //aey - truck is closed, or error, red
-			
 			htmlString += "Currently <br/>" + getOpenClosed(truckID) + "</div>";
-			
 			return htmlString;
 		}
 		
-		
 		/* aey - set up main menu */
-		
 		
 		//aey - creates an html table of the main menu with a list of all food trucks as buttons to click
 		function setUpMainMenu() {
@@ -424,8 +380,7 @@ Javascript code file
 			//aey - print name, location description, etc.
 			//aey - each menu item is a link/button that, when clicked, takes you to that trucks menu
 			//aey - you can do this because you take the id of the current truck and build the appropriate html			
-			
-			
+						
 			var mainMenuString = "<table id=\"mainMenuTable\" width=\"100%\">";
 			mainMenuString += "<tr><td><div id=\"menuTitleText\">Main menu</div><div id=\"menuSubtitleText\">Please choose a truck:</div></td></tr>";
 			
@@ -452,8 +407,7 @@ Javascript code file
 				//aey - first we set up the id
 				//aey - then we set up the class
 				mainMenuString += "<td class=\"";
-				
-				
+								
 				if(n == 1) mainMenuString+= "singleItem\" style=\"border-radius: 25px; "; //aey - just in case if only one item, then all corners are round; set style, class singleitem never used
 				else {
 					if(i == 0) mainMenuString += "mainMenuFieldBegin "; //aey - beginning, top corners round
@@ -464,7 +418,6 @@ Javascript code file
 					if((i % 2 == 0) && (n != 1)) mainMenuString += " menuFieldEven"; //for evens
 					else mainMenuString += " menuFieldOdd"; //for odds
 				}
-				
 				
 				mainMenuString += "\">"; //end of td tag
 				
@@ -478,9 +431,7 @@ Javascript code file
 				mainMenuString += "</td><td><div id=\"priceRangeMainMenu\">Price range: <br/>" + calculatePriceRange(localTruckArray[i].menu) + "</div></td></tr></table>";
 				
 				mainMenuString += "</td></tr>";
-			}
-			mainMenuString += "</table>";
-			
+			} mainMenuString += "</table>";
 			return mainMenuString;
 		}
 		
@@ -583,10 +534,8 @@ Javascript code file
 				} else {
 					menutable += "<td class=\"foodInfoColumn2\">"
 				}
-				
 				menutable += "  $"+ menu[i].price + "</td></tr>";
 			}
-			
 			return menutable;
 		}
 		
@@ -615,8 +564,7 @@ Javascript code file
 				if(currentPrice < min) { //if current is less than current min
 					min = currentPrice; //set a new minimum
 				}
-			}
-			var priceRange = "$" + min.toFixed(2) + " to $" + max.toFixed(2) + "";
+			} var priceRange = "$" + min.toFixed(2) + " to $" + max.toFixed(2) + "";
 			return priceRange;
 		}
 
@@ -657,8 +605,7 @@ Javascript code file
 				printOutAMenu(headerString + setUpMainMenu());
 				//aey - reset the zoom for the map
 				resetMap();	
-			}
-			else if (menuType == "truck") {
+			} else if (menuType == "truck") {
 				//aey - get, then print html string for truck's information menu
 				printOutAMenu(headerString + setUpTruckMenu(truckID));
 				zoomToTruck(truckID);
@@ -762,8 +709,7 @@ Javascript code file
 					position: new google.maps.LatLng( parseFloat(localTruckArray[i].lat), parseFloat(localTruckArray[i].lng)),
 					draggable: false,
 					map: map
-				});
-				//aey - add listener to the current marker
+				}); //aey - add listener to the current marker
 				google.maps.event.addListener(currentMarker, 'click', (function(currentMarker, i) {
 					return function() {
 						map.setZoom(17.5);
@@ -786,10 +732,9 @@ Javascript code file
 					break;
 				}
 			}
-		}
-		//aey - reset the map when returning to the main menu
+		} //aey - reset the map when returning to the main menu
 		function resetMap() {
 			originalCenter = { "lat":39.9557402, "lng":-75.1898869};
 			map.setCenter(originalCenter);
 			map.setZoom(16.48);
-		}	
+		}

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		Team 94 CI 103 Spring 2018 Final Project 
-		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		Andrew Yaros, who did most of the work here
-		https://andrewyaros.com/jffte/toldyouso.png
-		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<!-- Jacob Proctor -->
-		<!-- Jung Ho Baek -->
-		<!-- Riley Faulkner -->
 		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 		John Fry's Food Truck Extravaganza! 
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<!-- HTML file -->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Drexel CI103 Team 94 Spring 2018 Final Project
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Andrew Yaros, who did most of the real work
+		here for this project's final deliverables!
+		https://andrewyaros.com/jffte/toldyouso.png
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+		<!-- Jacob Proctor  -->
+		<!-- Jung Ho Baek   -->
+		<!-- Riley Faulkner -->
+		<!--~~~~~
+		HTML file
+		~~~~~~-->
 		<meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no" charset="UTF-8" />
 		<title>John Fry's Food Truck Extravaganza!</title>
 		<!-- aey - google fonts links -->
@@ -31,44 +34,31 @@
 		<script src="jffte.js" ></script>
 		
 		<!-- aey - THE CSS CODE -->
-		<link type="text/css" rel="stylesheet" href="jffte.css" media="all">
-		
-		
+		<link type="text/css" rel="stylesheet" href="jffte.css" media="all">	
 	</head>
 	<body>
 		<!-- the application -->
 		<div id="app">
-			
 			<!-- The map -->
-			<div id="appMapPanel">
-				<div id="map"></div>
-			</div>
+			<div id="appMapPanel"><div id="map"></div></div>
 			
 			<!-- The menu panel -->
-			<div id="appMenuPanel">
-				
-				<div id="theMenuPanel"></div>
-			</div>
+			<div id="appMenuPanel"><div id="theMenuPanel"></div></div>
 			
 			<script>
-				/* aey - since loading takes time, I'm going to just delay until things are ready*/
+				/* aey - since loading takes time, I'm going to just delay until things are ready */
 				/* aey - load the trucks from firebase; this will also print out the main menu */
 				loadTrucks();
-				setTimeout(function (){
+				setTimeout(function () {
 					//aey - load the main menu
 					pickAMenu("main","");
 					//aey - load the map
 					var script = document.createElement('script');
 					script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAEZzn1fHUb_bqYXNIFUS2vDQVW9PqPluk&callback=initMap";
 					document.getElementsByTagName('endScript')[0].appendChild(script);
-
 				}, 2000);
 			</script>			
-		</div>
-					
-		<!-- aey - google maps script, with andrews api key -->
-		<!-- sssshhhhhhhhhhhhhhhhhhhh -->
-		<endScript></endscript>
+		</div><endScript></endscript>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEZzn1fHUb_bqYXNIFUS2vDQVW9PqPluk&callback=initMap" asyncv
 			defer></script>		
 	</body>
