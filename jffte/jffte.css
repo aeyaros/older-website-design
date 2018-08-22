@@ -1,0 +1,289 @@
+/* 
+========================================
+Team 94 CI 103 Spring 2018 Final Project
+========================================
+Andrew Yaros
+Jacob Proctor
+Jung Ho Baek
+Riley Faulkner
+========================================
+John Fry's Food Truck Extravaganza!
+CSS file
+========================================
+*/
+
+/* ==================== general stuff ==================== */
+
+html, body {
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+}
+body {
+	margin: auto;
+	color: white;
+	background-color: rgb(4,42,76);
+	font-family: 'Crimson Text', serif;
+	font-size: 14pt;
+}
+#app { /* aey - the entirety of the app: the map, and the menus are enclosed within */
+	height: 97%;	/* aey - height of the body of the entire app */
+	width: 97%;
+	margin: auto;
+	float: top;	
+}
+h1, h2, h3, h4, h5, #header, #menuTitleText, #truckMenuTitleText, #menuSubtitleText {
+	color: rgb(253,193,57);
+}
+
+
+/* ==================== important containers ==================== */		
+
+#appMenuPanel, #appMapPanel {
+	float: left!important;
+	height: 100%;
+	width:	47%;
+}
+
+#appMenuPanel { /* aey - table containg the button panel and menu panel */
+	 	/* aey - width of the side panel */
+	vertical-align: text-top;
+	margin: 1.5%;
+	margin-left: 0%;
+}
+#appMapPanel {  /* aey - this is where the map div is located */
+	margin: 1.5%;
+	margin-right: 0%;
+}
+		
+/* ==================== responsive formatting ==================== */
+
+@media only screen and (orientation: portrait) {
+	/* vertical layout for portrait devices */
+	#appMenuPanel {
+		width: 100%;
+		height: 48%;
+		margin: 1.5%;
+		margin-bottom: 0%;
+	}
+	#appMapPanel {
+		width: 100%;
+		height: 48%;
+		
+		margin: 1.5%;
+		margin-top: 0%;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	body {
+		font-size: 14pt!important;
+	}
+	.menuFieldEven, .menuFieldOdd {
+		font-size: 16pt;
+	}
+	.tableInfoColumn1, .tableInfoColumn2, .foodInfoColumn1,.foodInfoColumn2 {
+		/* table font size change can go here */
+	}
+}
+
+
+/* ==================== main content divs ==================== */
+
+#theMenuPanel {/* aey - this is a div where the menu is printed */
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+/* rf - Always set the map height explicitly to define the size of the div
+ * rf - element that contains the map. */
+#map { /* aey - this is the map itself */
+	height: 100%;
+	width: 100%;
+	position: static;
+}
+
+/* ==================== controls ==================== */
+
+.button1 {/* aey - a style of button */
+	text-align: center;
+	background-color: rgb(54,92,126);
+	color: white;
+	border: 1px solid rgb(104,142,176);
+	font-size: 12pt;
+	padding: 12px;
+	font-weight: normal;
+}
+#backButton { /* aey - size info for back button */
+	background-color: rgb(24,62,96);
+}
+.button1:hover, #backButton:hover { 
+	background-color: white;
+	color: black;
+}
+#mainMenuTitleButton {
+	font-family: 'Open Sans Condensed','Barlow Semi Condensed', sans-serif;
+	font-size: 15pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	width: 100%;
+	margin-top: 10px;
+	margin- bottom: 20px;
+}
+.button1, #mainMenuTruckOpen, #mainMenuTruckClosed {
+	border-radius: 20px;
+}
+
+/* ==================== tables ==================== */
+
+#header{
+	width: 100%;
+	max-width: 768px;
+	margin: auto;
+	
+}
+
+#mainMenuTable, #truckFoodTable, #truckInfoTable, #truckInfoBackButton { /* aey - menus where the tables are printed */
+	width: 100%;
+	padding: 20px;
+	max-width: 768px;
+	margin: auto;
+	padding-top: 0px;
+}
+
+/* aey - font-sizes for tables with information*/
+.tableInfoColumn1, .tableInfoColumn2, .foodInfoColumn1,.foodInfoColumn2 {
+	font-size: 15pt;
+	padding: 7px;
+}
+/* aey - for the truck info table: */
+.tableInfoColumn1, .foodInfoColumn1 { /* aey - truck information menu column 1 */
+	font-weight: 200;
+	text-align: right;
+	padding-right: 10px;
+}
+.tableInfoColumn2, .foodInfoColumn2 { /* aey - truck information menu column 2 */
+	font-weight: 400;
+	text-align: left;
+	padding-right: 10px;
+}
+.tableInfoColumn1 {
+	width: 35%;
+	min-width: 90px;
+}
+.foodInfoColumn2 {
+	width: 35%;
+	min-width: 70px;
+}
+
+
+/* ==================== menu elements ==================== */
+
+.menuFieldEven, .menuFieldOdd { /* aey - for main menu; each field of info about a truck that is printed */
+	width: 100%;
+	height: 30px; /* aey - height of each row in the menu*/
+	padding: 10px;
+	vertical-align: center;
+	padding-left: 25px;
+}
+.menuFieldEven {
+	background-color: rgb(14,52,86); 
+}
+.menuFieldOdd {
+	background-color: rgb(24,62,96);
+}
+
+#truckMenuTruckOpen, #truckMenuTruckClosed {
+	border-radius: 10px;
+}
+.mainMenuFieldBegin { /* aey - start and end of menus are rounded */
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.mainMenuFieldEnd {
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+#beginTableMenuL {
+	border-top-left-radius: 25px;
+}
+#beginTableMenuR {
+	border-top-right-radius: 25px;
+}
+#endTableMenuL {
+	border-bottom-left-radius: 25px;
+}
+#endTableMenuR {
+	border-bottom-right-radius: 25px;
+}
+
+#menuTitleText{
+	text-align: center;
+	font-size: 28pt;
+	font-weight: bold;
+	font-family: 'Open Sans Condensed','Barlow', sans-serif;
+	font-style: 'Condensed';
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#truckMenuTitleText {
+	text-align: center;
+	font-size: 28pt;
+	font-weight: bold;
+	font-family: 'Open Sans Condensed','Barlow Semi Condensed', sans-serif;
+	font-style: 'Condensed';
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+#menuSubtitleText{
+	text-align: center;
+	font-size: 17pt;
+	padding-bottom: 10px; /* aey - padding betwen subtitle and menu choices */
+}
+/* aey - on main menu: div for isOpen/Closed and for pricerange */
+#mainMenuTruckOpen, #mainMenuTruckClosed, #mainMenuTruckOpen2, #mainMenuTruckClosed2, #priceRangeMainMenu {
+	font-family: 'Crimson Text', serif;
+	font-weight: bold;
+	font-size: 13pt;
+	text-align: center;
+	vertical-align: center;
+	border-radius: 20px;
+	margin-bottom: 0px;
+	letter-spacing: 0px;
+}
+#mainMenuTruckOpen, #mainMenuTruckClosed { /* for truck menu */
+	width: 90%;
+	height: 100%;
+	margin: auto;
+	border-radius: 25px;
+}
+#mainMenuTruckOpen2, #mainMenuTruckClosed2, #priceRangeMainMenu {  /* for main menu */
+	width: 95%;
+	height: 100%!important;
+	margin-top: 8px;
+}
+#mainMenuTruckOpen2, #mainMenuTruckClosed2 {
+	float: left;
+}
+#mainMenuTruckOpen, #mainMenuTruckOpen2{  /* for open */
+	color: rgb(0,255,0);
+	background-color: rgb(0,60,0);
+	border: 1px solid rgb(0,10,0);
+}
+#mainMenuTruckClosed, #mainMenuTruckClosed2{  /* for closed */
+	color: rgb(255,0,0);
+	background-color: rgb(50,0,0);
+	border: 1px solid rgb(10,0,0);
+}
+#priceRangeMainMenu { /* the price range on the main menu */
+	color: rgb(253,193,57);
+	background-color: rgb(4,42,76);
+	border: 1px solid rgb(10,0,0);
+	text-align: center;
+	font-weight: 400;
+	letter-spacing: .5px;
+	float: right;
+}
