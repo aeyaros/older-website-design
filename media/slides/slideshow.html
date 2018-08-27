@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		/*body {
+			background-image: url("stanford.jpeg");
+			background-size: cover!important;
+			background-repeat: no-repeat;
+		}*/
+		#hero-image {
+			background-image: url("stanford.jpeg"); /* The image used */
+			background-color: #cccccc; /* Used if the image is unavailable */
+			height: 500px; /* You must set a specified height */
+			background-position: center; /* Center the image */
+			background-repeat: no-repeat; /* Do not repeat the image */
+			background-size: cover; /* Resize the background image to cover the entire container */
+		}
+		</style>
+		<script>
+		var slideNames = [
+			"ark.jpeg", 
+			"athena.jpeg", 
+			"gropius.jpeg", 
+			"lancaster.jpeg", 
+			"manifold.jpeg", 
+			"shell.jpeg", 
+			"stanford.jpeg", 
+			"wefa.jpeg"
+		]; var n = slideNames.length;
+		
+		var i = 0;		
+		//change the image to the next one
+		function changeSlide() {
+			//change image to next item in array
+			document. = url(slideNames[i]);
+						
+			//increment counter variable
+			if(i+1 < n) i++;
+			else i=0;
+		} setInterval(changeSlide, 1500);
+		</script>
+	</head>
+	<body>
+		<div id="hero-image">
+		</div>
+	</body>
+</html>

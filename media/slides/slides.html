@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Slideshow</title>
+		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
+
+		<style>
+			body {
+				overflow: hidden;
+			}
+			#slide {
+				width:100%;
+				vertical-align: center;
+			}
+			@media only screen and (orientation: portrait) {
+				#slide {
+					height: 100%!important;
+					width: auto;
+					margin: auto;
+				}
+			}
+		</style>
+		<script>
+		//change the slides every few seconds
+		var numMilSec = 1500; //number of milliseconds
+		
+		//array with the names of each image
+		var slideNames = [
+			"ark.jpeg", 
+			"athena.jpeg", 
+			"gropius.jpeg", 
+			"lancaster.jpeg", 
+			"manifold.jpeg", 
+			"shell.jpeg", 
+			"stanford.jpeg", 
+			"wefa.jpeg"
+		]; var n = slideNames.length;
+		
+		var i = 0;		
+		//change the image to the next one
+		function changeSlide() {
+			//change image to next item in array
+			document.getElementById("slide").src = slideNames[i];
+			document.hero.style.background = color
+			//increment counter variable
+			if(i+1 < n) i++;
+			else i=0;
+		} setInterval(changeSlide, numMilSec);
+		</script>
+	</head>
+	<body>
+		<div id="hero"></div>
+		<img id="slide" src="stanford.jpeg">
+	</body>
+</html>
