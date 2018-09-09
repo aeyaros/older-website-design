@@ -83,7 +83,7 @@ html, body {
 	padding-bottom: 2px; /* padding */
 }.footer {
 	float: left;
-	width: 33%; 
+	width: 33.33%; 
 	margin: auto;
 	text-align: center;
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
