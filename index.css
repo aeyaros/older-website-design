@@ -18,7 +18,7 @@ Andrew Yaros :)
 @font-face {
 	font-family: "721";
 	src: url("media/Swiss721BT-Roman.otf");
-}
+} 
 html { height: 100%; }
 html, body {
 	margin: 0;
@@ -35,19 +35,20 @@ html, body {
 } #bodyTable {
 	height: 100%;
 	width: 100%;
-} .header, #footer { vertical-align: center; }
+} .header, .footer { vertical-align: center; }
 .header {
-	padding: 16px; /* padding */
+	padding: 3%; /* padding */
 	margin: auto;
 	height: 5%;
-	max-height: 40px!important;
-} #headerR { text-align: right; } 
-#headerL {
-	max-width: 280px;
+	max-height: 40px;
+} #headerR { 
+	text-align: right;
+} #headerL {
+	max-width: 280px!important;
 	text-align: left;
-} #title, #description, #footer, a, a:visited { color: #666666!important; } 
-#title, #description, #footer { 
-	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #8f8f8f!important;
+} #title, #description, .footer, a, a:visited { color: #666666!important; } 
+#title, #description, .footer { 
+	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #8f8f8f;
 } #title {
 	background-position: center!important;
 	font-family: "tachyonlite", "Helvetica Neue", "Arial", sans-serif!important;
@@ -67,18 +68,18 @@ html, body {
 } #mainContentDiv {
 	vertical-align: center;
 	margin: none;
-} #footer {
+} .footer {
 	text-align: center;
-	padding-top: 16px; /*  padding */
+	padding-top: 9px; /*  padding */
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: normal;
 	font-size: 12pt;
-	height: 2%; /* height of footer */
-	max-height: 80px!important;
+	height: 1.5%; /* height of footer */
+	max-height: 40px;
 	letter-spacing: .1em;
 	line-height: 2em;
 	text-transform: uppercase;
-	padding-bottom: 5px; /* padding */
+	padding-bottom: 2px; /* padding */
 } #copyright {
 	font-family: "721", "Helvetica Neue", "Helvetica", "Arial Condensed", sans-serif!important;
 	font-weight: 200!important;
@@ -88,7 +89,10 @@ html, body {
 	text-shadow: none!important;
 	text-transform: none!important;
 	text-align: center!important;
-	padding-top: 6px!important;
+	padding: 3px;
+} .copyright {
+	text-align: center;
+	margin: auto;
 } a, a:visited { text-decoration: none; } 
 a:hover { 
 	color: rgba(100,100,100,.6);
@@ -103,27 +107,49 @@ td { border: none!important; }
 		padding-bottom: 10px; /* padding */
 	} #title { font-size: 15pt; } 
 	#description { font-size: 10pt; }
-	#footer {
+	.footer {
 		padding-top: 2px; /* padding */
 		font-size: 10pt;
 		letter-spacing: .3em;
 		line-height: 11pt;
 		padding-bottom: 2px; /* padding */
-	} .header, #title, #description, #footer, .footerlink, #footerleft, #footercenter, #footerright, body {
-		color: #000000!important;
-		text-shadow: 0px 3px 5px #888888!important;
+	} .header, #title, #description, .footer, .footerlink, #footerleft, #footercenter, #footerright, body {
+		text-shadow: 0px 3px 5px #888888;
 	}
 } /* for really small devices */
 @media only screen and (max-width: 360px) {
-	#title { font-size: 12pt!important; }
+	#title { font-size: 12pt; }
 	#description { 
-		font-size: 8pt!important;
-		letter-spacing: .02em!important;
-	} #description { font-size: 10pt!important; }
-	#footer { font-size: 7pt!important; }
-	#headerL { max-width: 140px!important; }
+		font-size: 8pt;
+		letter-spacing: .02em;
+	} .footer { font-size: 7pt; }
+	#headerL { max-width: 140px; }
+	.header {
+		padding: 8px; /* padding */
+		margin: auto;
+		height: 2%;
+		max-height: 30px;
+	}
 }
-@media only screen and (max-width: 256px) {
+@media only screen and (max-width: 280px) {
+	#title { font-size: 8pt; }
+	#description { 
+		font-size: 6pt;
+		line-height: .2em!important;
+		letter-spacing: 0em;
+	} #headerL { 
+		width: 80%;
+	} #headerR { 
+		width: 0%;
+		display: none;
+	} .header {
+		padding: 3px; /* padding */
+		margin: auto;
+		max-height: 20px!important;
+	} .footer { 
+		font-size: 6pt;
+		letter-spacing: 0em;
+	}
 	#footerleft { text-align: right; }
 	#footercenter {text-align: center; }
 	#footerright { text-align: left; }
