@@ -10,16 +10,13 @@ Andrew Yaros :)
 @font-face{
 	font-family: "tachyonthin";
 	src: url("media/Tachyon_Thin.otf")
-}
-@font-face {
+} @font-face {
 	font-family: "cmu";
 	src: url("media/cmunrm.otf");
-}
-@font-face {
+} @font-face {
 	font-family: "721";
 	src: url("media/Swiss721BT-Roman.otf");
-} 
-html,body { height: 100%; }
+} html,body { height: 100%; }
 html, body {
 	margin: 0;
 	overflow: auto;
@@ -28,11 +25,8 @@ html, body {
 	font-family: "721","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-size: 12pt;
 	color: #000000;
-	/*background-repeat:repeat-x;
-	background-size:auto;*/
 } #bodyDiv{
 	height: 99%;
-	margin: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: stretch;
@@ -41,19 +35,13 @@ html, body {
 } #header, .footer { vertical-align: center; }
 #header{
 	padding: 10px; /* padding */
-	/*height: 5%;
-	max-height: 40px!important;*/
 	display: flex;
 	justify-content: space-between; /* horizontal align */
 	align-items: center; /* vertical align */
 	flex-wrap: nowrap;
-} #headerR { 
-	/*float: right;*/
-	text-align: right;
-} #headerL {
-	/*float: left;*/
-	text-align: left;
-} #title, #description, .footer, a, a:visited { color: #666666!important; } 
+} #headerR { text-align: right; }
+#headerL { text-align: left; }
+#title, #description, .footer, a, a:visited { color: #666666!important; } 
 #title, #description, .footer { 
 	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #8f8f8f;
 } #title {
@@ -78,8 +66,6 @@ html, body {
 	border: none;
 	flex: 1;
 } #footer{
-	/*height: 1.5%; /* height of footer */
-	/*max-height: 30px!important;*/
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -87,7 +73,6 @@ html, body {
 }.footer {
 	padding-top: 9px; /*  padding */
 	padding-bottom: 2px; /* padding */
-	/*float: left;*/
 	width: 30%; 
 	margin: auto;
 	text-align: center;
@@ -109,7 +94,6 @@ html, body {
 	padding: 4px;
 	text-align: center;
 	margin: auto;
-	/*height:10px!important;*/
 } a, a:visited { text-decoration: none; } 
 a:hover { 
 	color: rgba(100,100,100,.6);
@@ -127,14 +111,11 @@ div { border: none!important; }
 	#footer{
 		padding-top: 2px; /* padding */
 		padding-bottom: 2px; /* padding */
-	}
-	.footer {
+	} .footer {
 		font-size: 10pt;
 		letter-spacing: .3em;
 		line-height: 11pt;
-	} .header, #title, #description, .footer, .footerlink, body {
-		text-shadow: 0px 3px 5px #888888;
-	}
+	} .header, #title, #description, .footer, .footerlink, body { text-shadow: 0px 3px 5px #888888; }
 } /* for really small devices */
 @media only screen and (max-width: 360px) {
 	#title { font-size: 12pt; }
@@ -144,60 +125,40 @@ div { border: none!important; }
 	} .header {
 		padding: 8px; /* padding */
 		margin: auto;
-		/*height: 2%;
-		max-height: 30px;*/
-	} #headerL {
 	} .footer { font-size: 7pt; }
 	#footer {
 		padding-top:1px;
 		padding-bottom: 1px
 	}
-}
+} /*tiny screens; wrap title text*/
 @media only screen and (max-width: 260px) {
 	#title { font-size: 8pt; }
 	#description { 
 		font-size: 6pt;
 		line-height: .2em;
 		letter-spacing: 0em;
-	} #mainContent {
-		/*min-height: 0px;*/
-	} 
-	#headerL { 
-	} #headerR { 
-	} .header {
+	} #header { flex-wrap: wrap; }
+	.header {
 		padding-left: 0px; /* padding */
 		padding-right: 0px;
 		padding-top: 0px;
 		padding-bottom: 0px;
 		margin: auto;
-		/*max-height: 20px;*/
-	} .footer { 
-		font-size: 6pt;
-		padding: 2px;
-		width: 100%!important;
-	}
-}
-/*tiny screens; wrap title text*/
-@media only screen and (max-width: 260px) {
-	#header {
-		flex-wrap: wrap;
 	} #headerL{
-		/*float:none;*/
 		text-align: center;
 		width: 100%;
 		margin: auto;
 	} #headerR {
 		text-align: center;
 		margin: auto;
+	}.footer { 
+		font-size: 6pt;
+		padding: 2px;
+		width: 100%!important;
 	}
-}
-/* very very tiny screens :) */
+} /* very very tiny screens :) */
 @media only screen and (max-height: 260px) {
-	#mainContent {
-		display: none;
-	} #footer {
-		flex: 1;
-	} .footer {
-		padding: 4px;
-	}
+	#mainContent { display: none; } 
+	#footer { flex: 1; }
+	.footer { padding: 4px; }
 }
