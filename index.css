@@ -8,8 +8,8 @@ Andrew Yaros :)
 \*************/
 
 
-/*************************************************/
 /* Fonts */
+/*************************************************/
 @font-face{
 	font-family: "tachyonthin";
 	src: url("media/Tachyon_Thin.otf")
@@ -24,8 +24,8 @@ Andrew Yaros :)
 }
 
 
-/*************************************************/
 /* Overall page format */
+/*************************************************/
 html,body { height: 100%; }
 html, body {
 	margin: 0;
@@ -52,8 +52,8 @@ a:hover {
 } div { border: none!important; }
 
 
-/*************************************************/
 /* Header */
+/*************************************************/
 #header, .footer { vertical-align: center; }
 #header{
 	padding: 2.5%; /* padding */
@@ -85,8 +85,8 @@ a:hover {
 } 
 
 
-/*************************************************/
 /* Main page content */
+/*************************************************/
 #mainContent {
 	margin: none;
 	display: flex;
@@ -95,8 +95,8 @@ a:hover {
 }
 
 
-/*************************************************/
 /* Footer */
+/*************************************************/
 #footer{
 	display: flex;
 	justify-content: space-between;
@@ -131,10 +131,11 @@ a:hover {
 
 /*************************************************/
 /* Responsive design rules */
-
-
 /*************************************************/
+
+
 /* for larger/desktop devices */
+/*************************************************/
 @media only screen and (min-width: 850px) {
 	#title { font-size: 20pt; }
 	#description { font-size: 14pt; } 
@@ -150,8 +151,8 @@ a:hover {
 }
 
 
+/* for smaller devices */
 /*************************************************/
-/* for smaller devices */	
 @media only screen and (max-width: 550px) {
 	#title { font-size: 4.75vw; } 
 	#description { 
@@ -164,8 +165,8 @@ a:hover {
 }
 
 
-/*************************************************/
 /*very tiny screens; wrap title and description*/
+/*************************************************/
 @media only screen and (max-width: 260px) {
 	#title { font-size: 8pt; }
 	#description { 
@@ -194,8 +195,8 @@ a:hover {
 }
 
 
-/*************************************************/
 /* if height is too small then hide the iframe */
+/*************************************************/
 @media only screen and (max-height: 260px) {
 	#mainContent { display: none; }
 	#footer { flex: 1; } 
