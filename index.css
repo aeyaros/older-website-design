@@ -42,7 +42,7 @@ html, body {
 	justify-content: stretch;
 	flex-wrap: nowrap;
 	align-items: stretch;
-	min-width: 200px;
+	min-width: 170px;
 	min-height: 160px;
 } a, a:visited { text-decoration: none; } 
 a:hover { 
@@ -56,13 +56,14 @@ a:hover {
 /* Header */
 #header, .footer { vertical-align: center; }
 #header{
-	padding: 16px; /* padding */
+	padding: 2.5%; /* padding */
 	display: flex;
 	justify-content: space-between; /* horizontal align */
 	align-items: center; /* vertical align */
 	flex-wrap: nowrap;
-} #headerR { text-align: right; }
-#headerL { text-align: left; }
+} #headerR { 
+	text-align: right;
+} #headerL { text-align: left; }
 #title, #description, .footer, a, a:visited { color: #666666!important; } 
 #title, #description, .footer { 
 	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #8f8f8f;
@@ -71,16 +72,16 @@ a:hover {
 	font-family: "tachyonthin", "Helvetica Neue", "Arial", sans-serif!important;
 	text-transform: uppercase!important;
 	letter-spacing: .25em!important;
-	font-size: 20pt;
+	font-size: 3.5vw;
 	font-weight: normal;
 } #lastname { letter-spacing: .75em!important; }
 #description {
-	letter-spacing: .12em;
+	letter-spacing: .07em;
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: normal;
 	text-transform: uppercase;
-	letter-spacing: .12em;
-	font-size: 14pt;
+	letter-spacing: .07em;
+	font-size: 2vw;
 } 
 
 
@@ -98,18 +99,18 @@ a:hover {
 /* Footer */
 #footer{
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-content: center;
 	flex-wrap: wrap;
 }.footer {
-	padding-top: 9px; /*  padding */
+	padding-top: 10px; /*  padding */
 	padding-bottom: 2px; /* padding */
-	width: 30%; 
+	max-width: 33%; 
 	margin: auto;
 	text-align: center;
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: normal;
-	font-size: 12pt;
+	font-size: 2vw;
 	letter-spacing: .1em;
 	line-height: 2em;
 	text-transform: uppercase;
@@ -133,51 +134,43 @@ a:hover {
 
 
 /*************************************************/
-/* for small devices */	
-@media only screen and (max-width: 600px) {
-	#header{
-		padding-top: 10px; /* padding */
-		padding-bottom: 10px; /* padding */
-	} #title { font-size: 15pt; } 
-	#description { font-size: 10pt; }
-	#footer{
-		padding-top: 2px; /* padding */
-		padding-bottom: 2px; /* padding */
-	} .footer {
-		font-size: 10pt;
-		letter-spacing: .3em;
-		line-height: 11pt;
-	} #header, #title, #description, .footer, .footerlink {
+/* for larger/desktop devices */
+@media only screen and (min-width: 850px) {
+	#title { font-size: 20pt; }
+	#description { font-size: 14pt; } 
+	#header { padding: 16px; }
+	.header {
+		padding: 8px; /* padding */
+		margin: auto;
+	} .footer { font-size: 13.5pt; }
+	#footer {
+		padding-top:6px;
+		padding-bottom: 1px;
+	}
+}
+
+
+/*************************************************/
+/* for smaller devices */	
+@media only screen and (max-width: 550px) {
+	#title { font-size: 4.75vw; } 
+	#description { 
+		font-size: 2.75vw;
+	}
+	.footer { font-size: 2.75vw; } 
+	#header, #title, #description, .footer, .footerlink {
 		text-shadow: 0px 3px 5px #888888; 
 	}
 }
 
 
 /*************************************************/
-/* for really small devices */
-@media only screen and (max-width: 360px) {
-	#title { font-size: 12pt; }
-	#description { 
-		font-size: 8pt;
-		letter-spacing: .02em;
-	} .header {
-		padding: 8px; /* padding */
-		margin: auto;
-	} .footer { font-size: 7pt; }
-	#footer {
-		padding-top:1px;
-		padding-bottom: 1px
-	}
-}
-
-
-/*************************************************/
-/*tiny screens; wrap title and description*/
+/*very tiny screens; wrap title and description*/
 @media only screen and (max-width: 260px) {
 	#title { font-size: 8pt; }
 	#description { 
 		font-size: 6pt;
-		letter-spacing: 0em;
+		letter-spacing: 0.1em;
 		padding: none;
 	} #header { 
 		flex-wrap: wrap;
@@ -190,18 +183,24 @@ a:hover {
 	} #headerR {
 		text-align: center;
 		margin: auto;
+		width: 85%;
 	}.footer { 
 		font-size: 6pt;
-		padding: 2px;
-		width: 100%!important;
-	}
+		padding-bottom: 2px;
+		padding-top: 4px;
+		min-width: 45%;
+		width: 45%;
+	} .footerlink{ font-style: bold; }
 }
 
 
 /*************************************************/
-/* if the height is too small to show the iframe */
+/* if height is too small then hide the iframe */
 @media only screen and (max-height: 260px) {
 	#mainContent { display: none; }
-	#footer { flex: 1; }
-	.footer { padding: 4px; }
+	#footer { flex: 1; } 
+	.footer {
+		min-width: 47%;
+		width: 47%;
+	} .footerlink{ font-style: bold; }
 }
