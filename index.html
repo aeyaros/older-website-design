@@ -7,59 +7,82 @@
 	by Andrew Yaros
 	~~~~~~~~~~~~-->
 	<head>
+		<!-- CSS CODE: obviously this is important... -->
+		<link type="text/css" rel="stylesheet" href="index.css" media="all">
+		
 		<title>Andrew Yaros's Portfolio</title>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
+		
+		<!-- Favicon stuff -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="white">
 		<meta name="apple-mobile-web-app-title" content="Andrew Yaros">
 		<link rel="shortcut icon" href="favicon.png?ver=1.1">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png?ver=1.1">
 		<link rel="mask-icon" href="safari-pintab.svg" color="black">
-		<!-- CSS CODE: obviously this is important... -->
-		<link type="text/css" rel="stylesheet" href="index.css" media="all">
 	</head>
-	<body>
-		<div id="bodyDiv"> 
-			<div id="header">
-				<div id="headerL"><!-- Title -->
-					<span id="title">Andrew<br/>
-						<span id="lastname">Yaros</span>
-					</span>
-				</div>
-				<div id="headerR"><!-- Description -->
-					<span id="description">Drexel Computer Science &amp; Architecture</span>
-				</div>
-			</div>
-			<!-- Google drive embed -->
-			<div id="mainContent">
-				<iframe width="100%" height="100%"
-					style="border:none!important;"
-					src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;chrome=false&amp;embedded=true">If you see this text, the Google Drive embed did not load properly. 
-				<a href="media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a>
-				</iframe>
-			</div>
-			<div id="footer">
-				<div class="footer">
-					<a class="footerlink" target="_blank" 
-					href="media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1" 
-					>R&eacute;sum&eacute;</a>
-				</div><div class="footer">
-					<a class="footerlink" target="_blank"  
-					href="media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" 
-					>Portfolio</a>
-				</div><div class="footer">
-					<a class="footerlink" target="_blank" 
-					href="mailto:ay@drexel.edu">Contact</a>
-				</div>
+	<body><div id="bodyDiv"> 
+
+		<!-- Header -->
+		<div id="header">
+			<div id="headerL">
+				<!-- Title -->
+				<span id="title">Andrew<br/>
+					<span id="lastname">Yaros</span>
+				</span>
 			</div>
 			
-			<div id="copyright"><!-- This tiny script keeps the copyright year up to date -->
-				<span>&copy;&nbsp;2013-<script>
+			<div id="headerR">
+				<!-- Description -->
+				<span id="description">Drexel Computer Science &amp; Architecture</span>
+			</div>
+		</div>
+		
+		
+		<!-- Main content -->
+		<div id="mainContent">
+			<!-- Google drive embed -->
+			<iframe width="100%" height="100%"
+				style="border:none!important;"
+				src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;chrome=false&amp;embedded=true">If you see this text, the Google Drive embed did not load properly. 
+				<a href="media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a>
+			</iframe>
+		</div>
+		
+			
+		<!-- Footer -->
+		<div id="footer">
+			<div class="footer">
+				<a class="footerlink" target="_blank" 
+				href="media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1" 
+				>R&eacute;sum&eacute;</a>
+			</div>
+			
+			<div class="footer">
+				<a class="footerlink" target="_blank"  
+				href="media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" 
+				>Portfolio</a>
+			</div>
+			
+			<div class="footer">
+				<a class="footerlink" target="_blank" 
+				href="mailto:ay@drexel.edu">Contact</a>
+			</div>
+		</div>
+		
+			
+		<!-- Copyright -->
+		<div id="copyright"><!-- This tiny script keeps the copyright year up to date -->
+			<span>
+				&copy;&nbsp;2013-
+				<script>
 					var d = new Date(); 
 					var y = d.getFullYear();
 					document.write(y);
-				</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</span>
-			</div>
+				</script>
+				&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED
+			</span>
 		</div>
-	</body>
+		
+	</div></body>
 </html>

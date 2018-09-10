@@ -7,16 +7,26 @@ Andrew Yaros :)
 ~~~~~~~~~~~~~~~
 \*************/
 
+
+/*************************************************/
+/* Fonts */
 @font-face{
 	font-family: "tachyonthin";
 	src: url("media/Tachyon_Thin.otf")
-} @font-face {
+}
+@font-face {
 	font-family: "cmu";
 	src: url("media/cmunrm.otf");
-} @font-face {
+}
+@font-face {
 	font-family: "721";
 	src: url("media/Swiss721BT-Roman.otf");
-} html,body { height: 100%; }
+}
+
+
+/*************************************************/
+/* Overall page format */
+html,body { height: 100%; }
 html, body {
 	margin: 0;
 	overflow: auto;
@@ -32,9 +42,21 @@ html, body {
 	justify-content: stretch;
 	flex-wrap: nowrap;
 	align-items: stretch;
-} #header, .footer { vertical-align: center; }
+	min-width: 200px;
+	min-height: 160px;
+} a, a:visited { text-decoration: none; } 
+a:hover { 
+	color: rgba(100,100,100,.6);
+	text-decoration: overline;
+	text-shadow: 0px 0px 7px #aaaaaa, 0px 0px 20px #bfbfbf;
+} div { border: none!important; }
+
+
+/*************************************************/
+/* Header */
+#header, .footer { vertical-align: center; }
 #header{
-	padding: 10px; /* padding */
+	padding: 16px; /* padding */
 	display: flex;
 	justify-content: space-between; /* horizontal align */
 	align-items: center; /* vertical align */
@@ -57,15 +79,24 @@ html, body {
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: normal;
 	text-transform: uppercase;
-	padding-top: 10px; /* padding btw title and description */
 	letter-spacing: .12em;
 	font-size: 14pt;
-} #mainContent {
+} 
+
+
+/*************************************************/
+/* Main page content */
+#mainContent {
 	margin: none;
 	display: flex;
 	border: none;
 	flex: 1;
-} #footer{
+}
+
+
+/*************************************************/
+/* Footer */
+#footer{
 	display: flex;
 	justify-content: center;
 	align-content: center;
@@ -94,16 +125,17 @@ html, body {
 	padding: 4px;
 	text-align: center;
 	margin: auto;
-} a, a:visited { text-decoration: none; } 
-a:hover { 
-	color: rgba(100,100,100,.6);
-	text-decoration: overline;
-	text-shadow: 0px 0px 7px #aaaaaa, 0px 0px 20px #bfbfbf;
 } .footerlink {	letter-spacing: .2em; } 
-div { border: none!important; } 
+
+
+/*************************************************/
+/* Responsive design rules */
+
+
+/*************************************************/
 /* for small devices */	
 @media only screen and (max-width: 600px) {
-	.header{
+	#header{
 		padding-top: 10px; /* padding */
 		padding-bottom: 10px; /* padding */
 	} #title { font-size: 15pt; } 
@@ -115,8 +147,14 @@ div { border: none!important; }
 		font-size: 10pt;
 		letter-spacing: .3em;
 		line-height: 11pt;
-	} .header, #title, #description, .footer, .footerlink, body { text-shadow: 0px 3px 5px #888888; }
-} /* for really small devices */
+	} #header, #title, #description, .footer, .footerlink {
+		text-shadow: 0px 3px 5px #888888; 
+	}
+}
+
+
+/*************************************************/
+/* for really small devices */
 @media only screen and (max-width: 360px) {
 	#title { font-size: 12pt; }
 	#description { 
@@ -130,19 +168,20 @@ div { border: none!important; }
 		padding-top:1px;
 		padding-bottom: 1px
 	}
-} /*tiny screens; wrap title text*/
+}
+
+
+/*************************************************/
+/*tiny screens; wrap title and description*/
 @media only screen and (max-width: 260px) {
 	#title { font-size: 8pt; }
 	#description { 
 		font-size: 6pt;
-		line-height: .2em;
 		letter-spacing: 0em;
-	} #header { flex-wrap: wrap; }
-	.header {
-		padding-left: 0px; /* padding */
-		padding-right: 0px;
-		padding-top: 0px;
-		padding-bottom: 0px;
+		padding: none;
+	} #header { 
+		flex-wrap: wrap;
+		padding: 1px; /* padding */
 		margin: auto;
 	} #headerL{
 		text-align: center;
@@ -156,9 +195,13 @@ div { border: none!important; }
 		padding: 2px;
 		width: 100%!important;
 	}
-} /* very very tiny screens :) */
+}
+
+
+/*************************************************/
+/* if the height is too small to show the iframe */
 @media only screen and (max-height: 260px) {
-	#mainContent { display: none; } 
+	#mainContent { display: none; }
 	#footer { flex: 1; }
 	.footer { padding: 4px; }
 }
