@@ -12,15 +12,21 @@ Andrew Yaros :)
 /*************************************************/
 @font-face{
 	font-family: "tachyonthin";
-	src: url("media/Tachyon_Thin.otf")
+	src: url("media/fonts/Tachyon_Thin.otf")
 }
 @font-face {
 	font-family: "cmu";
-	src: url("media/cmunrm.otf");
+	src: url("media/fonts/cmunrm.otf");
+	font-weight: normal;
+}
+@font-face {
+	font-family: "cmu";
+	src: url("media/fonts/cmunrb.otf");
+	font-weight: bold;
 }
 @font-face {
 	font-family: "721";
-	src: url("media/Swiss721BT-Roman.otf");
+	src: url("media/fonts/Swiss721BT-Roman.otf");
 }
 
 
@@ -115,8 +121,9 @@ a:hover {
 	line-height: 2em;
 	text-transform: uppercase;
 } #copyright {
-	font-family: "721", "Helvetica Neue", "Helvetica", "Arial Condensed", sans-serif;
-	font-weight: 200;
+	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	/*font-family: "721", "Helvetica Neue", "Helvetica", "Arial Condensed", sans-serif;*/
+	font-weight: normal;
 	letter-spacing: .06em;
 	font-size: 6pt;
 	color:#afafaf;
@@ -145,7 +152,7 @@ a:hover {
 		margin: auto;
 	} .footer { font-size: 13.5pt; }
 	#footer {
-		padding-top:6px;
+		padding-top:8px;
 		padding-bottom: 1px;
 	}
 }
@@ -167,10 +174,9 @@ a:hover {
 /*************************************************/
 @media only screen and (max-width: 260px) {
 	#title { font-size: 8pt; }
-	#description { 
-		font-size: 6pt;
-		letter-spacing: 0.1em;
-		padding: none;
+	#description {
+		font-size: 3;
+		color: #afafaf;
 	} #header { 
 		flex-wrap: wrap;
 		padding: 1px; /* padding */
@@ -184,12 +190,12 @@ a:hover {
 		margin: auto;
 		width: 85%;
 	}.footer { 
-		font-size: 6pt;
+		font-size: 7pt;
 		padding-bottom: 2px;
-		padding-top: 4px;
+		padding-top: 2px;
 		min-width: 45%;
 		width: 45%;
-	} .footerlink{ font-style: bold; }
+	}
 }
 
 
@@ -197,9 +203,10 @@ a:hover {
 /*************************************************/
 @media only screen and (max-height: 260px) {
 	#mainContent { display: none; }
-	#footer { flex: 1; } 
+	#footer { flex: 1; }
 	.footer {
-		min-width: 47%;
-		width: 47%;
-	} .footerlink{ font-style: bold; }
+		min-width: 49%;
+		width: 49%;
+		font-weight: bold;
+	} #copyright { font-weight: normal; }
 }
