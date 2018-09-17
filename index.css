@@ -60,6 +60,7 @@ a:hover {
 ::selection { background: #ffff00; }
 ::-moz-selection { background: #ffff00; }
 
+
 /* Header */
 /*************************************************/
 #header, .footer { vertical-align: center; }
@@ -80,7 +81,7 @@ a:hover {
 	letter-spacing: .25em!important;
 	font-size: 3.5vw;
 	font-weight: normal;
-} #lastname { letter-spacing: .75em!important; }
+} #lastname { letter-spacing: .765em!important; }
 #description {
 	letter-spacing: .07em;
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
