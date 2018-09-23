@@ -118,7 +118,7 @@ a:hover {
 #footer{
 	display: flex;
 	justify-content: space-between;
-	align-content: center;
+	align-content: space-around;
 	align-items: stretch;
 	flex-wrap: wrap;
 }.footer {
