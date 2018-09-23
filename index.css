@@ -42,39 +42,48 @@ html, body {
 	font-size: 12pt;
 	color: #000000!important;
 } #bodyDiv{
-	height: 99%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: stretch;
 	flex-wrap: nowrap;
+	align-content: stretch;
 	align-items: stretch;
 	min-width: 170px;
 	min-height: 160px;
 } a, a:visited { text-decoration: none; } 
 a:hover { 
-	color: #909090!important;
+	color: #000000!important;
 	text-decoration: overline!important;
-	text-shadow: 0px 0px 3px #aaaaaa, 0px 0px 8px #bfbfbf!important;
+	background: #ffff00;
+	text-shadow: none;
 } div { border: none; }
 #title, #description, .footer, a, a:visited { color: #666666; } 
-::selection { background: #ffff00; }
-::-moz-selection { background: #ffff00; }
+::selection { 
+	background: #ffff00;
+	color: #000000;
+	text-shadow: none;
+} ::-moz-selection { 
+	background: #ffff00;
+	color: #000000;
+	text-shadow: none;
+}
 
 
 /* Header */
 /*************************************************/
 #header, .footer { vertical-align: center; }
-#header{
-	padding: 2.5%; /* padding */
+#header {
+	padding: 4%; /* padding */
 	display: flex;
 	justify-content: space-between; /* horizontal align */
 	align-items: center; /* vertical align */
 	flex-wrap: nowrap;
-} #headerR { 
-	text-align: right;
-} #headerL { text-align: left; }
-#title, #description, .footer { 
-	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #8f8f8f;
+} #headerR { text-align: right; }
+#headerL { text-align: left; }
+#title { text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #8f8f8f; }
+#description, .footer { 
+	text-shadow: 0px 2px 20px #cdcdcd, 0px 1px 3px #999999;
 } #title {
 	font-family: "tachyonthin", "Helvetica Neue", "Arial", sans-serif;
 	text-transform: uppercase;
@@ -95,10 +104,12 @@ a:hover {
 /* Main page content */
 /*************************************************/
 #mainContent {
+	width: 100%;
 	margin: none;
 	display: flex;
 	border: none;
 	flex: 1!important;
+	background-color: #d1d1d1;
 }
 
 
@@ -108,6 +119,7 @@ a:hover {
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
+	align-items: stretch;
 	flex-wrap: wrap;
 }.footer {
 	padding-top: 10px; /*  padding */
@@ -123,7 +135,6 @@ a:hover {
 	text-transform: uppercase;
 } #copyright {
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	/*font-family: "721", "Helvetica Neue", "Helvetica", "Arial Condensed", sans-serif;*/
 	font-weight: normal;
 	letter-spacing: .06em;
 	font-size: 6pt;
@@ -147,15 +158,9 @@ a:hover {
 @media only screen and (min-width: 850px) {
 	#title { font-size: 20pt; }
 	#description { font-size: 14pt; } 
-	#header { padding: 16px; }
-	.header {
-		padding: 8px; /* padding */
-		margin: auto;
-	} .footer { font-size: 13.5pt; }
-	#footer {
-		padding-top:8px;
-		padding-bottom: 1px;
-	}
+	#header { padding: 30px; }
+	.footer { font-size: 13.5pt; }
+	#footer { padding: 20px; }
 }
 
 
@@ -163,7 +168,8 @@ a:hover {
 /*************************************************/
 @media only screen and (max-width: 550px) {
 	#title { font-size: 4.75vw; } 
-	#description { font-size: 2.75vw; }
+	#description { font-size: 2.4vw; }
+	#header { padding: 20px; }
 	.footer { font-size: 2.75vw; } 
 	#title, #description, .footer, a, a:visited { color: #000000; }
 	#header, #title, #description, .footer, .footerlink { 
@@ -171,26 +177,26 @@ a:hover {
 }
 
 
-/*very tiny screens; wrap title and description*/
+/* very tiny screens; wrap title and description */
 /*************************************************/
 @media only screen and (max-width: 260px) {
 	#title { font-size: 8pt; }
-	#description {
-		font-size: 3;
-		color: #afafaf;
-	} #header { 
+	#description { font-size: 4pt; }
+	#header { 
+		padding: 7px;
 		flex-wrap: wrap;
-		padding: 1px; /* padding */
+		align-content: stretch;
+		padding: 1px;
 		margin: auto;
 	} #headerL{
 		text-align: center;
-		width: 100%;
 		margin: auto;
 	} #headerR {
 		text-align: center;
 		margin: auto;
 		width: 85%;
-	}.footer { 
+	} #footer { padding: 7px; }
+	.footer { 
 		font-size: 7pt;
 		padding-bottom: 2px;
 		padding-top: 2px;
@@ -202,7 +208,7 @@ a:hover {
 
 /* if height is too small then hide the iframe */
 /*************************************************/
-@media only screen and (max-height: 260px) {
+@media only screen and (max-height: 300px) {
 	#mainContent { display: none; }
 	#footer { flex: 1; }
 	.footer {
