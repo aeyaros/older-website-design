@@ -154,7 +154,11 @@ a:hover {
 	padding: 4px;
 	text-align: center;
 	margin: auto;
-} .footerlink {	letter-spacing: .2em; } 
+} .footerlink {	
+	letter-spacing: .2em;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+}
 
 
 /*************************************************/
