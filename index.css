@@ -17,22 +17,33 @@ Andrew Yaros :)
 @font-face {
 	font-family: "tachyonthin";
 	src: url("media/fonts/Tachyon_Thin.otf")
-} /* Computer Modern */
+} /* Computer Modern serif */
 @font-face {
 	font-family: "cmu";
 	src: url("media/fonts/cmunrm.otf");
 	font-weight: normal;
-} /* Computer Modern Bold */
+} /* Computer Modern serif Bold */
 @font-face {
 	font-family: "cmu";
 	src: url("media/fonts/cmunrb.otf");
 	font-weight: bold;
-} /* Swiss 721 */
+} /* Computer Modern classical */
 @font-face {
-	font-family: "721";
-	src: url("media/fonts/Swiss721BT-Roman.otf");
+	font-family: "cmu";
+	src: url("media/fonts/cmunci.otf");
+	font-weight: normal;
+	font-style: italic;
+} /* Computer Modern sans serif*/
+@font-face {
+	font-family: "cmusans";
+	src: url("media/fonts/cmunss.otf");
+	font-weight: normal;
+} /* Computer Modern sans serif Bold */
+@font-face {
+	font-family: "cmusans";
+	src: url("media/fonts/cmunsx.otf");
+	font-weight: bold;
 }
-
 
 /*************************************************/
 /*                  Main styles                  */
@@ -45,11 +56,9 @@ html, body {
 	height: 100%;
 	margin: 0;
 	overflow: auto;
-	min-width: 320px;
-	min-height: 320px;
 } body {
 	background-color: #ffffff!important;
-	font-family: "721","Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-size: 12pt;
 	color: #000000!important;
 } #bodyDiv{
@@ -60,16 +69,20 @@ html, body {
 	flex-wrap: nowrap;
 	align-content: stretch;
 	align-items: stretch;
-	
-} a, a:visited { text-decoration: none; } 
-a:hover { 
+	min-width: 280px;		/* minimum width */
+	min-height: 280px;		/* minimum height */
+} a, a:visited { text-decoration: none;
+	-webkit-transition-duration: 1s;
+	transition-duration: 1s;
+} a:hover { 
 	color: #000000!important;
 	text-decoration: overline!important;
 	background: #ffff00;
 	text-shadow: none;
 } div { border: none!important; }
-#title, #description, .footer, a, a:visited { color: #555555; } 
-::selection { 
+#title, #description, .footer, a, a:visited { 
+	color: #555555;
+} ::selection { 
 	background: #ffff00;
 	color: #000000;
 	text-shadow: none;
@@ -132,19 +145,18 @@ a:hover {
 	align-items: stretch;
 	flex-wrap: wrap;
 }.footer {
-	padding-top: 2%; /*  padding */
-	padding-bottom: 2px; /* padding */
-	max-width: 33%; 
+	padding-top: 2.25%; /*  padding */
+	padding-bottom: 2.25%; /* padding */
+	max-width: 19%; 
 	margin: auto;
 	text-align: center;
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: normal;
 	font-size: 2vw;
 	letter-spacing: .1em;
-	line-height: 2em;
 	text-transform: uppercase;
 } #copyright {
-	font-family: "721","Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-weight: normal;
 	letter-spacing: .06em;
 	font-size: 6pt;
@@ -180,14 +192,11 @@ a:hover {
 
 /* for smaller devices */
 /*************************************************/
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 640px) {
 	#title { font-size: 4.75vw; } 
 	#description { font-size: 2.4vw; }
 	#header { padding: 20px; }
-	.footer { font-size: 1em;
-		min-width: 32%;
-		width: 32%;
-	} #title, #description, .footer, a, a:visited { color: #333333; }
+	#title, #description, .footer, a, a:visited { color: #333333; }
 	#header, #title, #description, .footer, .footerlink { 
 		text-shadow: 0px 3px 5px #888888; }
 }
@@ -199,34 +208,71 @@ a:hover {
 	#mainContent { display: none; }
 	#header { padding-bottom: 0px; }
 	#footer { flex: 1;
+		flex-wrap: wrap;
 		padding-top: 0px;
-		align-content: center;
-	} .footer { padding-top: 10px;
-		padding-bottom: 10px;
-	} 
-	#copyright { font-weight: normal; }
+		align-content: space-around;
+		padding: none;
+	} .footer {
+		padding: none;
+		font-style: italic;
+	} #copyright { font-weight: normal; 
+		padding: none;
+	}
 }
 
 /* tiny screens */
 /*************************************************/
 @media only screen and (max-width: 400px) {
-	#title { font-size: 1em;}
+	#title { font-size: 18pt;
+		padding-left: 9pt; /* half of font size */
+		padding-right: none;
+		margin: auto;
+	} #lastname { padding-left: 9pt; } /* half of font size */
 	#description { font-size: .5em; }
 	#header { padding: 7px;
-		flex-wrap: wrap;
 		align-content: stretch;
 		padding: 1px;
 		margin: auto;
 	} #headerL, #headerR { margin: auto; }
-	#headerL { padding-top: 10px; }
-	#headerR { text-align: center; width: 100%; } 
+	#headerR { display: none; /*text-align: center; width: 100%;*/ } 
 	#mainContent { display: none; }
-	#footer { flex: 1; }
-	.footer {
+	#copyright { letter-spacing: 0px;
+		padding-top: 12.5px;
+	}
+}
+
+/* Sizing the footer */
+/*************************************************/
+@media only screen and (max-width: 720px) {
+	.footer { font-size: 1em;
 		padding: none;
-		font-size: 1em;
-		min-width: 99%;
-		width: 99%;
-		font-weight: normal;
-	} #copyright { letter-spacing: 0px; }
+		min-width: 32%;
+		width: 32%;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.footer {
+		min-width: 48%;
+		width: 48%;
+	} 
+}
+@media only screen and (max-width: 400px) {
+	#footer { flex: 1;
+		flex-wrap: wrap;
+		align-content: space-around;
+	} .footer {
+		min-width: 98%;
+		width: 98%;
+		font-style: normal;
+	} 
+}
+
+/* adjust header when tiny */
+@media only screen and ((max-width: 400px) and (max-height: 320px)) {
+	#headerL { padding-bottom: none; }
+	#title { font-size: 16pt;
+		padding: none;
+		padding-left: 12pt; /* half of font size */
+		margin: auto;
+	} #lastname { padding-left: 12pt; } /* half of font size */
 }
