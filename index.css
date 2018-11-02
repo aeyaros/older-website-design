@@ -41,10 +41,12 @@ Andrew Yaros :)
 
 /* Overall page format */
 /*************************************************/
-html,body { height: 100%; }
 html, body {
+	height: 100%;
 	margin: 0;
 	overflow: auto;
+	min-width: 320px;
+	min-height: 320px;
 } body {
 	background-color: #ffffff!important;
 	font-family: "721","Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -58,8 +60,7 @@ html, body {
 	flex-wrap: nowrap;
 	align-content: stretch;
 	align-items: stretch;
-	min-width: 128px;
-	min-height: 160px;
+	
 } a, a:visited { text-decoration: none; } 
 a:hover { 
 	color: #000000!important;
@@ -67,7 +68,7 @@ a:hover {
 	background: #ffff00;
 	text-shadow: none;
 } div { border: none!important; }
-#title, #description, .footer, a, a:visited { color: #666666; } 
+#title, #description, .footer, a, a:visited { color: #555555; } 
 ::selection { 
 	background: #ffff00;
 	color: #000000;
@@ -90,7 +91,7 @@ a:hover {
 	flex-wrap: nowrap;
 } #headerR { text-align: right; }
 #headerL { text-align: left; }
-#title { text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #8f8f8f; }
+#title { text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #999999; }
 #description, .footer { 
 	text-shadow: 0px 2px 20px #cdcdcd, 0px 1px 3px #999999;
 } #title {
@@ -179,14 +180,14 @@ a:hover {
 
 /* for smaller devices */
 /*************************************************/
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 720px) {
 	#title { font-size: 4.75vw; } 
 	#description { font-size: 2.4vw; }
 	#header { padding: 20px; }
-	.footer { font-size: 2.75vw;
-		min-width: 45%;
-		width: 45%;
-	} #title, #description, .footer, a, a:visited { color: #000000; }
+	.footer { font-size: 1em;
+		min-width: 32%;
+		width: 32%;
+	} #title, #description, .footer, a, a:visited { color: #333333; }
 	#header, #title, #description, .footer, .footerlink { 
 		text-shadow: 0px 3px 5px #888888; }
 }
@@ -199,44 +200,33 @@ a:hover {
 	#header { padding-bottom: 0px; }
 	#footer { flex: 1;
 		padding-top: 0px;
-	} .footer { font-weight: bold; }
+		align-content: center;
+	} .footer { padding-top: 10px;
+		padding-bottom: 10px;
+	} 
 	#copyright { font-weight: normal; }
 }
 
-
-/* tiny screens; wrap title and description */
+/* tiny screens */
 /*************************************************/
-@media only screen and (max-width: 260px) {
-	#title { font-size: 8pt; }
-	#description { font-size: 6pt; }
-	#header { 
-		padding: 7px;
+@media only screen and (max-width: 400px) {
+	#title { font-size: 1em;}
+	#description { font-size: .5em; }
+	#header { padding: 7px;
 		flex-wrap: wrap;
 		align-content: stretch;
 		padding: 1px;
 		margin: auto;
-	} #headerL, #headerR {
-		margin: auto;
-	} #headerR {
-		text-align: center;
-	} #footer { padding: 7px; }
-	.footer { 
-		font-size: 7pt;
-		padding-bottom: 2px;
-		padding-top: 2px;
-	}
-}
-
-
-/* super tiny screens */
-/*************************************************/
-@media only screen and (max-width: 175px) {
-	* { padding: 0px; }
-	#description, #mainContent { display: none; }
+	} #headerL, #headerR { margin: auto; }
+	#headerL { padding-top: 10px; }
+	#headerR { text-align: center; width: 100%; } 
+	#mainContent { display: none; }
 	#footer { flex: 1; }
 	.footer {
+		padding: none;
+		font-size: 1em;
 		min-width: 99%;
 		width: 99%;
-		font-weight: bold;
+		font-weight: normal;
 	} #copyright { letter-spacing: 0px; }
 }
