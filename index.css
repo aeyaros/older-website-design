@@ -145,10 +145,10 @@ html, body {
 	align-items: stretch;
 	flex-wrap: wrap;
 }.footer {
-	padding-top: 2.25%; /*  padding */
-	padding-bottom: 2.25%; /* padding */
 	max-width: 19%; 
 	margin: auto;
+	padding-top: 2.25%; /*  padding */
+	padding-bottom: 2.25%; /* padding */
 	text-align: center;
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: normal;
@@ -185,8 +185,10 @@ html, body {
 	#title { font-size: 20pt; }
 	#description { font-size: 14pt; } 
 	#header { padding: 30px; }
-	.footer { font-size: 13.5pt; }
-	#footer { padding: 20px; }
+	.footer { font-size: 13.5pt;
+		padding-top: 20px; /*  padding */
+		padding-bottom: 20px; /* padding */ 
+	}
 }
 
 
