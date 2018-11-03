@@ -70,7 +70,7 @@ html, body {
 	align-content: stretch;
 	align-items: stretch;
 	min-width: 280px;		/* minimum width */
-	min-height: 280px;		/* minimum height */
+	min-height: 300px;		/* minimum height */
 } a, a:visited { text-decoration: none;
 	-webkit-transition-duration: 1s;
 	transition-duration: 1s;
@@ -234,6 +234,7 @@ html, body {
 		padding: 1px;
 		margin: auto;
 	} #headerL, #headerR { margin: auto; }
+	#headerL { padding: 10px;}
 	#headerR { display: none; /*text-align: center; width: 100%;*/ } 
 	#mainContent { display: none; }
 	#copyright { letter-spacing: 0px;
@@ -269,7 +270,6 @@ html, body {
 
 /* adjust header when tiny */
 @media only screen and ((max-width: 400px) and (max-height: 320px)) {
-	#headerL { padding-bottom: none; }
 	#title { font-size: 16pt;
 		padding: none;
 		padding-left: 12pt; /* half of font size */
