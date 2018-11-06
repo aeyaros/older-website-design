@@ -222,12 +222,9 @@ div gets hidden (when the page gets too small) */
 	#header { padding-bottom: 0px; }
 	#footer { flex: 1;
 		flex-wrap: wrap;
-		padding-top: 0px;
 		align-content: space-around;
 		padding: none;
-		margin: 20px;
 	} .footer {
-		padding: none;
 		font-style: italic;
 		min-width: 32%;
 		width: 32%;
@@ -292,7 +289,6 @@ div gets hidden (when the page gets too small) */
 	#footer { flex: 1;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		align-content: space-around;
 	} .footer {
 		min-width: 98%;
 		width: 98%;
