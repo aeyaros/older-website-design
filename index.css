@@ -68,8 +68,8 @@ html, body {
 } #bodyDiv{
 	margin: auto; /* important */
 	height: 100%; /* important */
-	min-width: 300px;		/* minimum width */
-	min-height: 280px;		/* minimum height */
+	min-width: 240px;		/* minimum width */
+	min-height: 260px;		/* minimum height */
 	display: flex; /* flex stuff is all important */
 	flex-direction: column;
 	justify-content: stretch;
@@ -291,7 +291,7 @@ div gets hidden (when the page gets too small) */
 	#bodyDiv { min-height: 360px; }
 	#footer { flex: 1;
 		flex-wrap: wrap;
-		align-content: space-between;
+		align-content: space-around;
 	} .footer {
 		min-width: 98%;
 		width: 98%;
