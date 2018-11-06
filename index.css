@@ -77,8 +77,8 @@ html, body {
 	align-content: stretch;
 	align-items: stretch;
 } a, a:visited { text-decoration: none;
-	-webkit-transition-duration: 1.125s;
-	transition-duration: 1.125s;
+	-webkit-transition-duration: 0.75s;
+	transition-duration: 0.75s;
 } a:hover { 
 	color: #000!important;
 	text-decoration: overline;
@@ -234,8 +234,8 @@ div gets hidden (when the page gets too small) */
 		border-radius: 25px;
 		box-shadow: 0px 2px 20px #ddd;
 		padding: 20px;
-	} .footerlink:hover { box-shadow: 0px 2px 3px #000; }
-	a.footerlink:hover { text-decoration: none; }
+	} .footerlink:hover { box-shadow: 0px 1px 2px #777;
+	} a.footerlink:hover { text-decoration: none; }
 }
 
 
@@ -262,8 +262,8 @@ div gets hidden (when the page gets too small) */
 		border-radius: 20px;
 		box-shadow: 0px 2px 15px #ddd;
 		padding: 15px;
-	} .footerlink:hover { box-shadow: 0px 2px 3px #000; }
-	a.footerlink:hover { text-decoration: none!important; }
+	} .footerlink:hover { box-shadow: 0px 1px 2px #777;
+	}a.footerlink:hover { text-decoration: none!important; }
 }
 
 /* display small buttons when not enough room for larger buttons */
