@@ -59,9 +59,9 @@ the layout of the page */
 html, body {
 	height: 100%;
 	margin: 0;
-	overflow: auto; 
-} body {
+	overflow: auto;
 	background-color: #fafafa!important;
+} body {
 	font-family: "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-size: 12pt;
 	color: #000!important;
