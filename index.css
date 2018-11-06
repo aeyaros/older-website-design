@@ -45,6 +45,10 @@ Andrew Yaros :)
 	font-weight: bold;
 }
 
+/* by "important" I mean stuff that should not be
+changed or it will screw up the responsiveness and 
+the layout of the page */
+
 /*************************************************/
 /*                  Main styles                  */
 /*************************************************/
@@ -55,40 +59,41 @@ Andrew Yaros :)
 html, body {
 	height: 100%;
 	margin: 0;
-	overflow: auto;
+	overflow: auto; 
 } body {
-	background-color: #ffffff!important;
+	background-color: #fafafa!important;
 	font-family: "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-size: 12pt;
-	color: #000000!important;
+	color: #000!important;
 } #bodyDiv{
-	height: 100%;
-	display: flex;
+	margin: auto; /* important */
+	height: 100%; /* important */
+	min-width: 300px;		/* minimum width */
+	min-height: 320px;		/* minimum height */
+	display: flex; /* flex stuff is all important */
 	flex-direction: column;
 	justify-content: stretch;
 	flex-wrap: nowrap;
 	align-content: stretch;
 	align-items: stretch;
-	min-width: 280px;		/* minimum width */
-	min-height: 300px;		/* minimum height */
 } a, a:visited { text-decoration: none;
-	-webkit-transition-duration: 1s;
-	transition-duration: 1s;
+	-webkit-transition-duration: 1.5s;
+	transition-duration: 1.5s;
 } a:hover { 
-	color: #000000!important;
-	text-decoration: overline!important;
+	color: #000!important;
+	text-decoration: overline;
 	background: #ffff00;
 	text-shadow: none;
 } div { border: none!important; }
 #title, #description, .footer, a, a:visited { 
-	color: #555555;
+	color: #555;
 } ::selection { 
 	background: #ffff00;
-	color: #000000;
+	color: #000;
 	text-shadow: none;
 } ::-moz-selection { 
 	background: #ffff00;
-	color: #000000;
+	color: #000;
 	text-shadow: none;
 }
 
@@ -98,15 +103,15 @@ html, body {
 #header, .footer { vertical-align: center; }
 #header {
 	padding: 2%; /* padding */
-	display: flex;
+	display: flex; /* flex stuff is all important */
 	justify-content: space-between; /* horizontal align */
 	align-items: center; /* vertical align */
 	flex-wrap: nowrap;
 } #headerR { text-align: right; }
 #headerL { text-align: left; }
-#title { text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #999999; }
+#title { text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #999; }
 #description, .footer { 
-	text-shadow: 0px 2px 20px #cdcdcd, 0px 1px 3px #999999;
+	text-shadow: 0px 2px 20px #cdcdcd, 0px 1px 3px #999;
 } #title {
 	font-family: "tachyonthin", "Helvetica Neue", "Arial", sans-serif;
 	text-transform: uppercase;
@@ -126,7 +131,7 @@ html, body {
 
 /* Main page content */
 /*************************************************/
-#mainContent {
+#mainContent { /* all of this is important */
 	width: 100%;
 	margin: none;
 	display: flex;
@@ -138,15 +143,15 @@ html, body {
 
 /* Footer */
 /*************************************************/
-#footer{
+#footer { /* all important */
 	display: flex;
 	justify-content: space-between;
 	align-content: space-around;
 	align-items: stretch;
 	flex-wrap: wrap;
 }.footer {
-	max-width: 19%; 
-	margin: auto;
+	max-width: 19%; /* important */
+	margin: auto; /* important */
 	padding-top: 2.25%; /*  padding */
 	padding-bottom: 2.25%; /* padding */
 	text-align: center;
@@ -178,6 +183,10 @@ html, body {
 /*            Responsive design rules            */
 /*************************************************/
 
+/* most of this stuff is pretty important to the 
+layout of the page; footer buttons act as the
+primary content for the page when the google drive
+div gets hidden (when the page gets too small) */
 
 /* for larger/desktop devices */
 /*************************************************/
@@ -186,7 +195,7 @@ html, body {
 	#description { font-size: 14pt; } 
 	#header { padding: 30px; }
 	.footer { font-size: 13.5pt;
-		padding-top: 20px; /*  padding */
+		padding-top: 20px; /* padding */
 		padding-bottom: 20px; /* padding */ 
 	}
 }
@@ -198,15 +207,17 @@ html, body {
 	#title { font-size: 4.75vw; } 
 	#description { font-size: 2.4vw; }
 	#header { padding: 20px; }
-	#title, #description, .footer, a, a:visited { color: #333333; }
+	#title, #description, .footer, a, a:visited { color: #333; }
 	#header, #title, #description, .footer, .footerlink { 
-		text-shadow: 0px 3px 5px #888888; }
+		text-shadow: 0px 3px 5px #888; }
 }
 
 
-/* if height is too small then hide the iframe */
+/* if height is too small then hide the iframe
+	and show buttons */
 /*************************************************/
-@media only screen and (max-height: 400px) {
+@media only screen and (max-height: 500px) {
+	#bodyDiv { max-width: 1024px; }
 	#mainContent { display: none; }
 	#header { padding-bottom: 0px; }
 	#footer { flex: 1;
@@ -214,15 +225,24 @@ html, body {
 		padding-top: 0px;
 		align-content: space-around;
 		padding: none;
+		margin: 20px;
 	} .footer {
 		padding: none;
 		font-style: italic;
+		min-width: 32%;
+		width: 32%;
 	} #copyright { font-weight: normal; 
 		padding: none;
-	}
+	} .footerlink { /* big buttons */
+		border-radius: 25px;
+		box-shadow: 0px 2px 20px #b8b8b8;
+		padding: 20px;
+	} .footerlink:hover { box-shadow: 0px 2px 10px #000; }
+	a.footerlink:hover { text-decoration: none; }
 }
 
-/* tiny screens */
+
+/* tiny width screens - also show buttons */
 /*************************************************/
 @media only screen and (max-width: 400px) {
 	#title { font-size: 18pt;
@@ -241,7 +261,15 @@ html, body {
 	#mainContent { display: none; }
 	#copyright { letter-spacing: 0px;
 		padding-top: 12.5px;
-	}
+	} .footerlink { /* medium buttons */
+		border-radius: 20px;
+		box-shadow: 0px 2px 15px #b8b8b8;
+		padding: 15px;
+	} .footerlink:hover { box-shadow: 0px 2px 7.5px #000; }
+	a.footerlink:hover { text-decoration: none!important; }
+}
+@media only screen and (max-height: 450px) and (max-width: 600px) {
+	.footerlink { padding: 8px; } /* small buttons */
 }
 
 /* Sizing the footer */
@@ -253,7 +281,7 @@ html, body {
 		width: 32%;
 	}
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 	.footer {
 		min-width: 48%;
 		width: 48%;
@@ -271,7 +299,7 @@ html, body {
 }
 
 /* adjust header when tiny */
-@media only screen and ((max-width: 400px) and (max-height: 320px)) {
+@media only screen and ((max-width: 400px) and (max-height: 400px)) {
 	#title { font-size: 16pt;
 		padding: none;
 		padding-left: 12pt; /* half of font size */
