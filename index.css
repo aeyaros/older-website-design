@@ -235,7 +235,7 @@ div gets hidden (when the page gets too small) */
 		padding: none;
 	} .footerlink { /* big buttons */
 		border-radius: 25px;
-		box-shadow: 0px 2px 20px #b8b8b8;
+		box-shadow: 0px 2px 20px #ccc;
 		padding: 20px;
 	} .footerlink:hover { box-shadow: 0px 2px 10px #000; }
 	a.footerlink:hover { text-decoration: none; }
@@ -263,7 +263,7 @@ div gets hidden (when the page gets too small) */
 		padding-top: 12.5px;
 	} .footerlink { /* medium buttons */
 		border-radius: 20px;
-		box-shadow: 0px 2px 15px #b8b8b8;
+		box-shadow: 0px 2px 15px #ccc;
 		padding: 15px;
 	} .footerlink:hover { box-shadow: 0px 2px 7.5px #000; }
 	a.footerlink:hover { text-decoration: none!important; }
