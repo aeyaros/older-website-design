@@ -69,7 +69,7 @@ html, body {
 	margin: auto; /* important */
 	height: 100%; /* important */
 	min-width: 300px;		/* minimum width */
-	min-height: 320px;		/* minimum height */
+	min-height: 280px;		/* minimum height */
 	display: flex; /* flex stuff is all important */
 	flex-direction: column;
 	justify-content: stretch;
@@ -288,9 +288,10 @@ div gets hidden (when the page gets too small) */
 	} 
 }
 @media only screen and (max-width: 400px) {
+	#bodyDiv { min-height: 360px; }
 	#footer { flex: 1;
 		flex-wrap: wrap;
-		align-content: space-around;
+		align-content: space-between;
 	} .footer {
 		min-width: 98%;
 		width: 98%;
