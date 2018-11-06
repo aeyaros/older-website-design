@@ -265,7 +265,7 @@ div gets hidden (when the page gets too small) */
 	} .footerlink:hover { box-shadow: 0px 2px 3px #000; }
 	a.footerlink:hover { text-decoration: none!important; }
 }
-@media only screen and (max-height: 450px) and (max-width: 600px) {
+@media only screen and (max-height: 444px) and (max-width: 600px) {
 	.footerlink { padding: 8px; } /* small buttons */
 }
 
