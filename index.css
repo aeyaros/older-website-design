@@ -292,6 +292,7 @@ div gets hidden (when the page gets too small) */
 	#footer { flex: 1;
 		flex-wrap: wrap;
 		justify-content: space-around;
+		align-content: space-around;
 	} .footer {
 		min-width: 98%;
 		width: 98%;
