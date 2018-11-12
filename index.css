@@ -242,8 +242,10 @@ div gets hidden (when the page gets too small) */
 	and show buttons */
 /*************************************************/
 @media only screen and (max-height: 500px) {
-	#bodyDiv { max-width: 1024px; }
-	#mainContent { display: none; }
+	#bodyDiv { 
+		max-width: 1024px;
+		min-height: 310px;
+	} #mainContent { display: none; }
 	#header { padding-bottom: 0px; }
 	#footer { flex: 1;
 		flex-wrap: wrap;
