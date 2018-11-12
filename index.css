@@ -234,9 +234,10 @@ div gets hidden (when the page gets too small) */
 }
 
 /* if too narrow, iframe button should be raised up */
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 550px) {
 	#iframeButton { bottom: 65px; }
 }
+
 /* if height is too small then hide the iframe
 	and show buttons */
 /*************************************************/
