@@ -234,9 +234,9 @@ div gets hidden (when the page gets too small) */
 }
 
 /* if too narrow, iframe button should be raised up */
-@media only screen and (max-width: 550px) {
+/*@media only screen and (max-width: 512px) {
 	#iframeButton { bottom: 65px; }
-}
+}*/
 
 /* if height is too small then hide the iframe
 	and show buttons */
@@ -246,15 +246,15 @@ div gets hidden (when the page gets too small) */
 		max-width: 1024px;
 		min-height: 310px;
 	} #mainContent { display: none; }
-	#header { padding-bottom: 0px; }
+	#header { padding-bottom: 10px; }
 	#footer { flex: 1;
 		flex-wrap: wrap;
 		align-content: space-around;
 		padding: none;
 	} .footer {
 		font-style: italic;
-		min-width: 32%;
-		width: 32%;
+		min-width: 23%;
+		width: 23%;
 	} #copyright { font-weight: normal; 
 		padding: none;
 	} .footerlink { /* big buttons */
