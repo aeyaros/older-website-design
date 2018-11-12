@@ -512,9 +512,9 @@ Javascript code file
 			//aey - otherwise print out each item in the menu
 			for(let i = 0; i < n; i++){ 
 				menutable += "<tr ";
-				if(n == 1) menutable += "class=\"menuFieldSingluar\" "; //if only one item
-				else if(i % 2 == 0) menutable += "class=\"menuFieldEven\" "; //for evens
-				else menutable += "class=\"menuFieldOdd\" "; //for odds
+				if(n == 1) menutable += "class=\"menuFieldSingluar\" >"; //if only one item
+				else if(i % 2 == 0) menutable += "class=\"menuFieldEven\" >"; //for evens
+				else menutable += "class=\"menuFieldOdd\" >"; //for odds
 				
 				/* first column */
 				if(i == 0) { //if first item
