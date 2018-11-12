@@ -77,8 +77,8 @@ html, body {
 	align-content: stretch;
 	align-items: stretch;
 } a, a:visited { text-decoration: none;
-	-webkit-transition-duration: 0.75s;
-	transition-duration: 0.75s;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
 } a:hover { 
 	color: #000!important;
 	text-decoration: overline;
@@ -132,14 +132,38 @@ html, body {
 /* Main page content */
 /*************************************************/
 #mainContent { /* all of this is important */
+	position: relative;
 	width: 100%;
 	margin: none;
 	display: flex;
 	border: none;
 	flex: 1!important;
 	background-color: #d1d1d1;
-}
-
+} #iframeButton {
+	height: 44px;
+	max-height: 44px;
+	position: absolute;
+	bottom: 12px;
+	left: 25px;
+	text-align: left;
+	background-color: rgba(0, 0, 0, .75);
+	border-radius: 3px;
+	font-size: 10pt;
+} #xbutton, #xbutton:visited { 
+	background-color: transparent;
+	border: none;
+} #iframeLink, #xbutton { 
+	color: #fff!important;
+	-webkit-transition-duration: 0.1s;
+	transition-duration: 0.1s;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	vertical-align: center;
+} #iframeLink:hover , #xbutton:hover { 
+	background-color: rgba(128, 128, 128, .75); 
+	text-decoration: none;
+} #iframeLink { border-right: 1px solid rgba(128, 128, 128, .5);}
 
 /* Footer */
 /*************************************************/
@@ -174,10 +198,7 @@ html, body {
 	margin: auto;
 } .footerlink {	
 	letter-spacing: .2em;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
-}
-
+} .onlyMobile { display: none; }
 
 /*************************************************/
 /*            Responsive design rules            */
@@ -212,7 +233,10 @@ div gets hidden (when the page gets too small) */
 		text-shadow: 0px 3px 5px #888; }
 }
 
-
+/* if too narrow, iframe button should be raised up */
+@media only screen and (max-width: 580px) {
+	#iframeButton { bottom: 65px; }
+}
 /* if height is too small then hide the iframe
 	and show buttons */
 /*************************************************/
@@ -236,6 +260,7 @@ div gets hidden (when the page gets too small) */
 		padding: 20px;
 	} .footerlink:hover { box-shadow: 0px 1px 2px #777;
 	} a.footerlink:hover { text-decoration: none; }
+	.onlyMobile { display: inline; }
 }
 
 
@@ -264,6 +289,7 @@ div gets hidden (when the page gets too small) */
 		padding: 15px;
 	} .footerlink:hover { box-shadow: 0px 1px 2px #777;
 	}a.footerlink:hover { text-decoration: none!important; }
+	.onlyMobile { display: inline; }
 }
 
 /* display small buttons when not enough room for larger buttons */
@@ -302,7 +328,7 @@ div gets hidden (when the page gets too small) */
 		min-width: 98%;
 		width: 98%;
 		font-style: normal;
-	} 
+	} #recursion { display: none;}
 }
 
 /* adjust header when tiny */

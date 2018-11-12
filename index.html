@@ -43,12 +43,26 @@
 		
 		<!-- Main content -->
 		<div id="mainContent">
+		
+			<script> //hide the iframe link if the x is clicked
+				function hideiframebutton() {
+					document.getElementById("iframeButton").style.display = "none"; 
+				}</script>
+		
+			<!-- Download PDF link overlapping the ifrmae -->
+			<div id="iframeButton">
+				<a target="_blank" id="iframeLink"
+					href="/media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
+					Get&nbsp;PDF&nbsp;file</a><button id="xbutton" onclick="hideiframebutton()">X</button>
+			</div>
+			
 			<!-- Google drive embed -->
 			<iframe width="100%" height="100%"
-				style="border:none!important;"
+				style="position:static; border:none!important;"
 				src="https://docs.google.com/viewer?srcid=0B_8Jo0VBj38mc001bXFvV0E5b00&amp;pid=explorer&amp;efh=false&amp;chrome=false&amp;embedded=true">The Google Drive embed did not load properly. <!-- Failsafe link -->
 				<a href="/media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">Try&nbsp;clicking&nbsp;here.</a>
 			</iframe>
+			
 		</div>
 		
 		<!-- Footer -->
@@ -63,7 +77,7 @@
 			</div>
 			
 			<!-- Portfolio -->
-			<div class="footer">
+			<div class="footer onlyMobile">
 				<a class="footerlink" target="_blank"  
 				href="/media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1" 
 				>Portfolio</a>
@@ -81,6 +95,12 @@
 				href="/checkers.html">Checkers</a>
 			</div>
 			
+			<!-- John Fry's Food Truck Extravaganza -->
+			<div class="footer">
+				<a class="footerlink" target="_blank"  
+				href="/jffte/index.html">J.F.F.T.E.</a>
+			</div>
+			
 			<!-- LinkedIn -->
 			<div class="footer">
 				<a class="footerlink" target="_blank" 
@@ -93,13 +113,14 @@
 				href="mailto:ay@drexel.edu">Email</a>
 			</div>
 			
-			<!-- Recursion -->
-			<!--<div class="footer">
+			<!-- Recursion haha ...get it? LOL -->
+			<!--<div class="footer onlyMobile" id="recursion">
 				<a class="footerlink" 
 				href="https://andrewyaros.com">Recursion</a>
-			</div> --><!-- haha ...get it? LOL -->
-				<!-- If you don't get this joke then 
-				you aren't a computer scientist. -->
+			</div>-->
+			<!-- If you don't get this joke then 
+			you aren't a computer scientist. -->
+			<!-- This is really just a placeholder to make sure there are an even number of icons, depending on what links I currently have in the footer. -->
 				
 		</div>
 		
