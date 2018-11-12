@@ -195,8 +195,7 @@ h1, h2, h3, h4, h5, #header, #menuTitleText, #truckMenuTitleText, #menuSubtitleT
 .menuFieldOdd {
 	background-color: rgb(24,62,96);
 }
-#menuFieldSingluar {
-	border-radius: 25px;
+.menuFieldSingluar {
 	background-color: rgb(14,52,86); 
 }
 
@@ -223,6 +222,21 @@ h1, h2, h3, h4, h5, #header, #menuTitleText, #truckMenuTitleText, #menuSubtitleT
 #endTableMenuR {
 	border-bottom-right-radius: 25px;
 }
+#singularMenu {
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+	padding: 25px;
+}
+#singularMenuL {
+	border-top-left-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+#singularMenuR {
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
 
 #menuTitleText{
 	text-align: center;
@@ -241,6 +255,7 @@ h1, h2, h3, h4, h5, #header, #menuTitleText, #truckMenuTitleText, #menuSubtitleT
 	font-style: 'Condensed';
 	text-transform: uppercase;
 	letter-spacing: 1px;
+	padding-bottom: 10px;
 }
 #menuSubtitleText{
 	text-align: center;

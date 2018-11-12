@@ -502,25 +502,27 @@ Javascript code file
 			
 			var menu = truck.menu; //aey - get the menu from the truck with id truckID
 			var n = truck.menu.length; // length of menu
+			
 			//aey - if there's nothing there, then return
 			if(menu[0] == 0){
-				menutable += "<tr class=\"menuFieldSingluar\" ><td>There's nothing on the menu! :(</td></tr></table";
+				menutable += "<tr class=\"menuFieldSingluar\"><td id=\"singularMenu\">There's&nbsp;nothing on&nbsp;the&nbsp;menu! :&#8288;(</td></tr></table>";
 				return menutable;
 			}
-			
 			
 			//aey - otherwise print out each item in the menu
 			for(let i = 0; i < n; i++){ 
 				menutable += "<tr ";
-				if(n == 1) menutable += "class=\"menuFieldSingluar\" >"; //if only one item
-				else if(i % 2 == 0) menutable += "class=\"menuFieldEven\" >"; //for evens
-				else menutable += "class=\"menuFieldOdd\" >"; //for odds
+				
+				if(n == 1) menutable += "class=\"menuFieldSingluar\""; //if only one item
+				else if(i % 2 == 0) menutable += "class=\"menuFieldEven\""; //for evens
+				else menutable += "class=\"menuFieldOdd\""; //for odds
 				
 				/* first column */
-				if(i == 0) { //if first item
+				if(n == 1) { //if only item
+					menutable += "><td class=\"foodInfoColumn1\" id=\"singularMenuL\">"
+				} else if(i == 0) { //if first item
 					menutable += "><td class=\"foodInfoColumn1\" id=\"beginTableMenuL\">"
-				}
-				else if(i == n-1) { //if last item
+				} else if(i == n-1) { //if last item
 					menutable += "><td class=\"foodInfoColumn1\" id=\"endTableMenuL\">"
 				} else {
 					menutable += "><td class=\"foodInfoColumn1\">"
@@ -528,16 +530,17 @@ Javascript code file
 				menutable += menu[i].name + "</td>";
 				
 				/* second column */
-				if(i == 0) { //if first item
+				if(n == 1) { //if only item
+					menutable += "<td class=\"foodInfoColumn2\" id=\"singularMenuR\">"
+				} else if(i == 0) { //if first item
 					menutable += "<td class=\"foodInfoColumn2\" id=\"beginTableMenuR\">"
-				}
-				else if(i == n-1) { //if last item
+				} else if(i == n-1) { //if last item
 					menutable += "<td class=\"foodInfoColumn2\" id=\"endTableMenuR\">"
 				} else {
 					menutable += "<td class=\"foodInfoColumn2\">"
 				}
 				menutable += "  $"+ menu[i].price + "</td></tr>";
-			}
+			} menutable += "</table>"
 			return menutable;
 		}
 		
