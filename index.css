@@ -43,6 +43,10 @@ Andrew Yaros :)
 	font-family: "cmusans";
 	src: url("media/fonts/cmunsx.otf");
 	font-weight: bold;
+}/* Deja Vu sans bold */
+@font-face {
+	font-family: "applesymb";
+	src: url("media/fonts/applesymb.ttf");
 }
 
 /* by "important" I mean stuff that should not be
@@ -164,6 +168,7 @@ html, body {
 	background-color: rgba(128, 128, 128, .75); 
 	text-decoration: none;
 } #iframeLink { border-right: 1px solid rgba(128, 128, 128, .5);}
+#downarrow {}
 
 /* Footer */
 /*************************************************/
