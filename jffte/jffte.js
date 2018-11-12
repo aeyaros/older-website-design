@@ -294,7 +294,7 @@ Javascript code file
 			theHr = parseInt(hr);
 			theMin = parseInt(min);
 			if(theHr != NaN && theMin != NaN) {
-				return theHr + (theMin/60)
+				return theHr + (theMin/60.0)
 			} else if(theHr == NaN) return "...Error: hour is NAN";
 			else return "...Error: minute is NaN";
 		}
@@ -478,7 +478,7 @@ Javascript code file
 			truckhtml += 
 			"<tr class=\"menuFieldEven\">" +
 			"<td class=\"tableInfoColumn1\">Hours:</td>"+
-			"<td class=\"tableInfoColumn2\">Open from " + getTimeAMPM(curID, true) + " to " + getTimeAMPM(curID, false) + "</td>" +
+			"<td class=\"tableInfoColumn2\">Open from " + getTimeAMPM(truckID, true) + " to " + getTimeAMPM(truckID, false) + "</td>" +
 			"</tr>";
 			
 			truckhtml += 
@@ -555,7 +555,7 @@ Javascript code file
 			if(menu == undefined) return "N/A";
 			
 			n = menu.length;
-			for(let i = 1; i < n; i++) { //loop through every item in the menu
+			for(let i = 0; i < n; i++) { //loop through every item in the menu
 				currentPrice = parseFloat(menu[i].price); //get the price of the item
 				if(currentPrice > max) { //if the current price is more than the current maximum
 					max = currentPrice; //then set a new maximum
@@ -564,7 +564,7 @@ Javascript code file
 			
 			//aey - get min, starting from max
 			var min = max;
-			for(let i = 1; i < n; i++) { //loop through every item in the menu
+			for(let i = 0; i < n; i++) { //loop through every item in the menu
 				currentPrice = parseFloat(menu[i].price); //get the price of the item
 				if(currentPrice < min) { //if current is less than current min
 					min = currentPrice; //set a new minimum
