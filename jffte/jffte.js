@@ -501,7 +501,7 @@ Javascript code file
 			var menutable = "<div id=\"truckMenuTitleText\">Truck menu: </div><table id=\"truckFoodTable\">";
 			
 			var menu = truck.menu; //aey - get the menu from the truck with id truckID
-		//	var n = truck.menu.length; // length of menu
+			var n = truck.menu.length; // length of menu
 			//aey - if there's nothing there, then return
 			if(menu[0] == 0){
 				menutable += "<tr class=\"menuFieldSingluar\" ><td>There's nothing on the menu! :(</td></tr></table";
