@@ -501,17 +501,19 @@ Javascript code file
 			var menutable = "<div id=\"truckMenuTitleText\">Truck menu: </div><table id=\"truckFoodTable\">";
 			
 			var menu = truck.menu; //aey - get the menu from the truck with id truckID
+		//	var n = truck.menu.length; // length of menu
 			//aey - if there's nothing there, then return
 			if(menu[0] == 0){
-				menutable += "<tr class=\"menuFieldEven\" ><td>There's nothing on the menu! :(</td></tr></table";
+				menutable += "<tr class=\"menuFieldSingluar\" ><td>There's nothing on the menu! :(</td></tr></table";
 				return menutable;
-			} 
+			}
 			
 			
 			//aey - otherwise print out each item in the menu
 			for(let i = 0; i < n; i++){ 
 				menutable += "<tr ";
-				if(i % 2 == 0) menutable += "class=\"menuFieldEven\" "; //for evens
+				if(n == 1) menutable += "class=\"menuFieldSingluar\" "; //if only one item
+				else if(i % 2 == 0) menutable += "class=\"menuFieldEven\" "; //for evens
 				else menutable += "class=\"menuFieldOdd\" "; //for odds
 				
 				/* first column */
