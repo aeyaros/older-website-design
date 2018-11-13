@@ -613,6 +613,9 @@ Javascript code file
 			} else if (menuType == "truck") {
 				//aey - get, then print html string for truck's information menu
 				printOutAMenu(headerString + setUpTruckMenu(truckID));
+				//aey - scroll up to the top of the truck's menu after loading
+				document.getElementById("theMenuPanel").scrollTop = 0;
+				//aey - zoom into the truck on the map
 				zoomToTruck(truckID);
 			}
 		}
