@@ -7,11 +7,9 @@ Andrew Yaros :)
 ~~~~~~~~~~~~~~~
 \*************/
 
-
 /*************************************************/
 /*                     Fonts                     */
 /*************************************************/
-
 
 /* Tachyon Thin */
 @font-face {
@@ -57,7 +55,6 @@ the layout of the page */
 /*                  Main styles                  */
 /*************************************************/
 
-
 /* Overall page format */
 /*************************************************/
 html, body {
@@ -80,7 +77,8 @@ html, body {
 	flex-wrap: nowrap;
 	align-content: stretch;
 	align-items: stretch;
-} a, a:visited { text-decoration: none;
+} a, a:visited { 
+	text-decoration: none;
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
 } a:hover { 
@@ -88,8 +86,9 @@ html, body {
 	text-decoration: overline;
 	background: #ffff00;
 	text-shadow: none;
-} div { border: none!important; }
-#title, #description, .footer, a, a:visited { 
+} div { 
+	border: none!important;
+} #title, #description, .footer, a, a:visited { 
 	color: #555;
 } ::selection { 
 	background: #ffff00;
@@ -101,20 +100,23 @@ html, body {
 	text-shadow: none;
 }
 
-
 /* Header */
 /*************************************************/
-#header, .footer { vertical-align: center; }
-#header {
+#header, .footer { 
+	vertical-align: center;
+} #header {
 	padding: 2%; /* padding */
 	display: flex; /* flex stuff is all important */
 	justify-content: space-between; /* horizontal align */
 	align-items: center; /* vertical align */
 	flex-wrap: nowrap;
-} #headerR { text-align: right; }
-#headerL { text-align: left; }
-#title { text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #999; }
-#description, .footer { 
+} #headerR { 
+	text-align: right;
+} #headerL { 
+	text-align: left; 
+} #title { 
+	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #999; 
+} #description, .footer { 
 	text-shadow: 0px 2px 20px #cdcdcd, 0px 1px 3px #999;
 } #title {
 	font-family: "tachyonthin", "Helvetica Neue", "Arial", sans-serif;
@@ -122,8 +124,9 @@ html, body {
 	letter-spacing: .25em!important;
 	font-size: 3.5vw;
 	font-weight: normal;
-} #lastname { letter-spacing: .765em!important; }
-#description {
+} #lastname { 
+	letter-spacing: .765em!important; 
+} #description {
 	letter-spacing: .07em;
 	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: normal;
@@ -131,7 +134,6 @@ html, body {
 	letter-spacing: .07em;
 	font-size: 2vw;
 } 
-
 
 /* Main page content */
 /*************************************************/
@@ -167,8 +169,9 @@ html, body {
 } #iframeLink:hover , #xbutton:hover { 
 	background-color: rgba(128, 128, 128, .75); 
 	text-decoration: none;
-} #iframeLink { border-right: 1px solid rgba(128, 128, 128, .5);}
-#downarrow {
+} #iframeLink { 
+	border-right: 1px solid rgba(128, 128, 128, .5);
+} #downarrow {
 	position: relative;
 	top: .05em;
 }
@@ -206,7 +209,9 @@ html, body {
 	margin: auto;
 } .footerlink {	
 	letter-spacing: .2em;
-} .onlyMobile { display: none; }
+} .onlyMobile { 
+	display: none;
+}
 
 /*************************************************/
 /*            Responsive design rules            */
@@ -220,10 +225,14 @@ div gets hidden (when the page gets too small) */
 /* for larger/desktop devices */
 /*************************************************/
 @media only screen and (min-width: 850px) {
-	#title { font-size: 20pt; }
-	#description { font-size: 14pt; } 
-	#header { padding: 30px; }
-	.footer { font-size: 13.5pt;
+	#title { 
+		font-size: 20pt;
+	} #description { 
+		font-size: 14pt; 
+	} #header { 
+		padding: 30px;
+	} .footer { 
+		font-size: 13.5pt;
 		padding-top: 20px; /* padding */
 		padding-bottom: 20px; /* padding */ 
 	}
@@ -233,12 +242,17 @@ div gets hidden (when the page gets too small) */
 /* for smaller devices */
 /*************************************************/
 @media only screen and (max-width: 640px) {
-	#title { font-size: 4.75vw; } 
-	#description { font-size: 2.4vw; }
-	#header { padding: 20px; }
-	#title, #description, .footer, a, a:visited { color: #333; }
-	#header, #title, #description, .footer, .footerlink { 
-		text-shadow: 0px 3px 5px #888; }
+	#title { 
+		font-size: 4.75vw;
+	} #description { 
+		font-size: 2.4vw; 
+	} #header { 
+		padding: 20px;
+	} #title, #description, .footer, a, a:visited { 
+		color: #333;
+	} #header, #title, #description, .footer, .footerlink { 
+		text-shadow: 0px 3px 5px #888;
+	}
 }
 
 /* if too narrow, iframe button should be raised up */
@@ -253,9 +267,12 @@ div gets hidden (when the page gets too small) */
 	#bodyDiv { 
 		max-width: 1024px;
 		min-height: 310px;
-	} #mainContent { display: none; }
-	#header { padding-bottom: 10px; }
-	#footer { flex: 1;
+	} #mainContent { 
+		display: none; 
+	} #header { 
+		padding-bottom: 10px;
+	} #footer { 
+		flex: 1;
 		flex-wrap: wrap;
 		align-content: space-around;
 		padding: none;
@@ -263,62 +280,82 @@ div gets hidden (when the page gets too small) */
 		font-style: italic;
 		min-width: 23%;
 		width: 23%;
-	} #copyright { font-weight: normal; 
+	} #copyright { 
+		font-weight: normal; 
 		padding: none;
 	} .footerlink { /* big buttons */
 		border-radius: 25px;
 		box-shadow: 0px 2px 20px #ddd;
 		padding: 20px;
-	} .footerlink:hover { box-shadow: 0px 1px 2px #777;
-	} a.footerlink:hover { text-decoration: none; }
-	.onlyMobile { display: inline; }
+	} .footerlink:hover {
+		box-shadow: 0px 1px 2px #777;
+	} a.footerlink:hover { 
+		text-decoration: none; 
+	} .onlyMobile { 
+		display: inline;
+	}
 }
-
 
 /* tiny width screens - also show buttons */
 /*************************************************/
 @media only screen and (max-width: 400px) {
-	#title { font-size: 18pt;
+	#title { 
+		font-size: 18pt;
 		padding-left: 9pt; /* half of font size */
 		padding-right: none;
 		margin: auto;
-	} #lastname { padding-left: 9pt; } /* half of font size */
-	#description { font-size: .5em; }
-	#header { padding: 7px;
+	} #lastname { 
+		padding-left: 9pt; /* half of font size */
+	} #description { 
+		font-size: .5em; 
+	} #header { 
+		padding: 7px;
 		align-content: stretch;
 		padding: 1px;
 		margin: auto;
-	} #headerL, #headerR { margin: auto; }
-	#headerL { padding: 10px;}
-	#headerR { display: none; /*text-align: center; width: 100%;*/ } 
-	#mainContent { display: none; }
-	#copyright { letter-spacing: 0px;
+	} #headerL, #headerR {
+		margin: auto;
+	} #headerL { 
+		padding: 10px;
+	} #headerR { 
+		display: none; /*text-align: center; width: 100%;*/ 
+	}  #mainContent {
+		display: none;
+	} #copyright { 
+		letter-spacing: 0px;
 		padding-top: 12.5px;
 	} .footerlink { /* medium buttons */
 		border-radius: 20px;
 		box-shadow: 0px 2px 15px #ddd;
 		padding: 15px;
-	} .footerlink:hover { box-shadow: 0px 1px 2px #777;
-	}a.footerlink:hover { text-decoration: none!important; }
-	.onlyMobile { display: inline; }
+	} .footerlink:hover { 
+		box-shadow: 0px 1px 2px #777;
+	} a.footerlink:hover { 
+		text-decoration: none!important;
+	} .onlyMobile { 
+		display: inline;
+	}
 }
 
 /* display small buttons when not enough room for larger buttons */
 @media only screen and (max-height: 444px) and (max-width: 450px) {
-	.footerlink { padding: 8px; /* small buttons */
-	box-shadow: 0px 2px 5px #d8d8d8; 
+	.footerlink { 
+		padding: 8px; /* small buttons */
+		box-shadow: 0px 2px 5px #d8d8d8; 
 	}
 }
 @media only screen and (max-height: 320px) and (max-width: 600px) {
-	.footerlink { padding: 8px; /* small buttons */
-	box-shadow: 0px 2px 5px #d8d8d8; 
+	.footerlink { 
+		padding: 8px; /* small buttons */
+		box-shadow: 0px 2px 5px #d8d8d8; 
 	}
 }
 
 /* Sizing the footer */
 /*************************************************/
 @media only screen and (max-width: 799px) {
-	.footer { font-size: 1em;
+	.footer { 
+		font-size: 1em;
 		padding: none;
 		min-width: 32%;
 		width: 32%;
@@ -331,22 +368,29 @@ div gets hidden (when the page gets too small) */
 	} 
 }
 @media only screen and (max-width: 400px) {
-	#bodyDiv { min-height: 360px; }
-	#footer { flex: 1;
+	#bodyDiv { 
+		min-height: 360px;
+	} #footer { 
+		flex: 1;
 		flex-wrap: wrap;
 		justify-content: space-around;
 	} .footer {
 		min-width: 98%;
 		width: 98%;
 		font-style: normal;
-	} #recursion { display: none;}
+	} #recursion { 
+		display: none;
+	}
 }
 
 /* adjust header when tiny */
 @media only screen and ((max-width: 400px) and (max-height: 400px)) {
-	#title { font-size: 16pt;
+	#title { 
+		font-size: 16pt;
 		padding: none;
 		padding-left: 12pt; /* half of font size */
 		margin: auto;
-	} #lastname { padding-left: 12pt; } /* half of font size */
+	} #lastname { 
+		padding-left: 12pt; /* half of font size */
+	} 
 }
