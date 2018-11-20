@@ -133,7 +133,13 @@ the layout of the page */
 	text-transform: uppercase;
 	letter-spacing: .07em;
 	font-size: 2vw;
-} 
+} #title, #description {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+}
 
 /*************************************************/
 /*              Main Page Content                */
@@ -165,6 +171,12 @@ the layout of the page */
 	color: #000000!important;
 	background-color: rgba(222, 222, 222, .9); 
 	text-decoration: none;
+} #slideshow {
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
 }
 
 /*************************************************/
