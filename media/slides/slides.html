@@ -8,6 +8,10 @@
 		//image should be in the same directory as this html file
 		function setBackground(imageName) {
 			document.body.style.backgroundImage = "url('" + imageName + "')";
+			document.body.style.backgroundRepeat = "no-repeat";
+			document.body.style.backgroundPosition = "center center";
+			document.body.style.backgroundAttachment = "fixed"; 
+			document.body.style.backgroundSize = "cover";
 		}
 		
 		//change the slides every few seconds
@@ -25,27 +29,26 @@
 			"ark.jpeg"
 		]; var n = slideNames.length;
 		
+		//preload images
+		for (h = 0; h < n; h++) { var i = new Image(); i.src = slideNames[h]; }
+		
 		//counter variable starts at the second image; we already displayed the first
-		var i = 1;
+		var count = 1;
 		
 		//change the image to the next one
 		function changeSlide() {
 			//change image to next item in array
 			setBackground(slideNames[i]);
 			//increment counter variable
-			if (i + 1 < n) i++;
-			else i = 0;
+			if (count + 1 < n) count++;
+			else count = 0;
 		} setInterval(changeSlide, numMilSec);
 		</script>
 	</head>
 	<body>
 		<script> 
-			document.body.style.backgroundColor = "#000000";
+			document.body.style.backgroundColor = "#000000";	
 			setBackground("lancaster.jpeg");
-			document.body.style.backgroundRepeat = "no-repeat";
-			document.body.style.backgroundPosition = "center center";
-			document.body.style.backgroundAttachment = "fixed"; 
-			document.body.style.backgroundSize = "cover";
 		</script>
 	</body>
 </html>
