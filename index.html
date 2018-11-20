@@ -9,13 +9,9 @@
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56859530-3"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'UA-56859530-3');
-		</script>
+		<script> window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date()); gtag('config', 'UA-56859530-3'); </script>
 		
 		<!-- Page title -->
 		<title>Andrew Yaros</title>
@@ -37,8 +33,10 @@
 	</head>
 	<body>
 	<div id="bodyDiv"> 
+	
 		<!-- Header -->
 		<div id="header">
+		
 			<!-- Left side of header -->
 			<div id="headerL">
 				<!-- Title -->
@@ -46,20 +44,17 @@
 				<span id="lastname">Yaros</span>
 				</span>
 			</div>
+			
 			<!-- Right side of header -->
 			<div id="headerR">
 				<!-- Description -->
 				<span id="description">Drexel&nbsp;Computer&nbsp;Science &amp;&nbsp;Architecture</span>
 			</div>
+			
 		</div>
 		
 		<!-- Main content -->
 		<div id="mainContent">
-		
-			<script> //hide the iframe link if the x is clicked
-				function hideiframebutton() {
-					document.getElementById("iframeButton").style.display = "none"; 
-				} </script>
 		
 			<!-- Download PDF link overlapping the ifrmae -->
 			<a id="iframeButton" target="_blank"
@@ -67,11 +62,10 @@
 				Download&nbsp;PDF&nbsp;Portfolio</a>
 			
 			<!-- Slideshow -->
-			<iframe style="display: block; border: none; width: 100%; height: 100%;" 
-				src="./media/slides/slides.html">
-					<a href="./media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
-					Slideshow couldn't display. :( Click here.</a>
-				</iframe>			
+			<iframe style="display: block; border: none; width: 100%; height: 100%;" src="./media/slides/slides.html">
+					Slideshow could not display properly. :( Click here. </a>
+			</iframe>
+			
 		</div>
 		
 		<!-- Footer (Basically the main content when window is small) -->
