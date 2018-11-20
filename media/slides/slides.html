@@ -3,53 +3,48 @@
 	<head>
 		<title>Slideshow</title>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
-
-		<style>
-			body {
-				overflow: hidden;
-			}
-			#slide {
-				width:100%;
-				vertical-align: center;
-			}
-			@media only screen and (orientation: portrait) {
-				#slide {
-					height: 100%!important;
-					width: auto;
-					margin: auto;
-				}
-			}
-		</style>
-		<script>
+		<style> * { border: none; padding: none; margin: none; } </style>
+		<script> //function to change the background
+		//image should be in the same directory as this html file
+		function setBackground(imageName) {
+			document.body.style.backgroundImage = "url('" + imageName + "')";
+			document.body.style.backgroundRepeat = "no-repeat";
+			document.body.style.backgroundPosition = "center center";
+			document.body.style.backgroundAttachment = "fixed"; 
+			document.body.style.backgroundSize = "cover";
+		}
+		
 		//change the slides every few seconds
-		var numMilSec = 1500; //number of milliseconds
+		var numMilSec = 2000; //number of milliseconds
 		
 		//array with the names of each image
 		var slideNames = [
-			"ark.jpeg", 
-			"athena.jpeg", 
-			"gropius.jpeg", 
-			"lancaster.jpeg", 
-			"manifold.jpeg", 
+			"lancaster.jpeg",
 			"shell.jpeg", 
-			"stanford.jpeg", 
-			"wefa.jpeg"
+			"wefa.jpeg",
+			"gropius.jpeg",
+			"manifold.jpeg",
+			"stanford.jpeg",
+			"athena.jpeg", 
+			"ark.jpeg"
 		]; var n = slideNames.length;
 		
-		var i = 0;		
+		//counter variable starts at the second image; we already displayed the first
+		var i = 1;
+		
 		//change the image to the next one
 		function changeSlide() {
 			//change image to next item in array
-			document.getElementById("slide").src = slideNames[i];
-			document.hero.style.background = color
+			setBackground(slideNames[i]);
 			//increment counter variable
-			if(i+1 < n) i++;
-			else i=0;
+			if (i + 1 < n) i++;
+			else i = 0;
 		} setInterval(changeSlide, numMilSec);
 		</script>
 	</head>
 	<body>
-		<div id="hero"></div>
-		<img id="slide" src="stanford.jpeg">
+		<script> 
+			setBackground("lancaster.jpeg");
+		</script>
 	</body>
 </html>

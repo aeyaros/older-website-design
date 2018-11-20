@@ -146,15 +146,19 @@ html, body {
 	flex: 1!important;
 	background-color: #d1d1d1;
 } #iframeButton {
+	width: 200px;
 	height: 44px;
 	max-height: 44px;
 	position: absolute;
-	bottom: 12px;
-	left: 25px;
+	bottom: 10%; /*bottom: 12px;*/
+	left: 50%; /*left: 25px;*/
+	margin-left: -100px;
+	margin-bottom: -22px;
 	text-align: left;
 	background-color: rgba(0, 0, 0, .75);
 	border-radius: 3px;
 	font-size: 10pt;
+	text-align: center;
 } #xbutton, #xbutton:visited { 
 	background-color: transparent;
 	border: none;
