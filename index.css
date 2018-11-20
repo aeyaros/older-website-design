@@ -10,7 +10,6 @@ Andrew Yaros :)
 /*************************************************/
 /*                     Fonts                     */
 /*************************************************/
-
 /* Tachyon Thin */
 @font-face {
 	font-family: "tachyonthin";
@@ -52,10 +51,7 @@ changed or it will screw up the responsiveness and
 the layout of the page */
 
 /*************************************************/
-/*                  Main styles                  */
-/*************************************************/
-
-/* Overall page format */
+/*              Overall Page Format              */
 /*************************************************/
 html, body {
 	height: 100%;
@@ -100,7 +96,8 @@ html, body {
 	text-shadow: none;
 }
 
-/* Header */
+/*************************************************/
+/*                    Header                     */
 /*************************************************/
 #header, .footer { 
 	vertical-align: center;
@@ -135,7 +132,8 @@ html, body {
 	font-size: 2vw;
 } 
 
-/* Main page content */
+/*************************************************/
+/*              Main Page Content                */
 /*************************************************/
 #mainContent { /* all of this is important */
 	position: relative;
@@ -166,7 +164,8 @@ html, body {
 	text-decoration: none;
 }
 
-/* Footer */
+/*************************************************/
+/*                    Footer                     */
 /*************************************************/
 #footer { /* all important */
 	display: flex;
@@ -248,7 +247,7 @@ div gets hidden (when the page gets too small) */
 /* if height is too small then hide the iframe
 	and show buttons */
 /*************************************************/
-@media only screen and (max-height: 500px) {
+@media only screen and (max-height: 400px) {
 	#bodyDiv { 
 		max-width: 1024px;
 		min-height: 310px;
