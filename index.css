@@ -198,6 +198,8 @@ html, body {
 	margin: auto;
 } .footerlink {	
 	letter-spacing: .2em;
+	padding: 5px;
+	border-radius: 10px;
 } .onlyMobile { 
 	display: none;
 }
