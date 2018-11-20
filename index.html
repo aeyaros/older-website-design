@@ -59,16 +59,12 @@
 			<script> //hide the iframe link if the x is clicked
 				function hideiframebutton() {
 					document.getElementById("iframeButton").style.display = "none"; 
-				}</script>
+				} </script>
 		
 			<!-- Download PDF link overlapping the ifrmae -->
-			<div id="iframeButton">
-				<a target="_blank" id="iframeLink"
-					href="/media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
-					<!--&#11015; black down arrow unicode character - not using right now -->
-					<!--<span id="downarrow"><img src="/media/fonts/down.svg"/></span>-->
-					Download&nbsp;PDF&nbsp;Portfolio</a><button id="xbutton" onclick="hideiframebutton()"><b>X</b></button>
-			</div>
+			<a id="iframeButton" target="_blank"
+				href="/media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
+				Download&nbsp;PDF&nbsp;Portfolio</a>
 			
 			<!-- Slideshow -->
 			<iframe style="display: block; border: none; width: 100%; height: 100%;" 

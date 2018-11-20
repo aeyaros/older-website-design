@@ -146,38 +146,26 @@ html, body {
 	flex: 1!important;
 	background-color: #d1d1d1;
 } #iframeButton {
-	width: 200px;
-	height: 44px;
-	max-height: 44px;
+	display: block;
+	width: 256px;
+	padding: 15px;
 	position: absolute;
-	bottom: 10%; /*bottom: 12px;*/
-	left: 50%; /*left: 25px;*/
-	margin-left: -100px;
-	margin-bottom: -22px;
-	text-align: left;
-	background-color: rgba(0, 0, 0, .75);
-	border-radius: 3px;
-	font-size: 10pt;
+	bottom: 10%;
+	left: 50%;
+	margin-left: -128px;
 	text-align: center;
-} #xbutton, #xbutton:visited { 
-	background-color: transparent;
-	border: none;
-} #iframeLink, #xbutton { 
-	color: #fff!important;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, .75);
+	border-radius: 20px;
+	font-size: 10pt;
+	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-style: italic;
+	text-transform: uppercase;
 	-webkit-transition-duration: 0.1s;
 	transition-duration: 0.1s;
-	padding: 10px;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	vertical-align: center;
-} #iframeLink:hover , #xbutton:hover { 
+} #iframeButton:hover { 
 	background-color: rgba(128, 128, 128, .75); 
 	text-decoration: none;
-} #iframeLink { 
-	border-right: 1px solid rgba(128, 128, 128, .5);
-} #downarrow {
-	position: relative;
-	top: .05em;
 }
 
 /* Footer */
@@ -258,11 +246,6 @@ div gets hidden (when the page gets too small) */
 		text-shadow: 0px 3px 5px #888;
 	}
 }
-
-/* if too narrow, iframe button should be raised up */
-/*@media only screen and (max-width: 512px) {
-	#iframeButton { bottom: 65px; }
-}*/
 
 /* if height is too small then hide the iframe
 	and show buttons */
