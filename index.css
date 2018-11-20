@@ -155,15 +155,15 @@ the layout of the page */
 } #iframeButton {
 	display: block;
 	width: 200px;
-	padding: 16px;
+	padding: 8px;
 	position: absolute;
-	bottom: 10%;
+	bottom: 20px;
 	left: 50%;
-	margin-left: -116px; /* half width, plus padding */
+	margin-left: -108px; /* half width, plus padding */
 	text-align: center;
-	color: #ffffff;
-	background-color: rgba(0, 0, 0, .75);
-	border-radius: 20px;
+	color: rgba(255, 255, 255, .7);
+	background-color: rgba(0, 0, 0, .7);
+	border-radius: 10px;
 	font-size: 11pt;
 	-webkit-transition-duration: 0.05s;
 	transition-duration: 0.05s;
