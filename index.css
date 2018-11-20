@@ -53,7 +53,10 @@ the layout of the page */
 /*************************************************/
 /*              Overall Page Format              */
 /*************************************************/
-html, body {
+:root {
+	--selectiontext: #ffffff;
+	--selectioncolor: #000000;
+} html, body {
 	height: 100%;
 	margin: 0;
 	overflow: auto;
@@ -61,7 +64,7 @@ html, body {
 } body {
 	font-family: "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-size: 12pt;
-	color: #000!important;
+	color: #000000!important;
 } #bodyDiv{
 	margin: auto; /* important */
 	height: 100%; /* important */
@@ -78,21 +81,21 @@ html, body {
 	-webkit-transition-duration: 0.3s;
 	transition-duration: 0.3s;
 } a:hover { 
-	color: #000!important;
+	color: var(--selectiontext)!important;
 	text-decoration: overline;
-	background: #ffff00;
+	background: var(--selectioncolor);
 	text-shadow: none;
 } div { 
 	border: none!important;
 } #title, #description, .footer, a, a:visited { 
-	color: #555;
+	color: #555555;
 } ::selection { 
-	background: #ffff00;
-	color: #000;
+	background: var(--selectioncolor);
+	color: var(--selectiontext);
 	text-shadow: none;
 } ::-moz-selection { 
-	background: #ffff00;
-	color: #000;
+	background: var(--selectioncolor);
+	color: var(--selectiontext);
 	text-shadow: none;
 }
 
@@ -112,9 +115,9 @@ html, body {
 } #headerL { 
 	text-align: left; 
 } #title { 
-	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #999; 
+	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #999999; 
 } #description, .footer { 
-	text-shadow: 0px 2px 20px #cdcdcd, 0px 1px 3px #999;
+	text-shadow: 0px 2px 20px #cdcdcd, 0px 1px 3px #999999;
 } #title {
 	font-family: "tachyonthin", "Helvetica Neue", "Arial", sans-serif;
 	text-transform: uppercase;
@@ -156,10 +159,10 @@ html, body {
 	background-color: rgba(0, 0, 0, .75);
 	border-radius: 20px;
 	font-size: 11pt;
-	-webkit-transition-duration: 0.1s;
-	transition-duration: 0.1s;
+	-webkit-transition-duration: 0.05s;
+	transition-duration: 0.05s;
 } #iframeButton:hover {
-	color: #000000;
+	color: #000000!important;
 	background-color: rgba(222, 222, 222, .9); 
 	text-decoration: none;
 }
@@ -199,7 +202,6 @@ html, body {
 } .footerlink {	
 	letter-spacing: .2em;
 	padding: 5px;
-	border-radius: 10px;
 } .onlyMobile { 
 	display: none;
 }
@@ -240,9 +242,9 @@ div gets hidden (when the page gets too small) */
 	} #header { 
 		padding: 20px;
 	} #title, #description, .footer, a, a:visited { 
-		color: #333;
+		color: #333333;
 	} #header, #title, #description, .footer, .footerlink { 
-		text-shadow: 0px 3px 5px #888;
+		text-shadow: 0px 3px 5px #888888;
 	}
 }
 
@@ -271,10 +273,10 @@ div gets hidden (when the page gets too small) */
 		padding: none;
 	} .footerlink { /* big buttons */
 		border-radius: 25px;
-		box-shadow: 0px 2px 20px #ddd;
+		box-shadow: 0px 2px 20px #dddddd;
 		padding: 20px;
 	} .footerlink:hover {
-		box-shadow: 0px 1px 2px #777;
+		box-shadow: 0px 1px 2px #777777;
 	} a.footerlink:hover { 
 		text-decoration: none; 
 	} .onlyMobile { 
@@ -312,10 +314,10 @@ div gets hidden (when the page gets too small) */
 		padding-top: 12.5px;
 	} .footerlink { /* medium buttons */
 		border-radius: 20px;
-		box-shadow: 0px 2px 15px #ddd;
+		box-shadow: 0px 2px 15px #dddddd;
 		padding: 15px;
 	} .footerlink:hover { 
-		box-shadow: 0px 1px 2px #777;
+		box-shadow: 0px 1px 2px #777777;
 	} a.footerlink:hover { 
 		text-decoration: none!important;
 	} .onlyMobile { 
