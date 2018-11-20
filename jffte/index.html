@@ -1,64 +1,34 @@
-<!DOCTYPE html>
-<html>
+<html> <!-- Created by Andrew Yaros -->
 	<head>
-		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		John Fry's Food Truck Extravaganza! 
-		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		Drexel CI103 Team 94 Spring 2018 Final Project
-		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-		Andrew Yaros, who did most of the real work
-		here for this project's final deliverables!
-		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-		<!-- Jacob Proctor  -->
-		<!-- Jung Ho Baek   -->
-		<!-- Riley Faulkner -->
-		<!--~~~~~
-		HTML file
-		~~~~~~-->
-		<meta name="viewport" content="width=device-width, initial-scale=0.75, user-scalable=no" charset="UTF-8" />
-		<title>John Fry's Food Truck Extravaganza!</title>
-		<!-- aey - google fonts links -->
-		<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,700|Barlow:300,400,700" rel="stylesheet" >
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56859530-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-		<!-- aey - Firebase scripts -->
-		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
-				
-		<!-- aey - THE JAVASCRIPT CODE: -->
-		<script src="jffte.js" ></script>
-		
-		<!-- aey - THE CSS CODE -->
-		<link type="text/css" rel="stylesheet" href="jffte.css" media="all">	
+			gtag('config', 'UA-56859530-3');
+		</script>
+		<title>Redirecting to John Fry's Food Truck Extravaganza</title>
+		<meta http-equiv="refresh" content="0; url=http://jffte.andrewyaros.com/"/>
 	</head>
+	<style> /* Computer Modern serif */
+		@font-face { font-family: "cmu";
+			src: url("media/fonts/cmunrm.otf");
+			font-weight: normal;
+		} html, body { color: #000; background-color: #fafafa;
+			font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif; } 
+		#thelink { margin: auto; text-align: center; padding: 50px; } 
+		a, a:visited { text-decoration: none;
+			-webkit-transition-duration: .25s;
+			transition-duration: .25s; }
+		a { color: #444; box-shadow: 0px 0px 15px #c9c9c9;
+			padding: 20px; font-size: 16px; border-radius: 25px; } 
+		a:hover { background: #555; color: #fff; }
+	</style>
 	<body>
-		<!-- the application -->
-		<div id="app">
-			<!-- The map -->
-			<div id="appMapPanel"><div id="map"></div></div>
-			
-			<!-- The menu panel -->
-			<div id="appMenuPanel"><div id="theMenuPanel"></div></div>
-			
-			<script>
-				/* aey - since loading takes time, I'm going to just delay until things are ready */
-				/* aey - load the trucks from firebase; this will also print out the main menu */
-				loadTrucks();
-				setTimeout(function () {
-					//aey - load the main menu
-					pickAMenu("main","");
-					//aey - load the map
-					var script = document.createElement('script');
-					script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAEZzn1fHUb_bqYXNIFUS2vDQVW9PqPluk&callback=initMap";
-					document.getElementsByTagName('endScript')[0].appendChild(script);
-				}, 2000);
-			</script>			
-		</div><endScript></endscript>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEZzn1fHUb_bqYXNIFUS2vDQVW9PqPluk&callback=initMap" asyncv
-			defer></script>		
+		<div id="thelink"><a href="http://jffte.andrewyaros.com/">
+		Please click or tap here if the page does not redirect.
+		</a></div>
 	</body>
 </html>
