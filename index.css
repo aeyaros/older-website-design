@@ -196,7 +196,8 @@ the layout of the page */
 	text-shadow: none;
 	text-transform: none;
 	text-align: center;
-	padding: 4px;
+	padding: 10px;
+	padding-top: 0px;
 	text-align: center;
 	margin: auto;
 } .footerlink {	
