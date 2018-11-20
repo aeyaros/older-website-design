@@ -147,12 +147,12 @@ html, body {
 	background-color: #d1d1d1;
 } #iframeButton {
 	display: block;
-	width: 256px;
-	padding: 15px;
+	width: 200px;
+	padding: 16px;
 	position: absolute;
 	bottom: 10%;
 	left: 50%;
-	margin-left: -128px;
+	margin-left: -116px; /* half width, plus padding */
 	text-align: center;
 	color: #ffffff;
 	background-color: rgba(0, 0, 0, .75);
@@ -160,7 +160,8 @@ html, body {
 	font-size: 11pt;
 	-webkit-transition-duration: 0.1s;
 	transition-duration: 0.1s;
-} #iframeButton:hover { 
+} #iframeButton:hover {
+	color: #000000;
 	background-color: rgba(222, 222, 222, .9); 
 	text-decoration: none;
 }
