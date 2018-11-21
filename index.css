@@ -1,11 +1,9 @@
-/*************\
-~~~~~~~~~~~~~~~
-Hello world! :D
-~~~~~~~~~~~~~~~
-CSS designed by
-Andrew Yaros :)
-~~~~~~~~~~~~~~~
-\*************/
+/* * * * * * * * *\
+* Hello world! :D *
+* * * * * * * * * *
+* CSS designed by *
+* Andrew Yaros :) *
+\* * * * * * * * */
 
 /*************************************************/
 /*                     Fonts                     */
@@ -45,10 +43,12 @@ Andrew Yaros :)
 	font-family: "applesymb";
 	src: url("media/fonts/applesymb.ttf");
 }
-
+/*************************************************/
 /* by "important" I mean stuff that should not be
 changed or it will screw up the responsiveness and 
 the layout of the page */
+/*************************************************/
+
 
 /*************************************************/
 /*              Overall Page Format              */
@@ -217,7 +217,9 @@ the layout of the page */
 	padding: 5px;
 } .onlyMobile { 
 	display: none;
-}
+} #recursion { 
+	display: none;
+} 
 
 /*************************************************/
 /*            Responsive design rules            */
@@ -339,18 +341,24 @@ div gets hidden (when the page gets too small) */
 }
 
 /* display small buttons when not enough room for larger buttons */
-@media only screen and (max-height: 444px) and (max-width: 450px) {
+/*************************************************/
+@media only screen and (max-height: 400px) and (max-width: 600px) {
 	.footerlink { 
-		padding: 8px; /* small buttons */
-		box-shadow: 0px 2px 5px #d8d8d8; 
+		padding: 7px; /* small buttons */
+		padding-left: 20px;
+		padding-right: 20px;
+		box-shadow: 0px 2px 5px #d8d8d8;
 	}
 }
-@media only screen and (max-height: 320px) and (max-width: 600px) {
+@media only screen and (max-height: 500px) and (max-width: 400px) {
 	.footerlink { 
-		padding: 8px; /* small buttons */
-		box-shadow: 0px 2px 5px #d8d8d8; 
+		padding: 7px; /* small buttons */
+		padding-left: 20px;
+		padding-right: 20px;
+		box-shadow: 0px 2px 5px #d8d8d8;
 	}
 }
+
 
 /* Sizing the footer */
 /*************************************************/
@@ -379,12 +387,11 @@ div gets hidden (when the page gets too small) */
 		min-width: 98%;
 		width: 98%;
 		font-style: normal;
-	} #recursion { 
-		display: none;
-	}
+	} 
 }
 
 /* adjust header when tiny */
+/*************************************************/
 @media only screen and ((max-width: 400px) and (max-height: 400px)) {
 	#title { 
 		font-size: 16pt;
@@ -393,5 +400,5 @@ div gets hidden (when the page gets too small) */
 		margin: auto;
 	} #lastname { 
 		padding-left: 12pt; /* half of font size */
-	} 
+	}
 }
