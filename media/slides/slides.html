@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+		Slideshow for andrewyaros.com home page
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<title>Slideshow</title>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
-		<style> * { border: none; padding: none; margin: none; } </style>
+		<style> * { 
+			border: none; 
+			padding: none; 
+			margin: none;
+		} </style>
 		<script> //function to change the background
 		//image should be in the same directory as this html file
 		function setBackground(imageName) {
@@ -13,6 +20,8 @@
 			document.body.style.backgroundAttachment = "fixed"; 
 			document.body.style.backgroundSize = "cover";
 		}
+		
+		//this method is based on the W3schools demo :/ 
 		
 		//change the slides every few seconds
 		var numMilSec = 2000; //number of milliseconds
@@ -26,15 +35,17 @@
 			"wefa.jpg",
 			"gropius.jpg",
 			"barnes.jpg",
-			"stanford.jpg"   /*,
+			"stanford.jpg" /* ,
 			"rhombus.jpg",
 			"manifold.jpg",
-			"ark.jpg"
-			*/
+			"ark.jpg" */
 		]; var n = slideNames.length;
 		
 		//preload images
-		for (h = 0; h < n; h++) { var i = new Image(); i.src = slideNames[h]; }
+		for (h = 0; h < n; h++) { 
+			var i = new Image(); 
+			i.src = slideNames[h];
+		}
 		
 		//counter variable starts at the second image; we already displayed the first
 		var count = 1;
@@ -42,16 +53,15 @@
 		//change the image to the next one
 		function changeSlide() {
 			//change image to next item in array
-			setBackground(slideNames[count]);
-			//increment counter variable
-			if (count + 1 < n) count++;
-			else count = 0;
+			setBackground(slideNames[(count % n)]);
+			count++;
 		} setInterval(changeSlide, numMilSec);
 		</script>
 	</head>
 	<body>
-		<script> 
-			document.body.style.backgroundColor = "#d1d1d1";	
+		<script> //set the background color
+			document.body.style.backgroundColor = "#d1d1d1";
+			//set background image to the first item in the array
 			setBackground(slideNames[0]);
 		</script>
 	</body>
