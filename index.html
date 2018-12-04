@@ -51,16 +51,41 @@
 		<meta name="theme-color" content="#ffffff"><!--aaaaaaaaaaaaaaahhhhhhhhh-->
 		
 		<script> /* If it is dark out, then load the dark theme ;) */
-			//create a new link element, set it's attributes
-			var darkTheme = document.createElement("link");
-			darkTheme.setAttribute("type", "text/css");
-			darkTheme.setAttribute("rel", "stylesheet");
-			darkTheme.setAttribute("href", "./media/styles/darkerColors.css");
+			//IMPORTANT keep track of the current theme
+			var isDark = false;
 			
-			//only set the dark theme if it's night time
+			//change the theme to a different css file
+			//must be in the styles folder
+			//will be appended to the head tag as an additional link tag
+			function changeTheme(cssname) {
+				//create a new link element, set it's attributes
+				var newTheme = document.createElement("link");
+				newTheme.setAttribute("type", "text/css");
+				newTheme.setAttribute("rel", "stylesheet");
+				newTheme.setAttribute("href", "./media/styles/" + cssname + ".css");
+				//append to the head tag
+				document.getElementsByTagName("head")[0].appendChild(newTheme);
+			}
+			
+			//toggle back and forth between light and dark themes
+			function toggleTheme() {
+				if(isDark) { //if dark then switch to light theme
+					isDark = false;
+					document.getElementById("changethemebutton").innerHTML = "&#9790;";
+					changeTheme("lighterColors");
+				} else { //if light then switch to dark theme
+					isDark = true;
+					document.getElementById("changethemebutton").innerHTML = "&#9728;";
+					changeTheme("darkerColors");
+				}
+			} /* Icons for button:
+			&#9728; sun
+			&#9790; moon
+			*/
+			
+			//if night time, then change to dark theme
 			var theHour = parseInt((new Date).getHours());
-			if(theHour < 7 || theHour >= 19) { /* append to the head tag */
-				document.getElementsByTagName("head")[0].appendChild(darkTheme); }
+			if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
 		</script>
 	</head>
 	<body>
@@ -163,8 +188,15 @@
 			<!-- Copyright -->
 			<div id="copyright">
 				<!-- This tiny script keeps the copyright year up to date -->
-				<span>&copy;&nbsp;2013-<script>document.write((new Date).getFullYear());
-				</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED</span>
+				&copy;&nbsp;2013-<script>document.write((new Date).getFullYear());
+				</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED 
+				<span id="changethemetext" onclick="toggleTheme()">
+				Click&nbsp;to&nbsp;change&nbsp;theme</span>
+			</div>
+			
+			
+			<div id="changethemebutton" onclick="toggleTheme()">
+				&#9790; <!-- moon unicode symbol -->
 			</div>
 		</div>
 	</body>

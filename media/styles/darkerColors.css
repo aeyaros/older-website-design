@@ -4,7 +4,7 @@ andrewyaros.com dark theme
 :root {
 	--selectiontext: #000000;
 	--selectioncolor: #dee9d0; /* glow in the dark color */
-	--pagebg: #1d1d1d;
+	--pagebg: #202020;
 	--pagetext: #ffffff;
 	--titletext: #dee9d0;
 	--pagelightertext: #cccccc;
@@ -21,6 +21,6 @@ andrewyaros.com dark theme
 	--smallerscreenshadow: #000000;
 	
 	--tinybuttonshadow: #141414;
-	--mobilebuttonshadow: #0c0c0c;
-	--mobilebuttonhovershadow: #888888;
+	--mobilebuttonshadow: #000000;
+	--mobilebuttonhovershadow: #000000;
 }

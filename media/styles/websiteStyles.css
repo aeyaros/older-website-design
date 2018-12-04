@@ -57,11 +57,15 @@ the layout of the page */
 /*************************************************/
 :root {
 	/* SEE SEPERATE FILE FOR DARK THEME */
+	/* There is also a seperate light theme file;
+	copy any changes to these colors into that file */
+	
 	/* Theme colors. DO NOT REMOVE THIS */
 	--selectiontext: #ffffff;
 	--selectioncolor: #000000;
 	--pagebg: #fafafa;
 	--pagetext: #000000;
+	--titletext: #555555;
 	--pagelightertext: #555555;
 	
 	--titleshadowone: #ababab;
@@ -205,7 +209,7 @@ the layout of the page */
 	color: var(--iframebuttonhovertext)!important;
 	background-color: var(--iframebuttonhoverbg); 
 	text-decoration: none;
-} #slideshow {
+} #slideshow, #changethemetext {
 	user-select: none;
 	-ms-user-select: none;
 	-moz-user-select: none;
@@ -258,7 +262,35 @@ the layout of the page */
 	display: none;
 } #recursion { 
 	display: none;
-} 
+} #changethemebutton {
+	display: none;
+	position: absolute!important;
+	right: 16px!important;
+	bottom: 16px!important;
+	width: 32px;
+	height: 32px;
+	border-radius: 8px;
+	font-size: 24px;
+	text-align: center;
+	vertical-align: center;
+	color: var(--pagetext);
+	background-color: var(--selectiontext);
+	box-shadow: 0px 0px 8px var(--mobilebuttonshadow);
+	font-family: "Verdana", sans-serif;
+} #changethemebutton:hover {
+	color: var(--selectiontext);
+	background-color: var(--pagetext);
+	box-shadow: 0px 0px 1px var(--mobilebuttonshadowhover);
+} #changethemetext {
+	display: inline;
+	color: var(--pagelightertext);
+	font-size: 7pt;
+	padding: 3px;
+	text-transform: uppercase;
+} #changethemetext:hover {
+	color: var(--selectiontext);
+	background-color: var(--pagetext);
+}
 
 /*************************************************/
 /*            Responsive design rules            */
@@ -335,7 +367,9 @@ div gets hidden (when the page gets too small) */
 		text-decoration: none; 
 	} .onlyMobile { 
 		display: inline;
-	}
+	} #changethemebutton {
+		display: block;
+	} #changethemetext { display: none };
 }
 
 /* tiny width screens - also show buttons */
@@ -376,7 +410,9 @@ div gets hidden (when the page gets too small) */
 		text-decoration: none!important;
 	} .onlyMobile { 
 		display: inline;
-	}
+	} #changethemebutton {
+		display: block;
+	} #changethemetext { display: none };
 }
 
 /* display small buttons when not enough room for larger buttons */
