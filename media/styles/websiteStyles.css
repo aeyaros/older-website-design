@@ -250,8 +250,8 @@ the layout of the page */
 } #copyright {
 	font-family: "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-weight: normal;
-	letter-spacing: .06em;
-	font-size: 6pt;
+	letter-spacing: .025em;
+	font-size: 7pt;
 	color: var(--copyrighttext);
 	text-shadow: none;
 	text-transform: none;
@@ -260,6 +260,7 @@ the layout of the page */
 	padding-top: 0px;
 	text-align: center;
 	margin: auto;
+	text-transform: uppercase;
 } .footerlink {	
 	letter-spacing: .2em;
 	padding: 5px;
