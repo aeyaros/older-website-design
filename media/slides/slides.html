@@ -6,11 +6,31 @@
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<title>Slideshow</title>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
-		<style> * { 
-			border: none; 
-			padding: none; 
-			margin: none;
-		} </style>
+		<style>
+		/* variables */
+		:root{
+			--fadetime: 1s;
+			--transprop: ease-in-out;
+		}
+		
+		/* ...just in case */
+		* { border: none;  padding: none;  margin: none; }
+		
+		/* slide transitions */
+		body {
+			        transition: background 1s ease-in-out;
+			   -moz-transition: background 1s ease-in-out;
+			-webkit-transition: background 1s ease-in-out;
+			    -ms-transition: background 1s ease-in-out;
+			     -o-transition: background 1s ease-in-out;
+			
+			        transition: background var(--fadetime) var(--transprop);
+			   -moz-transition: background var(--fadetime) var(--transprop);
+			-webkit-transition: background var(--fadetime) var(--transprop);
+			    -ms-transition: background var(--fadetime) var(--transprop);
+			     -o-transition: background var(--fadetime) var(--transprop);
+		}
+		</style>
 		<script> //function to change the background
 		//image should be in the same directory as this html file
 		function setBackground(imageName) {
@@ -24,7 +44,7 @@
 		//this method is based on the W3schools demo :/ 
 		
 		//change the slides every few seconds
-		var numMilSec = 2000; //number of milliseconds
+		var numSec = 3; //number of seconds
 		
 		//array with the names of each image
 		var slideNames = [
@@ -55,7 +75,7 @@
 			//change image to next item in array
 			setBackground(slideNames[(count % n)]);
 			count++;
-		} setInterval(changeSlide, numMilSec);
+		} setInterval(changeSlide, (1000 * numSec));
 		</script>
 	</head>
 	<body>

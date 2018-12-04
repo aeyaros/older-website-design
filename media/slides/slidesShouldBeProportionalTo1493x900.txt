@@ -1,0 +1,7 @@
+Slides should be proportional to the following ratio:
+
+	1493:900
+
+Note:
+	900/1493 = 0.6028131278...
+	1493/900 = 1.6588888888...
