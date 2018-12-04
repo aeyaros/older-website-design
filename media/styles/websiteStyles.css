@@ -215,11 +215,16 @@ the layout of the page */
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
-} #downarrow {
+} #downarrow { /* the svg tag */
 	width: 12px;
 	margin-bottom: -0.5px;
-} #iframeButton:hover #downarrow {
-	filter: invert();
+} #thearrow { /* the svg path */
+	fill: var(--iframebuttontext);
+	stroke: var(--iframebuttontext);
+	stroke-miterlimit: 10;
+} #iframeButton:hover #thearrow { /* the svg when hovering over the iframe button */
+	fill: var(--iframebuttonhovertext);
+	stroke: var(--iframebuttonhovertext);
 }
 
 /*************************************************/
@@ -277,10 +282,17 @@ the layout of the page */
 	background-color: var(--pagebg);
 	box-shadow: 0px 0px 8px var(--mobilebuttonshadow);
 	font-family: "Verdana", sans-serif;
+} #themetoggleicon {
+	fill: var(--pagetext);
+	stroke: var(--pagetext);
+	stroke-miterlimit: 10;
 } #changethemebutton:hover {
 	color: var(--selectiontext);
 	background-color: var(--pagetext);
 	box-shadow: 0px 0px 1px var(--mobilebuttonshadowhover);
+} #changethemebutton:hover #themetoggleicon {
+	fill: var(--selectiontext);
+	stroke: var(--selectiontext);
 } #changethemetext {
 	display: inline;
 	color: var(--pagelightertext);
