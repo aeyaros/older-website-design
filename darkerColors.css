@@ -1,0 +1,27 @@
+/* * * * * * * * * * * * *
+andrewyaros.com dark theme 
+* * * * * * * * * * * * */
+:root {
+	--selectiontext: #000000;
+	--selectioncolor: #DEE9D0;
+	--pagebg: #1d1d1d;
+	--pagetext: #ffffff;
+	--titletext: #DEE9D0;
+	--pagelightertext: #cccccc;
+	
+	
+	--titleshadowone: #343434;
+	--titleshadowtwo: #000000;
+	--descriptionshadowone: #222222;
+	--descriptionshadowtwo: #000000;
+	
+	--maincontentbg: #2e2e2e;
+	--copyrighttext: #505050;
+	
+	--smallerscreentext: #cccccc;
+	--smallerscreenbg: #777777;
+	
+	--tinybuttonshadow: #141414;
+	--mobilebuttonshadow: #0c0c0c;
+	--mobilebuttonhovershadow: #888888;
+}

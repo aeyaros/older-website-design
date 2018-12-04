@@ -42,7 +42,9 @@
 @font-face {
 	font-family: "applesymb";
 	src: url("media/fonts/applesymb.ttf");
-}
+} /* Exo 2 light */
+@import url('https://fonts.googleapis.com/css?family=Exo+2:300&subset=cyrillic,latin-ext');
+
 /*************************************************/
 /* by "important" I mean stuff that should not be
 changed or it will screw up the responsiveness and 
@@ -54,17 +56,44 @@ the layout of the page */
 /*              Overall Page Format              */
 /*************************************************/
 :root {
+	/* SEE SEPERATE FILE FOR DARK THEME */
+	/* Theme colors. DO NOT REMOVE THIS */
 	--selectiontext: #ffffff;
 	--selectioncolor: #000000;
+	--pagebg: #fafafa;
+	--pagetext: #000000;
+	--pagelightertext: #555555;
+	
+	--titleshadowone: #ababab;
+	--titleshadowtwo: #999999;
+	--descriptionshadowone: #cdcdcd;
+	--descriptionshadowtwo: #999999;
+	
+	--maincontentbg: #d1d1d1;	
+	--copyrighttext: #afafaf;
+	
+	--smallerscreentext: #333333;
+	--smallerscreenbg: #888888;
+	
+	--tinybuttonshadow: #d8d8d8;
+	--mobilebuttonshadow: #dddddd;
+	--mobilebuttonhovershadow: #777777;
+	
+	/* this is to be the same regardless of light or dark theme */
+	--iframebuttontext: rgba(255, 255, 255, .9);
+	--iframebuttonbg: rgba(0, 0, 0, .9);
+	--iframebuttonhovertext: rgba(0, 0, 0, .9);
+	--iframebuttonhoverbg: rgba(222, 222, 222, .9);
 } html, body {
 	height: 100%;
 	margin: 0;
 	overflow: auto;
-	background-color: #fafafa!important;
+	background-color: var(--pagebg)!important;
 } body {
-	font-family: "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: "Exo 2", "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-size: 12pt;
-	color: #000000!important;
+	font-weight: 200;
+	color: var(--pagetext)!important;
 } #bodyDiv{
 	margin: auto; /* important */
 	height: 100%; /* important */
@@ -87,8 +116,10 @@ the layout of the page */
 	text-shadow: none;
 } div { 
 	border: none!important;
-} #title, #description, .footer, a, a:visited { 
-	color: #555555;
+} #title, #description, h1, h2, h3, h4, h5, h6 {
+	color: var(--titletext);
+} .footer, a, a:visited { 
+	color: var(--pagelightertext);
 } ::selection { 
 	background: var(--selectioncolor);
 	color: var(--selectiontext);
@@ -115,9 +146,9 @@ the layout of the page */
 } #headerL { 
 	text-align: left; 
 } #title { 
-	text-shadow: 0px 3px 20px #ababab, 0px 2px 3px #999999; 
+	text-shadow: 0px 3px 20px var(--titleshadowone), 0px 2px 3px var(--titleshadowtwo); 
 } #description, .footer { 
-	text-shadow: 0px 2px 20px #cdcdcd, 0px 1px 3px #999999;
+	text-shadow: 0px 2px 20px var(--descriptionshadowone), 0px 1px 3px var(--descriptionshadowtwo);
 } #title {
 	font-family: "tachyonthin", "Helvetica Neue", "Arial", sans-serif;
 	text-transform: uppercase;
@@ -139,6 +170,9 @@ the layout of the page */
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
+} #iframeButton {
+	font-family: "Exo 2", "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: normal;
 }
 
 /*************************************************/
@@ -151,25 +185,25 @@ the layout of the page */
 	display: flex;
 	border: none;
 	flex: 1!important;
-	background-color: #d1d1d1;
+	background-color: var(--maincontentbg);
 } #iframeButton {
 	display: block;
-	width: 200px;
+	width: 150px;
 	padding: 8px;
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
-	margin-left: -108px; /* half width, plus padding */
+	margin-left: -83px; /* half width, plus padding */
 	text-align: center;
-	color: rgba(255, 255, 255, .7);
-	background-color: rgba(0, 0, 0, .7);
+	color: var(--iframebuttontext);
+	background-color: var(--iframebuttonbg);
 	border-radius: 10px;
 	font-size: 11pt;
-	-webkit-transition-duration: 0.05s;
-	transition-duration: 0.05s;
+	-webkit-transition-duration: 0.0s;
+	transition-duration: 0.0s;
 } #iframeButton:hover {
-	color: #000000!important;
-	background-color: rgba(222, 222, 222, .9); 
+	color: var(--iframebuttonhovertext)!important;
+	background-color: var(--iframebuttonhoverbg); 
 	text-decoration: none;
 } #slideshow {
 	user-select: none;
@@ -177,6 +211,11 @@ the layout of the page */
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
+} #downarrow {
+	width: 12px;
+	margin-bottom: -0.5px;
+} #iframeButton:hover #downarrow {
+	filter: invert();
 }
 
 /*************************************************/
@@ -204,7 +243,7 @@ the layout of the page */
 	font-weight: normal;
 	letter-spacing: .06em;
 	font-size: 6pt;
-	color:#afafaf;
+	color: var(--copyrighttext);
 	text-shadow: none;
 	text-transform: none;
 	text-align: center;
@@ -257,9 +296,9 @@ div gets hidden (when the page gets too small) */
 	} #header { 
 		padding: 20px;
 	} #title, #description, .footer, a, a:visited { 
-		color: #333333;
+		color: var(--smallerscreentext);
 	} #header, #title, #description, .footer, .footerlink { 
-		text-shadow: 0px 3px 5px #888888;
+		text-shadow: 0px 3px 5px var(--smallerscreenbg);
 	}
 }
 
@@ -288,10 +327,10 @@ div gets hidden (when the page gets too small) */
 		padding: none;
 	} .footerlink { /* big buttons */
 		border-radius: 25px;
-		box-shadow: 0px 2px 20px #dddddd;
+		box-shadow: 0px 2px 20px var(--mobilebuttonshadow);
 		padding: 20px;
 	} .footerlink:hover {
-		box-shadow: 0px 1px 2px #777777;
+		box-shadow: 0px 1px 2px var(--mobilebuttonhovershadow);
 	} a.footerlink:hover { 
 		text-decoration: none; 
 	} .onlyMobile { 
@@ -329,10 +368,10 @@ div gets hidden (when the page gets too small) */
 		padding-top: 12.5px;
 	} .footerlink { /* medium buttons */
 		border-radius: 20px;
-		box-shadow: 0px 2px 15px #dddddd;
+		box-shadow: 0px 2px 15px var(--mobilebuttonshadow);
 		padding: 15px;
 	} .footerlink:hover { 
-		box-shadow: 0px 1px 2px #777777;
+		box-shadow: 0px 1px 2px var(--mobilebuttonhovershadow);
 	} a.footerlink:hover { 
 		text-decoration: none!important;
 	} .onlyMobile { 
@@ -347,7 +386,7 @@ div gets hidden (when the page gets too small) */
 		padding: 7px; /* small buttons */
 		padding-left: 20px;
 		padding-right: 20px;
-		box-shadow: 0px 2px 5px #d8d8d8;
+		box-shadow: 0px 2px 5px var(--tinybuttonshadow);
 	}
 }
 @media only screen and (max-height: 500px) and (max-width: 400px) {
@@ -355,7 +394,7 @@ div gets hidden (when the page gets too small) */
 		padding: 7px; /* small buttons */
 		padding-left: 20px;
 		padding-right: 20px;
-		box-shadow: 0px 2px 5px #d8d8d8;
+		box-shadow: 0px 2px 5px var(--tinybuttonshadow);
 	}
 }
 
