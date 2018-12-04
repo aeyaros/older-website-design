@@ -50,7 +50,7 @@
 		<meta name="msapplication-config" content="./media/icons/browserconfig.xml?v=4">
 		<meta name="theme-color" content="#ffffff"><!--aaaaaaaaaaaaaaahhhhhhhhh-->
 		
-		<script> /* If it is dark out, then load the dark theme ;) */
+		<script> /* Javascript for changing themes */
 			//IMPORTANT keep track of the current theme
 			var isDark = false;
 			
@@ -88,7 +88,7 @@
 				}
 			} 
 			
-			//if night time, then change to dark theme
+			/* If it is dark out, then load the dark theme ;) */
 			var theHour = parseInt((new Date).getHours());
 			if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
 		</script>
