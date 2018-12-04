@@ -10,9 +10,10 @@
 		
 		/* variables */
 		:root{
-			--fadetime: 1s;
+			--fadetime: 1s; /* dont forget to change the alternative setinterval in the script below */
 			--transprop: ease-in-out;
-			--shadowcolor: rgba(0, 0, 0, 0.75);
+			--shadowcolor: rgba(0, 0, 0, 0.7);
+			--shadowsize: 40px;
 		}
 		
 		/* slide transitions */
@@ -30,14 +31,14 @@
 			height: 100%!important;
 			overflow: hidden!important;
 		} #shadowdiv {
+			background-color: transparent!important;
 			position: fixed!important;
 			left: 0px!important;
 			top: 0px!important;
 			width: 100%!important;
 			height: 100%!important;
-			background-color: transparent!important;
-			        box-shadow: 0px 0px 50px 0px var(--shadowcolor) inset!important;
-			-webkit-box-shadow: 0px 0px 50px 0px var(--shadowcolor) inset!important;
+			        box-shadow: 0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
+			-webkit-box-shadow: 0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
 		}
 		
 		/* remove any margins or borders just in case */
@@ -47,7 +48,7 @@
 			padding: none;
 		}
 		</style>
-		<script> //function to change the background
+		<script> //function to change the background every few seconds
 		//image should be in the same directory as this html file
 		function setBackground(imageName) {
 			document.body.style.backgroundImage = "url('" + imageName + "')";
@@ -60,7 +61,9 @@
 		//this method is based on the W3schools demo :/ 
 		
 		//change the slides every few seconds
-		var numSec = 3; //number of seconds
+		var secondsInAMillisecond = 1000;
+		var numSec = 3.5; //number of seconds
+		var fadeTime = 1; //set to the value in the style tag
 		
 		//array with the names of each image
 		var slideNames = [
@@ -83,6 +86,9 @@
 			i.src = slideNames[h];
 		}
 		
+		//at the very beginning, transition will happen sooner
+		var isinitial = true;
+		
 		//counter variable starts at the second image; we already displayed the first
 		var count = 1;
 		
@@ -91,15 +97,20 @@
 			//change image to next item in array
 			setBackground(slideNames[(count % n)]);
 			count++;
-		} setInterval(changeSlide, (1000 * numSec));
+		} if(isinitial) { //initially, transition slightly faster
+			setInterval(changeSlide, (secondsInAMillisecond * (numSec - fadeTime)));
+		} else { //otherwise transition normally
+			setInterval(changeSlide, (secondsInAMillisecond * numSec));
+		}
 		</script>
 	</head>
-	<body>
+	<body><!-- Whole page is really just a body background with a div on top -->
 		<script> //set the background color
 			document.body.style.backgroundColor = "#d1d1d1";
 			//set background image to the first item in the array
 			setBackground(slideNames[0]);
 		</script>
-		<div id="shadowdiv"></div>
+		<!-- Div for displaying the drop shadow -->
+		<div id="shadowdiv" style="background-color: transparent;"></div>
 	</body>
 </html>
