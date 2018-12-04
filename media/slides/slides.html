@@ -7,28 +7,44 @@
 		<title>Slideshow</title>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
 		<style>
+		
 		/* variables */
 		:root{
 			--fadetime: 1s;
 			--transprop: ease-in-out;
+			--shadowcolor: rgba(0, 0, 0, 0.75);
 		}
-		
-		/* ...just in case */
-		* { border: none;  padding: none;  margin: none; }
 		
 		/* slide transitions */
 		body {
-			        transition: background 1s ease-in-out;
-			   -moz-transition: background 1s ease-in-out;
-			-webkit-transition: background 1s ease-in-out;
-			    -ms-transition: background 1s ease-in-out;
-			     -o-transition: background 1s ease-in-out;
-			
 			        transition: background var(--fadetime) var(--transprop);
 			   -moz-transition: background var(--fadetime) var(--transprop);
 			-webkit-transition: background var(--fadetime) var(--transprop);
 			    -ms-transition: background var(--fadetime) var(--transprop);
 			     -o-transition: background var(--fadetime) var(--transprop);
+		}
+		
+		/* inner shadow */
+		html, body {
+			width: 100%!important;
+			height: 100%!important;
+			overflow: hidden!important;
+		} #shadowdiv {
+			position: fixed!important;
+			left: 0px!important;
+			top: 0px!important;
+			width: 100%!important;
+			height: 100%!important;
+			background-color: transparent!important;
+			        box-shadow: 0px 0px 50px 0px var(--shadowcolor) inset!important;
+			-webkit-box-shadow: 0px 0px 50px 0px var(--shadowcolor) inset!important;
+		}
+		
+		/* remove any margins or borders just in case */
+		* {
+			margin: none;
+			border: none;
+			padding: none;
 		}
 		</style>
 		<script> //function to change the background
@@ -84,5 +100,6 @@
 			//set background image to the first item in the array
 			setBackground(slideNames[0]);
 		</script>
+		<div id="shadowdiv"></div>
 	</body>
 </html>
