@@ -11,37 +11,37 @@
 /* Tachyon Thin */
 @font-face {
 	font-family: "tachyonthin";
-	src: url("media/fonts/Tachyon_Thin.otf")
+	src: url("../fonts/Tachyon_Thin.otf")
 } /* Computer Modern serif */
 @font-face {
 	font-family: "cmu";
-	src: url("media/fonts/cmunrm.otf");
+	src: url("../fonts/cmunrm.otf");
 	font-weight: normal;
 } /* Computer Modern serif Bold */
 @font-face {
 	font-family: "cmu";
-	src: url("media/fonts/cmunrb.otf");
+	src: url("../fonts/cmunrb.otf");
 	font-weight: bold;
 } /* Computer Modern classical */
 @font-face {
 	font-family: "cmu";
-	src: url("media/fonts/cmunci.otf");
+	src: url("../fonts/cmunci.otf");
 	font-weight: normal;
 	font-style: italic;
 } /* Computer Modern sans serif*/
 @font-face {
 	font-family: "cmusans";
-	src: url("media/fonts/cmunss.otf");
+	src: url("../fonts/cmunss.otf");
 	font-weight: normal;
 } /* Computer Modern sans serif Bold */
 @font-face {
 	font-family: "cmusans";
-	src: url("media/fonts/cmunsx.otf");
+	src: url("../fonts/cmunsx.otf");
 	font-weight: bold;
 }/* Deja Vu sans bold */
 @font-face {
 	font-family: "applesymb";
-	src: url("media/fonts/applesymb.ttf");
+	src: url("../fonts/applesymb.ttf");
 } /* Exo 2 light */
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300&subset=cyrillic,latin-ext');
 

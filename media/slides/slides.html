@@ -99,6 +99,7 @@
 			count++;
 		} if(isinitial) { //initially, transition slightly faster
 			setInterval(changeSlide, (secondsInAMillisecond * (numSec - fadeTime)));
+			isinitial = false;
 		} else { //otherwise transition normally
 			setInterval(changeSlide, (secondsInAMillisecond * numSec));
 		}
