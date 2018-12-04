@@ -5,11 +5,11 @@
 		Slideshow for andrewyaros.com home page
 		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 		<title>Slideshow</title>
-		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
+		<meta charset="UTF-8" name="viewport" 
+			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
 		<style>
-		
 		/* variables */
-		:root{
+		:root {
 			--fadetime: 1.5s; /* dont forget to change the alternative setinterval in the script below */
 			--transprop: ease-in-out;
 			--shadowcolor: rgba(0, 0, 0, 0.8);
@@ -19,10 +19,10 @@
 		/* slide transitions */
 		body {
 			        transition: background var(--fadetime) var(--transprop);
-			   -moz-transition: background var(--fadetime) var(--transprop);
 			-webkit-transition: background var(--fadetime) var(--transprop);
-			 /* -ms-transition: background var(--fadetime) var(--transprop);
-			     -o-transition: background var(--fadetime) var(--transprop); */
+			    -ms-transition: background var(--fadetime) var(--transprop);
+			     -o-transition: background var(--fadetime) var(--transprop);
+			   -moz-transition: background var(--fadetime) 0; /* not working in firefox :( */
 		}
 		
 		/* inner shadow */
