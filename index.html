@@ -58,8 +58,8 @@
 			darkTheme.setAttribute("href", "./media/styles/darkerColors.css");
 			
 			//only set the dark theme if it's night time
-			var theTime = parseInt((new Date).getHours());
-			if(theTime < 7 || theTime >= 19) { /* append to the head tag */
+			var theHour = parseInt((new Date).getHours());
+			if(theHour < 7 || theHour >= 19) { /* append to the head tag */
 				document.getElementsByTagName("head")[0].appendChild(darkTheme); }
 		</script>
 	</head>
