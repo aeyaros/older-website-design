@@ -79,18 +79,15 @@
 			function toggleTheme() {
 				if(isDark) { //if dark then switch to light theme
 					isDark = false;
-					document.getElementById("changethemebutton").innerHTML = moonIcon;
 					changeTheme("lighterColors");
+					document.getElementById("changethemebutton").innerHTML = moonIcon;
+					
 				} else { //if light then switch to dark theme
 					isDark = true;
-					document.getElementById("changethemebutton").innerHTML = sunIcon;
 					changeTheme("darkerColors");
+					document.getElementById("changethemebutton").innerHTML = sunIcon;
 				}
-			} 
-			
-			/* If it is dark out, then load the dark theme ;) */
-			var theHour = parseInt((new Date).getHours());
-			if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
+			}
 		</script>
 	</head>
 	<body>
@@ -199,10 +196,12 @@
 			<!-- Copyright -->
 			<div id="copyright">
 				<!-- This tiny script keeps the copyright year up to date -->
-				&copy;&nbsp;2013-<script>document.write((new Date).getFullYear());
+				&copy;&nbsp;2013-<script>
+					document.write((new Date).getFullYear());
 				</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED 
 				<span id="changethemetext" onclick="toggleTheme()">
-				Click&nbsp;to&nbsp;change&nbsp;theme</span>
+					Click&nbsp;to&nbsp;change&nbsp;theme
+				</span>
 			</div>
 			
 			
@@ -214,4 +213,9 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		/* If it is dark out and dark theme isn't loaded, then load the dark theme ;) */
+		var theHour = parseInt((new Date).getHours());
+		if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
+	</script>
 </html>
