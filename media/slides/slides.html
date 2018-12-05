@@ -10,7 +10,7 @@
 		
 		/* variables */
 		:root{
-			--fadetime: 1s; /* dont forget to change the alternative setinterval in the script below */
+			--fadetime: 1.5s; /* dont forget to change the alternative setinterval in the script below */
 			--transprop: ease-in-out;
 			--shadowcolor: rgba(0, 0, 0, 0.7);
 			--shadowsize: 40px;
@@ -60,11 +60,6 @@
 		
 		//this method is based on the W3schools demo :/ 
 		
-		//change the slides every few seconds
-		var secondsInAMillisecond = 1000;
-		var numSec = 3.5; //number of seconds
-		var fadeTime = 1; //set to the value in the style tag
-		
 		//array with the names of each image
 		var slideNames = [
 			"foodtrucks.jpg",
@@ -81,10 +76,13 @@
 		]; var n = slideNames.length;
 		
 		//preload images
-		for (h = 0; h < n; h++) { 
-			var i = new Image(); 
-			i.src = slideNames[h];
-		}
+		var i = new Image(); 
+		for (h = 0; h < n; h++) i.src = slideNames[h];
+		
+		//change the slides every few seconds
+		var secondsInAMillisecond = 1000;
+		var numSec = 4; //number of seconds
+		var fadeTime = 1.5; //set to the value in the style tag
 		
 		//at the very beginning, transition will happen sooner
 		var isinitial = true;
