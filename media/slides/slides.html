@@ -52,10 +52,11 @@
 		//image should be in the same directory as this html file
 		function setBackground(imageName) {
 			document.body.style.backgroundImage = "url('" + imageName + "')";
-			document.body.style.backgroundRepeat = "no-repeat";
+		/*	document.body.style.backgroundRepeat = "no-repeat";
 			document.body.style.backgroundPosition = "center center";
 			document.body.style.backgroundAttachment = "fixed"; 
 			document.body.style.backgroundSize = "cover";
+			*/
 		}
 		
 		//this method is based on the W3schools demo :/ 
@@ -106,6 +107,11 @@
 	<body><!-- Whole page is really just a body background with a div on top -->
 		<script> //set background image to the first item in the array
 			setBackground(slideNames[0]);
+			//position the background properly! THIS IS IMPORTANT
+			document.body.style.backgroundRepeat = "no-repeat";
+			document.body.style.backgroundPosition = "center center";
+			document.body.style.backgroundAttachment = "fixed"; 
+			document.body.style.backgroundSize = "cover";
 		</script>
 		<!-- Div for displaying the drop shadow -->
 		<div id="shadowdiv" style="background-color: transparent;"></div>
