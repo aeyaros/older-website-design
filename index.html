@@ -60,7 +60,7 @@
 			var sunIcon = '<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 16"><path id="themetoggleicon" d="M.669,7.792H3.646v.4H.669Zm2,5.25,2.1-2.112.288.288-2.1,2.1ZM2.958,2.67l2.113,2.1-.288.288-2.1-2.1ZM11.329,8A3.329,3.329,0,1,1,8,4.671,3.327,3.327,0,0,1,11.329,8ZM7.792,15.331V12.354h.4v2.977ZM8.208.669V3.646h-.4V.669ZM13.043,13.33l-2.114-2.1.289-.288,2.1,2.1Zm.288-10.372-2.1,2.113-.288-.288,2.1-2.1Zm2,5.25H12.354v-.4h2.977Z" style="fill:#231f20"/></svg>';
 			
 			/*	Original unicode icons for buttons: 
-				&#9728; sun		&#9790; moon 		*/
+				&#9728; sun		&#9790; moon 	&#9993; mail	*/
 			
 			//change the theme to a different css file
 			//must be in the styles folder
@@ -176,16 +176,16 @@
 				</div>
 				
 				<!-- Email -->
-				<div class="footer">
+				<div class="footer" id="emailfooterlink">
 					<a class="footerlink" target="_blank" 
 					href="mailto:ay@drexel.edu">Email</a>
 				</div>
 				
 				<!-- Recursion haha ...get it? LOL -->
-				 <div class="footer onlyMobile" id="recursion">
+				<!-- <div class="footer onlyMobile" id="recursion">
 					<a class="footerlink" 
 					href="https://andrewyaros.com">:)</a>
-				</div><!-- If you don't get this joke then you 
+				</div>--><!-- If you don't get this joke then you 
 				probably aren't a computer scientist. This is just 
 				a placeholder I can use to make sure there are an
 				even number of icons, depending on what links I 
@@ -204,6 +204,12 @@
 				</span>
 			</div>
 			
+			<!-- mobile button; click to send an email -->
+			<a id="mobilemailbutton" target="_blank" href="mailto:ay@drexel.edu">
+				<svg id="mobilemailtag" width="16" height="16" viewBox="0 0 16 16">
+					<path id="mobilemailicon" d="M0,13.816V2.184H16V13.816Zm13.565-1.347L10.17,9.037,8.031,11.175,5.855,9.034,2.439,12.469Zm1.064-1.044V4.588L11.2,8.011Zm-13.258,0L4.8,8.011,1.371,4.588ZM8.028,9.061l5.529-5.518H2.448Z"/>
+				</svg>
+			</a>
 			
 			<div id="changethemebutton" onclick="toggleTheme()">
 				<!-- initially load the moon icon directly, in case there's no javascript -->

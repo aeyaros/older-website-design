@@ -101,7 +101,7 @@ the layout of the page */
 } #bodyDiv{
 	margin: auto; /* important */
 	height: 100%; /* important */
-	min-width: 240px;		/* minimum width */
+	min-width: 260px;		/* minimum width */
 	min-height: 260px;		/* minimum height */
 	display: flex; /* flex stuff is all important */
 	flex-direction: column;
@@ -194,6 +194,7 @@ the layout of the page */
 	display: block;
 	width: 150px;
 	padding: 8px;
+	padding-bottom: 10px;
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
@@ -221,7 +222,6 @@ the layout of the page */
 } #thearrow { /* the svg path */
 	fill: var(--iframebuttontext);
 	stroke: var(--iframebuttontext);
-	stroke-miterlimit: 10;
 } #iframeButton:hover #thearrow { /* the svg when hovering over the iframe button */
 	fill: var(--iframebuttonhovertext);
 	stroke: var(--iframebuttonhovertext);
@@ -268,10 +268,9 @@ the layout of the page */
 	display: none;
 } #recursion { 
 	display: none;
-} #changethemebutton {
+} #changethemebutton, #mobilemailbutton {
 	display: none;
 	position: absolute!important;
-	right: 16px!important;
 	bottom: 16px!important;
 	width: 32px;
 	height: 32px;
@@ -281,19 +280,26 @@ the layout of the page */
 	vertical-align: center;
 	color: var(--pagetext);
 	background-color: var(--pagebg);
-	box-shadow: 0px 0px 8px var(--mobilebuttonshadow);
+	box-shadow: 0px 2px 5px var(--mobilebuttonshadow);
 	font-family: "Verdana", sans-serif;
-} #themetoggleicon {
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+} #changethemebutton {
+	left: 16px!important;
 	fill: var(--pagetext);
 	stroke: var(--pagetext);
-	stroke-miterlimit: 10;
-} #changethemebutton:hover {
+} #mobilemailbutton {
+	right: 16px!important;
+	fill: var(--pagetext);
+} #changethemebutton:hover, #mobilemailbutton:hover {
 	color: var(--selectiontext);
 	background-color: var(--pagetext);
-	box-shadow: 0px 0px 1px var(--mobilebuttonshadowhover);
+	box-shadow: 0px 0px 2px var(--mobilebuttonshadowhover);
 } #changethemebutton:hover #themetoggleicon {
 	fill: var(--selectiontext);
 	stroke: var(--selectiontext);
+} #mobilemailbutton:hover #mobilemailicon {
+	fill: var(--selectiontext);
 } #changethemetext {
 	display: inline;
 	color: var(--pagelightertext);
@@ -352,7 +358,9 @@ div gets hidden (when the page gets too small) */
 /*************************************************/
 @media only screen and (max-height: 400px) {
 	#bodyDiv { 
-		max-width: 1024px;
+		/*max-width: 1024px;*//* remove until I figure out
+		a solution to deal with the tiny absolutely positioned 
+		buttons*/
 		min-height: 310px;
 	} #mainContent { 
 		display: none; 
@@ -370,6 +378,7 @@ div gets hidden (when the page gets too small) */
 	} #copyright { 
 		font-weight: normal; 
 		padding: none;
+		padding-top: 16px;
 	} .footerlink { /* big buttons */
 		border-radius: 25px;
 		box-shadow: 0px 2px 20px var(--mobilebuttonshadow);
@@ -426,7 +435,18 @@ div gets hidden (when the page gets too small) */
 	} #changethemebutton {
 		display: block;
 		bottom: 32px!important;
+	} #mobilemailbutton {
+		bottom: 32px!important;
 	} #changethemetext { display: none };
+}
+
+/* show the smaller mail button (and hide larger one) under certain circumstances */
+@media only screen and (max-height: 400px) and (max-width: 800px) {
+	#mobilemailbutton {
+		display: block;
+	} #emailfooterlink {
+		display: none;
+	}
 }
 
 /* display small buttons when not enough room for larger buttons */
@@ -489,7 +509,7 @@ div gets hidden (when the page gets too small) */
 		margin: auto;
 	} #lastname { 
 		padding-left: 12pt; /* half of font size */
-	} #changethemebutton {
+	} #changethemebutton, #mobilemailbutton {
 		bottom: 32px!important;
 	} 
 }
