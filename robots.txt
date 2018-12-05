@@ -1,3 +1,5 @@
 User-agent: *
 Disallow: /jffte/
-Disallow: /media/
+Disallow: /media/fonts/
+Disallow: /media/icons/
+Disallow: /media/slides/images/
