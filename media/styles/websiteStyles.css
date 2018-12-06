@@ -213,7 +213,7 @@ the layout of the page */
 	background-color: var(--pagetext); /*var(--iframebuttonhoverbg); */
 	text-decoration: none;
 	text-shadow: none;
-} #slideshow, #changethemetext {
+} #iframeDisplay, #changethemetext {
 	user-select: none;
 	-ms-user-select: none;
 	-moz-user-select: none;

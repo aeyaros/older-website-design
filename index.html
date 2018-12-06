@@ -11,19 +11,18 @@
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56859530-3"></script>
 		<script> window.dataLayer = window.dataLayer || [];
 			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date()); gtag('config', 'UA-56859530-3'); </script>
-		
+			gtag('js', new Date()); gtag('config', 'UA-56859530-3');</script>
 		<!-- Meta tag for Bing webmaster tools -->
 		<meta name="msvalidate.01" content="AA7E5B5FE7C20FE49F696D7949C5444C" />
 		
-		<!-- Page title and description -->
+		<!-- Page title -->
 		<title>Andrew Yaros</title>
-		<meta name="description" content="Personal website of Andrew Yaros containing portfolio, résumé, and work examples.">
-		
 		
 		<!-- Meta stuff -->
 		<meta charset="UTF-8" name="viewport" 
 			  content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
+			<!-- Description -->
+			<meta name="description" content="Personal website of Andrew Yaros containing portfolio, résumé, and work examples.">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="white">
 		<meta name="apple-mobile-web-app-title" content="Andrew Yaros">
@@ -86,40 +85,49 @@
 					isDark = false;
 					changeTheme("lighterColors");
 					document.getElementById("changethemebutton").innerHTML = moonIcon;
-					
 				} else { //if light then switch to dark theme
 					isDark = true;
 					changeTheme("darkerColors");
 					document.getElementById("changethemebutton").innerHTML = sunIcon;
 				}
 			}
+			
+			//change the iframe to a specfic link
+			function changeDisplay(url) {
+				document.getElementById("iframeDisplay").setAttribute("src", url);
+				document.getElementById("iframeButton").style.display = "none";
+			}
+			
+			//reset the iframe to the slideshow
+			function resetDisplay() { changeDisplay("./media/slides/slides.html");
+				document.getElementById("iframeButton").style.display = "block";
+			}
 		</script>
 	</head>
 	<body>
 		<div id="bodyDiv"> 
-		
 			<!-- Header -->
 			<div id="header">
-			
 				<!-- Left side of header -->
 				<div id="headerL">
 					<!-- Title -->
-					<span id="title">Andrew<br/>
-					<span id="lastname">Yaros</span>
+					<span id="title">
+						Andrew<br/>
+						<span id="lastname">
+							Yaros
+						</span>
 					</span>
 				</div>
-				
 				<!-- Right side of header -->
 				<div id="headerR">
 					<!-- Description -->
-					<span id="description">Drexel&nbsp;Computer&nbsp;Science &amp;&nbsp;Architecture</span>
+					<span id="description">
+						Drexel&nbsp;Computer&nbsp;Science &amp;&nbsp;Architecture
+					</span>
 				</div>
-				
 			</div>
-			
 			<!-- Main content -->
 			<div id="mainContent">
-			
 				<!-- Download PDF link overlapping the ifrmae -->
 				<a id="iframeButton" target="_blank"
 					href="./media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
@@ -127,77 +135,79 @@
 						<path id="thearrow" 
 						d="M6.875,6.317h2.5l-4.09,4.168L1.191,6.317h2.5V.5H6.875Z"/>
 					</svg>
-					<!--<img id="downarrow" src="./media/icons/down.svg">-->
-					<!--&#8681;-->
-					<!--&nbsp;-->PDF&nbsp;Portfolio</a>
-				
+					<!--<img id="downarrow" src="./media/icons/down.svg">--> <!--&#8681;-->
+					<!--&nbsp;-->PDF&nbsp;Portfolio
+				</a>
 				<!-- Slideshow -->
-				<iframe id="slideshow" style="display: block; border: none; width: 100%; height: 100%;" src="./media/slides/slides.html">
+				<iframe id="iframeDisplay" src="./media/slides/slides.html"
+					style="display: block; border: none; width: 100%; height: 100%;">
 					<a href="./media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
-						Slideshow could not display properly. :( Click here. </a>
+						Slideshow could not display properly. :( Click here.
+					</a>
 				</iframe>
-				
 			</div>
-			
 			<!-- Footer (Basically the main content when window is small) -->
 			<div id="footer">
-				
 				<!-- Resume -->
 				<div class="footer" id="resumelink">
-					<a class="footerlink" target="_blank" 
-					href="./media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1">
-					R&eacute;sum&eacute;</a>
+					<a class="footerlink" target="_blank"
+						href="./media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1"
+						onmouseenter="changeDisplay('./media/AndrewYarosResume.pdf#view=FitH&toolbar=0&statusbar=0&navpanes=0&scrollbar=0&messages=0&navpanes=0')"
+						onmouseleave="resetDisplay()">
+						R&eacute;sum&eacute;
+					</a>
 				</div>
-				
 				<!-- Portfolio -->
 				<div class="footer onlyMobile">
 					<a class="footerlink" target="_blank"  
-					href="./media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
-					Portfolio</a>
+						href="./media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
+						Portfolio
+					</a>
 				</div>
-				
 				<!-- GitHub -->
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
-					href="https://github.com/aeyaros/schoolwork">GitHub</a>
+						href="https://github.com/aeyaros/schoolwork"
+						onmouseenter="changeDisplay('./media/slides/githubimage.html')"
+						onmouseleave="resetDisplay()">
+						GitHub
+					</a>
 				</div>
-				
 				<!-- Checkers Online -->
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
-					href="./checkers.html">Checkers</a>
+						href="./checkers.html"
+						onmouseenter="changeDisplay('./media/slides/checkersimage.html')"
+						onmouseleave="resetDisplay()">
+						Checkers
+					</a>
 				</div>
-				
 				<!-- John Fry's Food Truck Extravaganza -->
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
-					href="http://jffte.andrewyaros.com/">J.F.F.T.E.</a>
+						href="http://jffte.andrewyaros.com/"
+						onmouseenter="changeDisplay('./media/slides/foodtrucksimage.html')"
+						onmouseleave="resetDisplay()">
+						J.F.F.T.E.
+					</a>
 				</div>
-				
 				<!-- LinkedIn -->
 				<div class="footer">
 					<a class="footerlink" target="_blank" 
-					href="https://www.linkedin.com/in/andrewethanyaros/">LinkedIn</a>
+					href="https://www.linkedin.com/in/andrewethanyaros/"
+					onmouseenter="changeDisplay('./media/slides/linkedinimage.html')"
+					onmouseleave="resetDisplay()">
+						LinkedIn
+					</a>
 				</div>
-				
 				<!-- Email -->
 				<div class="footer" id="emailfooterlink">
 					<a class="footerlink" target="_blank" 
-					href="mailto:ay@drexel.edu">Email</a>
+					href="mailto:ay@drexel.edu">
+						Email
+					</a>
 				</div>
-				
-				<!-- Recursion haha ...get it? LOL -->
-				<!-- <div class="footer onlyMobile" id="recursion">
-					<a class="footerlink" 
-					href="https://andrewyaros.com">:)</a>
-				</div>--><!-- If you don't get this joke then you 
-				probably aren't a computer scientist. This is just 
-				a placeholder I can use to make sure there are an
-				even number of icons, depending on what links I 
-				currently have in the footer. -->
-					
 			</div>
-			
 			<!-- Copyright -->
 			<div id="copyright">
 				<!-- This tiny script keeps the copyright year up to date -->
@@ -208,14 +218,12 @@
 					Click&nbsp;to&nbsp;change&nbsp;theme
 				</span>
 			</div>
-			
 			<!-- mobile button; click to send an email -->
 			<a id="mobilemailbutton" target="_blank" href="mailto:ay@drexel.edu">
 				<svg id="mobilemailtag" width="16" height="16" viewBox="0 0 16 16">
 					<path id="mobilemailicon" d="M0,13.816V2.184H16V13.816Zm13.565-1.347L10.17,9.037,8.031,11.175,5.855,9.034,2.439,12.469Zm1.064-1.044V4.588L11.2,8.011Zm-13.258,0L4.8,8.011,1.371,4.588ZM8.028,9.061l5.529-5.518H2.448Z"/>
 				</svg>
 			</a>
-			
 			<div id="changethemebutton" onclick="toggleTheme()">
 				<!-- initially load the moon icon directly, in case there's no javascript -->
 				<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 16">
