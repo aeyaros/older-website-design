@@ -194,18 +194,19 @@ the layout of the page */
 	background-color: var(--maincontentbg);
 } #iframeButton {
 	display: block;
-	width: 200px;
+	width: 220px;
 	padding: 8px;
 	padding-bottom: 7px;
 	position: absolute;
 	bottom: 20px;
 	left: 50%;
-	margin-left: -108px; /* half width, plus padding */
+	margin-left: -118px; /* half width, plus padding */
 	text-align: center;
-	color: var(--pagetext); /*var(--iframebuttontext);*/
+	color: var(--pagelightertext); /*var(--iframebuttontext);*/
 	background-color: var(--pagebg); /*var(--iframebuttonbg);*/
 	/*border-radius: 10px;*/
 	font-size: 13.5pt;
+	letter-spacing: .1em;
 	-webkit-transition-duration: 0.0s;
 	transition-duration: 0.0s;
 } #iframeButton:hover {
@@ -224,7 +225,7 @@ the layout of the page */
 	height: 13px;
 	margin-bottom: 0px;
 } #thearrow { /* the svg path */
-	fill: var(--pagetext); /*var(--iframebuttontext);*/
+	fill: var(--pagelightertext); /*var(--iframebuttontext);*/
 	stroke: var(--pagetext); /*var(--iframebuttontext);*/
 } #iframeButton:hover #thearrow { /* the svg when hovering over the iframe button */
 	fill: var(--pagebg); /*var(--iframebuttonhovertext);*/
@@ -350,7 +351,7 @@ div gets hidden (when the page gets too small) */
 		font-size: 2.4vw; 
 	} #header { 
 		padding: 20px;
-	} #title, #description, .footer, a, a:visited { 
+	} #title, #description, .footer, a, a:visited, #iframeButton { 
 		color: var(--smallerscreentext);
 	} #header, #title, #description, .footer, .footerlink { 
 		text-shadow: 0px 3px 5px var(--smallerscreenshadow);

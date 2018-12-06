@@ -7,47 +7,9 @@
 		<title>Slideshow</title>
 		<meta charset="UTF-8" name="viewport" 
 			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
-		<style>
-		/* variables */
-		:root {
-			--fadetime: 1.5s; /* dont forget to change the alternative setinterval in the script below */
-			--transprop: ease-in-out;
-			--shadowcolor: rgba(0, 0, 0, 0.8);
-			--shadowsize: 40px;
-		}
 		
-		/* slide transitions */
-		body {
-			        transition: background var(--fadetime) var(--transprop);
-			-webkit-transition: background var(--fadetime) var(--transprop);
-			    -ms-transition: background var(--fadetime) var(--transprop);
-			     -o-transition: background var(--fadetime) var(--transprop);
-			   -moz-transition: background var(--fadetime) 0; /* not working in firefox :( */
-		}
+		<link type="text/css" rel="stylesheet" href="slideStyles.css?ver=1" media="all">
 		
-		/* inner shadow */
-		html, body {
-			width: 100%!important;
-			height: 100%!important;
-			overflow: hidden!important;
-		} #shadowdiv {
-			background-color: transparent!important;
-			position: fixed!important;
-			left: 0px!important;
-			top: 0px!important;
-			width: 100%!important;
-			height: 100%!important;
-			        box-shadow: 0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
-			-webkit-box-shadow: 0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
-		}
-		
-		/* remove any margins or borders just in case */
-		* {
-			margin: none;
-			border: none;
-			padding: none;
-		}
-		</style>
 		<script> //function to change the background every few seconds
 		//image should be in the same directory as this html file
 		function setBackground(imageName) {
