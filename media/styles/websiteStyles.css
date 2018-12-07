@@ -220,6 +220,8 @@ the layout of the page */
 	-moz-user-select: none;
 	-khtml-user-select: none;
 	-webkit-user-select: none;
+} #iframeDisplay {
+	filter: none;
 } #downarrow { /* the svg tag */
 	width: 13px;
 	height: 13px;
