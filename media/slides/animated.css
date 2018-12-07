@@ -1,0 +1,17 @@
+/*
+CSS for animated slides
+*/
+
+:root {
+	--fadetime: 1.5s; /* dont forget to change the alternative setinterval in the script below */
+	--transprop: ease-in-out;
+}
+/* slide transitions */
+body {
+	        transition: background var(--fadetime) var(--transprop);
+	-webkit-transition: background var(--fadetime) var(--transprop);
+	    -ms-transition: background var(--fadetime) var(--transprop);
+	     -o-transition: background var(--fadetime) var(--transprop);
+	   -moz-transition: background var(--fadetime) 0; /* not working in firefox :( */
+}
+''
