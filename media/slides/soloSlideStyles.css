@@ -1,0 +1,32 @@
+/*
+Andrew Yaros
+CSS for slides
+*/
+/* variables */
+:root {
+	--shadowcolor: rgba(0, 0, 0, 0.8);
+	--shadowsize: 40px;
+}
+
+/* inner shadow */
+html, body {
+	width: 100%!important;
+	height: 100%!important;
+	overflow: hidden!important;
+} #shadowdiv {
+	background-color: transparent!important;
+	position: fixed!important;
+	left: 0px!important;
+	top: 0px!important;
+	width: 100%!important;
+	height: 100%!important;
+	        box-shadow: 0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
+	-webkit-box-shadow: 0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
+}
+
+/* remove any margins or borders just in case */
+* {
+	margin: none;
+	border: none;
+	padding: none;
+}
