@@ -226,7 +226,7 @@ the layout of the page */
 	margin-bottom: 0px;
 } #thearrow { /* the svg path */
 	fill: var(--pagelightertext); /*var(--iframebuttontext);*/
-	stroke: var(--pagetext); /*var(--iframebuttontext);*/
+	stroke: var(--pagelightertext); /*var(--iframebuttontext);*/
 } #iframeButton:hover #thearrow { /* the svg when hovering over the iframe button */
 	fill: var(--pagebg); /*var(--iframebuttonhovertext);*/
 	stroke: var(--pagebg); /*var(--iframebuttonhovertext);*/
