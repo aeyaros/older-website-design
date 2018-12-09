@@ -10,20 +10,15 @@
 		<link type="text/css" rel="stylesheet" href="slidestyle.css?ver=1" media="all">
 		<link type="text/css" rel="stylesheet" href="animated.css?ver=1" media="all">
 	</head>
-	<body>
-		<!-- Whole page is really just a body background with a div on top of it -->
+	<body> <!-- Whole page is really just a body background with a div on top of it -->
 		<script> 
 			//function to change the background
 			function setBackground(imageName) {
 				document.body.style.backgroundImage = "url('" + imageName + "')";
-				document.body.style.backgroundRepeat = "no-repeat";
-				document.body.style.backgroundPosition = "center center";
-				document.body.style.backgroundAttachment = "fixed"; 
-				document.body.style.backgroundSize = "cover";
 			}
 			
 			//array with the names of each image
-				//images should be in the same directory as this html file
+			//images should be in the same directory as this html file
 			const slideNames = [
 				"lancaster.jpg",
 				"shell.jpg", 
@@ -32,6 +27,7 @@
 				"barnes.jpg",
 				"stanford.jpg"
 			]; const n = slideNames.length;
+			
 			//preload images
 			var i = new Image(); 
 			for (h = 0; h < n; h++) i.src = slideNames[h];
@@ -39,8 +35,7 @@
 			//change the slides every few seconds
 			const secondsInAMillisecond = 1000;
 			const numSec = 4; //number of seconds for slide to display
-			const fadeTime = 1.5; //fade transition time: must set to the value in the style tag!
-			
+						
 			/* When the page is loaded: set the background image based on the current time
 				create a date object; getTime returns Unix time, but milliseconds
 				divide by 1000 and use floor function to get seconds
@@ -51,13 +46,18 @@
 			//set the background
 			setBackground(slideNames[startingSlide]);
 			
+			/* VERY IMPORTANT - background position settings */
+			document.body.style.backgroundRepeat = "no-repeat";
+			document.body.style.backgroundPosition = "center center";
+			document.body.style.backgroundAttachment = "fixed"; 
+			document.body.style.backgroundSize = "cover";
+			
 			//counter variable starts at the second image; we already displayed the first
 			var count = startingSlide + 1;
 			
 			//change the image to the next one
 			function changeSlide() { //change image to next item in array
-				setBackground(slideNames[(count % n)]);
-				count++;
+				setBackground(slideNames[(count % n)]); count++;
 			}  setInterval(changeSlide, (secondsInAMillisecond * numSec));
 		</script>
 		<!-- Div for displaying the drop shadow -->
