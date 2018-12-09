@@ -57,7 +57,9 @@ the layout of the page */
 /*************************************************/
 :root {
 	/* SEE SEPERATE FILE FOR DARK THEME */
-	/* There is also a seperate light theme file;
+	
+	
+	/* THERE IS ALSO A SEPERATE LIGHT THEME FILE;
 	copy any changes to these colors into that file */
 	
 	/* Theme colors. DO NOT REMOVE THIS */
@@ -82,12 +84,6 @@ the layout of the page */
 	--tinybuttonshadow: #d8d8d8;
 	--mobilebuttonshadow: #dddddd;
 	--mobilebuttonhovershadow: #777777;
-	
-	/* this is to be the same regardless of light or dark theme */
-	--iframebuttontext: rgba(255, 255, 255, .9);
-	--iframebuttonbg: rgba(0, 0, 0, .9);
-	--iframebuttonhovertext: rgba(0, 0, 0, .9);
-	--iframebuttonhoverbg: rgba(222, 222, 222, .9);
 } html, body {
 	height: 100%;
 	margin: 0;
@@ -202,16 +198,16 @@ the layout of the page */
 	left: 50%;
 	margin-left: -118px; /* half width, plus padding */
 	text-align: center;
-	color: var(--pagelightertext); /*var(--iframebuttontext);*/
-	background-color: var(--pagebg); /*var(--iframebuttonbg);*/
+	color: var(--pagelightertext); 
+	background-color: var(--pagebg); 
 	/*border-radius: 10px;*/
 	font-size: 13.5pt;
 	letter-spacing: .1em;
 	-webkit-transition-duration: 0.0s;
 	transition-duration: 0.0s;
 } #iframeButton:hover {
-	color: var(--pagebg); /*var(--iframebuttonhovertext);*/
-	background-color: var(--pagetext); /*var(--iframebuttonhoverbg); */
+	color: var(--pagebg);
+	background-color: var(--pagetext);
 	text-decoration: none;
 	text-shadow: none;
 } #iframeDisplay, #changethemetext {
@@ -227,11 +223,11 @@ the layout of the page */
 	height: 13px;
 	margin-bottom: 0px;
 } #thearrow { /* the svg path */
-	fill: var(--pagelightertext); /*var(--iframebuttontext);*/
-	stroke: var(--pagelightertext); /*var(--iframebuttontext);*/
+	fill: var(--pagelightertext); 
+	stroke: var(--pagelightertext); 
 } #iframeButton:hover #thearrow { /* the svg when hovering over the iframe button */
-	fill: var(--pagebg); /*var(--iframebuttonhovertext);*/
-	stroke: var(--pagebg); /*var(--iframebuttonhovertext);*/
+	fill: var(--pagebg); 
+	stroke: var(--pagebg); 
 }
 
 /*************************************************/
