@@ -95,7 +95,7 @@
 			//change the iframe to a specfic URL
 			function changeDisplay(url) {
 				document.getElementById("iframeDisplay").setAttribute("src", url);
-				document.getElementById("iframeButton").style.display = "none";
+				//document.getElementById("iframeButton").style.display = "none";
 				/*
 				if(invert && isDark) { //invert background if dark theme, and only if we want to invert
 					document.getElementById("iframeDisplay").contentDocument.body.style.filter = "invert()";
@@ -106,7 +106,7 @@
 			//reset the iframe to the slideshow
 			function resetDisplay() {
 				changeDisplay("./media/slides/slides.html"); //set to main slideshow
-				document.getElementById("iframeButton").style.display = "block"; //show iframe button
+				//document.getElementById("iframeButton").style.display = "block"; //show iframe button
 				////disable invert filter
 				////document.getElementById("iframeDisplay").contentDocument.body.style.filter = "none";
 			}
