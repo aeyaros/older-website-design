@@ -62,8 +62,7 @@
 		<meta name="msapplication-config" content="./media/icons/browserconfig.xml?v=4">
 		<meta name="theme-color" content="#ffffff"><!--aaaaaaaaaaaaaaahhhhhhhhh-->
 		
-		<!-- IMPORTANT! Script for changing themes and the iframe source -->
-		<script src="./index.js"></script>
+		
 	</head>
 	<body onpagehide="resetDisplay()" onpageshow="resetDisplay()">
 		<div id="bodyDiv"> 
@@ -194,9 +193,10 @@
 			</div>
 		</div>
 	</body>
-	<script> resetDisplay();
-		/* If it is dark out and dark theme isn't loaded, then load the dark theme ;) */
-		var theHour = parseInt((new Date).getHours());
-		if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
-	</script>
+	<!--~~~~~~~~~~~~~~~~~~~~~~
+	~~~~~~~ IMPORTANT! ~~~~~~~
+	Script for changing themes 
+	and the iframe source!!!!!
+	~~~~~~~~~~~~~~~~~~~~~~~-->
+	<script src="./index.js"></script>
 </html>

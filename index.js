@@ -2,6 +2,7 @@
 andrewyaros.com - javascript for homepage
 By Andrew Yaros
 For changing themes and the iframe source 
+Please insert after body tag
 ****************************************/
 
 //IMPORTANT keep track of the current theme
@@ -59,3 +60,9 @@ function resetDisplay() {
 	////disable invert filter
 	////document.getElementById("iframeDisplay").contentDocument.body.style.filter = "none";
 }
+
+//This should be done after the body tag
+resetDisplay();
+/* If it is dark out and dark theme isn't loaded, then load the dark theme ;) */
+var theHour = parseInt((new Date).getHours());
+if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
