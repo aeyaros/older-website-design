@@ -61,8 +61,6 @@
 		<meta name="msapplication-TileImage" content="./media/icons/mstile-144x144.png?v=4">
 		<meta name="msapplication-config" content="./media/icons/browserconfig.xml?v=4">
 		<meta name="theme-color" content="#ffffff"><!--aaaaaaaaaaaaaaahhhhhhhhh-->
-		
-		
 	</head>
 	<body onpagehide="resetDisplay()" onpageshow="resetDisplay()">
 		<div id="bodyDiv"> 
@@ -171,10 +169,9 @@
 			</div>
 			<!-- Copyright -->
 			<div id="copyright">
-				<!-- This tiny script keeps the copyright year up to date -->
-				&copy;&nbsp;2013-<script>
-					document.write((new Date).getFullYear());
-				</script>&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED 
+				&copy;&nbsp;2013-<script>/*set copyright to current year*/
+				document.write((new Date).getFullYear());</script>
+				&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED 
 				<span id="changethemetext" onclick="toggleTheme()">
 					Click&nbsp;to&nbsp;change&nbsp;theme
 				</span>
@@ -192,8 +189,7 @@
 				</svg>
 			</div>
 		</div>
-	</body>
-	<!--~~~~~~~~~~~~~~~~~~~~~~
+	</body><!--~~~~~~~~~~~~~~~
 	~~~~~~~ IMPORTANT! ~~~~~~~
 	Script for changing themes 
 	and the iframe source!!!!!
