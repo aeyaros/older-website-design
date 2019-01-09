@@ -2,25 +2,25 @@
 andrewyaros.com  light theme
 * * * * * * * * * * * * * */
 :root {
-	--selectiontext: #ffffff;
-	--selectioncolor: #000000;
-	--pagebg: #fafafa;
-	--pagetext: #000000;
-	--titletext: #555555;
-	--pagelightertext: #555555;
+	--selectiontext: 			#ffffff;
+	--selectioncolor: 			#000000;
+	--pagebg: 					#fafafa;
+	--pagetext: 					#000000;
+	--titletext: 				#555555;
+	--pagelightertext: 			#555555;
 	
-	--titleshadowone: #ababab;
-	--titleshadowtwo: #999999;
-	--descriptionshadowone: #cdcdcd;
-	--descriptionshadowtwo: #999999;
+	--titleshadowone: 			#ababab;
+	--titleshadowtwo: 			#999999;
+	--descriptionshadowone: 	#cdcdcd;
+	--descriptionshadowtwo: 	#999999;
 	
-	--maincontentbg: #d1d1d1;	
-	--copyrighttext: #afafaf;
+	--maincontentbg: 			#d1d1d1;	
+	--copyrighttext: 			#afafaf;
 	
-	--smallerscreentext: #333333;
-	--smallerscreenshadow: #888888;
+	--smallerscreentext: 		#333333;
+	--smallerscreenshadow: 		#888888;
 	
-	--tinybuttonshadow: #d8d8d8;
-	--mobilebuttonshadow: #dddddd;
-	--mobilebuttonhovershadow: #777777;
+	--tinybuttonshadow: 		#d8d8d8;
+	--mobilebuttonshadow: 		#dddddd;
+	--mobilebuttonhovershadow:	#777777;
 }

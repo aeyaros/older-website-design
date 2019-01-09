@@ -10,38 +10,38 @@
 /*************************************************/
 /* Tachyon Thin */
 @font-face {
-	font-family: "tachyonthin";
-	src: url("../fonts/Tachyon_Thin.otf")
+	font-family: 	"tachyonthin";
+	src: 			url("../fonts/Tachyon_Thin.otf")
 } /* Computer Modern serif */
 @font-face {
-	font-family: "cmu";
-	src: url("../fonts/cmunrm.otf");
-	font-weight: normal;
+	font-family: 	"cmu";
+	src: 			url("../fonts/cmunrm.otf");
+	font-weight: 	normal;
 } /* Computer Modern serif Bold */
 @font-face {
-	font-family: "cmu";
-	src: url("../fonts/cmunrb.otf");
-	font-weight: bold;
+	font-family: 	"cmu";
+	src: 			url("../fonts/cmunrb.otf");
+	font-weight: 	bold;
 } /* Computer Modern classical */
 @font-face {
-	font-family: "cmu";
-	src: url("../fonts/cmunci.otf");
-	font-weight: normal;
-	font-style: italic;
+	font-family: 	"cmu";
+	src: 			url("../fonts/cmunci.otf");
+	font-weight: 	normal;
+	font-style: 	italic;
 } /* Computer Modern sans serif*/
 @font-face {
-	font-family: "cmusans";
-	src: url("../fonts/cmunss.otf");
-	font-weight: normal;
+	font-family: 	"cmusans";
+	src: 			url("../fonts/cmunss.otf");
+	font-weight: 	normal;
 } /* Computer Modern sans serif Bold */
 @font-face {
-	font-family: "cmusans";
-	src: url("../fonts/cmunsx.otf");
-	font-weight: bold;
+	font-family: 	"cmusans";
+	src: 			url("../fonts/cmunsx.otf");
+	font-weight: 	bold;
 }/* Deja Vu sans bold */
 @font-face {
-	font-family: "applesymb";
-	src: url("../fonts/applesymb.ttf");
+	font-family:		"applesymb";
+	src: 			url("../fonts/applesymb.ttf");
 } /* Exo 2 light */
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300&subset=cyrillic,latin-ext');
 
@@ -63,255 +63,255 @@ the layout of the page */
 	copy any changes to these colors into that file */
 	
 	/* Theme colors. DO NOT REMOVE THIS */
-	--selectiontext: #ffffff;
-	--selectioncolor: #000000;
-	--pagebg: #fafafa;
-	--pagetext: #000000;
-	--titletext: #555555;
-	--pagelightertext: #555555;
+	--selectiontext: 			#ffffff;
+	--selectioncolor: 			#000000;
+	--pagebg: 					#fafafa;
+	--pagetext: 					#000000;
+	--titletext: 				#555555;
+	--pagelightertext: 			#555555;
 	
-	--titleshadowone: #ababab;
-	--titleshadowtwo: #999999;
-	--descriptionshadowone: #cdcdcd;
-	--descriptionshadowtwo: #999999;
+	--titleshadowone: 			#ababab;
+	--titleshadowtwo: 			#999999;
+	--descriptionshadowone:		#cdcdcd;
+	--descriptionshadowtwo:		#999999;
 	
-	--maincontentbg: #d1d1d1;	
-	--copyrighttext: #afafaf;
+	--maincontentbg:				#d1d1d1;	
+	--copyrighttext:				#afafaf;
 	
-	--smallerscreentext: #333333;
-	--smallerscreenshadow: #888888;
+	--smallerscreentext:		#333333;
+	--smallerscreenshadow:		#888888;
 	
-	--tinybuttonshadow: #d8d8d8;
-	--mobilebuttonshadow: #dddddd;
-	--mobilebuttonhovershadow: #777777;
+	--tinybuttonshadow:			#d8d8d8;
+	--mobilebuttonshadow:		#dddddd;
+	--mobilebuttonhovershadow:	#777777;
 } html, body {
-	height: 100%;
-	margin: 0;
-	overflow: auto;
-	background-color: var(--pagebg)!important;
+	height:						100%;
+	margin:						0;
+	overflow: 					auto;
+	background-color: 			var(--pagebg)!important;
 } body {
-	font-family: "Exo 2", "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	font-size: 12pt;
-	font-weight: 200;
-	color: var(--pagetext)!important;
-} #bodyDiv{
-	margin: auto; /* important */
-	height: 100%; /* important */
-	min-width: 260px;		/* minimum width */
-	min-height: 260px;		/* minimum height */
-	display: flex; /* flex stuff is all important */
-	flex-direction: column;
-	justify-content: stretch;
-	flex-wrap: nowrap;
-	align-content: stretch;
-	align-items: stretch;
+	font-family: 				"Exo 2", "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-size: 					12pt;
+	font-weight: 				200;
+	color: 						var(--pagetext)!important;
+} #bodyDiv {
+	margin: 						auto; /* important */
+	height: 						100%; /* important */
+	min-width: 					260px;		/* minimum width */
+	min-height: 				260px;		/* minimum height */
+	display: 					flex; /* flex stuff is all important */
+	flex-direction: 			column;
+	justify-content: 			stretch;
+	flex-wrap: 					nowrap;
+	align-content: 				stretch;
+	align-items: 				stretch;
 } a, a:visited { 
-	text-decoration: none;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+	text-decoration: 				none;
+	-webkit-transition-duration: 	0.3s;
+	transition-duration: 			0.3s;
 } a:hover { 
-	color: var(--selectiontext)!important;
-	text-decoration: overline;
-	background: var(--selectioncolor);
-	text-shadow: none;
+	color: 							var(--selectiontext)!important;
+	text-decoration: 				overline;
+	background: 					var(--selectioncolor);
+	text-shadow: 					none;
 } div { 
 	border: none!important;
 } #title, #description, h1, h2, h3, h4, h5, h6 {
-	color: var(--titletext);
+	color: 							var(--titletext);
 } .footer, a, a:visited { 
-	color: var(--pagelightertext);
+	color: 							var(--pagelightertext);
 } ::selection { 
-	background: var(--selectioncolor);
-	color: var(--selectiontext);
-	text-shadow: none;
+	background: 					var(--selectioncolor);
+	color: 							var(--selectiontext);
+	text-shadow: 					none;
 } ::-moz-selection { 
-	background: var(--selectioncolor);
-	color: var(--selectiontext);
-	text-shadow: none;
+	background: 					var(--selectioncolor);
+	color: 							var(--selectiontext);
+	text-shadow: 					none;
 }
 
 /*************************************************/
 /*                    Header                     */
 /*************************************************/
 #header, .footer { 
-	vertical-align: center;
+	vertical-align: 	center;
 } #header {
-	padding: 2%; /* padding */
-	display: flex; /* flex stuff is all important */
-	justify-content: space-between; /* horizontal align */
-	align-items: center; /* vertical align */
-	flex-wrap: nowrap;
+	padding: 			2%; /* padding */
+	display: 			flex; /* flex stuff is all important */
+	justify-content: 	space-between; /* horizontal align */
+	align-items: 		center; /* vertical align */
+	flex-wrap: 			nowrap;
 } #headerR { 
-	text-align: right;
+	text-align: 		right;
 } #headerL { 
-	text-align: left; 
+	text-align: 		left; 
 } #title { 
-	text-shadow: 0px 3px 20px var(--titleshadowone), 0px 2px 3px var(--titleshadowtwo); 
+	text-shadow: 		0px 3px 20px var(--titleshadowone), 0px 2px 3px var(--titleshadowtwo); 
 } #description, .footer, #iframeButton { 
-	text-shadow: 0px 2px 20px var(--descriptionshadowone), 0px 1px 3px var(--descriptionshadowtwo);
+	text-shadow: 		0px 2px 20px var(--descriptionshadowone), 0px 1px 3px var(--descriptionshadowtwo);
 } #title {
-	font-family: "tachyonthin", "Helvetica Neue", "Arial", sans-serif;
-	text-transform: uppercase;
-	letter-spacing: .25em!important;
-	font-size: 3.5vw;
-	font-weight: normal;
+	font-family: 		"tachyonthin", "Helvetica Neue", "Arial", sans-serif;
+	text-transform:		uppercase;
+	letter-spacing:		.25em!important;
+	font-size: 			3.5vw;
+	font-weight: 		normal;
 } #lastname { 
-	letter-spacing: .765em!important; 
+	letter-spacing: 	.765em!important; 
 } #description {
-	letter-spacing: .07em;
-	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	font-weight: normal;
-	text-transform: uppercase;
-	letter-spacing: .07em;
-	font-size: 2vw;
+	letter-spacing: 	.07em;
+	font-family: 		"cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 		normal;
+	text-transform: 	uppercase;
+	letter-spacing: 	.07em;
+	font-size: 			2vw;
 } #title, #description {
-	user-select: none;
-	-ms-user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
+	user-select: 			none;
+	-ms-user-select: 		none;
+	-moz-user-select: 		none;
+	-khtml-user-select: 	none;
+	-webkit-user-select:	none;
 } #iframeButton {
 	/*font-family: "Exo 2", "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;*/
-	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	font-weight: lighter;
-	text-transform: uppercase;
+	font-family: 			"cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 			lighter;
+	text-transform:			uppercase;
 }
 
 /*************************************************/
 /*              Main Page Content                */
 /*************************************************/
 #mainContent { /* all of this is important */
-	position: relative;
-	width: 100%;
-	margin: none;
-	display: flex;
-	border: none;
-	flex: 1!important;
-	background-color: var(--maincontentbg);
+	position: 			relative;
+	width: 				100%;
+	margin: 				none;
+	display: 			flex;
+	border: 				none;
+	flex: 				1!important;
+	background-color:	var(--maincontentbg);
 } #iframeButton {
-	display: block;
-	width: 220px;
-	padding: 8px;
-	padding-bottom: 7px;
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	margin-left: -118px; /* half width, plus padding */
-	text-align: center;
-	color: var(--pagelightertext); 
-	background-color: var(--pagebg); 
-	/*border-radius: 10px;*/
-	font-size: 13.5pt;
-	letter-spacing: .1em;
-	-webkit-transition-duration: 0.0s;
-	transition-duration: 0.0s;
+	display: 			block;
+	width: 				220px;
+	padding:				8px;
+	padding-bottom:		7px;
+	position: 			absolute;
+	bottom: 				20px;
+	left: 				50%;
+	margin-left:			-118px; /* half width, plus padding */
+	text-align: 		center;
+	color: 				var(--pagelightertext); 
+	background-color: 	var(--pagebg); 
+	/*border-radius: 	10px;*/
+	font-size: 			13.5pt;
+	letter-spacing:		.1em;
+	-webkit-transition-duration:	0.0s;
+	transition-duration: 			0.0s;
 } #iframeButton:hover {
-	color: var(--pagebg);
-	background-color: var(--pagetext);
-	text-decoration: none;
-	text-shadow: none;
+	color: 					var(--pagebg);
+	background-color: 		var(--pagetext);
+	text-decoration: 		none;
+	text-shadow: 			none;
 } #iframeDisplay, #changethemetext {
-	user-select: none;
-	-ms-user-select: none;
-	-moz-user-select: none;
-	-khtml-user-select: none;
-	-webkit-user-select: none;
+	user-select: 			none;
+	-ms-user-select: 		none;
+	-moz-user-select: 		none;
+	-khtml-user-select:		none;
+	-webkit-user-select:	none;
 } #iframeDisplay {
-	filter: none;
+	filter: 					none;
 } #downarrow { /* the svg tag */
-	width: 13px;
-	height: 13px;
-	margin-bottom: 0px;
+	width: 					13px;
+	height: 					13px;
+	margin-bottom: 			0px;
 } #thearrow { /* the svg path */
-	fill: var(--pagelightertext); 
-	stroke: var(--pagelightertext); 
+	fill: 					var(--pagelightertext); 
+	stroke:					var(--pagelightertext); 
 } #iframeButton:hover #thearrow { /* the svg when hovering over the iframe button */
-	fill: var(--pagebg); 
-	stroke: var(--pagebg); 
+	fill:					var(--pagebg); 
+	stroke:					var(--pagebg); 
 }
 
 /*************************************************/
 /*                    Footer                     */
 /*************************************************/
 #footer { /* all important */
-	display: flex;
-	justify-content: space-between;
-	align-content: space-around;
-	align-items: stretch;
-	flex-wrap: wrap;
+	display: 			flex;
+	justify-content: 	space-between;
+	align-content: 		space-around;
+	align-items: 		stretch;
+	flex-wrap: 			wrap;
 }.footer {
-	max-width: 19%; /* important */
-	margin: auto; /* important */
-	padding-top: 2.25%; /*  padding */
-	padding-bottom: 2.25%; /* padding */
-	text-align: center;
-	font-family: "cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	font-weight: normal;
-	font-size: 2vw;
-	letter-spacing: .1em;
-	text-transform: uppercase;
+	max-width: 			19%; /* important */
+	margin: 				auto; /* important */
+	padding-top: 		2.25%; /*  padding */
+	padding-bottom: 	2.25%; /* padding */
+	text-align: 		center;
+	font-family: 		"cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-weight: 		normal;
+	font-size: 			2vw;
+	letter-spacing: 	.1em;
+	text-transform: 	uppercase;
 } #copyright {
-	font-family: "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	font-weight: normal;
-	letter-spacing: .025em;
-	font-size: 7pt;
-	color: var(--copyrighttext);
-	text-shadow: none;
-	text-transform: none;
-	text-align: center;
-	padding: 10px;
-	padding-top: 0px;
-	text-align: center;
-	margin: auto;
-	text-transform: uppercase;
+	font-family: 		"cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 		normal;
+	letter-spacing: 	.025em;
+	font-size: 			7pt;
+	color: 				var(--copyrighttext);
+	text-shadow: 		none;
+	text-transform: 	none;
+	text-align: 		center;
+	padding: 			10px;
+	padding-top: 		0px;
+	text-align: 		center;
+	margin: 				auto;
+	text-transform: 	uppercase;
 } .footerlink {	
-	letter-spacing: .2em;
-	padding: 5px;
+	letter-spacing: 	.2em;
+	padding: 			5px;
 } .onlyMobile { 
-	display: none;
+	display: 			none;
 } #recursion { 
-	display: none;
+	display: 			none;
 } #changethemebutton, #mobilemailbutton {
-	display: none;
-	position: absolute!important;
-	bottom: 16px!important;
-	width: 32px;
-	height: 32px;
-	border-radius: 12px;
-	font-size: 24px;
-	text-align: center;
-	vertical-align: center;
-	color: var(--pagetext);
-	background-color: var(--pagebg);
-	box-shadow: 0px 2px 5px var(--mobilebuttonshadow);
-	font-family: "Verdana", sans-serif;
-	-webkit-transition-duration: 0.3s;
-	transition-duration: 0.3s;
+	display: 			none;
+	position: 			absolute!important;
+	bottom: 				16px!important;
+	width: 				32px;
+	height: 				32px;
+	border-radius: 		12px;
+	font-size: 			24px;
+	text-align: 		center;
+	vertical-align: 	center;
+	color: 				var(--pagetext);
+	background-color: 	var(--pagebg);
+	box-shadow: 		0px 2px 5px var(--mobilebuttonshadow);
+	font-family: 		"Verdana", sans-serif;
+	-webkit-transition-duration: 	0.3s;
+	transition-duration:			0.3s;
 } #changethemebutton {
-	left: 16px!important;
-	fill: var(--pagetext);
-	stroke: var(--pagetext);
+	left:				16px!important;
+	fill:				var(--pagetext);
+	stroke:				var(--pagetext);
 } #mobilemailbutton {
-	right: 16px!important;
-	fill: var(--pagetext);
+	right:				16px!important;
+	fill:				var(--pagetext);
 } #changethemebutton:hover, #mobilemailbutton:hover {
-	color: var(--selectiontext);
-	background-color: var(--pagetext);
-	box-shadow: 0px 0px 2px var(--mobilebuttonshadowhover);
+	color:				var(--selectiontext);
+	background-color:	var(--pagetext);
+	box-shadow: 		0px 0px 2px var(--mobilebuttonshadowhover);
 } #changethemebutton:hover #themetoggleicon {
-	fill: var(--selectiontext);
-	stroke: var(--selectiontext);
+	fill: 				var(--selectiontext);
+	stroke:				var(--selectiontext);
 } #mobilemailbutton:hover #mobilemailicon {
-	fill: var(--selectiontext);
+	fill: 				var(--selectiontext);
 } #changethemetext {
-	display: inline;
-	color: var(--pagelightertext);
-	font-size: 7pt;
-	padding: 3px;
-	text-transform: uppercase;
+	display:				inline;
+	color: 				var(--pagelightertext);
+	font-size:			7pt;
+	padding:				3px;
+	text-transform: 	uppercase;
 } #changethemetext:hover {
-	color: var(--selectiontext);
-	background-color: var(--pagetext);
+	color: 				var(--selectiontext);
+	background-color:	var(--pagetext);
 }
 
 /*************************************************/
@@ -327,15 +327,15 @@ div gets hidden (when the page gets too small) */
 /*************************************************/
 @media only screen and (min-width: 850px) {
 	#title { 
-		font-size: 20pt;
+		font-size: 		20pt;
 	} #description { 
-		font-size: 14pt; 
+		font-size: 		14pt; 
 	} #header { 
-		padding: 30px;
+		padding: 		30px;
 	} .footer { 
-		font-size: 13.5pt;
-		padding-top: 20px; /* padding */
-		padding-bottom: 20px; /* padding */ 
+		font-size: 		13.5pt;
+		padding-top: 	20px; /* padding */
+		padding-bottom:	20px; /* padding */ 
 	}
 }
 
@@ -344,15 +344,15 @@ div gets hidden (when the page gets too small) */
 /*************************************************/
 @media only screen and (max-width: 640px) {
 	#title { 
-		font-size: 4.75vw;
+		font-size: 		4.75vw;
 	} #description { 
-		font-size: 2.4vw; 
+		font-size: 		2.4vw; 
 	} #header { 
-		padding: 20px;
+		padding: 		20px;
 	} #title, #description, .footer, a, a:visited, #iframeButton { 
-		color: var(--smallerscreentext);
+		color: 			var(--smallerscreentext);
 	} #header, #title, #description, .footer, .footerlink { 
-		text-shadow: 0px 3px 5px var(--smallerscreenshadow);
+		text-shadow: 	0px 3px 5px var(--smallerscreenshadow);
 	}
 }
 
@@ -364,91 +364,95 @@ div gets hidden (when the page gets too small) */
 		/*max-width: 1024px;*//* remove until I figure out
 		a solution to deal with the tiny absolutely positioned 
 		buttons*/
-		min-height: 310px;
-	} #mainContent { 
-		display: none; 
+		min-height: 	310px;
+	} #mainContent {
+		display: 		none; 
 	} #header { 
 		padding-bottom: 10px;
 	} #footer { 
-		flex: 1;
-		flex-wrap: wrap;
-		align-content: space-around;
-		padding: none;
+		flex: 			1;
+		flex-wrap: 		wrap;
+		align-content: 	space-around;
+		padding: 		none;
 	} .footer {
-		font-style: italic;
-		min-width: 23%;
-		width: 23%;
+		font-style: 	italic;
+		min-width: 		23%;
+		width: 			23%;
 	} #copyright { 
-		font-weight: normal; 
-		padding: none;
-		padding-top: 16px;
+		font-weight: 	normal; 
+		padding: 		none;
+		padding-top: 	16px;
 	} .footerlink { /* big buttons */
-		border-radius: 25px;
-		box-shadow: 0px 2px 20px var(--mobilebuttonshadow);
-		padding: 20px;
+		border-radius: 	25px;
+		box-shadow: 	0px 2px 20px var(--mobilebuttonshadow);
+		padding: 		20px;
 	} .footerlink:hover {
-		box-shadow: 0px 1px 2px var(--mobilebuttonhovershadow);
+		box-shadow: 	0px 1px 2px var(--mobilebuttonhovershadow);
 	} a.footerlink:hover { 
-		text-decoration: none; 
+		text-decoration:	none; 
 	} .onlyMobile { 
-		display: inline;
+		display: 			inline;
 	} #changethemebutton {
-		display: block;
-	} #changethemetext { display: none };
+		display: 			block;
+	} #changethemetext { 
+		display: 			none;
+	}
 }
 
 /* tiny width screens - also show buttons */
 /*************************************************/
 @media only screen and (max-width: 400px) {
 	#title { 
-		font-size: 18pt;
-		padding-left: 9pt; /* half of font size */
-		padding-right: none;
-		margin: auto;
+		font-size: 		18pt;
+		padding-left: 	9pt; /* half of font size */
+		padding-right:	none;
+		margin: 		auto;
 	} #lastname { 
-		padding-left: 9pt; /* half of font size */
+		padding-left: 	9pt; /* half of font size */
 	} #description { 
-		font-size: .5em; 
+		font-size: 		.5em; 
 	} #header { 
-		padding: 7px;
-		align-content: stretch;
-		padding: 1px;
-		margin: auto;
+		padding: 		7px;
+		align-content: 	stretch;
+		padding: 		1px;
+		margin: 		auto;
 	} #headerL, #headerR {
-		margin: auto;
+		margin: 		auto;
 	} #headerL { 
-		padding: 10px;
+		padding: 		10px;
 	} #headerR { 
-		display: none; /*text-align: center; width: 100%;*/ 
+		display: 		none; /*text-align: center; width: 100%;*/ 
 	}  #mainContent {
-		display: none;
+		display: 		none;
 	} #copyright { 
 		letter-spacing: 0px;
-		padding-top: 12.5px;
+		padding-top: 	12.5px;
 	} .footerlink { /* medium buttons */
-		border-radius: 20px;
-		box-shadow: 0px 2px 15px var(--mobilebuttonshadow);
-		padding: 15px;
+		border-radius:	20px;
+		box-shadow: 	0px 2px 15px var(--mobilebuttonshadow);
+		padding: 		15px;
 	} .footerlink:hover { 
-		box-shadow: 0px 1px 2px var(--mobilebuttonhovershadow);
+		box-shadow: 	0px 1px 2px var(--mobilebuttonhovershadow);
 	} a.footerlink:hover { 
 		text-decoration: none!important;
 	} .onlyMobile { 
-		display: inline;
+		display: 		inline;
 	} #changethemebutton {
-		display: block;
-		bottom: 32px!important;
+		display: 		block;
+		bottom: 		32px!important;
 	} #mobilemailbutton {
-		bottom: 32px!important;
-	} #changethemetext { display: none };
+		bottom: 		32px!important;
+	} #changethemetext { 
+		display:			none;
+	}
 }
 
 /* show the smaller mail button (and hide larger one) under certain circumstances */
 @media only screen and (max-height: 400px) and (max-width: 800px) {
 	#mobilemailbutton {
-		display: block;
+		display:			block;
 	} #emailfooterlink {
-		display: none;
+		display:			none;
 	}
 }
 
@@ -456,18 +460,18 @@ div gets hidden (when the page gets too small) */
 /*************************************************/
 @media only screen and (max-height: 400px) and (max-width: 600px) {
 	.footerlink { 
-		padding: 7px; /* small buttons */
-		padding-left: 20px;
-		padding-right: 20px;
-		box-shadow: 0px 2px 5px var(--tinybuttonshadow);
+		padding: 		7px; /* small buttons */
+		padding-left: 	20px;
+		padding-right: 	20px;
+		box-shadow: 	0px 2px 5px var(--tinybuttonshadow);
 	}
 }
 @media only screen and (max-height: 500px) and (max-width: 400px) {
 	.footerlink { 
-		padding: 7px; /* small buttons */
-		padding-left: 20px;
-		padding-right: 20px;
-		box-shadow: 0px 2px 5px var(--tinybuttonshadow);
+		padding: 		7px; /* small buttons */
+		padding-left: 	20px;
+		padding-right: 	20px;
+		box-shadow: 	0px 2px 5px var(--tinybuttonshadow);
 	}
 }
 
@@ -476,29 +480,29 @@ div gets hidden (when the page gets too small) */
 /*************************************************/
 @media only screen and (max-width: 799px) {
 	.footer { 
-		font-size: 1em;
-		padding: none;
-		min-width: 32%;
-		width: 32%;
+		font-size: 		1em;
+		padding: 		none;
+		min-width: 		32%;
+		width: 			32%;
 	}
 }
 @media only screen and (max-width: 600px) {
 	.footer {
-		min-width: 48%;
-		width: 48%;
+		min-width: 		48%;
+		width: 			48%;
 	} 
 }
 @media only screen and (max-width: 400px) {
 	#bodyDiv { 
-		min-height: 360px;
+		min-height:		360px;
 	} #footer { 
-		flex: 1;
-		flex-wrap: wrap;
+		flex: 			1;
+		flex-wrap: 		wrap;
 		justify-content: space-around;
 	} .footer {
-		min-width: 98%;
-		width: 98%;
-		font-style: normal;
+		min-width: 		98%;
+		width: 			98%;
+		font-style:		normal;
 	} 
 }
 
@@ -506,13 +510,13 @@ div gets hidden (when the page gets too small) */
 /*************************************************/
 @media only screen and ((max-width: 400px) and (max-height: 400px)) {
 	#title { 
-		font-size: 16pt;
-		padding: none;
-		padding-left: 12pt; /* half of font size */
-		margin: auto;
+		font-size: 		16pt;
+		padding: 		none;
+		padding-left:	12pt; /* half of font size */
+		margin: 		auto;
 	} #lastname { 
-		padding-left: 12pt; /* half of font size */
+		padding-left:	12pt; /* half of font size */
 	} #changethemebutton, #mobilemailbutton {
-		bottom: 32px!important;
+		bottom: 		32px!important;
 	} 
 }

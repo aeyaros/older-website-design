@@ -2,25 +2,25 @@
 andrewyaros.com dark theme 
 * * * * * * * * * * * * */
 :root {
-	--selectiontext: #000000;
-	--selectioncolor: #dedede; 
-	--pagebg: #202020;
-	--pagetext: #ffffff;
-	--titletext: #dee9d0; /* glow in the dark color */
-	--pagelightertext: #e0e0e0;
+	--selectiontext: 			#000000;
+	--selectioncolor: 			#dedede; 
+	--pagebg: 					#202020;
+	--pagetext: 					#ffffff;
+	--titletext: 				#dee9d0; /* glow in the dark color */
+	--pagelightertext: 			#e0e0e0;
 	
-	--titleshadowone: #000000; /*343434*/
-	--titleshadowtwo: #000000;
-	--descriptionshadowone: #000000; /*222222*/
-	--descriptionshadowtwo: #000000;
+	--titleshadowone: 			#000000;
+	--titleshadowtwo: 			#000000;
+	--descriptionshadowone: 	#000000;
+	--descriptionshadowtwo: 	#000000;
 	
-	--maincontentbg: #2e2e2e;
-	--copyrighttext: #505050;
+	--maincontentbg: 			#2e2e2e;
+	--copyrighttext: 			#505050;
 	
-	--smallerscreentext: #cccccc;
-	--smallerscreenshadow: #000000;
+	--smallerscreentext: 		#cccccc;
+	--smallerscreenshadow: 		#000000;
 	
-	--tinybuttonshadow: #000000;
-	--mobilebuttonshadow: #000000;
-	--mobilebuttonhovershadow: #000000;
+	--tinybuttonshadow: 		#000000;
+	--mobilebuttonshadow: 		#000000;
+	--mobilebuttonhovershadow: 	#000000;
 }
