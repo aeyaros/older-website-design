@@ -1,5 +1,5 @@
 /****************************************
-andrewyaros.com - javascript for homepage
+javascript for homepage
 By Andrew Yaros
 For changing themes and the iframe source 
 Please insert after body tag
