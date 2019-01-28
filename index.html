@@ -169,13 +169,15 @@
 			</div>
 			<!-- Copyright -->
 			<div id="copyright">
-				&copy;&nbsp;2013-<script>/*set copyright to current year*/
-				document.write((new Date).getFullYear());</script>
-				&nbsp;Andrew&nbsp;Yaros ALL&nbsp;RIGHTS&nbsp;RESERVED 
+				&copy;&nbsp;2013-<span id="currentDate">2019</span>&nbsp;Andrew&nbsp;Ethan&nbsp;Yaros. 
+				ALL&nbsp;RIGHTS&nbsp;RESERVED 
 				<span id="changethemetext" onclick="toggleTheme()">
 					Click&nbsp;to&nbsp;change&nbsp;theme
 				</span>
 			</div>
+			<script>/*set date to current year*/
+				document.getElementById("currentDate").innerHTML = (new Date).getFullYear();
+			</script>
 			<!-- mobile button; click to send an email -->
 			<a id="mobilemailbutton" target="_blank" href="mailto:ay@drexel.edu">
 				<svg id="mobilemailtag" width="16" height="16" viewBox="0 0 16 16">
