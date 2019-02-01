@@ -23,4 +23,7 @@ andrewyaros.com  light theme
 	--tinybuttonshadow: 		#d8d8d8;
 	--mobilebuttonshadow: 		#dddddd;
 	--mobilebuttonhovershadow:	#777777;
+	
+	--buttonactivecolor:		#0066ff;
+	--buttonactivetext:			#ffffff;
 }

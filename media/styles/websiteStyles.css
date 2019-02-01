@@ -84,6 +84,9 @@ the layout of the page */
 	--tinybuttonshadow:			#d8d8d8;
 	--mobilebuttonshadow:		#dddddd;
 	--mobilebuttonhovershadow:	#777777;
+	
+	--buttonactivecolor:		#0066ff;
+	--buttonactivetext:			#ffffff;
 } html, body {
 	height:						100%;
 	margin:						0;
@@ -113,6 +116,11 @@ the layout of the page */
 	color: 						var(--selectiontext)!important;
 	text-decoration: 			overline;
 	background: 				var(--selectioncolor);
+	text-shadow: 				none;
+} a:active { 
+	color: 						var(--buttonactivetext)!important;
+	text-decoration: 			underline;
+	background: 				var(--buttonactivecolor);
 	text-shadow: 				none;
 } div { 
 	border: none!important;
@@ -210,6 +218,11 @@ the layout of the page */
 	background-color: 			var(--pagetext);
 	text-decoration: 			none;
 	text-shadow: 				none;
+} #iframeButton:active {
+	color: 						var(--buttonactivetext);
+	background-color: 			var(--buttonactivecolor);
+	text-decoration: 			none;
+	text-shadow: 				none;
 } #iframeDisplay, #changethemetext {
 	user-select: 				none;
 	-ms-user-select: 			none;
@@ -297,6 +310,10 @@ the layout of the page */
 } #changethemebutton:hover, #mobilemailbutton:hover {
 	color:						var(--selectiontext);
 	background-color:			var(--pagetext);
+	box-shadow: 				0px 0px 2px var(--mobilebuttonshadowhover);
+} #changethemebutton:active, #mobilemailbutton:active {
+	color:						var(--buttonactivetext);
+	background-color:			var(--buttonactivecolor);
 	box-shadow: 				0px 0px 2px var(--mobilebuttonshadowhover);
 } #changethemebutton:hover #themetoggleicon {
 	fill: 						var(--selectiontext);
