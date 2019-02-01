@@ -320,7 +320,6 @@ the layout of the page */
 	stroke:						var(--selectiontext);
 } #mobilemailbutton:hover #mobilemailicon, #mobilemailbutton:active #mobilemailicon {
 	fill: 						var(--selectiontext);
-	stroke:						var(--selectiontext);
 } #changethemetext {
 	display:						inline;
 	color: 						var(--pagelightertext);
