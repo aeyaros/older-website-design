@@ -241,6 +241,9 @@ the layout of the page */
 } #iframeButton:hover #thearrow { /* the svg when hovering over the iframe button */
 	fill:						var(--pagebg); 
 	stroke:						var(--pagebg); 
+} #iframeButton:active #thearrow { /* the svg when hovering over the active (clicked) iframe button */
+	fill:						var(--pagebg); 
+	stroke:						var(--pagebg); 
 }
 
 /*************************************************/
@@ -315,10 +318,10 @@ the layout of the page */
 	color:						var(--buttonactivetext);
 	background-color:			var(--buttonactivecolor);
 	box-shadow: 				0px 0px 2px var(--mobilebuttonshadowhover);
-} #changethemebutton:hover #themetoggleicon {
+} #changethemebutton:hover #themetoggleicon, #changethemebutton:active #themetoggleicon {
 	fill: 						var(--selectiontext);
 	stroke:						var(--selectiontext);
-} #mobilemailbutton:hover #mobilemailicon {
+} #mobilemailbutton:hover #mobilemailicon, #mobilemailbutton:active #mobilemailicon {
 	fill: 						var(--selectiontext);
 } #changethemetext {
 	display:						inline;
@@ -326,7 +329,7 @@ the layout of the page */
 	font-size:					7pt;
 	padding:						3px;
 	text-transform: 			uppercase;
-} #changethemetext:hover {
+} #changethemetext:hover, #changethemetext:hover {
 	color: 						var(--selectiontext);
 	background-color:			var(--pagetext);
 }
