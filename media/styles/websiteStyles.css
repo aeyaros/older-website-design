@@ -238,13 +238,10 @@ the layout of the page */
 } #thearrow { /* the svg path */
 	fill: 						var(--pagelightertext); 
 	stroke:						var(--pagelightertext); 
-} #iframeButton:hover #thearrow { /* the svg when hovering over the iframe button */
+} #iframeButton:hover #thearrow, #iframeButton:active #thearrow { /* the svg when hovering over the iframe button */
 	fill:						var(--pagebg); 
 	stroke:						var(--pagebg); 
-} #iframeButton:active #thearrow { /* the svg when hovering over the active (clicked) iframe button */
-	fill:						var(--pagebg); 
-	stroke:						var(--pagebg); 
-}
+} 
 
 /*************************************************/
 /*                    Footer                     */
@@ -323,16 +320,21 @@ the layout of the page */
 	stroke:						var(--selectiontext);
 } #mobilemailbutton:hover #mobilemailicon, #mobilemailbutton:active #mobilemailicon {
 	fill: 						var(--selectiontext);
+	stroke:						var(--selectiontext);
 } #changethemetext {
 	display:						inline;
 	color: 						var(--pagelightertext);
 	font-size:					7pt;
 	padding:						3px;
 	text-transform: 			uppercase;
-} #changethemetext:hover, #changethemetext:hover {
+} #changethemetext:hover, {
 	color: 						var(--selectiontext);
 	background-color:			var(--pagetext);
+} #changethemetext:active {
+	color: 						var(--buttonactivetext);
+	background-color:			var(--buttonactivecolor);
 }
+
 
 /*************************************************/
 /*            Responsive design rules            */
@@ -406,9 +408,9 @@ div gets hidden (when the page gets too small) */
 		border-radius: 			25px;
 		box-shadow: 			0px 2px 20px var(--mobilebuttonshadow);
 		padding: 				20px;
-	} .footerlink:hover {
+	} .footerlink:hover, .footerlink:active {
 		box-shadow: 			0px 1px 2px var(--mobilebuttonhovershadow);
-	} a.footerlink:hover { 
+	} a.footerlink:hover, a.footerlink:active { 
 		text-decoration:		none; 
 	} .onlyMobile { 
 		display: 				inline;
@@ -451,9 +453,9 @@ div gets hidden (when the page gets too small) */
 		border-radius:			20px;
 		box-shadow: 			0px 2px 15px var(--mobilebuttonshadow);
 		padding: 				15px;
-	} .footerlink:hover { 
+	} .footerlink:hover, .footerlink:active { 
 		box-shadow: 			0px 1px 2px var(--mobilebuttonhovershadow);
-	} a.footerlink:hover { 
+	} a.footerlink:hover, a.footerlink:active { 
 		text-decoration: 		none!important;
 	} .onlyMobile { 
 		display: 				inline;
