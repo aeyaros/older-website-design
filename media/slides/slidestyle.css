@@ -6,9 +6,9 @@ CSS for slides
 :root {
 	--shadowcolor:		rgba(0, 0, 0, 0.8);
 	--shadowsize:		40px;
-}
-
-/* inner shadow */
+} body { 
+	background-color: 	#000000;
+} /* inner shadow */
 html, body {
 	width: 				100%!important;
 	height: 				100%!important;
@@ -19,12 +19,10 @@ html, body {
 	left: 				0px!important;
 	top: 				0px!important;
 	width: 				100%!important;
-	height: 100%!important;
+	height:				100%!important;
 	        box-shadow:	0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
 	-webkit-box-shadow:	0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
-}
-
-/* remove any margins or borders just in case */
+} /* remove any margins or borders just in case */
 * {
 	margin: 				none;
 	border: 				none;
