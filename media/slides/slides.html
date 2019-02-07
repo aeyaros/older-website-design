@@ -20,17 +20,20 @@
 			//array with the names of each image
 			//images should be in the same directory as this html file
 			const slideNames = [
-				"lancaster.jpg",
-				"shell.jpg", 
-				"wefa.jpg",
-				"gropius.jpg",
-				"barnes.jpg",
-				"stanford.jpg"
+				"./lancaster.jpg",
+				"./shell.jpg", 
+				"./wefa.jpg",
+				"./gropius.jpg",
+				"./barnes.jpg",
+				"./stanford.jpg"
 			]; const n = slideNames.length;
 			
 			//preload images
-			var i = new Image(); 
-			for (h = 0; h < n; h++) i.src = slideNames[h];
+			var images = new Array();
+			for (i = 0; i < n; i++) {
+				images[i] = new Image();
+				images[i].src = slideNames[i];
+			}
 			
 			//change the slides every few seconds
 			const secondsInAMillisecond = 1000;
