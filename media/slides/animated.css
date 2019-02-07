@@ -3,5 +3,5 @@ body { /* CSS for animated slides */
 	-webkit-transition:	background .5s ease-out;
 	    -ms-transition:	background .5s ease-out;
 	     -o-transition:	background .5s ease-out;
-	   -moz-transition:	none; /* not working in firefox :( */
+	   -moz-transition:	background .5s ease-out; /* not working in firefox :( */
 }
