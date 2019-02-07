@@ -1,7 +1,7 @@
 body { /* CSS for animated slides */
-	        transition:	background .5s ease-in-out;
-	-webkit-transition:	background .5s ease-in-out;
-	    -ms-transition:	background .5s ease-in-out;
-	     -o-transition:	background .5s ease-in-out;
+	        transition:	background .5s ease-out;
+	-webkit-transition:	background .5s ease-out;
+	    -ms-transition:	background .5s ease-out;
+	     -o-transition:	background .5s ease-out;
 	   -moz-transition:	none; /* not working in firefox :( */
 }
