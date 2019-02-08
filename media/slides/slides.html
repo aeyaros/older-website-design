@@ -28,13 +28,6 @@
 				"./stanford.jpg"
 			]; const n = slideNames.length;
 			
-			//preload images
-			var images = new Array();
-			for (i = 0; i < n; i++) {
-				images[i] = new Image();
-				images[i].src = slideNames[i];
-			}
-			
 			//change the slides every few seconds
 			const secondsInAMillisecond = 1000;
 			const numSec = 4; //number of seconds for slide to display
@@ -45,6 +38,18 @@
 				to determine which slide to start off at, %n that number */
 			var unixTime = Math.floor((new Date).getTime()/secondsInAMillisecond);
 			var startingSlide = unixTime % n;
+			
+			//preload images
+			var images = new Array();
+			/* Start preloading at the starting slide
+			Preload n images
+			*/
+			var currentSlideToPreload = startingSlide;
+			for (i = 0; i < n; i++) {
+				images[currentSlideToPreload] = new Image();
+				images[currentSlideToPreload].src = slideNames[currentSlideToPreload%n];
+				currentSlideToPreload++; //increment index of slide; modulus n because we are looping over to the start
+			}
 			
 			//set the background
 			setBackground(slideNames[startingSlide]);

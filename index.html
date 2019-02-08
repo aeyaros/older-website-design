@@ -1,34 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<!-------------
-	Hello world! :D
-	---------------
-	Website made by
-	Andrew Yaros :)
-	-------------->
+	<!--------------------------
+	Andrew Yaros's home page! :)
+	--------------------------->
 	<head>
+		<title>Andrew Yaros</title>
+		<meta charset="UTF-8" name="viewport" 
+			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
+		<meta name="description" content="Personal website of Andrew Yaros with portfolio, résumé, and work examples.">
+		<!-- Google webmaster tools --><meta name="google-site-verification" content="bwSTxxkBuYuXig_yEctBdAmvMnA61ULkgSke_r_Yjpg" />
+		<!-- Microsoft webmaster tools --><meta name="msvalidate.01" content="AA7E5B5FE7C20FE49F696D7949C5444C" />
+		
+		<!------ CSS styles: VERY IMPORTANT --------------------------------------------------------------->
+		<link type="text/css" rel="stylesheet" href="./media/styles/websiteStyles.css?ver=1.67" media="all">
+		<!------------------------------------------------------------------------------------------------->
+		
+		<!-------- Javascript: IMPORTANT -------->
+		<script src="./index.js?ver=1.2"></script>
+		<!--------------------------------------->
+		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56859530-3"></script>
 		<script> window.dataLayer = window.dataLayer || [];
 			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date()); gtag('config', 'UA-56859530-3');</script>
-		
-		<!-- Page title -->
-		<title>Andrew Yaros</title>
-		
-		<!-- Meta stuff -->
-		<meta charset="UTF-8" name="viewport" 
-			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
-		
-		<!-- Description -->
-		<meta name="description" content="Personal website of Andrew Yaros with portfolio, résumé, and work examples.">
-		
-		<!-- Meta tags for webmaster tools -->
-		<meta name="google-site-verification" content="bwSTxxkBuYuXig_yEctBdAmvMnA61ULkgSke_r_Yjpg" />
-		<meta name="msvalidate.01" content="AA7E5B5FE7C20FE49F696D7949C5444C" />
-		
-		<!-- CSS styles -->
-		<link type="text/css" rel="stylesheet" href="./media/styles/websiteStyles.css?ver=1.67" media="all">
 		
 		<!-- Mobile web app stuff -->
 		<link rel="manifest"  href="/site.webmanifest?v=5">
@@ -52,26 +47,21 @@
 		<div id="bodyDiv"> 
 			<!-- Header -->
 			<div id="header">
+			
 				<!-- Left side of header -->
-				<div id="headerL">
-					<!-- Title -->
-					<span id="title">
-						Andrew<br/>
-						<span id="lastname">
-							Yaros
-						</span>
-					</span>
+				<div id="headerL"><!-- Title -->
+					<span id="title">Andrew<br/><span id="lastname">Yaros</span></span>
 				</div>
+				
 				<!-- Right side of header -->
-				<div id="headerR">
-					<!-- Description -->
-					<span id="description">
-						Drexel&nbsp;Computer&nbsp;Science &amp;&nbsp;Architecture
-					</span>
+				<div id="headerR"><!-- Description -->
+					<span id="description">Drexel&nbsp;Computer&nbsp;Science &amp;&nbsp;Architecture</span>
 				</div>
+				
 			</div>
 			<!-- Main content -->
 			<div id="mainContent">
+			
 				<!-- Download PDF link overlapping the ifrmae -->
 				<a id="iframeButton" target="_blank"
 					href="./media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
@@ -81,6 +71,7 @@
 					</svg>
 					<!--&nbsp;-->PDF&nbsp;Portfolio
 				</a>
+				
 				<!-- Slideshow -->
 				<iframe id="iframeDisplay" src="./media/slides/slides.html"
 					style="display: block; border: none; width: 100%; height: 100%;">
@@ -88,9 +79,11 @@
 						Slideshow could not display properly. :( Click here.
 					</a>
 				</iframe>
+				
 			</div>
 			<!-- Footer (Basically the main content when window is small) -->
 			<div id="footer">
+			
 				<!-- Resume -->
 				<div class="footer" id="resumelink">
 					<a class="footerlink" target="_blank"
@@ -100,6 +93,7 @@
 						R&eacute;sum&eacute;
 					</a>
 				</div>
+				
 				<!-- Portfolio -->
 				<div class="footer onlyMobile">
 					<a class="footerlink" target="_blank"  
@@ -107,6 +101,7 @@
 						Portfolio
 					</a>
 				</div>
+				
 				<!-- GitHub -->
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
@@ -116,6 +111,7 @@
 						GitHub
 					</a>
 				</div>
+				
 				<!-- Checkers Online -->
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
@@ -125,6 +121,7 @@
 						Checkers
 					</a>
 				</div>
+				
 				<!-- John Fry's Food Truck Extravaganza -->
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
@@ -134,6 +131,7 @@
 						J.F.F.T.E.
 					</a>
 				</div>
+				
 				<!-- LinkedIn -->
 				<div class="footer">
 					<a class="footerlink" target="_blank" 
@@ -143,6 +141,7 @@
 						LinkedIn
 					</a>
 				</div>
+				
 				<!-- Email -->
 				<div class="footer" id="emailfooterlink">
 					<a class="footerlink" target="_blank" 
@@ -153,34 +152,31 @@
 					</a>
 				</div>
 			</div>
+			
 			<!-- Copyright -->
 			<div id="copyright">
 				&copy;&nbsp;2013-<span id="currentDate">2019</span>&nbsp;Andrew&nbsp;Ethan&nbsp;Yaros. 
 				ALL&nbsp;RIGHTS&nbsp;RESERVED 
 				<span id="changethemetext" onclick="toggleTheme()">
 					Click&nbsp;to&nbsp;change&nbsp;theme
-				</span>
+				</span><script>updateDate();</script>
 			</div>
-			<script>/*set date to current year*/
-				document.getElementById("currentDate").innerHTML = (new Date).getFullYear();
-			</script>
+			
 			<!-- mobile button; click to send an email -->
 			<a id="mobilemailbutton" target="_blank" href="mailto:contact@andrewyaros.com">
 				<svg id="mobilemailtag" width="16" height="16" viewBox="0 0 16 16">
 					<path id="mobilemailicon" d="M0,13.816V2.184H16V13.816Zm13.565-1.347L10.17,9.037,8.031,11.175,5.855,9.034,2.439,12.469Zm1.064-1.044V4.588L11.2,8.011Zm-13.258,0L4.8,8.011,1.371,4.588ZM8.028,9.061l5.529-5.518H2.448Z"/>
 				</svg>
 			</a>
+			
+			<!-- Button to change theme -->
 			<div id="changethemebutton" onclick="toggleTheme()">
 				<!-- initially load the moon icon directly, in case there's no javascript -->
 				<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 16">
 					<path id="themetoggleicon" d="M13.84,9.75a6,6,0,0,1-5.8,4.039A5.8,5.8,0,0,1,2.16,7.977,5.961,5.961,0,0,1,6.246,2.211a5.829,5.829,0,0,0-.57,2.726,5.19,5.19,0,0,0,5.414,5.384A6.052,6.052,0,0,0,13.84,9.75Z"/>
 				</svg>
 			</div>
+			
 		</div>
-	</body><!--~~~~~~~~~~~~~~~
-	~~~~~~~ IMPORTANT! ~~~~~~~
-	Script for changing themes 
-	and the iframe source!!!!!
-	~~~~~~~~~~~~~~~~~~~~~~~-->
-	<script src="./index.js"></script>
+	</body><script>resetDisplay();</script>
 </html>
