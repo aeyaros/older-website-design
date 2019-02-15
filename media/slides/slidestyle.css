@@ -7,7 +7,7 @@ CSS for slides
 	--shadowcolor:		rgba(0, 0, 0, 0.8);
 	--shadowsize:		40px;
 } body { 
-	background-color: 	#000000;
+	background-color: 	transparent;
 } /* inner shadow */
 html, body {
 	width: 				100%!important;
