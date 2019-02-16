@@ -157,8 +157,7 @@ window.onload = function initial() {
 	//preload images
 	var images = new Array();
 	/* Start preloading at the starting slide
-	Preload n images
-	*/
+	Preload n images */
 	var currentSlideToPreload = startingSlide;
 	for (i = 0; i < n; i++) {
 		images[currentSlideToPreload] = new Image();
