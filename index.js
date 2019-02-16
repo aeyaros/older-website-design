@@ -7,6 +7,7 @@
 const secondsInAMillisecond = 1000;
 const numSec = 4; //number of seconds for slide to display
 const secondsInAnHour = 3600000;
+var i;
 
 //change the theme to a different css file
 //must be in the styles folder
@@ -112,7 +113,7 @@ function changeDisplay(imageName, shouldTile) {
 	document.getElementById("innerDisplay").style.backgroundImage = "url('./media/slides/" + imageName + "')";
 	if (shouldTile){
 		document.getElementById("innerDisplay").style.backgroundRepeat = "repeat";
-		document.getElementById("innerDisplay").style.backgroundSize = "auto";
+		document.getElementById("innerDisplay").style.backgroundSize = "256px 256px";
 	} else {
 		document.getElementById("innerDisplay").style.backgroundRepeat = "no-repeat";
 		document.getElementById("innerDisplay").style.backgroundSize = "cover";
@@ -167,7 +168,7 @@ window.onload = function initial() {
 	
 	//preload images for mouseovers
 	var moreImages = new Array();
-	for(i = 0; i < moreSlideNames.length; i++) {
+	for (i = 0; i < moreSlideNames.length; i++) {
 		moreImages[i] = new Image();
 		moreImages[i].src=moreSlideNames[i];
 	}
