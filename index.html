@@ -8,22 +8,42 @@
 		<meta charset="UTF-8" name="viewport" 
 			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
 		<meta name="description" content="Personal website of Andrew Yaros with portfolio, résumé, and work examples.">
-		<!-- Google webmaster tools --><meta name="google-site-verification" content="bwSTxxkBuYuXig_yEctBdAmvMnA61ULkgSke_r_Yjpg" />
-		<!-- Microsoft webmaster tools --><meta name="msvalidate.01" content="AA7E5B5FE7C20FE49F696D7949C5444C" />
 		
 		<!------ CSS styles: VERY IMPORTANT --------------------------------------------------------------->
-		<link type="text/css" rel="stylesheet" href="./media/styles/websiteStyles.css?ver=1.67" media="all">
+		<link type="text/css" rel="stylesheet" href="./media/styles/websiteStyles.css?ver=1.75" media="all">
 		<!------------------------------------------------------------------------------------------------->
 		
+		<script>/*check/change theme colors IMMEDIATELY after loading CSS
+				to try and avoid a bright flash of white
+				icon cant be changed yet, because the HTML isn't fully loaded yet */
+			var startHour = parseInt((new Date).getHours());
+			if (startHour < 7 || startHour >= 19) {
+				//create a new link element, set it's attributes
+				var newTheme = document.createElement("link");
+				newTheme.setAttribute("type", "text/css");
+				newTheme.setAttribute("rel", "stylesheet");
+				newTheme.setAttribute("href", "./media/styles/darkerColors.css");
+				//append to the head tag
+				document.getElementsByTagName("head")[0].appendChild(newTheme);
+			}
+		</script>
+		
 		<!-------- Javascript: IMPORTANT -------->
-		<script src="./index.js?ver=1.2"></script>
+		<script src="./index.js?ver=1.3"></script>
 		<!--------------------------------------->
 		
+		<!--------------------
+		-- Webmaster tools: --
+		--------------------->
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56859530-3"></script>
 		<script> window.dataLayer = window.dataLayer || [];
 			function gtag() { dataLayer.push(arguments); }
 			gtag('js', new Date()); gtag('config', 'UA-56859530-3');</script>
+		<!-- Google webmaster tools -->
+		<meta name="google-site-verification" content="bwSTxxkBuYuXig_yEctBdAmvMnA61ULkgSke_r_Yjpg" />
+		<!-- Microsoft webmaster tools -->
+		<meta name="msvalidate.01" content="AA7E5B5FE7C20FE49F696D7949C5444C" />
 		
 		<!-- Mobile web app stuff -->
 		<link rel="manifest"  href="/site.webmanifest?v=5">

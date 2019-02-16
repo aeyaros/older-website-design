@@ -3,8 +3,32 @@
  * page by Andrew Yaros *
  ************************/
 
-//IMPORTANT keep track of the current theme
+//for changing the slides every few seconds
+const secondsInAMillisecond = 1000;
+const numSec = 4; //number of seconds for slide to display
+const secondsInAnHour = 3600000;
+
+//change the theme to a different css file
+//must be in the styles folder
+//will be appended to the head tag as an additional link tag
+function changeCSS(cssname) {
+	//create a new link element, set it's attributes
+	var newTheme = document.createElement("link");
+	newTheme.setAttribute("type", "text/css");
+	newTheme.setAttribute("rel", "stylesheet");
+	newTheme.setAttribute("href", "./media/styles/" + cssname + ".css");
+	//append to the head tag
+	document.getElementsByTagName("head")[0].appendChild(newTheme);
+	console.log("dark = " + isDark);
+}
+
+//this is false by default
+//this is used for toggling the theme
+//this is changed when the page is done loading
 var isDark = false;
+
+//dont change theme automatically every hour if the user manually changes the theme
+var userChangedTheme = false;
 
 //sun and moon button SVG icons
 var moonIcon = '<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 16"><path id="themetoggleicon" d="M13.84,9.75a6,6,0,0,1-5.8,4.039A5.8,5.8,0,0,1,2.16,7.977,5.961,5.961,0,0,1,6.246,2.211a5.829,5.829,0,0,0-.57,2.726,5.19,5.19,0,0,0,5.414,5.384A6.052,6.052,0,0,0,13.84,9.75Z"/></svg>';
@@ -14,31 +38,68 @@ var sunIcon = '<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 1
 /*	Original unicode icons for buttons: 
 	&#9728; sun		&#9790; moon 	&#9993; mail	 */
 
-//change the theme to a different css file
-//must be in the styles folder
-//will be appended to the head tag as an additional link tag
-function changeTheme(cssname) {
-	//create a new link element, set it's attributes
-	var newTheme = document.createElement("link");
-	newTheme.setAttribute("type", "text/css");
-	newTheme.setAttribute("rel", "stylesheet");
-	newTheme.setAttribute("href", "./media/styles/" + cssname + ".css");
-	//append to the head tag
-	document.getElementsByTagName("head")[0].appendChild(newTheme);
+//use dark theme
+function makeDark() {
+	isDark = true;
+	changeCSS("darkerColors");
+	document.getElementById("changethemebutton").innerHTML = sunIcon;
 }
 
-//toggle back and forth between light and dark themes
-function toggleTheme() {
-	if(isDark) { //if dark then switch to light theme
-		isDark = false;
-		changeTheme("lighterColors");
-		document.getElementById("changethemebutton").innerHTML = moonIcon;
-	} else { //if light then switch to dark theme
-		isDark = true;
-		changeTheme("darkerColors");
-		document.getElementById("changethemebutton").innerHTML = sunIcon;
-	}
+//use light theme
+function makeLight() {
+	isDark = false;
+	changeCSS("lighterColors");
+	document.getElementById("changethemebutton").innerHTML = moonIcon;
 }
+
+//toggle theme; a user action
+function toggleTheme() {
+	if (isDark) makeLight();
+	else makeDark();
+	//user change the theme, so this must be true now:
+	userChangedTheme = true;
+}
+
+//change theme based on time
+function setTheme() {
+	var theHour = parseInt((new Date).getHours());
+	if(theHour < 7 || theHour >= 19) makeDark();
+	else makeLight();
+}
+
+//array with the names of each image
+//images should be in the same directory as this html file
+const slideNames = [
+	"./media/slides/lancaster.jpg",
+	"./media/slides/shell.jpg", 
+	"./media/slides/wefa.jpg",
+	"./media/slides/gropius.jpg",
+	"./media/slides/barnes.jpg",
+	"./media/slides/stanford.jpg"
+];
+
+//n = number of slides
+const n = slideNames.length;
+
+/* When the page is loaded: set the background image based on the current time
+	create a date object; getTime returns Unix time, but milliseconds
+	divide by 1000 and use floor function to get seconds
+	to determine which slide to start off at, %n that number */
+var unixTime = Math.floor((new Date).getTime()/secondsInAMillisecond);
+var startingSlide = unixTime % n;
+
+//counter variable starts at the second image; we already displayed the first
+var count = startingSlide + 1;
+
+//array for slides used for mouseovers
+const moreSlideNames = [
+	"./media/slides/emailtile.gif",
+	"./media/slides/githubtile.gif",
+	"./media/slides/linkedintile.gif",
+	"./media/slides/checkers.jpg",
+	"./media/slides/resumeimage.jpg", 
+	"./media/slides/foodtrucks.jpg"	
+];
 
 //update the current copyright year
 function updateDate() {
@@ -49,8 +110,7 @@ function updateDate() {
 //change the inner shadow div to an image
 function changeDisplay(imageName, shouldTile) {
 	document.getElementById("innerDisplay").style.backgroundImage = "url('./media/slides/" + imageName + "')";
-	
-	if(shouldTile){
+	if (shouldTile){
 		document.getElementById("innerDisplay").style.backgroundRepeat = "repeat";
 		document.getElementById("innerDisplay").style.backgroundSize = "auto";
 	} else {
@@ -70,73 +130,51 @@ function setBackground(imageName) {
 	document.getElementById("outerDisplay").style.backgroundImage = "url('" + imageName + "')";
 }
 
-//array with the names of each image
-//images should be in the same directory as this html file
-const slideNames = [
-	"./media/slides/lancaster.jpg",
-	"./media/slides/shell.jpg", 
-	"./media/slides/wefa.jpg",
-	"./media/slides/gropius.jpg",
-	"./media/slides/barnes.jpg",
-	"./media/slides/stanford.jpg"
-]; const n = slideNames.length;
-
-//array for slides used for mouseovers
-const moreSlideNames = [
-	"./media/slides/emailtile.gif",
-	"./media/slides/githubtile.gif",
-	"./media/slides/linkedintile.gif",
-	"./media/slides/checkers.jpg",
-	"./media/slides/resumeimage.jpg", 
-	"./media/slides/foodtrucks.jpg"	
-];
-
-//change the slides every few seconds
-const secondsInAMillisecond = 1000;
-const numSec = 4; //number of seconds for slide to display
-			
-/* When the page is loaded: set the background image based on the current time
-	create a date object; getTime returns Unix time, but milliseconds
-	divide by 1000 and use floor function to get seconds
-	to determine which slide to start off at, %n that number */
-var unixTime = Math.floor((new Date).getTime()/secondsInAMillisecond);
-var startingSlide = unixTime % n;
-
-//preload images
-var images = new Array();
-/* Start preloading at the starting slide
-Preload n images
-*/
-var currentSlideToPreload = startingSlide;
-for (i = 0; i < n; i++) {
-	images[currentSlideToPreload] = new Image();
-	images[currentSlideToPreload].src = slideNames[currentSlideToPreload%n];
-	currentSlideToPreload++; //increment index of slide; modulus n because we are looping over to the start
-}
-
-//load images for mouseovers
-var moreImages = new Array();
-for(i = 0; i < moreSlideNames.length; i++) {
-	moreImages[i] = new Image();
-	moreImages[i].src=moreSlideNames[i];
-}
-
-//counter variable starts at the second image; we already displayed the first
-var count = startingSlide + 1;
-
 //change the image to the next one
 function changeSlide() { //change image to next item in array
 	setBackground(slideNames[(count % n)]); count++;
-}  setInterval(changeSlide, (secondsInAMillisecond * numSec));
-
+} 
 
 /* VERY IMPORTANT - Do this stuff once page is loaded*/
 window.onload = function initial() {
-	//update copyright date
+	//update copyright date in HTML
 	updateDate();
-	/* If it is dark out and dark theme isn't loaded, then load the dark theme ;) */
-	var theHour = parseInt((new Date).getHours());
-	if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
+	
+	// If it is dark out and dark theme isn't loaded, then load the dark theme ;) 
+	setTheme();
+	/* Yes, I know I'm loading the colors manually in the HTML,
+		but I am still doing this here to ensure the button icons are changed,
+		and as a matter of principle (this function *should* be called 
+		if I change the theme) */
+	
+	//update the theme every so often, but only if user hasn't changed it
+	setInterval(function () {
+		//if user hasn't changed theme
+		//then set it based on time
+		if (!userChangedTheme) setTheme();
+	}, secondsInAnHour);
+
+	//preload images
+	var images = new Array();
+	/* Start preloading at the starting slide
+	Preload n images
+	*/
+	var currentSlideToPreload = startingSlide;
+	for (i = 0; i < n; i++) {
+		images[currentSlideToPreload] = new Image();
+		images[currentSlideToPreload].src = slideNames[currentSlideToPreload%n];
+		currentSlideToPreload++; //increment index of slide; modulus n because we are looping over to the start
+	}
+	
+	//preload images for mouseovers
+	var moreImages = new Array();
+	for(i = 0; i < moreSlideNames.length; i++) {
+		moreImages[i] = new Image();
+		moreImages[i].src=moreSlideNames[i];
+	}
+	
+	//change the slide every few seconds
+	setInterval(changeSlide, (secondsInAMillisecond * numSec));
 	
 	//inner div background should be blank
 	resetDisplay();
