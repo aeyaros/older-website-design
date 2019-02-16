@@ -81,6 +81,16 @@ const slideNames = [
 	"./media/slides/stanford.jpg"
 ]; const n = slideNames.length;
 
+//array for slides used for mouseovers
+const moreSlideNames = [
+	"./media/slides/emailtile.gif",
+	"./media/slides/githubtile.gif",
+	"./media/slides/linkedintile.gif",
+	"./media/slides/checkers.jpg",
+	"./media/slides/resumeimage.jpg", 
+	"./media/slides/foodtrucks.jpg"	
+];
+
 //change the slides every few seconds
 const secondsInAMillisecond = 1000;
 const numSec = 4; //number of seconds for slide to display
@@ -104,6 +114,13 @@ for (i = 0; i < n; i++) {
 	currentSlideToPreload++; //increment index of slide; modulus n because we are looping over to the start
 }
 
+//load images for mouseovers
+var moreImages = new Array();
+for(i = 0; i < moreSlideNames.length; i++) {
+	moreImages[i] = new Image();
+	moreImages[i].src=moreSlideNames[i];
+}
+
 //counter variable starts at the second image; we already displayed the first
 var count = startingSlide + 1;
 
@@ -111,8 +128,6 @@ var count = startingSlide + 1;
 function changeSlide() { //change image to next item in array
 	setBackground(slideNames[(count % n)]); count++;
 }  setInterval(changeSlide, (secondsInAMillisecond * numSec));
-
-
 
 
 /* VERY IMPORTANT - Do this stuff once page is loaded*/
