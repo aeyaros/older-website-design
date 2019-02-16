@@ -67,7 +67,7 @@ function resetDisplay() {
 
 //change the outer main content div
 function setBackground(imageName) {
-	document.getElementById("iframeDisplay").style.backgroundImage = "url('" + imageName + "')";
+	document.getElementById("outerDisplay").style.backgroundImage = "url('" + imageName + "')";
 }
 
 //array with the names of each image

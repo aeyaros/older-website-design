@@ -226,13 +226,13 @@ the layout of the page */
 	background-color: 			var(--buttonactivecolor);
 	text-decoration: 			none;
 	text-shadow: 				none;
-} #iframeDisplay, #changethemetext {
+} #outerDisplay, #changethemetext {
 	user-select: 				none;
 	-ms-user-select: 			none;
 	-moz-user-select: 			none;
 	-khtml-user-select:			none;
 	-webkit-user-select:			none;
-} #iframeDisplay {
+} #outerDisplay {
 	width:						100%;
 	height:						100%;
 	display:					block;
