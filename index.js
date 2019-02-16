@@ -42,24 +42,24 @@ function toggleTheme() {
 
 //change the inner shadow div to an image
 function changeDisplay(imageName, shouldTile) {
-	document.getElementById("shadowdiv").style.backgroundImage = "url('./media/slides/" + imageName + "')";
+	document.getElementById("innerMainContent").style.backgroundImage = "url('./media/slides/" + imageName + "')";
 	
 	if(shouldTile){
-		document.getElementById("shadowdiv").style.backgroundRepeat = "repeat";
-		document.getElementById("shadowdiv").style.backgroundSize = "auto";
+		document.getElementById("innerMainContent").style.backgroundRepeat = "repeat";
+		document.getElementById("innerMainContent").style.backgroundSize = "auto";
 	} else {
-		document.getElementById("shadowdiv").style.backgroundRepeat = "no-repeat";
-		document.getElementById("shadowdiv").style.backgroundSize = "cover";
+		document.getElementById("innerMainContent").style.backgroundRepeat = "no-repeat";
+		document.getElementById("innerMainContent").style.backgroundSize = "cover";
 	}
 	
 	//old crap:
-	//document.getElementById("iframeDisplay").innerHTML = "<div id='shadowdiv'><img display='block' width='100%' height='100%' border='none' src='./media/slides/" + url + "'></div>";
-	//document.getElementById("iframeDisplay").innerHTML = "<iframe display='block' width='100%' height='100%' border='none' margin='-15px' src='" + url + "'></iframe>";
-	//document.getElementById("iframeDisplay").setAttribute("src", url);
-	//document.getElementById("iframeButton").style.display = "none";
+	//document.getElementById("outerMainContent").innerHTML = "<div id='innerMainContent'><img display='block' width='100%' height='100%' border='none' src='./media/slides/" + url + "'></div>";
+	//document.getElementById("outerMainContent").innerHTML = "<iframe display='block' width='100%' height='100%' border='none' margin='-15px' src='" + url + "'></iframe>";
+	//document.getElementById("outerMainContent").setAttribute("src", url);
+	//document.getElementById("mainContentButton").style.display = "none";
 	/*
 	if(invert && isDark) { //invert background if dark theme, and only if we want to invert
-		document.getElementById("iframeDisplay").contentDocument.body.style.filter = "invert()";
+		document.getElementById("outerMainContent").contentDocument.body.style.filter = "invert()";
 	}
 	*/
 }
@@ -67,14 +67,14 @@ function changeDisplay(imageName, shouldTile) {
 //reset the inner shadow div to no image
 function resetDisplay() {
 	//remove background image property from shadow div
-	document.getElementById("shadowdiv").style.backgroundImage = "none";
+	document.getElementById("innerMainContent").style.backgroundImage = "none";
 	
 	//old crap:
-	//document.getElementById("iframeDisplay").innerHTML = "<div id='shadowdiv'></div>";
+	//document.getElementById("outerMainContent").innerHTML = "<div id='innerMainContent'></div>";
 	//changeDisplay("./media/slides/slides.html"); //set to main slideshow
-	//document.getElementById("iframeButton").style.display = "block"; //show iframe button
+	//document.getElementById("mainContentButton").style.display = "block"; //show iframe button
 	////disable invert filter
-	////document.getElementById("iframeDisplay").contentDocument.body.style.filter = "none";
+	////document.getElementById("outerMainContent").contentDocument.body.style.filter = "none";
 }
 
 //update the current copyright year
@@ -87,7 +87,7 @@ function updateDate() {
 
 //change the iframe div
 function setBackground(imageName) {
-	document.getElementById("iframeDisplay").style.backgroundImage = "url('" + imageName + "')";
+	document.getElementById("outerMainContent").style.backgroundImage = "url('" + imageName + "')";
 	//document.body.style.backgroundImage = "url('" + imageName + "')";
 }
 

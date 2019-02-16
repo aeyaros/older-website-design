@@ -158,7 +158,7 @@ the layout of the page */
 	text-align: 				left; 
 } #title { 
 	text-shadow: 				0px 3px 20px var(--titleshadowone), 0px 2px 3px var(--titleshadowtwo); 
-} #description, .footer, #iframeButton { 
+} #description, .footer, #mainContentButton { 
 	text-shadow: 		0px 2px 20px var(--descriptionshadowone), 0px 1px 3px var(--descriptionshadowtwo);
 } #title {
 	font-family: 				"tachyonthin", "Helvetica Neue", "Arial", sans-serif;
@@ -181,7 +181,7 @@ the layout of the page */
 	-moz-user-select: 			none;
 	-khtml-user-select: 		none;
 	-webkit-user-select:		none;
-} #iframeButton {
+} #mainContentButton {
 	/*font-family: "Exo 2", "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;*/
 	font-family: 				"cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: 				lighter;
@@ -199,7 +199,7 @@ the layout of the page */
 	border: 						none;
 	flex: 						1!important;
 	background-color:			var(--maincontentbg);
-} #iframeButton {
+} #mainContentButton {
 	display: 					block;
 	width: 						220px;
 	padding:						8px;
@@ -216,23 +216,23 @@ the layout of the page */
 	letter-spacing:				.1em;
 	-webkit-transition-duration:	0.0s;
 	transition-duration: 		0.0s;
-} #iframeButton:hover {
+} #mainContentButton:hover {
 	color: 						var(--pagebg);
 	background-color: 			var(--pagetext);
 	text-decoration: 			none;
 	text-shadow: 				none;
-} #iframeButton:active {
+} #mainContentButton:active {
 	color: 						var(--buttonactivetext);
 	background-color: 			var(--buttonactivecolor);
 	text-decoration: 			none;
 	text-shadow: 				none;
-} #iframeDisplay, #changethemetext {
+} #outerMainContent, #changethemetext {
 	user-select: 				none;
 	-ms-user-select: 			none;
 	-moz-user-select: 			none;
 	-khtml-user-select:			none;
 	-webkit-user-select:			none;
-} #iframeDisplay {
+} #outerMainContent {
 	width:						100%;
 	height:						100%;
 	display:					block;
@@ -268,7 +268,7 @@ the layout of the page */
 } #thearrow { /* the svg path */
 	fill: 						var(--pagelightertext); 
 	stroke:						var(--pagelightertext); 
-} #iframeButton:hover #thearrow, #iframeButton:active #thearrow { /* the svg when hovering over the iframe button */
+} #mainContentButton:hover #thearrow, #mainContentButton:active #thearrow { /* the svg when hovering over the iframe button */
 	fill:						var(--pagebg); 
 	stroke:						var(--pagebg); 
 } 
@@ -400,7 +400,7 @@ div gets hidden (when the page gets too small) */
 		font-size: 				2.4vw; 
 	} #header { 
 		padding: 				20px;
-	} #title, #description, .footer, a, a:visited, #iframeButton { 
+	} #title, #description, .footer, a, a:visited, #mainContentButton { 
 		color: 					var(--smallerscreentext);
 	} #header, #title, #description, .footer, .footerlink { 
 		text-shadow: 			0px 3px 5px var(--smallerscreenshadow);
