@@ -40,9 +40,22 @@ function toggleTheme() {
 	}
 }
 
-//change the iframe to a specfic URL
-function changeDisplay(url) {
-	document.getElementById("iframeDisplay").setAttribute("src", url);
+//change the inner shadow div to an image
+function changeDisplay(imageName, shouldTile) {
+	document.getElementById("shadowdiv").style.backgroundImage = "url('./media/slides/" + imageName + "')";
+	
+	if(shouldTile){
+		document.getElementById("shadowdiv").style.backgroundRepeat = "repeat";
+		document.getElementById("shadowdiv").style.backgroundSize = "auto";
+	} else {
+		document.getElementById("shadowdiv").style.backgroundRepeat = "no-repeat";
+		document.getElementById("shadowdiv").style.backgroundSize = "cover";
+	}
+	
+	//old crap:
+	//document.getElementById("iframeDisplay").innerHTML = "<div id='shadowdiv'><img display='block' width='100%' height='100%' border='none' src='./media/slides/" + url + "'></div>";
+	//document.getElementById("iframeDisplay").innerHTML = "<iframe display='block' width='100%' height='100%' border='none' margin='-15px' src='" + url + "'></iframe>";
+	//document.getElementById("iframeDisplay").setAttribute("src", url);
 	//document.getElementById("iframeButton").style.display = "none";
 	/*
 	if(invert && isDark) { //invert background if dark theme, and only if we want to invert
@@ -51,9 +64,14 @@ function changeDisplay(url) {
 	*/
 }
 
-//reset the iframe to the slideshow
+//reset the inner shadow div to no image
 function resetDisplay() {
-	changeDisplay("./media/slides/slides.html"); //set to main slideshow
+	//remove background image property from shadow div
+	document.getElementById("shadowdiv").style.backgroundImage = "none";
+	
+	//old crap:
+	//document.getElementById("iframeDisplay").innerHTML = "<div id='shadowdiv'></div>";
+	//changeDisplay("./media/slides/slides.html"); //set to main slideshow
 	//document.getElementById("iframeButton").style.display = "block"; //show iframe button
 	////disable invert filter
 	////document.getElementById("iframeDisplay").contentDocument.body.style.filter = "none";
@@ -65,11 +83,78 @@ function updateDate() {
 	document.getElementById("currentDate").innerHTML = (new Date).getFullYear();
 }
 
-/* If it is dark out and dark theme isn't loaded, then load the dark theme ;) */
-var theHour = parseInt((new Date).getHours());
-if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
+//slideshow stuff
+
+//change the iframe div
+function setBackground(imageName) {
+	document.getElementById("iframeDisplay").style.backgroundImage = "url('" + imageName + "')";
+	//document.body.style.backgroundImage = "url('" + imageName + "')";
+}
+
+//array with the names of each image
+//images should be in the same directory as this html file
+const slideNames = [
+	"./media/slides/lancaster.jpg",
+	"./media/slides/shell.jpg", 
+	"./media/slides/wefa.jpg",
+	"./media/slides/gropius.jpg",
+	"./media/slides/barnes.jpg",
+	"./media/slides/stanford.jpg"
+]; const n = slideNames.length;
+
+//change the slides every few seconds
+const secondsInAMillisecond = 1000;
+const numSec = 4; //number of seconds for slide to display
+			
+/* When the page is loaded: set the background image based on the current time
+	create a date object; getTime returns Unix time, but milliseconds
+	divide by 1000 and use floor function to get seconds
+	to determine which slide to start off at, %n that number */
+var unixTime = Math.floor((new Date).getTime()/secondsInAMillisecond);
+var startingSlide = unixTime % n;
+
+//preload images
+var images = new Array();
+/* Start preloading at the starting slide
+Preload n images
+*/
+var currentSlideToPreload = startingSlide;
+for (i = 0; i < n; i++) {
+	images[currentSlideToPreload] = new Image();
+	images[currentSlideToPreload].src = slideNames[currentSlideToPreload%n];
+	currentSlideToPreload++; //increment index of slide; modulus n because we are looping over to the start
+}
 
 
 
-//resetDisplay should be called after the body tag
-//updateDate should be called right after the currentDate div
+/* old, for when I used iframe - background position settings */
+/*document.body.style.backgroundRepeat = "no-repeat";
+document.body.style.backgroundPosition = "center center";
+document.body.style.backgroundAttachment = "fixed"; 
+document.body.style.backgroundSize = "cover";*/
+
+//counter variable starts at the second image; we already displayed the first
+var count = startingSlide + 1;
+
+//change the image to the next one
+function changeSlide() { //change image to next item in array
+	setBackground(slideNames[(count % n)]); count++;
+}  setInterval(changeSlide, (secondsInAMillisecond * numSec));
+
+
+
+
+/* VERY IMPORTANT - Do this stuff once page is loaded*/
+window.onload = function initial() {
+	//update copyright date
+	updateDate();
+	/* If it is dark out and dark theme isn't loaded, then load the dark theme ;) */
+	var theHour = parseInt((new Date).getHours());
+	if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
+	
+	//set the background initially
+	//resetDisplay();
+	
+	//set slideshow background
+	setBackground(slideNames[startingSlide]);
+}

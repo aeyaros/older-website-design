@@ -62,6 +62,13 @@
 			<!-- Main content -->
 			<div id="mainContent">
 			
+				
+				
+				<!-- Slideshow -->
+				<div id="iframeDisplay">
+					<div id="shadowdiv"></div>
+				</div>
+				
 				<!-- Download PDF link overlapping the ifrmae -->
 				<a id="iframeButton" target="_blank"
 					href="./media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
@@ -72,13 +79,14 @@
 					<!--&nbsp;-->PDF&nbsp;Portfolio
 				</a>
 				
-				<!-- Slideshow -->
+				<!--
 				<iframe id="iframeDisplay" src="./media/slides/slides.html"
 					style="display: block; border: none; width: 100%; height: 100%;">
 					<a href="./media/AndrewYarosPortfolio.pdf#page=3&view=Fit&toolbar=0&navpanes=0&scrollbar=1">
 						Slideshow could not display properly. :( Click here.
 					</a>
 				</iframe>
+				-->
 				
 			</div>
 			<!-- Footer (Basically the main content when window is small) -->
@@ -88,7 +96,7 @@
 				<div class="footer" id="resumelink">
 					<a class="footerlink" target="_blank"
 						href="./media/AndrewYarosResume.pdf#view=Fit&toolbar=0&navpanes=0&scrollbar=1"
-						onmouseenter="changeDisplay('./media/slides/resumeimage.html')"
+						onmouseenter="changeDisplay('resumeimage.jpg', false)"
 						onmouseleave="resetDisplay()">
 						R&eacute;sum&eacute;
 					</a>
@@ -106,7 +114,7 @@
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
 						href="https://github.com/aeyaros/schoolwork"
-						onmouseenter="changeDisplay('./media/slides/githubimage.html')"
+						onmouseenter="changeDisplay('githubtile.gif', true)"
 						onmouseleave="resetDisplay()">
 						GitHub
 					</a>
@@ -116,7 +124,7 @@
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
 						href="./checkers.html"
-						onmouseenter="changeDisplay('./media/slides/checkersimage.html')"
+						onmouseenter="changeDisplay('checkers.jpg', false)"
 						onmouseleave="resetDisplay()">
 						Checkers
 					</a>
@@ -126,7 +134,7 @@
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
 						href="http://jffte.yaros.ae/"
-						onmouseenter="changeDisplay('./media/slides/foodtrucksimage.html')"
+						onmouseenter="changeDisplay('foodtrucks.jpg', false)"
 						onmouseleave="resetDisplay()">
 						J.F.F.T.E.
 					</a>
@@ -136,7 +144,7 @@
 				<div class="footer">
 					<a class="footerlink" target="_blank" 
 					href="https://www.linkedin.com/in/aey/"
-					onmouseenter="changeDisplay('./media/slides/linkedinimage.html')"
+					onmouseenter="changeDisplay('linkedintile.gif', true)"
 					onmouseleave="resetDisplay()">
 						LinkedIn
 					</a>
@@ -146,7 +154,7 @@
 				<div class="footer" id="emailfooterlink">
 					<a class="footerlink" target="_blank" 
 					href="mailto:contact@andrewyaros.com"
-					onmouseenter="changeDisplay('./media/slides/emailimage.html')"
+					onmouseenter="changeDisplay('emailtile.gif', true)"
 					onmouseleave="resetDisplay()">
 						Email
 					</a>
@@ -159,7 +167,7 @@
 				ALL&nbsp;RIGHTS&nbsp;RESERVED 
 				<span id="changethemetext" onclick="toggleTheme()">
 					Click&nbsp;to&nbsp;change&nbsp;theme
-				</span><script>updateDate();</script>
+				</span>
 			</div>
 			
 			<!-- mobile button; click to send an email -->
@@ -176,7 +184,6 @@
 					<path id="themetoggleicon" d="M13.84,9.75a6,6,0,0,1-5.8,4.039A5.8,5.8,0,0,1,2.16,7.977,5.961,5.961,0,0,1,6.246,2.211a5.829,5.829,0,0,0-.57,2.726,5.19,5.19,0,0,0,5.414,5.384A6.052,6.052,0,0,0,13.84,9.75Z"/>
 				</svg>
 			</div>
-			
 		</div>
-	</body><script>resetDisplay();</script>
+	</body>
 </html>

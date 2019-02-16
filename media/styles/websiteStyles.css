@@ -87,6 +87,9 @@ the layout of the page */
 	
 	--buttonactivecolor:		#0066ff;
 	--buttonactivetext:			#ffffff;
+	
+	--shadowcolor:				rgba(0, 0, 0, 0.8);
+	--shadowsize:				40px;
 } html, body {
 	height:						100%;
 	margin:						0;
@@ -228,12 +231,39 @@ the layout of the page */
 	-ms-user-select: 			none;
 	-moz-user-select: 			none;
 	-khtml-user-select:			none;
-	-webkit-user-select:		none;
+	-webkit-user-select:			none;
 } #iframeDisplay {
-	filter: 						none;
+	width:						100%;
+	height:						100%;
+	display:					block;
+	border:						none;
+	background-repeat:			no-repeat;
+	background-size:			cover;
+	background-position:			center center;
+	background-attachment: 		scroll;
+	        transition:	background 1.5s ease-out;
+	-webkit-transition:	background 1.5s ease-out;
+	    -ms-transition:	background 1.5s ease-out;
+	     -o-transition:	background 1.5s ease-out;
+	   -moz-transition:	background 1.5s ease-out; /* not working in firefox :( */
+} #shadowdiv {
+	background-color:	transparent!important;
+	position: 			relative;
+	left: 				0%!important;
+	top: 				0%!important;
+	width: 				100%!important;
+	height:				100%!important;
+	display:					block;
+	border:						none;
+	background-repeat:			no-repeat;
+	background-size:			cover;
+	background-position:			center center;
+	background-attachment: 		scroll;
+	box-shadow:			0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
+	-webkit-box-shadow:	0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
 } #downarrow { /* the svg tag */
 	width: 						13px;
-	height: 						13px;
+	height: 					13px;
 	margin-bottom: 				0px;
 } #thearrow { /* the svg path */
 	fill: 						var(--pagelightertext); 
