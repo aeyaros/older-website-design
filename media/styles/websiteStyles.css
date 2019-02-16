@@ -268,7 +268,7 @@ the layout of the page */
 } #thearrow { /* the svg path */
 	fill: 						var(--pagelightertext); 
 	stroke:						var(--pagelightertext); 
-} #mainContentButton:hover #thearrow, #mainContentButton:active #thearrow { /* the svg when hovering over the iframe button */
+} #mainContentButton:hover #thearrow, #mainContentButton:active #thearrow { /* the svg when hovering over the main content button */
 	fill:						var(--pagebg); 
 	stroke:						var(--pagebg); 
 } 
@@ -407,7 +407,7 @@ div gets hidden (when the page gets too small) */
 	}
 }
 
-/* if height is too small then hide the iframe
+/* if height is too small then hide the main content
 	and show buttons */
 /*************************************************/
 @media only screen and (max-height: 400px) {
