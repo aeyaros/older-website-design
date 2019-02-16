@@ -48,21 +48,21 @@ function updateDate() {
 
 //change the inner shadow div to an image
 function changeDisplay(imageName, shouldTile) {
-	document.getElementById("shadowdiv").style.backgroundImage = "url('./media/slides/" + imageName + "')";
+	document.getElementById("innerDisplay").style.backgroundImage = "url('./media/slides/" + imageName + "')";
 	
 	if(shouldTile){
-		document.getElementById("shadowdiv").style.backgroundRepeat = "repeat";
-		document.getElementById("shadowdiv").style.backgroundSize = "auto";
+		document.getElementById("innerDisplay").style.backgroundRepeat = "repeat";
+		document.getElementById("innerDisplay").style.backgroundSize = "auto";
 	} else {
-		document.getElementById("shadowdiv").style.backgroundRepeat = "no-repeat";
-		document.getElementById("shadowdiv").style.backgroundSize = "cover";
+		document.getElementById("innerDisplay").style.backgroundRepeat = "no-repeat";
+		document.getElementById("innerDisplay").style.backgroundSize = "cover";
 	}
 }
 
 //reset the inner shadow div to no image
 function resetDisplay() {
 	//remove background image property from shadow div
-	document.getElementById("shadowdiv").style.backgroundImage = "none";
+	document.getElementById("innerDisplay").style.backgroundImage = "none";
 }
 
 //change the outer main content div

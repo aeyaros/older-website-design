@@ -246,7 +246,7 @@ the layout of the page */
 	    -ms-transition:	background 1.5s ease-out;
 	     -o-transition:	background 1.5s ease-out;
 	   -moz-transition:	background 1.5s ease-out; /* not working in firefox :( */
-} #shadowdiv {
+} #innerDisplay {
 	background-color:	transparent!important;
 	position: 			relative;
 	left: 				0%!important;
