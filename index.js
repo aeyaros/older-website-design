@@ -40,6 +40,12 @@ function toggleTheme() {
 	}
 }
 
+//update the current copyright year
+function updateDate() {
+	//Change year to current year
+	document.getElementById("currentDate").innerHTML = (new Date).getFullYear();
+}
+
 //change the inner shadow div to an image
 function changeDisplay(imageName, shouldTile) {
 	document.getElementById("shadowdiv").style.backgroundImage = "url('./media/slides/" + imageName + "')";
@@ -51,44 +57,17 @@ function changeDisplay(imageName, shouldTile) {
 		document.getElementById("shadowdiv").style.backgroundRepeat = "no-repeat";
 		document.getElementById("shadowdiv").style.backgroundSize = "cover";
 	}
-	
-	//old crap:
-	//document.getElementById("iframeDisplay").innerHTML = "<div id='shadowdiv'><img display='block' width='100%' height='100%' border='none' src='./media/slides/" + url + "'></div>";
-	//document.getElementById("iframeDisplay").innerHTML = "<iframe display='block' width='100%' height='100%' border='none' margin='-15px' src='" + url + "'></iframe>";
-	//document.getElementById("iframeDisplay").setAttribute("src", url);
-	//document.getElementById("iframeButton").style.display = "none";
-	/*
-	if(invert && isDark) { //invert background if dark theme, and only if we want to invert
-		document.getElementById("iframeDisplay").contentDocument.body.style.filter = "invert()";
-	}
-	*/
 }
 
 //reset the inner shadow div to no image
 function resetDisplay() {
 	//remove background image property from shadow div
 	document.getElementById("shadowdiv").style.backgroundImage = "none";
-	
-	//old crap:
-	//document.getElementById("iframeDisplay").innerHTML = "<div id='shadowdiv'></div>";
-	//changeDisplay("./media/slides/slides.html"); //set to main slideshow
-	//document.getElementById("iframeButton").style.display = "block"; //show iframe button
-	////disable invert filter
-	////document.getElementById("iframeDisplay").contentDocument.body.style.filter = "none";
 }
 
-//update the current copyright year
-function updateDate() {
-	//Change year to current year
-	document.getElementById("currentDate").innerHTML = (new Date).getFullYear();
-}
-
-//slideshow stuff
-
-//change the iframe div
+//change the outer main content div
 function setBackground(imageName) {
 	document.getElementById("iframeDisplay").style.backgroundImage = "url('" + imageName + "')";
-	//document.body.style.backgroundImage = "url('" + imageName + "')";
 }
 
 //array with the names of each image
@@ -125,14 +104,6 @@ for (i = 0; i < n; i++) {
 	currentSlideToPreload++; //increment index of slide; modulus n because we are looping over to the start
 }
 
-
-
-/* old, for when I used iframe - background position settings */
-/*document.body.style.backgroundRepeat = "no-repeat";
-document.body.style.backgroundPosition = "center center";
-document.body.style.backgroundAttachment = "fixed"; 
-document.body.style.backgroundSize = "cover";*/
-
 //counter variable starts at the second image; we already displayed the first
 var count = startingSlide + 1;
 
@@ -152,8 +123,8 @@ window.onload = function initial() {
 	var theHour = parseInt((new Date).getHours());
 	if((theHour < 7 || theHour >= 19) && !isDark) toggleTheme();
 	
-	//set the background initially
-	//resetDisplay();
+	//inner div background should be blank
+	resetDisplay();
 	
 	//set slideshow background
 	setBackground(slideNames[startingSlide]);
