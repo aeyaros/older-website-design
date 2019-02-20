@@ -2,7 +2,7 @@
 /* Style for pages with simple redirect buttons */
 @font-face {
 	font-family: 					"cmu";
-	src: 							url("./media/fonts/cmunrm.otf");
+	src: 							url("../fonts/cmunrm.otf");
 	font-weight: 					normal;
 } html, body { 
 	color: 							#000; 
