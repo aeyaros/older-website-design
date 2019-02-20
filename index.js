@@ -110,7 +110,9 @@ function updateDate() {
 
 //change the inner shadow div to an image
 function changeDisplay(imageName, shouldTile) {
+	//first, change the image source
 	document.getElementById("innerDisplay").style.backgroundImage = "url('./media/slides/" + imageName + "')";
+	//then, depending on the argument, either tile it or not
 	if (shouldTile){
 		document.getElementById("innerDisplay").style.backgroundRepeat = "repeat";
 		document.getElementById("innerDisplay").style.backgroundSize = "256px 256px";
@@ -118,12 +120,19 @@ function changeDisplay(imageName, shouldTile) {
 		document.getElementById("innerDisplay").style.backgroundRepeat = "no-repeat";
 		document.getElementById("innerDisplay").style.backgroundSize = "cover";
 	}
+	//finally, change the opacity, which triggers the fade-in transition
+	//this is because in the CSS, the opacity is given the transition time
+	//changing the source should be done first, since it happens immediately
+	//(user should never see an abrupt image change)
+	document.getElementById("innerDisplay").style.opacity = "1.0";
 }
 
 //reset the inner shadow div to no image
 function resetDisplay() {
 	//remove background image property from shadow div
-	document.getElementById("innerDisplay").style.backgroundImage = "none";
+	//reduce opacity - this will fade it out to trasnparent 
+	//dont change the image, not necessary until the next time changeDisplay is called
+	document.getElementById("innerDisplay").style.opacity = "0.0";
 }
 
 //change the outer main content div
@@ -140,6 +149,10 @@ function changeSlide() { //change image to next item in array
 window.onload = function initial() {
 	//update copyright date in HTML
 	updateDate();
+	
+	//IMPORTANT!!!!!! Set the inner display div to a transparent png file as the default
+	//that way, the first time we mouseover a footer link, we will get a smooth transition
+	document.getElementById("innerDisplay").style.backgroundImage = "url('./media/slides/transparent.png')";
 	
 	// If it is dark out and dark theme isn't loaded, then load the dark theme ;) 
 	setTheme();
