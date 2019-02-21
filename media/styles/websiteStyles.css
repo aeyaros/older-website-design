@@ -90,6 +90,7 @@ the layout of the page */
 	
 	--shadowcolor:				rgba(0, 0, 0, 0.8);
 	--shadowsize:				40px;
+	--buttonDepressionShadow: 	rgba(0, 0, 0, 0.2);
 } html, body {
 	height:						100%;
 	margin:						0;
@@ -211,13 +212,13 @@ the layout of the page */
 	text-align: 				center;
 	color: 						var(--pagelightertext); 
 	background-color: 			var(--pagebg); 
-	/*border-radius: 			10px;*/
+	border-radius: 				15px;
 	font-size: 					13.5pt;
 	letter-spacing:				.1em;
 	-webkit-transition-duration:	0.0s;
 	transition-duration: 		0.0s;
-	box-shadow:			0px 0px var(--shadowsize) 0px var(--shadowcolor) !important;
-	-webkit-box-shadow:	0px 0px var(--shadowsize) 0px var(--shadowcolor) !important;
+	box-shadow:			0px 0px 10px 0px var(--shadowcolor) !important;
+	-webkit-box-shadow:	0px 0px 10px 0px var(--shadowcolor) !important;
 } #mainContentButton:hover {
 	color: 						var(--pagebg);
 	background-color: 			var(--pagetext);
@@ -242,8 +243,7 @@ the layout of the page */
 	/* this seems redundant but it is necessary; when the inner div is visible, the other div's shadow gets covered up */
 	box-shadow:			0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
 	-webkit-box-shadow:	0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
-}
-#outerDisplay {
+} #outerDisplay {
 	background-repeat:			no-repeat;
 	background-size:				cover;
 	background-position:		center center;
@@ -281,7 +281,11 @@ the layout of the page */
 } #mainContentButton:hover #thearrow, #mainContentButton:active #thearrow { /* the svg when hovering over the main content button */
 	fill:						var(--pagebg); 
 	stroke:						var(--pagebg); 
-} 
+} #mainContentButton:active, #changethemebutton:active, #mobilemailbutton:active, .footerlink:active {
+	/* when button is pressed, show a shadow */
+	box-shadow:			0px 7.5px 10px 0px var(--buttonDepressionShadow) inset!important;
+	-webkit-box-shadow:	0px 7.5px 10px 0px var(--buttonDepressionShadow) inset!important;
+}
 
 /*************************************************/
 /*                    Footer                     */
@@ -292,7 +296,7 @@ the layout of the page */
 	align-content: 				space-around;
 	align-items: 				stretch;
 	flex-wrap: 					wrap;
-}.footer {
+} .footer {
 	max-width: 					19%; /* important */
 	margin: 						auto; /* important */
 	padding-top: 				2.25%; /*  padding */
@@ -319,7 +323,9 @@ the layout of the page */
 	text-transform: 			uppercase;
 } .footerlink {	
 	letter-spacing: 			.2em;
-	padding: 					5px;
+	padding:					10px;
+	padding-top: 				8px;
+	padding-bottom: 				7px;
 } .onlyMobile { 
 	display: 					none;
 } #recursion { 
