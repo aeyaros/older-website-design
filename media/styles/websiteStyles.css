@@ -18,28 +18,44 @@
 	src: 						url("../fonts/cmunrm.otf");
 	font-weight: 				normal;
 } /* Computer Modern serif Bold */
-@font-face {
+/*@font-face {
 	font-family: 				"cmu";
 	src: 						url("../fonts/cmunrb.otf");
 	font-weight: 				bold;
-} /* Computer Modern classical */
-@font-face {
+}*/ /* Computer Modern classical */
+/* @font-face {
 	font-family: 				"cmu";
 	src: 						url("../fonts/cmunci.otf");
 	font-weight: 				normal;
 	font-style: 				italic;
-} /* Computer Modern sans serif*/
-@font-face {
+}*/ /* Computer Modern sans serif */
+/*@font-face {
 	font-family:	 				"cmusans";
 	src: 						url("../fonts/cmunss.otf");
 	font-weight: 				normal;
-} /* Computer Modern sans serif Bold */
+}*/ /* Computer Modern sans serif Bold */
 @font-face {
 	font-family: 				"cmusans";
 	src: 						url("../fonts/cmunsx.otf");
 	font-weight: 				bold;
 } /* Exo 2 light */
-@import url('https://fonts.googleapis.com/css?family=Exo+2:300&subset=cyrillic,latin-ext');
+/*@import url('https://fonts.googleapis.com/css?family=Exo+2:300&subset=cyrillic,latin-ext');*/
+/* Continuum Light */
+@font-face {
+	font-family: "cont";
+	src: 						url("../fonts/contl.ttf");
+	font-weight: lighter;
+} /* Continuum Medium */
+/*@font-face {
+	font-family: "cont";
+	src: 						url("../fonts/contm.ttf");
+	font-weight: normal;
+}*/ /* Continuum Bold */
+/*@font-face {
+	font-family: "cont";
+	src: 						url("../fonts/contb.ttf");
+	font-weight: bold;
+}*/
 
 /*************************************************/
 /* by "important" I mean stuff that should not be
@@ -93,7 +109,7 @@ the layout of the page */
 	overflow: 					auto;
 	background-color: 			var(--pagebg)!important;
 } body {
-	font-family: 				"Exo 2", "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-family: 				"cmusans", "Helvetica Neue", "Arial", sans-serif;
 	font-size: 					12pt;
 	font-weight: 				200;
 	color: 						var(--pagetext)!important;
@@ -179,7 +195,6 @@ the layout of the page */
 	-khtml-user-select: 		none;
 	-webkit-user-select:		none;
 } #mainContentButton {
-	/*font-family: "Exo 2", "cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;*/
 	font-family: 				"cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: 				lighter;
 	text-transform:				uppercase;
@@ -200,7 +215,6 @@ the layout of the page */
 	display: 					block;
 	width: 						220px;
 	padding:						8px;
-	padding-bottom:				7px;
 	position: 					absolute;
 	bottom: 						20px;
 	left: 						50%;
@@ -306,13 +320,12 @@ the layout of the page */
 	padding-top: 				2.25%; /*  padding */
 	padding-bottom: 			2.25%; /* padding */
 	text-align: 				center;
-	font-family: 				"cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-	font-weight: 				normal;
+	font-family: 				"cont", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 				lighter;
 	font-size: 					2vw;
 	letter-spacing: 			.1em;
 	text-transform: 			uppercase;
 } #copyright {
-	font-family: 				"cmusans","Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-weight: 				normal;
 	letter-spacing: 			.025em;
 	font-size: 					7pt;
@@ -446,7 +459,7 @@ div gets hidden (when the page gets too small) */
 		align-content: 			space-around;
 		padding: 				none;
 	} .footer {
-		font-style: 			italic;
+		font-style: 			normal;
 		min-width: 				23%;
 		width: 					23%;
 	} #copyright { 
