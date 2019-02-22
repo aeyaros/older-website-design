@@ -3,26 +3,21 @@
  * page by Andrew Yaros *
  ************************/
 
+/*************
+ * VARIABLES *
+ *************/
+
 //for changing the slides every few seconds
 const secondsInAMillisecond = 1000;
 const numSec = 4; //number of seconds for slide to display
 const secondsInAnHour = 3600000;
-var i;
 const hasTouchedYet = false;
+var i;
 
-//change the theme to a different css file
-//must be in the styles folder
-//will be appended to the head tag as an additional link tag
-function appendCSS(cssname) {
-	//create a new link element, set it's attributes
-	var newTheme = document.createElement("link");
-	newTheme.setAttribute("type", "text/css");
-	newTheme.setAttribute("rel", "stylesheet");
-	newTheme.setAttribute("href", "./media/styles/" + cssname + ".css");
-	//append to the head tag
-	document.getElementsByTagName("head")[0].appendChild(newTheme);
-	console.log("dark = " + isDark);
-}
+//variables for mouseover background tiles
+var githubtile;
+var linkedintile;
+var emailtile;
 
 //this is false by default
 //this is used for toggling the theme
@@ -39,35 +34,6 @@ var sunIcon = '<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 1
 
 /*	Original unicode icons for buttons: 
 	&#9728; sun		&#9790; moon 	&#9993; mail	 */
-
-//use dark theme
-function makeDark() {
-	isDark = true;
-	appendCSS("darkerColors");
-	document.getElementById("changethemebutton").innerHTML = sunIcon;
-}
-
-//use light theme
-function makeLight() {
-	isDark = false;
-	appendCSS("lighterColors");
-	document.getElementById("changethemebutton").innerHTML = moonIcon;
-}
-
-//toggle theme; a user action
-function toggleTheme() {
-	if (isDark) makeLight();
-	else makeDark();
-	//user change the theme, so this must be true now:
-	userChangedTheme = true;
-}
-
-//change theme based on time
-function setTheme() {
-	var theHour = parseInt((new Date).getHours());
-	if(theHour < 7 || theHour >= 19) makeDark();
-	else makeLight();
-}
 
 //array with the names of each image
 //images should be in the same directory as this html file
@@ -95,13 +61,83 @@ var count = startingSlide + 1;
 
 //array for slides used for mouseovers
 const moreSlideNames = [
-	"./media/slides/emailtile.gif",
-	"./media/slides/githubtile.gif",
-	"./media/slides/linkedintile.gif",
+	"./media/slides/emailtile-light.gif",
+	"./media/slides/githubtile-light.gif",
+	"./media/slides/linkedintile-light.gif",
+	"./media/slides/emailtile-dark.gif",
+	"./media/slides/githubtile-dark.gif",
+	"./media/slides/linkedintile-dark.gif",
 	"./media/slides/checkers.jpg",
 	"./media/slides/resumeimage.jpg", 
 	"./media/slides/foodtrucks.jpg"	
 ];
+
+/*************
+ * FUNCTIONS *
+ *************/
+
+/* IMPORTANT!
+Set the outer display div to a transparent png file.
+This will replace the "please enable javascript" image.
+That way, when the page loads, the first slide will fade
+in from a single color, rather than the javascript image,
+which we don't ever want the user to see if javascript is 
+enabled. I put this in a script tag so that it would load 
+right after the outerDisplay tag is loaded. Note: the image 
+file needs to be the same size as the slides to prevent weird
+resizing/stretching effects on fade-in in certain browsers. */
+function setTranslucentSlide() {
+	document.getElementById("outerDisplay").style.backgroundImage = "url('./media/slides/transparent.png')";
+}
+
+//change the theme to a different css file
+//must be in the styles folder
+//will be appended to the head tag as an additional link tag
+function appendCSS(cssname) {
+	//create a new link element, set it's attributes
+	var newTheme = document.createElement("link");
+	newTheme.setAttribute("type", "text/css");
+	newTheme.setAttribute("rel", "stylesheet");
+	newTheme.setAttribute("href", "./media/styles/" + cssname + ".css");
+	//append to the head tag
+	document.getElementsByTagName("head")[0].appendChild(newTheme);
+	console.log("dark = " + isDark);
+}
+
+//use dark theme
+function makeDark() {
+	isDark = true;
+	appendCSS("darkerColors");
+	document.getElementById("changethemebutton").innerHTML = sunIcon;
+	githubtile = "githubtile-dark.gif";
+	linkedintile = "linkedintile-dark.gif";
+	emailtile = "emailtile-dark.gif";
+}
+
+//use light theme
+function makeLight() {
+	isDark = false;
+	appendCSS("lighterColors");
+	document.getElementById("changethemebutton").innerHTML = moonIcon;
+	githubtile = "githubtile-light.gif";
+	linkedintile = "linkedintile-light.gif";
+	emailtile = "emailtile-light.gif";
+}
+
+//toggle theme; a user action
+function toggleTheme() {
+	if (isDark) makeLight();
+	else makeDark();
+	//user change the theme, so this must be true now:
+	userChangedTheme = true;
+}
+
+//change theme based on time
+function setTheme() {
+	var theHour = parseInt((new Date).getHours());
+	if(theHour < 7 || theHour >= 19) makeDark();
+	else makeLight();
+}
 
 //update the current copyright year
 function updateDate() {
@@ -144,7 +180,7 @@ function setBackground(imageName) {
 //change the image to the next one
 function changeSlide() { //change image to next item in array
 	setBackground(slideNames[(count % n)]); count++;
-} 
+}
 
 /* VERY IMPORTANT - Do this stuff once page is loaded*/
 window.onload = function initial() {
@@ -157,6 +193,7 @@ window.onload = function initial() {
 	
 	// If it is dark out and dark theme isn't loaded, then load the dark theme ;) 
 	setTheme();
+	
 	/* Yes, I know I'm loading the colors manually in the HTML,
 		but I am still doing this here to ensure the button icons are changed,
 		and as a matter of principle (this function *should* be called 

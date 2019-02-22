@@ -4,7 +4,7 @@
 	Andrew Yaros's home page! :)
 	--------------------------->
 	<head>
-		<title>Andrew Yaros</title>
+		<title>Andrew Yaros's Website</title>
 		<meta charset="UTF-8" name="viewport" 
 			content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=.75, user-scalable=0">
 		<meta name="description" content="Personal website of Andrew Yaros with portfolio, résumé, and work examples.">
@@ -85,6 +85,9 @@
 			
 				<!-- Slideshow -->
 				<div id="outerDisplay">
+					<script> setTranslucentSlide(); 
+					/* IMPORTANT; refer to info in index.js */
+					</script>
 					<div id="innerDisplay"></div>
 				</div>
 				
@@ -124,7 +127,7 @@
 				<div class="footer">
 					<a class="footerlink" target="_blank"  
 						href="https://github.com/aeyaros/schoolwork"
-						onmouseenter="changeDisplay('githubtile.gif', true)"
+						onmouseenter="changeDisplay(githubtile, true)"
 						onmouseleave="resetDisplay()">
 						GitHub
 					</a>
@@ -154,7 +157,7 @@
 				<div class="footer">
 					<a class="footerlink" target="_blank" 
 					href="https://www.linkedin.com/in/aey/"
-					onmouseenter="changeDisplay('linkedintile.gif', true)"
+					onmouseenter="changeDisplay(linkedintile, true)"
 					onmouseleave="resetDisplay()">
 						LinkedIn
 					</a>
@@ -164,7 +167,7 @@
 				<div class="footer" id="emailfooterlink">
 					<a class="footerlink" target="_blank" 
 					href="mailto:contact@andrewyaros.com"
-					onmouseenter="changeDisplay('emailtile.gif', true)"
+					onmouseenter="changeDisplay(emailtile, true)"
 					onmouseleave="resetDisplay()">
 						Email
 					</a>
