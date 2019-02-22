@@ -8,11 +8,12 @@ const secondsInAMillisecond = 1000;
 const numSec = 4; //number of seconds for slide to display
 const secondsInAnHour = 3600000;
 var i;
+const hasTouchedYet = false;
 
 //change the theme to a different css file
 //must be in the styles folder
 //will be appended to the head tag as an additional link tag
-function changeCSS(cssname) {
+function appendCSS(cssname) {
 	//create a new link element, set it's attributes
 	var newTheme = document.createElement("link");
 	newTheme.setAttribute("type", "text/css");
@@ -42,14 +43,14 @@ var sunIcon = '<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 1
 //use dark theme
 function makeDark() {
 	isDark = true;
-	changeCSS("darkerColors");
+	appendCSS("darkerColors");
 	document.getElementById("changethemebutton").innerHTML = sunIcon;
 }
 
 //use light theme
 function makeLight() {
 	isDark = false;
-	changeCSS("lighterColors");
+	appendCSS("lighterColors");
 	document.getElementById("changethemebutton").innerHTML = moonIcon;
 }
 
@@ -167,6 +168,18 @@ window.onload = function initial() {
 		//then set it based on time
 		if (!userChangedTheme) setTheme();
 	}, secondsInAnHour);
+	
+	//add event listener to detect touch events
+	//if user touches screen, disable mouseover colors on buttons
+	window.addEventListener("touchstart", function() {
+		if (!hasTouchedYet) { //if not touched yet
+			appendCSS("mobileSupression"); //remove button highlighting
+			hasTouchedYet = true; //set global variable
+		}
+	});
+	
+	//inner div background should be blank
+	resetDisplay();	
 
 	//preload images
 	var images = new Array();
@@ -179,6 +192,9 @@ window.onload = function initial() {
 		currentSlideToPreload++; //increment index of slide; modulus n because we are looping over to the start
 	}
 	
+	//set slideshow background
+	setBackground(slideNames[startingSlide]);
+	
 	//preload images for mouseovers
 	var moreImages = new Array();
 	for (i = 0; i < moreSlideNames.length; i++) {
@@ -188,10 +204,4 @@ window.onload = function initial() {
 	
 	//change the slide every few seconds
 	setInterval(changeSlide, (secondsInAMillisecond * numSec));
-	
-	//inner div background should be blank
-	resetDisplay();
-	
-	//set slideshow background
-	setBackground(slideNames[startingSlide]);
 }

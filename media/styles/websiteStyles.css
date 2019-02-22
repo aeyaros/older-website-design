@@ -217,13 +217,15 @@ the layout of the page */
 	letter-spacing:				.1em;
 	-webkit-transition-duration:	0.0s;
 	transition-duration: 		0.0s;
-	box-shadow:			0px 0px 10px 0px var(--shadowcolor) !important;
-	-webkit-box-shadow:	0px 0px 10px 0px var(--shadowcolor) !important;
+	box-shadow:			0px 0px 30px 0px var(--shadowcolor) !important;
+	-webkit-box-shadow:	0px 0px 30px 0px var(--shadowcolor) !important;
 } #mainContentButton:hover {
 	color: 						var(--pagebg);
 	background-color: 			var(--pagetext);
 	text-decoration: 			none;
 	text-shadow: 				none;
+	box-shadow:			0px 0px 3px 0px var(--shadowcolor) !important;
+	-webkit-box-shadow:	0px 0px 3px 0px var(--shadowcolor) !important;
 } #mainContentButton:active {
 	color: 						var(--buttonactivetext);
 	background-color: 			var(--buttonactivecolor);
@@ -275,6 +277,7 @@ the layout of the page */
 	width: 						13px;
 	height: 					13px;
 	margin-bottom: 				0px;
+	margin-right:				3px; /*when text shadow changes, give spacing to avoid the arrow changing position*/
 } #thearrow { /* the svg path */
 	fill: 						var(--pagelightertext); 
 	stroke:						var(--pagelightertext); 

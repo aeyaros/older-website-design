@@ -1,0 +1,22 @@
+/* remove mouseover color button highlighting on touch screens */
+a:hover { 
+	color: 						var(--pagetext)!important;
+	background: 				var(--pagebg);
+} #mainContentButton:hover {
+	color: 						var(--pagelightertext);
+	background-color: 			var(--pagebg);
+} #changethemebutton:hover, #mobilemailbutton:hover {
+	color:						var(--pagetext);
+	background-color:			var(--pagebg);
+} #changethemetext:hover, {
+	color: 						var(--pagelightertext);
+	background-color:			var(--selectiontext);
+} #changethemebutton:hover #themetoggleicon, #changethemebutton:active #themetoggleicon {
+	fill: 						var(--pagetext);
+	stroke:						var(--pagetext);
+} #mobilemailbutton:hover #mobilemailicon, #mobilemailbutton:active #mobilemailicon {
+	fill: 						var(--pagetext);
+} #mainContentButton:hover #thearrow, #mainContentButton:active #thearrow { /* the svg when hovering over the main content button */
+	fill:						var(--pagetext); 
+	stroke:						var(--pagetext); 
+}
