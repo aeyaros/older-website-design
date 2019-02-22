@@ -17,45 +17,22 @@
 	font-family: 				"cmu";
 	src: 						url("../fonts/cmunrm.otf");
 	font-weight: 				normal;
-} /* Computer Modern serif Bold */
-/*@font-face {
-	font-family: 				"cmu";
-	src: 						url("../fonts/cmunrb.otf");
-	font-weight: 				bold;
-}*/ /* Computer Modern classical */
-/* @font-face {
-	font-family: 				"cmu";
-	src: 						url("../fonts/cmunci.otf");
-	font-weight: 				normal;
-	font-style: 				italic;
-}*/ /* Computer Modern sans serif */
-/*@font-face {
+} /* Computer Modern sans serif */
+@font-face {
 	font-family:	 				"cmusans";
 	src: 						url("../fonts/cmunss.otf");
 	font-weight: 				normal;
-}*/ /* Computer Modern sans serif Bold */
+} /* Computer Modern sans serif Bold */
 @font-face {
 	font-family: 				"cmusans";
 	src: 						url("../fonts/cmunsx.otf");
 	font-weight: 				bold;
-} /* Exo 2 light */
-/*@import url('https://fonts.googleapis.com/css?family=Exo+2:300&subset=cyrillic,latin-ext');*/
-/* Continuum Light */
+} /* Continuum Light */
 @font-face {
 	font-family: "cont";
 	src: 						url("../fonts/contl.ttf");
 	font-weight: lighter;
-} /* Continuum Medium */
-/*@font-face {
-	font-family: "cont";
-	src: 						url("../fonts/contm.ttf");
-	font-weight: normal;
-}*/ /* Continuum Bold */
-/*@font-face {
-	font-family: "cont";
-	src: 						url("../fonts/contb.ttf");
-	font-weight: bold;
-}*/
+}
 
 /*************************************************/
 /* by "important" I mean stuff that should not be
