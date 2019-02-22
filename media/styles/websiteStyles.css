@@ -38,10 +38,6 @@
 	font-family: 				"cmusans";
 	src: 						url("../fonts/cmunsx.otf");
 	font-weight: 				bold;
-}/* Deja Vu sans bold */
-@font-face {
-	font-family:					"applesymb";
-	src: 						url("../fonts/applesymb.ttf");
 } /* Exo 2 light */
 @import url('https://fonts.googleapis.com/css?family=Exo+2:300&subset=cyrillic,latin-ext');
 
@@ -573,7 +569,7 @@ div gets hidden (when the page gets too small) */
 		min-width: 				98%;
 		width: 					98%;
 		font-style:				normal;
-	} 
+	}
 }
 
 /* adjust header when tiny */
@@ -589,4 +585,17 @@ div gets hidden (when the page gets too small) */
 	} #changethemebutton, #mobilemailbutton {
 		bottom: 				32px!important;
 	} 
+}
+
+/* hide mobile mail/theme buttons when tiny */
+/*************************************************/
+@media only screen and (max-height: 150px) {
+	#mobilemailbutton, #changethemebutton {
+		display: none;
+	}
+}
+@media only screen and (max-width: 280px) {
+	#mobilemailbutton, #changethemebutton {
+		display: none;
+	}
 }
