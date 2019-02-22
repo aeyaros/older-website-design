@@ -250,6 +250,7 @@ the layout of the page */
 	background-attachment: 		scroll;
 	/* Image that states javascript isn't enabled.
 	If javascript is enabled, it will promptly be replaced */
+	background-image: url("../slides/plsenablejs.png");
 	/* slideshow transitions */
 	        transition:	background 1.5s ease-out;
 	-webkit-transition:	background 1.5s ease-out;
