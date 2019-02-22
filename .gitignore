@@ -1,4 +1,2 @@
-
-index.html.tmp.html
-index.css.tmp.html
-index.js.tmp.html
+*.tmp.html
+.DS Store
