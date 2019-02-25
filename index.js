@@ -18,6 +18,7 @@ var i;
 var githubtile;
 var linkedintile;
 var emailtile;
+var downtile;
 
 //this is false by default
 //this is used for toggling the theme
@@ -64,9 +65,11 @@ const moreSlideNames = [
 	"./media/slides/emailtile-light.gif",
 	"./media/slides/githubtile-light.gif",
 	"./media/slides/linkedintile-light.gif",
+	"./media/slides/downtile-light.gif",
 	"./media/slides/emailtile-dark.gif",
 	"./media/slides/githubtile-dark.gif",
 	"./media/slides/linkedintile-dark.gif",
+	"./media/slides/downtile-dark.gif",
 	"./media/slides/checkers.jpg",
 	"./media/slides/resumeimage.jpg", 
 	"./media/slides/foodtrucks.jpg"	
@@ -112,6 +115,7 @@ function makeDark() {
 	githubtile = "githubtile-dark.gif";
 	linkedintile = "linkedintile-dark.gif";
 	emailtile = "emailtile-dark.gif";
+	downtile = "downtile-dark.gif";
 }
 
 //use light theme
@@ -122,6 +126,7 @@ function makeLight() {
 	githubtile = "githubtile-light.gif";
 	linkedintile = "linkedintile-light.gif";
 	emailtile = "emailtile-light.gif";
+	downtile = "downtile-light.gif";
 }
 
 //toggle theme; a user action
