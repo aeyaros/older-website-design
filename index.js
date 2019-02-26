@@ -63,8 +63,8 @@ var startingSlide = unixTime % n;
 //counter variable starts at the second image; we already displayed the first
 var count = startingSlide + 1;
 
-//array for slides used for mouseovers
-const moreSlideNames = [
+//arrays for slides used for mouseovers
+const moreSlideNames1 = [
 	/* light slides */
 	"./media/slides/emailtile-light.gif",
 	"./media/slides/githubtile-light.gif",
@@ -72,7 +72,8 @@ const moreSlideNames = [
 	"./media/slides/downtile-light.gif",
 	"./media/slides/resumetile-light.gif",
 	"./media/slides/checkerstile-light.gif",
-	"./media/slides/trucktile-light.gif",
+	"./media/slides/trucktile-light.gif"
+]; const moreSlideNames2 = [
 	/* dark slides */
 	"./media/slides/emailtile-dark.gif",
 	"./media/slides/githubtile-dark.gif",
@@ -80,11 +81,7 @@ const moreSlideNames = [
 	"./media/slides/downtile-dark.gif",
 	"./media/slides/resumetile-dark.gif",
 	"./media/slides/checkerstile-dark.gif",
-	"./media/slides/trucktile-dark.gif" /*, */
-	/* older slides */
-	/* "./media/slides/checkers.jpg",
-	"./media/slides/resumeimage.jpg", 
-	"./media/slides/foodtrucks.jpg"	*/
+	"./media/slides/trucktile-dark.gif"
 ];
 
 /*************
@@ -256,10 +253,25 @@ window.onload = function initial() {
 	setBackground(slideNames[startingSlide]);
 	
 	//preload images for mouseovers
-	var moreImages = new Array();
-	for (i = 0; i < moreSlideNames.length; i++) {
-		moreImages[i] = new Image();
-		moreImages[i].src=moreSlideNames[i];
+	var moreImages1 = new Array(); //light tiles
+	var moreImages2 = new Array(); //dark tiles
+	
+	if (isDark) { //if dark, first load dark, then light
+		for (i = 0; i < moreSlideNames2.length; i++) {
+			moreImages2[i] = new Image();
+			moreImages2[i].src = moreSlideNames2[i];
+		} for (i = 0; i < moreSlideNames1.length; i++) {
+			moreImages1[i] = new Image();
+			moreImages1[i].src = moreSlideNames1[i];
+		}
+	} else { //otherwise load lighter slides first
+		for (i = 0; i < moreSlideNames1.length; i++) {
+			moreImages1[i] = new Image();
+			moreImages1[i].src = moreSlideNames1[i];
+		} for (i = 0; i < moreSlideNames2.length; i++) {
+			moreImages2[i] = new Image();
+			moreImages2[i].src = moreSlideNames2[i];
+		}
 	}
 	
 	//change the slide every few seconds
