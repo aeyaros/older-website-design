@@ -19,6 +19,9 @@ var githubtile;
 var linkedintile;
 var emailtile;
 var downtile;
+var resumetile;
+var checkerstile;
+var trucktile;
 
 //this is false by default
 //this is used for toggling the theme
@@ -62,17 +65,26 @@ var count = startingSlide + 1;
 
 //array for slides used for mouseovers
 const moreSlideNames = [
+	/* light slides */
 	"./media/slides/emailtile-light.gif",
 	"./media/slides/githubtile-light.gif",
 	"./media/slides/linkedintile-light.gif",
 	"./media/slides/downtile-light.gif",
+	"./media/slides/resumetile-light.gif",
+	"./media/slides/checkerstile-light.gif",
+	"./media/slides/trucktile-light.gif",
+	/* dark slides */
 	"./media/slides/emailtile-dark.gif",
 	"./media/slides/githubtile-dark.gif",
 	"./media/slides/linkedintile-dark.gif",
 	"./media/slides/downtile-dark.gif",
-	"./media/slides/checkers.jpg",
+	"./media/slides/resumetile-dark.gif",
+	"./media/slides/checkerstile-dark.gif",
+	"./media/slides/trucktile-dark.gif" /*, */
+	/* older slides */
+	/* "./media/slides/checkers.jpg",
 	"./media/slides/resumeimage.jpg", 
-	"./media/slides/foodtrucks.jpg"	
+	"./media/slides/foodtrucks.jpg"	*/
 ];
 
 /*************
@@ -116,6 +128,9 @@ function makeDark() {
 	linkedintile = "linkedintile-dark.gif";
 	emailtile = "emailtile-dark.gif";
 	downtile = "downtile-dark.gif";
+	resumetile = "resumetile-dark.gif";
+	checkerstile = "checkerstile-dark.gif";
+	trucktile = "trucktile-dark.gif";
 }
 
 //use light theme
@@ -127,6 +142,9 @@ function makeLight() {
 	linkedintile = "linkedintile-light.gif";
 	emailtile = "emailtile-light.gif";
 	downtile = "downtile-light.gif";
+	resumetile = "resumetile-light.gif";
+	checkerstile = "checkerstile-light.gif";
+	trucktile = "trucktile-light.gif";
 }
 
 //toggle theme; a user action
@@ -157,7 +175,7 @@ function changeDisplay(imageName, shouldTile) {
 	//then, depending on the argument, either tile it or not
 	if (shouldTile){
 		document.getElementById("innerDisplay").style.backgroundRepeat = "repeat";
-		document.getElementById("innerDisplay").style.backgroundSize = "256px 256px";
+		document.getElementById("innerDisplay").style.backgroundSize = "auto";
 	} else {
 		document.getElementById("innerDisplay").style.backgroundRepeat = "no-repeat";
 		document.getElementById("innerDisplay").style.backgroundSize = "cover";
