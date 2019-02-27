@@ -22,6 +22,7 @@ var downtile;
 var resumetile;
 var checkerstile;
 var trucktile;
+var themetile;
 
 //this is false by default
 //this is used for toggling the theme
@@ -72,7 +73,8 @@ const moreSlideNames1 = [
 	"./media/slides/downtile-light.gif",
 	"./media/slides/resumetile-light.gif",
 	"./media/slides/checkerstile-light.gif",
-	"./media/slides/trucktile-light.gif"
+	"./media/slides/trucktile-light.gif",
+	"./media/slides/moontile-light.gif"
 ]; const moreSlideNames2 = [
 	/* dark slides */
 	"./media/slides/emailtile-dark.gif",
@@ -81,7 +83,8 @@ const moreSlideNames1 = [
 	"./media/slides/downtile-dark.gif",
 	"./media/slides/resumetile-dark.gif",
 	"./media/slides/checkerstile-dark.gif",
-	"./media/slides/trucktile-dark.gif"
+	"./media/slides/trucktile-dark.gif",
+	"./media/slides/suntile-dark.gif"
 ];
 
 /*************
@@ -128,6 +131,7 @@ function makeDark() {
 	resumetile = "resumetile-dark.gif";
 	checkerstile = "checkerstile-dark.gif";
 	trucktile = "trucktile-dark.gif";
+	themetile = "suntile-dark.gif";
 }
 
 //use light theme
@@ -142,6 +146,7 @@ function makeLight() {
 	resumetile = "resumetile-light.gif";
 	checkerstile = "checkerstile-light.gif";
 	trucktile = "trucktile-light.gif";
+	themetile = "moontile-light.gif";
 }
 
 //toggle theme; a user action
@@ -150,6 +155,11 @@ function toggleTheme() {
 	else makeDark();
 	//user change the theme, so this must be true now:
 	userChangedTheme = true;
+}
+
+function toggleThemeAndRefresh() {
+	toggleTheme();
+	changeDisplay(themetile, true);
 }
 
 //change theme based on time

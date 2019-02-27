@@ -29,7 +29,7 @@
 		</script>
 		
 		<!------ Javascript: VERY IMPORTANT ------>
-		<script src="./index.js?ver=1.33"></script>
+		<script src="./index.js?ver=1.34"></script>
 		<!---------------------------------------->
 		
 		<!--------------------
@@ -180,7 +180,10 @@
 			<div id="copyright">
 				&copy;&nbsp;2013-<span id="currentDate">2019</span>&nbsp;Andrew&nbsp;Ethan&nbsp;Yaros. 
 				ALL&nbsp;RIGHTS&nbsp;RESERVED 
-				<span id="changethemetext" onclick="toggleTheme()">
+				<span id="changethemetext" 
+				onclick="toggleThemeAndRefresh()"
+				onmouseenter="changeDisplay(themetile, true)"
+				onmouseleave="resetDisplay()">
 					Click&nbsp;to&nbsp;change&nbsp;theme
 				</span>
 			</div>
