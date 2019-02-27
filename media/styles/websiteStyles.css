@@ -527,7 +527,7 @@ div gets hidden (when the page gets too small) */
 		box-shadow: 			0px 2px 5px var(--tinybuttonshadow);
 	}
 }
-@media only screen and (max-height: 500px) and (max-width: 400px) {
+@media only screen and (max-height: 560px) and (max-width: 400px) {
 	.footerlink { 
 		padding: 				7px; /* small buttons */
 		padding-left: 			20px;
@@ -564,6 +564,9 @@ div gets hidden (when the page gets too small) */
 		min-width: 				98%;
 		width: 					98%;
 		font-style:				normal;
+	} .footerlink {
+		display: inline-block;
+		min-width:  110px;
 	}
 }
 
