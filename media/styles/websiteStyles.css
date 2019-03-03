@@ -17,15 +17,15 @@
 	font-family: 				"cmu";
 	src: 						url("../fonts/cmunrm.otf");
 	font-weight: 				normal;
-} /* Computer Modern sans serif */
+} /* Swiss 721 roman */
 @font-face {
-	font-family:	 				"cmusans";
-	src: 						url("../fonts/cmunss.otf");
+	font-family:	 			"721";
+	src: 						url("../fonts/721r.otf");
 	font-weight: 				normal;
-} /* Computer Modern sans serif Bold */
+} /* Swiss 721 bold */
 @font-face {
-	font-family: 				"cmusans";
-	src: 						url("../fonts/cmunsx.otf");
+	font-family: 				"721";
+	src: 						url("../fonts/721b.otf");
 	font-weight: 				bold;
 } /* Continuum Light */
 @font-face {
@@ -86,7 +86,7 @@ the layout of the page */
 	overflow: 					auto;
 	background-color: 			var(--pagebg)!important;
 } body {
-	font-family: 				"cmusans", "Helvetica Neue", "Arial", sans-serif;
+	font-family: 				"721", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	font-size: 					12pt;
 	font-weight: 				200;
 	color: 						var(--pagetext)!important;
@@ -151,7 +151,7 @@ the layout of the page */
 } #description, .footer, #mainContentButton { 
 	text-shadow: 		0px 2px 20px var(--descriptionshadowone), 0px 1px 3px var(--descriptionshadowtwo);
 } #title {
-	font-family: 				"tachyonthin", "Helvetica Neue", "Arial", sans-serif;
+	font-family: 				"tachyonthin", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	text-transform:				uppercase;
 	letter-spacing:				.25em!important;
 	font-size: 					3.5vw;
