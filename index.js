@@ -43,6 +43,7 @@ var sunIcon = '<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 1
 //array with the names of each image
 //images should be in the same directory as this html file
 const slideNames = [
+	"./media/slides/newhub.jpg",
 	"./media/slides/lancaster.jpg",
 	"./media/slides/shell.jpg", 
 	"./media/slides/wefa.jpg",
