@@ -12,9 +12,15 @@ const secondsInAMillisecond = 1000;
 const numSec = 4; //number of seconds for slide to display
 const secondsInAnHour = 3600000;
 const hasTouchedYet = false;
+const innerDisplayOpaque = "1"; //can be .5 or 1 or whatev
+const innerDisplayTrans = "0"; //MUST BE ZERO!
+//const noblur = "none";
+//const blurred = "blur(20px)";
 var i;
 
 //variables for mouseover background tiles
+//there are two arrays for tiles - one for light and one for dark
+//depending on theme, these variables are set to ones for the light/dark tiles
 var githubtile;
 var linkedintile;
 var emailtile;
@@ -23,6 +29,8 @@ var resumetile;
 var checkerstile;
 var trucktile;
 var themetile;
+//these are the variables which are used directly in the HTML file when changeDisplay is called!
+
 
 //this is false by default
 //this is used for toggling the theme
@@ -43,12 +51,13 @@ var sunIcon = '<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 1
 //array with the names of each image
 //images should be in the same directory as this html file
 const slideNames = [
+	"./media/slides/bshroom-l2.jpg",
 	"./media/slides/newhub.jpg",
 	"./media/slides/lancaster.jpg",
 	"./media/slides/shell.jpg", 
 	"./media/slides/wefa.jpg",
 	"./media/slides/gropius.jpg",
-	"./media/slides/barnes.jpg",
+	//"./media/slides/barnes.jpg",
 	"./media/slides/stanford.jpg"
 ];
 
@@ -192,7 +201,10 @@ function changeDisplay(imageName, shouldTile) {
 	//this is because in the CSS, the opacity is given the transition time
 	//changing the source should be done first, since it happens immediately
 	//(user should never see an abrupt image change)
-	document.getElementById("innerDisplay").style.opacity = "1.0";
+	document.getElementById("innerDisplay").style.opacity = innerDisplayOpaque;
+	
+	////blur the outer background
+	////document.getElementById("bg").style.filter = blurred;
 }
 
 //reset the inner shadow div to no image
@@ -200,12 +212,15 @@ function resetDisplay() {
 	//remove background image property from shadow div
 	//reduce opacity - this will fade it out to trasnparent 
 	//dont change the image, not necessary until the next time changeDisplay is called
-	document.getElementById("innerDisplay").style.opacity = "0.0";
+	document.getElementById("innerDisplay").style.opacity = innerDisplayTrans;
+	
+	////unblur the outer background
+	////document.getElementById("bg").style.filter = "none";
 }
 
 //change the outer main content div
 function setBackground(imageName) {
-	document.getElementById("outerDisplay").style.backgroundImage = "url('" + imageName + "')";
+	document.getElementById("bg").style.backgroundImage = "url('" + imageName + "')";
 }
 
 //change the image to the next one
