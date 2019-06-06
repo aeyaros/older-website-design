@@ -1,4 +1,4 @@
-#ignore temporary coderunner files
+#ignore temporary files from CodeRunner
 *.tmp.html
-#ignore finder metadata files
+#ignore macOS Finder metadata files
 .DS Store
