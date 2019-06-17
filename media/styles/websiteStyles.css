@@ -190,7 +190,7 @@ the layout of the page */
 	background-color:			var(--maincontentbg);
 } #mainContentButton {
 	display: 					block;
-	width: 						220px;
+	width: 						130px;
 	padding:						8px;
 	position: 					absolute;
 	bottom: 						20px;
@@ -276,7 +276,7 @@ the layout of the page */
 	width: 						13px;
 	height: 					13px;
 	margin-bottom: 				0px;
-	margin-right:				3px; /*when text shadow changes, give spacing to avoid the arrow changing position*/
+	margin-right:				1.5px; /*when text shadow changes, give spacing to avoid the arrow changing position*/
 } #thearrow { /* the svg path */
 	fill: 						var(--pagelightertext); 
 	stroke:						var(--pagelightertext); 
