@@ -163,7 +163,7 @@ function makeLight() {
 function toggleTheme() {
 	if (isDark) makeLight();
 	else makeDark();
-	//user change the theme, so this must be true now:
+	//user changed the theme, so this must be true now:
 	userChangedTheme = true;
 }
 
@@ -180,8 +180,7 @@ function setTheme() {
 }
 
 //update the current copyright year
-function updateDate() {
-	//Change year to current year
+function updateDate() { //Change year to current year
 	document.getElementById("currentDate").innerHTML = (new Date).getFullYear();
 }
 
@@ -198,8 +197,8 @@ function changeDisplay(imageName, shouldTile) {
 		document.getElementById("innerDisplay").style.backgroundSize = "cover";
 	}
 	//finally, change the opacity, which triggers the fade-in transition
-	//this is because in the CSS, the opacity is given the transition time
-	//changing the source should be done first, since it happens immediately
+	//this is because in the CSS we are setting the transition time of the opacity property
+	//changing the source should be done first, since the source change happens immediately
 	//(user should never see an abrupt image change)
 	document.getElementById("innerDisplay").style.opacity = innerDisplayOpaque;
 	
@@ -282,7 +281,7 @@ window.onload = function initial() {
 	var moreImages1 = new Array(); //light tiles
 	var moreImages2 = new Array(); //dark tiles
 	
-	if (isDark) { //if dark, first load dark, then light
+	if (isDark) { //if dark, first load dark tiles, then light
 		for (i = 0; i < moreSlideNames2.length; i++) {
 			moreImages2[i] = new Image();
 			moreImages2[i].src = moreSlideNames2[i];
@@ -290,7 +289,7 @@ window.onload = function initial() {
 			moreImages1[i] = new Image();
 			moreImages1[i].src = moreSlideNames1[i];
 		}
-	} else { //otherwise load lighter slides first
+	} else { //otherwise load lighter tiles first
 		for (i = 0; i < moreSlideNames1.length; i++) {
 			moreImages1[i] = new Image();
 			moreImages1[i].src = moreSlideNames1[i];
