@@ -190,7 +190,7 @@ the layout of the page */
 	background-color:			var(--maincontentbg);
 } #mainContentButton {
 	display: 					block;
-	width: 						130px;
+	width: 						220px;
 	padding:						8px;
 	position: 					absolute;
 	bottom: 						20px;
