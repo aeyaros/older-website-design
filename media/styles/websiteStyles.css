@@ -190,12 +190,12 @@ the layout of the page */
 	background-color:			var(--maincontentbg);
 } #mainContentButton {
 	display: 					block;
-	width: 						220px;
+	width: 						130px;
 	padding:						8px;
 	position: 					absolute;
 	bottom: 						20px;
 	left: 						50%;
-	margin-left:					-118px; /* half width, plus padding */
+	margin-left:					-73px; /* = (width / 2) + padding */
 	text-align: 				center;
 	color: 						var(--pagelightertext); 
 	background-color: 			var(--pagebg); 
