@@ -27,7 +27,8 @@ var emailtile;
 var downtile;
 var resumetile;
 var checkerstile;
-var trucktile;
+var painttile;
+//var trucktile;
 var themetile;
 //these are the variables which are used directly in the HTML file when changeDisplay is called!
 
@@ -51,6 +52,7 @@ var sunIcon = '<svg id="themetoggletag" width="16" height="16" viewBox="0 0 16 1
 //array with the names of each image
 //images should be in the same directory as this html file
 const slideNames = [
+	"./media/slides/jpaint.jpg",
 	"./media/slides/bshroom-l2.jpg",
 	"./media/slides/lancaster.jpg",
 	"./media/slides/newhub.jpg",
@@ -83,7 +85,8 @@ const moreSlideNames1 = [
 	"./media/slides/downtile-light.gif",
 	"./media/slides/resumetile-light.gif",
 	"./media/slides/checkerstile-light.gif",
-	"./media/slides/trucktile-light.gif",
+	"./media/slides/painttile-light.gif",
+//	"./media/slides/trucktile-light.gif",
 	"./media/slides/moontile-light.gif"
 ]; const moreSlideNames2 = [
 	/* dark slides */
@@ -93,7 +96,8 @@ const moreSlideNames1 = [
 	"./media/slides/downtile-dark.gif",
 	"./media/slides/resumetile-dark.gif",
 	"./media/slides/checkerstile-dark.gif",
-	"./media/slides/trucktile-dark.gif",
+	"./media/slides/painttile-dark.gif",
+//	"./media/slides/trucktile-dark.gif",
 	"./media/slides/suntile-dark.gif"
 ];
 
@@ -140,7 +144,8 @@ function makeDark() {
 	downtile = "downtile-dark.gif";
 	resumetile = "resumetile-dark.gif";
 	checkerstile = "checkerstile-dark.gif";
-	trucktile = "trucktile-dark.gif";
+	painttile = "painttile-dark.gif";
+	//trucktile = "trucktile-dark.gif";
 	themetile = "suntile-dark.gif";
 }
 
@@ -155,7 +160,8 @@ function makeLight() {
 	downtile = "downtile-light.gif";
 	resumetile = "resumetile-light.gif";
 	checkerstile = "checkerstile-light.gif";
-	trucktile = "trucktile-light.gif";
+	painttile = "painttile-light.gif";
+//	trucktile = "trucktile-light.gif";
 	themetile = "moontile-light.gif";
 }
 
