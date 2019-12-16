@@ -376,6 +376,7 @@ the layout of the page */
 	font-size:					7pt;
 	padding:						3px;
 	text-transform: 			uppercase;
+	cursor:						pointer;
 } #changethemetext:hover, {
 	color: 						var(--selectiontext);
 	background-color:			var(--pagetext);
