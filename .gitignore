@@ -2,3 +2,4 @@
 *.tmp.html
 #ignore macOS Finder metadata files
 *.DS_Store
+.DS_Store
