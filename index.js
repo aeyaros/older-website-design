@@ -76,29 +76,29 @@ var startingSlide = unixTime % n;
 //counter variable starts at the second image; we already displayed the first
 var count = startingSlide + 1;
 
-//arrays for slides used for mouseovers
-const moreSlideNames1 = [
-	/* light slides */
-	"./media/slides/emailtile-light.gif",
-	"./media/slides/githubtile-light.gif",
-	"./media/slides/linkedintile-light.gif",
-	"./media/slides/downtile-light.gif",
-	"./media/slides/resumetile-light.gif",
-	"./media/slides/checkerstile-light.gif",
-	"./media/slides/painttile-light.gif",
-//	"./media/slides/trucktile-light.gif",
-	"./media/slides/moontile-light.gif"
-]; const moreSlideNames2 = [
-	/* dark slides */
-	"./media/slides/emailtile-dark.gif",
-	"./media/slides/githubtile-dark.gif",
-	"./media/slides/linkedintile-dark.gif",
-	"./media/slides/downtile-dark.gif",
-	"./media/slides/resumetile-dark.gif",
-	"./media/slides/checkerstile-dark.gif",
-	"./media/slides/painttile-dark.gif",
-//	"./media/slides/trucktile-dark.gif",
-	"./media/slides/suntile-dark.gif"
+//arrays for tiles used for mouseovers
+const tileNames1 = [
+	/* light tiles */
+	"./media/tiles/emailtile-light.gif",
+	"./media/tiles/githubtile-light.gif",
+	"./media/tiles/linkedintile-light.gif",
+	"./media/tiles/downtile-light.gif",
+	"./media/tiles/resumetile-light.gif",
+	"./media/tiles/checkerstile-light.gif",
+	"./media/tiles/painttile-light.gif",
+//	"./media/tiles/trucktile-light.gif",
+	"./media/tiles/moontile-light.gif"
+]; const tileNames2 = [
+	/* dark tiles */
+	"./media/tiles/emailtile-dark.gif",
+	"./media/tiles/githubtile-dark.gif",
+	"./media/tiles/linkedintile-dark.gif",
+	"./media/tiles/downtile-dark.gif",
+	"./media/tiles/resumetile-dark.gif",
+	"./media/tiles/checkerstile-dark.gif",
+	"./media/tiles/painttile-dark.gif",
+//	"./media/tiles/trucktile-dark.gif",
+	"./media/tiles/suntile-dark.gif"
 ];
 
 /*************
@@ -288,20 +288,20 @@ window.onload = function initial() {
 	var moreImages2 = new Array(); //dark tiles
 	
 	if (isDark) { //if dark, first load dark tiles, then light
-		for (i = 0; i < moreSlideNames2.length; i++) {
+		for (i = 0; i < tileNames2.length; i++) {
 			moreImages2[i] = new Image();
-			moreImages2[i].src = moreSlideNames2[i];
-		} for (i = 0; i < moreSlideNames1.length; i++) {
+			moreImages2[i].src = tileNames2[i];
+		} for (i = 0; i < tileNames1.length; i++) {
 			moreImages1[i] = new Image();
-			moreImages1[i].src = moreSlideNames1[i];
+			moreImages1[i].src = tileNames1[i];
 		}
 	} else { //otherwise load lighter tiles first
-		for (i = 0; i < moreSlideNames1.length; i++) {
+		for (i = 0; i < tileNames1.length; i++) {
 			moreImages1[i] = new Image();
-			moreImages1[i].src = moreSlideNames1[i];
-		} for (i = 0; i < moreSlideNames2.length; i++) {
+			moreImages1[i].src = tileNames1[i];
+		} for (i = 0; i < tileNames2.length; i++) {
 			moreImages2[i] = new Image();
-			moreImages2[i].src = moreSlideNames2[i];
+			moreImages2[i].src = tileNames2[i];
 		}
 	}
 	

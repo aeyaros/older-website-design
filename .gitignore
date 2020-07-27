@@ -3,3 +3,4 @@
 #ignore macOS Finder metadata files
 *.DS_Store
 .DS_Store
+media/.DS_Store
