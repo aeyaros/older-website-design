@@ -191,13 +191,13 @@ function updateDate() { //Change year to current year
 
 //change the inner shadow div to an image
 function changeDisplay(imageName, shouldTile) {
-	//first, change the image source
-	document.getElementById("innerDisplay").style.backgroundImage = "url('./media/slides/" + imageName + "')";
 	//then, depending on the argument, either tile it or not
 	if (shouldTile){
+		document.getElementById("innerDisplay").style.backgroundImage = "url('./media/tiles/" + imageName + "')";
 		document.getElementById("innerDisplay").style.backgroundRepeat = "repeat";
 		document.getElementById("innerDisplay").style.backgroundSize = "auto";
 	} else {
+		document.getElementById("innerDisplay").style.backgroundImage = "url('./media/slides/" + imageName + "')";
 		document.getElementById("innerDisplay").style.backgroundRepeat = "no-repeat";
 		document.getElementById("innerDisplay").style.backgroundSize = "cover";
 	}
