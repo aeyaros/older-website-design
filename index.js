@@ -55,10 +55,9 @@ const slideNames = [
 	"./media/slides/jpaint.jpg",
 	"./media/slides/bshroom-l2.jpg",
 	"./media/slides/lancaster.jpg",
-	"./media/slides/newhub.jpg",
 	"./media/slides/shell.jpg", 
 	"./media/slides/stanford.jpg",
-	//"./media/slides/wefa.jpg",
+	"./media/slides/wefa.jpg",
 	"./media/slides/gropius.jpg" //,
 	//"./media/slides/barnes.jpg",
 ];
