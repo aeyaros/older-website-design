@@ -350,6 +350,7 @@ the layout of the page */
 	font-family: 				"Verdana", sans-serif;
 	-webkit-transition-duration: 	0.3s;
 	transition-duration:			0.3s;
+	cursor:						pointer;
 } #changethemebutton {
 	left:						16px!important;
 	fill:						var(--pagetext);
