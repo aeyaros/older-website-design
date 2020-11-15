@@ -1,8 +1,4 @@
 #ignore temporary files from CodeRunner
-*.tmp.html
+**/.tmp.html
 #ignore macOS Finder metadata files
-*.DS_Store
-.DS_Store
-media/.DS_Store
-.DS_Store
-media/.DS_Store
+**/.DS_Store
