@@ -2,3 +2,5 @@
 **/.tmp.html
 #ignore macOS Finder metadata files
 **/.DS_Store
+#ignore jetBrains IDE files
+.idea/
