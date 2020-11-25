@@ -8,7 +8,7 @@ a:hover {
 } #changethemebutton:hover, #mobilemailbutton:hover {
 	color:						var(--pagetext);
 	background-color:			var(--pagebg);
-} #changethemetext:hover, {
+} #changethemetext:hover {
 	color: 						var(--pagelightertext);
 	background-color:			var(--selectiontext);
 } #changethemebutton:hover #themetoggleicon, #changethemebutton:active #themetoggleicon {

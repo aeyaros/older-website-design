@@ -31,7 +31,7 @@
 @font-face {
 	font-family: "cont";
 	src: 						url("../fonts/contl.ttf");
-	font-weight: lighter;
+	font-weight: 200;
 }
 
 /*************************************************/
@@ -46,11 +46,11 @@ the layout of the page */
 /*************************************************/
 :root {
 	/* SEE SEPERATE FILE FOR DARK THEME */
-	
-	
+
+
 	/* THERE IS ALSO A SEPERATE LIGHT THEME FILE;
 	copy any changes to these colors into that file */
-	
+
 	/* Theme colors. DO NOT REMOVE THIS */
 	--selectiontext: 			#ffffff;
 	--selectioncolor: 			#000000;
@@ -58,25 +58,25 @@ the layout of the page */
 	--pagetext: 					#000000;
 	--titletext: 				#555555;
 	--pagelightertext: 			#555555;
-	
+
 	--titleshadowone: 			#ababab;
 	--titleshadowtwo: 			#999999;
 	--descriptionshadowone:		#cdcdcd;
 	--descriptionshadowtwo:		#999999;
-	
-	--maincontentbg:				#d1d1d1;	
+
+	--maincontentbg:				#d1d1d1;
 	--copyrighttext:				#afafaf;
-	
+
 	--smallerscreentext:		#333333;
 	--smallerscreenshadow:		#888888;
-	
+
 	--tinybuttonshadow:			#d8d8d8;
 	--mobilebuttonshadow:		#dddddd;
 	--mobilebuttonhovershadow:	#777777;
-	
+
 	--buttonactivecolor:		#0066ff;
 	--buttonactivetext:			#ffffff;
-	
+
 	--shadowcolor:				rgba(0, 0, 0, 0.8);
 	--shadowsize:				40px;
 	--buttonDepressionShadow: 	rgba(0, 0, 0, 0.2);
@@ -102,33 +102,33 @@ the layout of the page */
 	flex-wrap: 					nowrap;
 	align-content: 				stretch;
 	align-items: 				stretch;
-} a: {
+} a {
 	cursor: pointer;
-} a, a:visited { 
+} a, a:visited {
 	text-decoration: 			none;
 	-webkit-transition-duration: 	0.3s;
 	transition-duration: 		0.3s;
-} a:hover { 
+} a:hover {
 	color: 						var(--selectiontext)!important;
 	text-decoration: 			overline;
 	background: 				var(--selectioncolor);
 	text-shadow: 				none;
-} a:active { 
+} a:active {
 	color: 						var(--buttonactivetext)!important;
 	text-decoration: 			underline;
 	background: 				var(--buttonactivecolor);
 	text-shadow: 				none;
-} div { 
+} div {
 	border: none!important;
 } #title, #description, h1, h2, h3, h4, h5, h6 {
 	color: 						var(--titletext);
-} .footer, a, a:visited { 
+} .footer, a, a:visited {
 	color: 						var(--pagelightertext);
-} ::selection { 
+} ::selection {
 	background: 				var(--selectioncolor);
 	color: 						var(--selectiontext);
 	text-shadow: 				none;
-} ::-moz-selection { 
+} ::-moz-selection {
 	background: 				var(--selectioncolor);
 	color: 						var(--selectiontext);
 	text-shadow: 				none;
@@ -137,7 +137,7 @@ the layout of the page */
 /*************************************************/
 /*                    Header                     */
 /*************************************************/
-#header, .footer { 
+#header, .footer {
 	vertical-align: 			center;
 } #header {
 	padding: 					2%; /* padding */
@@ -145,24 +145,23 @@ the layout of the page */
 	justify-content: 			space-between; /* horizontal align */
 	align-items: 				center; /* vertical align */
 	flex-wrap: 					nowrap;
-} #headerR { 
+} #headerR {
 	text-align: 				right;
-} #headerL { 
-	text-align: 				left; 
-} #title { 
-	text-shadow: 				0px 3px 20px var(--titleshadowone), 0px 2px 3px var(--titleshadowtwo); 
-} #description, .footer, #mainContentButton { 
-	text-shadow: 		0px 2px 20px var(--descriptionshadowone), 0px 1px 3px var(--descriptionshadowtwo);
+} #headerL {
+	text-align: 				left;
+} #title {
+	text-shadow: 				0 3px 20px var(--titleshadowone), 0 2px 3px var(--titleshadowtwo);
+} #description, .footer, #mainContentButton {
+	text-shadow: 		0 2px 20px var(--descriptionshadowone), 0 1px 3px var(--descriptionshadowtwo);
 } #title {
 	font-family: 				"tachyonthin", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	text-transform:				uppercase;
 	letter-spacing:				.25em!important;
 	font-size: 					3.5vw;
 	font-weight: 				normal;
-} #lastname { 
-	letter-spacing: 			.765em!important; 
+} #lastname {
+	letter-spacing: 			.765em!important;
 } #description {
-	letter-spacing: 			.07em;
 	font-family: 				"cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: 				normal;
 	text-transform: 			uppercase;
@@ -186,7 +185,7 @@ the layout of the page */
 #mainContent { /* all of this is important */
 	position: 					relative;
 	width: 						100%;
-	margin: 						none;
+	margin: 						0;
 	display: 					flex;
 	border: 						none;
 	flex: 						1!important;
@@ -200,22 +199,22 @@ the layout of the page */
 	left: 						50%;
 	margin-left:					-73px; /* = (width / 2) + padding */
 	text-align: 				center;
-	color: 						var(--pagelightertext); 
-	background-color: 			var(--pagebg); 
+	color: 						var(--pagelightertext);
+	background-color: 			var(--pagebg);
 	border-radius: 				15px;
 	font-size: 					13.5pt;
 	letter-spacing:				.1em;
 	-webkit-transition-duration:	0.0s;
 	transition-duration: 		0.0s;
-	box-shadow:			0px 0px 30px 0px rgba(0,0,0,.6) !important;
-	-webkit-box-shadow:	0px 0px 30px 0px rgba(0,0,0,.6) !important;
+	box-shadow:			0 0 30px 0 rgba(0,0,0,.6) !important;
+	-webkit-box-shadow:	0 0 30px 0 rgba(0,0,0,.6) !important;
 } #mainContentButton:hover {
 	color: 						var(--pagebg);
 	background-color: 			var(--pagetext);
 	text-decoration: 			none;
 	text-shadow: 				none;
-	box-shadow:			0px 0px 3px 0px var(--shadowcolor) !important;
-	-webkit-box-shadow:	0px 0px 3px 0px var(--shadowcolor) !important;
+	box-shadow:			0 0 3px 0 var(--shadowcolor) !important;
+	-webkit-box-shadow:	0 0 3px 0 var(--shadowcolor) !important;
 } #mainContentButton:active {
 	color: 						var(--buttonactivetext);
 	background-color: 			var(--buttonactivecolor);
@@ -233,17 +232,17 @@ the layout of the page */
 	display:					block;
 	border:						none;
 } #bg, #innerDisplay {
-	/* this seems redundant to have the shadow on both but it is necessary; 
-	when the inner div is visible, the other div's shadow gets covered up 
+	/* this seems redundant to have the shadow on both but it is necessary;
+	when the inner div is visible, the other div's shadow gets covered up
 	since it is the opacity of the entire inner div that is changed to show/hide it */
-	box-shadow:			0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
-	-webkit-box-shadow:	0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
+	box-shadow:			0 0 var(--shadowsize) 0 var(--shadowcolor) inset!important;
+	-webkit-box-shadow:	0 0 var(--shadowsize) 0 var(--shadowcolor) inset!important;
 } #bg {
 	background-repeat:			no-repeat;
 	background-size:				cover;
 	background-position:		center center;
 	background-attachment: 		scroll;
-	
+
 	/* slideshow transitions */
 	        transition:	background 1.5s ease-out;
 	-webkit-transition:	background 1.5s ease-out;
@@ -261,8 +260,8 @@ the layout of the page */
 } #innerDisplay {
 	background-color:	transparent!important;
 	position: 			absolute;
-	left: 				0%!important;
-	top: 				0%!important;
+	left: 				0!important;
+	top: 				0!important;
 	background-repeat:			no-repeat;
 	background-size:				cover;
 	background-position:		center center;
@@ -278,18 +277,18 @@ the layout of the page */
 } #downarrow { /* the svg tag */
 	width: 						13px;
 	height: 					13px;
-	margin-bottom: 				0px;
+	margin-bottom: 				0;
 	margin-right:				1.5px; /*when text shadow changes, give spacing to avoid the arrow changing position*/
 } #thearrow { /* the svg path */
-	fill: 						var(--pagelightertext); 
-	stroke:						var(--pagelightertext); 
+	fill: 						var(--pagelightertext);
+	stroke:						var(--pagelightertext);
 } #mainContentButton:hover #thearrow, #mainContentButton:active #thearrow { /* the svg when hovering over the main content button */
-	fill:						var(--pagebg); 
-	stroke:						var(--pagebg); 
+	fill:						var(--pagebg);
+	stroke:						var(--pagebg);
 } #mainContentButton:active, #changethemebutton:active, #mobilemailbutton:active, .footerlink:active {
 	/* when button is pressed, show a shadow */
-	box-shadow:			0px 7.5px 10px 0px var(--buttonDepressionShadow) inset!important;
-	-webkit-box-shadow:	0px 7.5px 10px 0px var(--buttonDepressionShadow) inset!important;
+	box-shadow:			0 7.5px 10px 0 var(--buttonDepressionShadow) inset!important;
+	-webkit-box-shadow:	0 7.5px 10px 0 var(--buttonDepressionShadow) inset!important;
 }
 
 /*************************************************/
@@ -318,21 +317,16 @@ the layout of the page */
 	font-size: 					7pt;
 	color: 						var(--copyrighttext);
 	text-shadow: 				none;
-	text-transform: 			none;
-	text-align: 				center;
-	padding: 					10px;
-	padding-top: 				0px;
-	text-align: 				center;
+		padding: 0 10px 10px;
+		text-align: 				center;
 	margin: 						auto;
 	text-transform: 			uppercase;
-} .footerlink {	
+} .footerlink {
 	letter-spacing: 			.2em;
-	padding:					10px;
-	padding-top: 				8px;
-	padding-bottom: 				7px;
-} .onlyMobile { 
+		  padding: 8px 10px 7px;
+	  } .onlyMobile {
 	display: 					none;
-} #recursion { 
+} #recursion {
 	display: 					none;
 } #changethemebutton, #mobilemailbutton {
 	display: 					none;
@@ -346,7 +340,7 @@ the layout of the page */
 	vertical-align: 			center;
 	color: 						var(--pagetext);
 	background-color: 			var(--pagebg);
-	box-shadow: 				0px 2px 5px var(--mobilebuttonshadow);
+	box-shadow: 				0 2px 5px var(--mobilebuttonshadow);
 	font-family: 				"Verdana", sans-serif;
 	-webkit-transition-duration: 	0.3s;
 	transition-duration:			0.3s;
@@ -361,11 +355,11 @@ the layout of the page */
 } #changethemebutton:hover, #mobilemailbutton:hover {
 	color:						var(--selectiontext);
 	background-color:			var(--pagetext);
-	box-shadow: 				0px 0px 2px var(--mobilebuttonshadowhover);
+	box-shadow: 				0 0 2px var(--mobilebuttonhovershadow);
 } #changethemebutton:active, #mobilemailbutton:active {
 	color:						var(--buttonactivetext);
 	background-color:			var(--buttonactivecolor);
-	box-shadow: 				0px 0px 2px var(--mobilebuttonshadowhover);
+	box-shadow: 				0 0 2px var(--mobilebuttonhovershadow);
 } #changethemebutton:hover #themetoggleicon, #changethemebutton:active #themetoggleicon {
 	fill: 						var(--selectiontext);
 	stroke:						var(--selectiontext);
@@ -378,7 +372,7 @@ the layout of the page */
 	padding:						3px;
 	text-transform: 			uppercase;
 	cursor:						pointer;
-} #changethemetext:hover, {
+} #changethemetext:hover {
 	color: 						var(--selectiontext);
 	background-color:			var(--pagetext);
 } #changethemetext:active {
@@ -399,16 +393,16 @@ div gets hidden (when the page gets too small) */
 /* for larger/desktop devices */
 /*************************************************/
 @media only screen and (min-width: 850px) {
-	#title { 
+	#title {
 		font-size: 				20pt;
-	} #description { 
-		font-size: 				14pt; 
-	} #header { 
+	} #description {
+		font-size: 				14pt;
+	} #header {
 		padding: 				30px;
-	} .footer { 
+	} .footer {
 		font-size: 				13.5pt;
 		padding-top: 			20px; /* padding */
-		padding-bottom:			20px; /* padding */ 
+		padding-bottom:			20px; /* padding */
 	}
 }
 
@@ -416,16 +410,16 @@ div gets hidden (when the page gets too small) */
 /* for smaller devices */
 /*************************************************/
 @media only screen and (max-width: 640px) {
-	#title { 
+	#title {
 		font-size: 				4.75vw;
-	} #description { 
-		font-size: 				2.4vw; 
-	} #header { 
+	} #description {
+		font-size: 				2.4vw;
+	} #header {
 		padding: 				20px;
-	} #title, #description, .footer, a, a:visited, #mainContentButton { 
+	} #title, #description, .footer, a, a:visited, #mainContentButton {
 		color: 					var(--smallerscreentext);
-	} #header, #title, #description, .footer, .footerlink { 
-		text-shadow: 			0px 3px 5px var(--smallerscreenshadow);
+	} #header, #title, #description, .footer, .footerlink {
+		text-shadow: 			0 3px 5px var(--smallerscreenshadow);
 	}
 }
 
@@ -433,41 +427,40 @@ div gets hidden (when the page gets too small) */
 	and show buttons */
 /*************************************************/
 @media only screen and (max-height: 400px) {
-	#bodyDiv { 
+	#bodyDiv {
 		/*max-width: 1024px;*//* remove until I figure out
-		a solution to deal with the tiny absolutely positioned 
+		a solution to deal with the tiny absolutely positioned
 		buttons*/
 		min-height: 			310px;
 	} #mainContent {
-		display: 				none; 
-	} #header { 
+		display: 				none;
+	} #header {
 		padding-bottom: 		10px;
-	} #footer { 
+	} #footer {
 		flex: 					1;
 		flex-wrap: 				wrap;
 		align-content: 			space-around;
-		padding: 				none;
+		padding: 				0;
 	} .footer {
 		font-style: 			normal;
 		min-width: 				23%;
 		width: 					23%;
-	} #copyright { 
-		font-weight: 			normal; 
-		padding: 				none;
-		padding-top: 			16px;
-	} .footerlink { /* big buttons */
+	} #copyright {
+		font-weight: 			normal;
+									  padding: 16px 0 0;
+								  } .footerlink { /* big buttons */
 		border-radius: 			25px;
-		box-shadow: 			0px 2px 20px var(--mobilebuttonshadow);
+		box-shadow: 			0 2px 20px var(--mobilebuttonshadow);
 		padding: 				20px;
 	} .footerlink:hover, .footerlink:active {
-		box-shadow: 			0px 1px 2px var(--mobilebuttonhovershadow);
-	} a.footerlink:hover, a.footerlink:active { 
-		text-decoration:		none; 
-	} .onlyMobile { 
+		box-shadow: 			0 1px 2px var(--mobilebuttonhovershadow);
+	} a.footerlink:hover, a.footerlink:active {
+		text-decoration:		none;
+	} .onlyMobile {
 		display: 				inline;
 	} #changethemebutton {
 		display: 				block;
-	} #changethemetext { 
+	} #changethemetext {
 		display: 				none;
 	}
 }
@@ -475,47 +468,46 @@ div gets hidden (when the page gets too small) */
 /* tiny width screens - also show buttons */
 /*************************************************/
 @media only screen and (max-width: 400px) {
-	#title { 
+	#title {
 		font-size: 				18pt;
 		padding-left: 			9pt; /* half of font size */
-		padding-right:			none;
+		padding-right:			0;
 		margin: 				auto;
-	} #lastname { 
+	} #lastname {
 		padding-left: 			9pt; /* half of font size */
-	} #description { 
-		font-size: 				.5em; 
-	} #header { 
-		padding: 				7px;
+	} #description {
+		font-size: 				.5em;
+	} #header {
 		align-content: 			stretch;
 		padding: 				1px;
 		margin: 				auto;
 	} #headerL, #headerR {
 		margin: 				auto;
-	} #headerL { 
+	} #headerL {
 		padding: 				10px;
-	} #headerR { 
-		display: 				none; /*text-align: center; width: 100%;*/ 
+	} #headerR {
+		display: 				none; /*text-align: center; width: 100%;*/
 	}  #mainContent {
 		display: 				none;
-	} #copyright { 
-		letter-spacing: 		0px;
+	} #copyright {
+		letter-spacing: 		0;
 		padding-top: 			12.5px;
 	} .footerlink { /* medium buttons */
 		border-radius:			20px;
-		box-shadow: 			0px 2px 15px var(--mobilebuttonshadow);
+		box-shadow: 			0 2px 15px var(--mobilebuttonshadow);
 		padding: 				15px;
-	} .footerlink:hover, .footerlink:active { 
-		box-shadow: 			0px 1px 2px var(--mobilebuttonhovershadow);
-	} a.footerlink:hover, a.footerlink:active { 
+	} .footerlink:hover, .footerlink:active {
+		box-shadow: 			0 1px 2px var(--mobilebuttonhovershadow);
+	} a.footerlink:hover, a.footerlink:active {
 		text-decoration: 		none!important;
-	} .onlyMobile { 
+	} .onlyMobile {
 		display: 				inline;
 	} #changethemebutton {
 		display: 				block;
 		bottom: 				32px!important;
 	} #mobilemailbutton {
 		bottom: 				32px!important;
-	} #changethemetext { 
+	} #changethemetext {
 		display:					none;
 	}
 }
@@ -532,19 +524,17 @@ div gets hidden (when the page gets too small) */
 /* display small buttons when not enough room for larger buttons */
 /*************************************************/
 @media only screen and (max-height: 400px) and (max-width: 600px) {
-	.footerlink { 
-		padding: 				7px; /* small buttons */
-		padding-left: 			20px;
-		padding-right: 			20px;
-		box-shadow: 			0px 2px 5px var(--tinybuttonshadow);
+	.footerlink {
+		/* small buttons */
+		padding: 7px 20px;
+		box-shadow: 			0 2px 5px var(--tinybuttonshadow);
 	}
 }
 @media only screen and (max-height: 560px) and (max-width: 400px) {
-	.footerlink { 
-		padding: 				7px; /* small buttons */
-		padding-left: 			20px;
-		padding-right: 			20px;
-		box-shadow: 			0px 2px 5px var(--tinybuttonshadow);
+	.footerlink {
+		/* small buttons */
+		padding: 7px 20px;
+		box-shadow: 			0 2px 5px var(--tinybuttonshadow);
 	}
 }
 
@@ -552,9 +542,9 @@ div gets hidden (when the page gets too small) */
 /* Sizing the footer */
 /*************************************************/
 @media only screen and (max-width: 799px) {
-	.footer { 
+	.footer {
 		font-size: 				1em;
-		padding: 				none;
+		padding: 				0;
 		min-width: 				32%;
 		width: 					32%;
 	}
@@ -563,12 +553,12 @@ div gets hidden (when the page gets too small) */
 	.footer {
 		min-width: 				48%;
 		width: 					48%;
-	} 
+	}
 }
 @media only screen and (max-width: 400px) {
-	#bodyDiv { 
+	#bodyDiv {
 		min-height:				360px;
-	} #footer { 
+	} #footer {
 		flex: 					1;
 		flex-wrap: 				wrap;
 		justify-content: 		space-around;
@@ -584,17 +574,17 @@ div gets hidden (when the page gets too small) */
 
 /* adjust header when tiny */
 /*************************************************/
-@media only screen and ((max-width: 400px) and (max-height: 400px)) {
-	#title { 
+@media only screen and (max-width: 400px) and (max-height: 400px) {
+	#title {
 		font-size: 				16pt;
-		padding: 				none;
-		padding-left:			12pt; /* half of font size */
+		/* half of font size */
+		padding: 0 0 0 12pt;
 		margin: 				auto;
-	} #lastname { 
+	} #lastname {
 		padding-left:			12pt; /* half of font size */
 	} #changethemebutton, #mobilemailbutton {
 		bottom: 				32px!important;
-	} 
+	}
 }
 
 /* hide mobile mail/theme buttons when tiny */
