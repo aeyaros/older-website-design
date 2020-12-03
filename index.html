@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<!--------------------------
 	Andrew Yaros's home page! :)
 	--------------------------->
@@ -19,7 +19,7 @@
 			var startHour = parseInt((new Date).getHours());
 			if (startHour < 7 || startHour >= 19) {
 				//create a new link element, set it's attributes
-				let newTheme = document.createElement("link");
+				var newTheme = document.createElement("link");
 				newTheme.setAttribute("type", "text/css");
 				newTheme.setAttribute("rel", "stylesheet");
 				newTheme.setAttribute("href", "./media/styles/darkerColors.css");
