@@ -123,7 +123,7 @@ function setTranslucentSlide() {
 //will be appended to the head tag as an additional link tag
 function appendCSS(cssname) {
 	//create a new link element, set it's attributes
-	let newTheme = document.createElement("link");
+	var newTheme = document.createElement("link");
 	newTheme.setAttribute("type", "text/css");
 	newTheme.setAttribute("rel", "stylesheet");
 	newTheme.setAttribute("href", "./media/styles/" + cssname + ".css");
@@ -179,7 +179,7 @@ function toggleThemeAndRefresh() {
 
 //change theme based on time
 function setTheme() {
-	let theHour = parseInt((new Date).getHours());
+	var theHour = parseInt((new Date).getHours());
 	if(theHour < 7 || theHour >= 19) makeDark();
 	else makeLight();
 }
