@@ -11,7 +11,7 @@
 const secondsInAMillisecond = 1000;
 const numSec = 4; //number of seconds for slide to display
 const secondsInAnHour = 3600000;
-const hasTouchedYet = false;
+var hasTouchedYet = false;
 const innerDisplayOpaque = "1"; //can be .5 or 1 or whatev
 const innerDisplayTrans = "0"; //MUST BE ZERO!
 //const noblur = "none";
