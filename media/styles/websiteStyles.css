@@ -186,7 +186,7 @@ the layout of the page */
 #mainContent { /* all of this is important */
 	position: 					relative;
 	width: 						100%;
-	margin: 						none;
+	/*margin: 						none;*/
 	display: 					flex;
 	border: 						none;
 	flex: 						1!important;
@@ -360,11 +360,11 @@ the layout of the page */
 } #changethemebutton:hover, #mobilemailbutton:hover {
 	color:						var(--selectiontext);
 	background-color:			var(--pagetext);
-	box-shadow: 				0 0 2px var(--mobilebuttonshadowhover);
+	box-shadow: 				0 0 2px var(--mobilebuttonhovershadow);
 } #changethemebutton:active, #mobilemailbutton:active {
 	color:						var(--buttonactivetext);
 	background-color:			var(--buttonactivecolor);
-	box-shadow: 				0 0 2px var(--mobilebuttonshadowhover);
+	box-shadow: 				0 0 2px var(--mobilebuttonhovershadow);
 } #changethemebutton:hover #themetoggleicon, #changethemebutton:active #themetoggleicon {
 	fill: 						var(--selectiontext);
 	stroke:						var(--selectiontext);
@@ -377,7 +377,7 @@ the layout of the page */
 	padding:						3px;
 	text-transform: 			uppercase;
 	cursor:						pointer;
-} #changethemetext:hover, {
+} #changethemetext:hover {
 	color: 						var(--selectiontext);
 	background-color:			var(--pagetext);
 } #changethemetext:active {
@@ -445,14 +445,14 @@ div gets hidden (when the page gets too small) */
 		flex: 					1;
 		flex-wrap: 				wrap;
 		align-content: 			space-around;
-		padding: 				none;
+		/*padding: 				none;*/
 	} .footer {
 		font-style: 			normal;
 		min-width: 				23%;
 		width: 					23%;
 	} #copyright { 
 		font-weight: 			normal; 
-		padding: 				none;
+		/*padding: 				none;*/
 		padding-top: 			16px;
 	} .footerlink { /* big buttons */
 		border-radius: 			25px;
@@ -477,7 +477,7 @@ div gets hidden (when the page gets too small) */
 	#title { 
 		font-size: 				18pt;
 		padding-left: 			9pt; /* half of font size */
-		padding-right:			none;
+		/*padding-right:			none;*/
 		margin: 				auto;
 	} #lastname { 
 		padding-left: 			9pt; /* half of font size */
