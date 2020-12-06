@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<!--------------------------
 	Andrew Yaros's home page! :)
 	--------------------------->
@@ -16,10 +16,10 @@
 		<script>/*check/change theme colors IMMEDIATELY after loading CSS
 				to try and avoid a bright flash of white
 				icon cant be changed yet, because the HTML isn't fully loaded yet */
-			var startHour = parseInt((new Date).getHours());
+		let startHour = (new Date).getHours();
 			if (startHour < 7 || startHour >= 19) {
 				//create a new link element, set it's attributes
-				var newTheme = document.createElement("link");
+				let newTheme = document.createElement("link");
 				newTheme.setAttribute("type", "text/css");
 				newTheme.setAttribute("rel", "stylesheet");
 				newTheme.setAttribute("href", "./media/styles/darkerColors.css");
