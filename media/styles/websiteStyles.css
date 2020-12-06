@@ -166,7 +166,6 @@ the layout of the page */
 	font-family: 				"cmu", "Palatino Linotype", "Book Antiqua", Palatino, serif;
 	font-weight: 				normal;
 	text-transform: 			uppercase;
-	letter-spacing: 			.07em;
 	font-size: 					2vw;
 } #title, #description {
 	user-select: 				none;
@@ -320,8 +319,7 @@ the layout of the page */
 	text-shadow: 				none;
 	text-align: 				center;
 	padding: 					10px;
-	padding-top: 				0px;
-	text-align: 				center;
+	padding-top: 				0;
 	margin: 						auto;
 	text-transform: 			uppercase;
 } .footerlink {	
@@ -484,7 +482,6 @@ div gets hidden (when the page gets too small) */
 	} #description { 
 		font-size: 				.5em; 
 	} #header { 
-		padding: 				7px;
 		align-content: 			stretch;
 		padding: 				1px;
 		margin: 				auto;
@@ -553,7 +550,7 @@ div gets hidden (when the page gets too small) */
 @media only screen and (max-width: 799px) {
 	.footer { 
 		font-size: 				1em;
-		padding: 				none;
+		/*padding: 				none;*/
 		min-width: 				32%;
 		width: 					32%;
 	}
@@ -583,10 +580,10 @@ div gets hidden (when the page gets too small) */
 
 /* adjust header when tiny */
 /*************************************************/
-@media only screen and ((max-width: 400px) and (max-height: 400px)) {
+@media only screen and (max-width: 400px) and (max-height: 400px) {
 	#title { 
 		font-size: 				16pt;
-		padding: 				none;
+		/*padding: 				none;*/
 		padding-left:			12pt; /* half of font size */
 		margin: 				auto;
 	} #lastname { 
