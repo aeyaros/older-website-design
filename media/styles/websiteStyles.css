@@ -31,7 +31,7 @@
 @font-face {
 	font-family: "cont";
 	src: 						url("../fonts/contl.ttf");
-	font-weight: lighter;
+	font-weight: 200;
 }
 
 /*************************************************/
@@ -102,7 +102,7 @@ the layout of the page */
 	flex-wrap: 					nowrap;
 	align-content: 				stretch;
 	align-items: 				stretch;
-} a: {
+} a {
 	cursor: pointer;
 } a, a:visited { 
 	text-decoration: 			none;
@@ -150,9 +150,9 @@ the layout of the page */
 } #headerL { 
 	text-align: 				left; 
 } #title { 
-	text-shadow: 				0px 3px 20px var(--titleshadowone), 0px 2px 3px var(--titleshadowtwo); 
+	text-shadow: 				0 3px 20px var(--titleshadowone), 0 2px 3px var(--titleshadowtwo);
 } #description, .footer, #mainContentButton { 
-	text-shadow: 		0px 2px 20px var(--descriptionshadowone), 0px 1px 3px var(--descriptionshadowtwo);
+	text-shadow: 		0 2px 20px var(--descriptionshadowone), 0 1px 3px var(--descriptionshadowtwo);
 } #title {
 	font-family: 				"tachyonthin", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 	text-transform:				uppercase;
@@ -207,15 +207,15 @@ the layout of the page */
 	letter-spacing:				.1em;
 	-webkit-transition-duration:	0.0s;
 	transition-duration: 		0.0s;
-	box-shadow:			0px 0px 30px 0px rgba(0,0,0,.6) !important;
-	-webkit-box-shadow:	0px 0px 30px 0px rgba(0,0,0,.6) !important;
+	box-shadow:			0 0 30px 0 rgba(0,0,0,.6) !important;
+	-webkit-box-shadow:	0 0 30px 0 rgba(0,0,0,.6) !important;
 } #mainContentButton:hover {
 	color: 						var(--pagebg);
 	background-color: 			var(--pagetext);
 	text-decoration: 			none;
 	text-shadow: 				none;
-	box-shadow:			0px 0px 3px 0px var(--shadowcolor) !important;
-	-webkit-box-shadow:	0px 0px 3px 0px var(--shadowcolor) !important;
+	box-shadow:			0 0 3px 0 var(--shadowcolor) !important;
+	-webkit-box-shadow:	0 0 3px 0 var(--shadowcolor) !important;
 } #mainContentButton:active {
 	color: 						var(--buttonactivetext);
 	background-color: 			var(--buttonactivecolor);
@@ -236,8 +236,8 @@ the layout of the page */
 	/* this seems redundant to have the shadow on both but it is necessary; 
 	when the inner div is visible, the other div's shadow gets covered up 
 	since it is the opacity of the entire inner div that is changed to show/hide it */
-	box-shadow:			0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
-	-webkit-box-shadow:	0px 0px var(--shadowsize) 0px var(--shadowcolor) inset!important;
+	box-shadow:			0 0 var(--shadowsize) 0 var(--shadowcolor) inset!important;
+	-webkit-box-shadow:	0 0 var(--shadowsize) 0 var(--shadowcolor) inset!important;
 } #bg {
 	background-repeat:			no-repeat;
 	background-size:				cover;
@@ -261,8 +261,8 @@ the layout of the page */
 } #innerDisplay {
 	background-color:	transparent!important;
 	position: 			absolute;
-	left: 				0%!important;
-	top: 				0%!important;
+	left: 				0!important;
+	top: 				0!important;
 	background-repeat:			no-repeat;
 	background-size:				cover;
 	background-position:		center center;
@@ -278,7 +278,7 @@ the layout of the page */
 } #downarrow { /* the svg tag */
 	width: 						13px;
 	height: 					13px;
-	margin-bottom: 				0px;
+	margin-bottom: 				0;
 	margin-right:				1.5px; /*when text shadow changes, give spacing to avoid the arrow changing position*/
 } #thearrow { /* the svg path */
 	fill: 						var(--pagelightertext); 
@@ -288,8 +288,8 @@ the layout of the page */
 	stroke:						var(--pagebg); 
 } #mainContentButton:active, #changethemebutton:active, #mobilemailbutton:active, .footerlink:active {
 	/* when button is pressed, show a shadow */
-	box-shadow:			0px 7.5px 10px 0px var(--buttonDepressionShadow) inset!important;
-	-webkit-box-shadow:	0px 7.5px 10px 0px var(--buttonDepressionShadow) inset!important;
+	box-shadow:			0 7.5px 10px 0 var(--buttonDepressionShadow) inset!important;
+	-webkit-box-shadow:	0 7.5px 10px 0 var(--buttonDepressionShadow) inset!important;
 }
 
 /*************************************************/
@@ -318,7 +318,6 @@ the layout of the page */
 	font-size: 					7pt;
 	color: 						var(--copyrighttext);
 	text-shadow: 				none;
-	text-transform: 			none;
 	text-align: 				center;
 	padding: 					10px;
 	padding-top: 				0px;
@@ -346,7 +345,7 @@ the layout of the page */
 	vertical-align: 			center;
 	color: 						var(--pagetext);
 	background-color: 			var(--pagebg);
-	box-shadow: 				0px 2px 5px var(--mobilebuttonshadow);
+	box-shadow: 				0 2px 5px var(--mobilebuttonshadow);
 	font-family: 				"Verdana", sans-serif;
 	-webkit-transition-duration: 	0.3s;
 	transition-duration:			0.3s;
@@ -361,11 +360,11 @@ the layout of the page */
 } #changethemebutton:hover, #mobilemailbutton:hover {
 	color:						var(--selectiontext);
 	background-color:			var(--pagetext);
-	box-shadow: 				0px 0px 2px var(--mobilebuttonshadowhover);
+	box-shadow: 				0 0 2px var(--mobilebuttonshadowhover);
 } #changethemebutton:active, #mobilemailbutton:active {
 	color:						var(--buttonactivetext);
 	background-color:			var(--buttonactivecolor);
-	box-shadow: 				0px 0px 2px var(--mobilebuttonshadowhover);
+	box-shadow: 				0 0 2px var(--mobilebuttonshadowhover);
 } #changethemebutton:hover #themetoggleicon, #changethemebutton:active #themetoggleicon {
 	fill: 						var(--selectiontext);
 	stroke:						var(--selectiontext);
@@ -425,7 +424,7 @@ div gets hidden (when the page gets too small) */
 	} #title, #description, .footer, a, a:visited, #mainContentButton { 
 		color: 					var(--smallerscreentext);
 	} #header, #title, #description, .footer, .footerlink { 
-		text-shadow: 			0px 3px 5px var(--smallerscreenshadow);
+		text-shadow: 			0 3px 5px var(--smallerscreenshadow);
 	}
 }
 
@@ -457,10 +456,10 @@ div gets hidden (when the page gets too small) */
 		padding-top: 			16px;
 	} .footerlink { /* big buttons */
 		border-radius: 			25px;
-		box-shadow: 			0px 2px 20px var(--mobilebuttonshadow);
+		box-shadow: 			0 2px 20px var(--mobilebuttonshadow);
 		padding: 				20px;
 	} .footerlink:hover, .footerlink:active {
-		box-shadow: 			0px 1px 2px var(--mobilebuttonhovershadow);
+		box-shadow: 			0 1px 2px var(--mobilebuttonhovershadow);
 	} a.footerlink:hover, a.footerlink:active { 
 		text-decoration:		none; 
 	} .onlyMobile { 
@@ -498,14 +497,14 @@ div gets hidden (when the page gets too small) */
 	}  #mainContent {
 		display: 				none;
 	} #copyright { 
-		letter-spacing: 		0px;
+		letter-spacing: 		0;
 		padding-top: 			12.5px;
 	} .footerlink { /* medium buttons */
 		border-radius:			20px;
-		box-shadow: 			0px 2px 15px var(--mobilebuttonshadow);
+		box-shadow: 			0 2px 15px var(--mobilebuttonshadow);
 		padding: 				15px;
 	} .footerlink:hover, .footerlink:active { 
-		box-shadow: 			0px 1px 2px var(--mobilebuttonhovershadow);
+		box-shadow: 			0 1px 2px var(--mobilebuttonhovershadow);
 	} a.footerlink:hover, a.footerlink:active { 
 		text-decoration: 		none!important;
 	} .onlyMobile { 
@@ -536,7 +535,7 @@ div gets hidden (when the page gets too small) */
 		padding: 				7px; /* small buttons */
 		padding-left: 			20px;
 		padding-right: 			20px;
-		box-shadow: 			0px 2px 5px var(--tinybuttonshadow);
+		box-shadow: 			0 2px 5px var(--tinybuttonshadow);
 	}
 }
 @media only screen and (max-height: 560px) and (max-width: 400px) {
@@ -544,7 +543,7 @@ div gets hidden (when the page gets too small) */
 		padding: 				7px; /* small buttons */
 		padding-left: 			20px;
 		padding-right: 			20px;
-		box-shadow: 			0px 2px 5px var(--tinybuttonshadow);
+		box-shadow: 			0 2px 5px var(--tinybuttonshadow);
 	}
 }
 
