@@ -318,16 +318,13 @@ the layout of the page */
 	color: 						var(--copyrighttext);
 	text-shadow: 				none;
 	text-align: 				center;
-	padding: 					10px;
-	padding-top: 				0;
-	margin: 						auto;
+		padding: 0 10px 10px;
+		margin: 						auto;
 	text-transform: 			uppercase;
 } .footerlink {	
 	letter-spacing: 			.2em;
-	padding:					10px;
-	padding-top: 				8px;
-	padding-bottom: 				7px;
-} .onlyMobile { 
+		  padding: 8px 10px 7px;
+	  } .onlyMobile {
 	display: 					none;
 } #recursion { 
 	display: 					none;
@@ -528,18 +525,16 @@ div gets hidden (when the page gets too small) */
 /* display small buttons when not enough room for larger buttons */
 /*************************************************/
 @media only screen and (max-height: 400px) and (max-width: 600px) {
-	.footerlink { 
-		padding: 				7px; /* small buttons */
-		padding-left: 			20px;
-		padding-right: 			20px;
+	.footerlink {
+		/* small buttons */
+		padding: 7px 20px;
 		box-shadow: 			0 2px 5px var(--tinybuttonshadow);
 	}
 }
 @media only screen and (max-height: 560px) and (max-width: 400px) {
-	.footerlink { 
-		padding: 				7px; /* small buttons */
-		padding-left: 			20px;
-		padding-right: 			20px;
+	.footerlink {
+		/* small buttons */
+		padding: 7px 20px;
 		box-shadow: 			0 2px 5px var(--tinybuttonshadow);
 	}
 }
