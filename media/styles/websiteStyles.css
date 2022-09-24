@@ -455,7 +455,7 @@ div gets hidden (when the page gets too small) */
 		padding: 				20px;
 	} .footerlink:hover, .footerlink:active {
 		box-shadow: 			0 1px 2px var(--mobilebuttonhovershadow);
-	} a.footerlink:hover, a.footerlink:active { 
+	} a.footerlink:hover, a.footerlink:active, .functionlink { 
 		text-decoration:		none; 
 	} .onlyMobile { 
 		display: 				inline;
@@ -499,7 +499,7 @@ div gets hidden (when the page gets too small) */
 		padding: 				15px;
 	} .footerlink:hover, .footerlink:active { 
 		box-shadow: 			0 1px 2px var(--mobilebuttonhovershadow);
-	} a.footerlink:hover, a.footerlink:active { 
+	} a.footerlink:hover, a.footerlink:active, .functionlink { 
 		text-decoration: 		none!important;
 	} .onlyMobile { 
 		display: 				inline;
