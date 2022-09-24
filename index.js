@@ -188,6 +188,26 @@ function updateDate() { //Change year to current year
 	document.getElementById("currentDate").innerHTML = String((new Date).getFullYear());
 }
 
+//when email link is clicked
+function sendEmail() {
+	//subtract 1 from a character code to get the previous character
+	function shiftDown(char) {
+		return String.fromCharCode(char.charCodeAt(0) - 1);
+	}
+
+	//shift a whole word downwards
+	function shiftWord(input) {
+		let output = "";
+		//shift each character in the word
+		for (let i = 0; i < input.length; i++) output += (shiftDown(input[i]));
+		return output;
+	}
+
+	let shifted = ["boesfx", "zbspt", "bf"];
+	//go to mailto link
+	window.location = "mailto:" + shiftWord(shifted[0]) + "@" + shiftWord(shifted[1]) + "." + shiftWord(shifted[2]);
+}
+
 //change the inner shadow div to an image
 function changeDisplay(imageName, shouldTile) {
 	//then, depending on the argument, either tile it or not
