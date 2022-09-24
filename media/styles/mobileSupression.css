@@ -1,5 +1,5 @@
 /* remove mouseover color button highlighting on touch screens */
-a:hover { 
+a:hover, .functionlink:hover { 
 	color: 						var(--pagetext)!important;
 	background: 				var(--pagebg);
 } #mainContentButton:hover {

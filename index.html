@@ -179,12 +179,11 @@
 				
 				<!-- Email -->
 				<div class="footer" id="emailfooterlink">
-					<a class="footerlink" target="_blank" 
-					href="mailto:andrew@yaros.ae"
+					<span class="footerlink functionlink" onclick="sendEmail()" 
 					onmouseenter="changeDisplay(emailtile, true)"
 					onmouseleave="resetDisplay()">
 						Email
-					</a>
+					</span>
 				</div>
 				
 				<!-- Portfolio -->
@@ -212,11 +211,11 @@
 			</div>
 			
 			<!-- mobile button; click to send an email -->
-			<a id="mobilemailbutton" target="_blank" href="mailto:andrew@yaros.ae">
+			<span id="mobilemailbutton" onclick="sendEmail()">
 				<svg id="mobilemailtag" width="16" height="16" viewBox="0 0 16 16">
 					<path id="mobilemailicon" d="M0,13.816V2.184H16V13.816Zm13.565-1.347L10.17,9.037,8.031,11.175,5.855,9.034,2.439,12.469Zm1.064-1.044V4.588L11.2,8.011Zm-13.258,0L4.8,8.011,1.371,4.588ZM8.028,9.061l5.529-5.518H2.448Z"/>
 				</svg>
-			</a>
+			</span>
 			
 			<!-- Button to change theme -->
 			<div id="changethemebutton" onclick="toggleTheme()">
