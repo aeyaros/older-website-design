@@ -27,7 +27,7 @@ var downtile;
 var resumetile;
 var checkerstile;
 var painttile;
-//var trucktile;
+var trucktile;
 var themetile;
 //these are the variables which are used directly in the HTML file when changeDisplay is called!
 
@@ -57,8 +57,8 @@ const slideNames = [
 	"./media/slides/shell.jpg", 
 	"./media/slides/stanford.jpg",
 	"./media/slides/wefa.jpg",
-	"./media/slides/gropius.jpg" //,
-	//"./media/slides/barnes.jpg",
+	"./media/slides/gropius.jpg",
+	"./media/slides/barnes.jpg"
 ];
 
 //n = number of slides
@@ -84,7 +84,7 @@ const tileNames1 = [
 	"./media/tiles/resumetile-light.gif",
 	"./media/tiles/checkerstile-light.gif",
 	"./media/tiles/painttile-light.gif",
-//	"./media/tiles/trucktile-light.gif",
+	"./media/tiles/trucktile-light.gif",
 	"./media/tiles/moontile-light.gif"
 ]; const tileNames2 = [
 	/* dark tiles */
@@ -95,7 +95,7 @@ const tileNames1 = [
 	"./media/tiles/resumetile-dark.gif",
 	"./media/tiles/checkerstile-dark.gif",
 	"./media/tiles/painttile-dark.gif",
-//	"./media/tiles/trucktile-dark.gif",
+	"./media/tiles/trucktile-dark.gif",
 	"./media/tiles/suntile-dark.gif"
 ];
 
@@ -143,7 +143,7 @@ function makeDark() {
 	resumetile = "resumetile-dark.gif";
 	checkerstile = "checkerstile-dark.gif";
 	painttile = "painttile-dark.gif";
-	//trucktile = "trucktile-dark.gif";
+	trucktile = "trucktile-dark.gif";
 	themetile = "suntile-dark.gif";
 }
 
@@ -159,7 +159,7 @@ function makeLight() {
 	resumetile = "resumetile-light.gif";
 	checkerstile = "checkerstile-light.gif";
 	painttile = "painttile-light.gif";
-//	trucktile = "trucktile-light.gif";
+	trucktile = "trucktile-light.gif";
 	themetile = "moontile-light.gif";
 }
 
